@@ -7,8 +7,7 @@ import Forget from "../Components/Authtication/Forget/Forget";
 import Otp from "../Components/Authtication/Otp/Otp";
 import NewPassword from "../Components/Authtication/NewPassword/NewPassword";
 import Thanks from "../Components/Authtication/Thanks/Thanks";
-import Collages from "../Pages/CollagePages/Collages";
-import UnderConstruction from "../Pages/Construction/UnderConstruction";
+import Collages from "../Pages/Collage/Collages";
 
 const MainRoutes = () => {
   return (
@@ -23,7 +22,6 @@ const MainRoutes = () => {
         <Route path="/Thanks" element={<Thanks />}></Route>
         <Route path="/Thanks" element={<Thanks />}></Route>
         <Route path="/collage" element={<Collages />}></Route>
-        <Route path="*" element={<UnderConstruction />}></Route>
       </Routes>
     </div>
   );

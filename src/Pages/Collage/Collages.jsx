@@ -7,6 +7,9 @@ import { AiOutlineStar } from "react-icons/ai";
 import Overview from "./SmallPages/Overview";
 import Programs from "./SmallPages/Programs";
 import Admission from "./SmallPages/Admission";
+import Placements from "./SmallPages/Placements";
+import Campus from "./SmallPages/Campus";
+import Faq from "./SmallPages/Faq";
 
 const Collages = () => {
   return (
@@ -73,7 +76,10 @@ const Collages = () => {
         {/* MAIN PAGE START FROM HERE  */}
         {/* <Overview /> */}
         {/* <Programs /> */}
-        <Admission />
+        {/* <Admission /> */}
+        {/* <Placements /> */}
+        {/* <Campus /> */}
+        <Faq /> 
       </div>
       <Footer />
     </div>

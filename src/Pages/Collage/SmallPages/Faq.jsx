@@ -1,9 +1,15 @@
-import React from 'react'
+import React from "react";
 
 const Faq = () => {
   return (
-    <div>Faq</div>
-  )
-}
+    <>
+      <div className="main-collage-faq-div">
+       
 
-export default Faq
+        
+      </div>
+    </>
+  );
+};
+
+export default Faq;
