@@ -1,0 +1,168 @@
+.main-signup-design {
+    background-image: url("../../../Assets/login-bg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .left-side-div {
+    background-image: url("../../../Assets/login-first.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 30%;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 60%;
+    margin-right: -5rem;
+    z-index: 100;
+    border-top-left-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+  }
+  
+  .left-side-div img {
+    width: 30%;
+  }
+  
+  .left-side-div p {
+    font-weight: bolder;
+    color: white;
+    text-align: center;
+  }
+  
+  .forget-password-head {
+    color:#17559C;
+    font-weight: 900;
+    align-items: left;
+    text-align: left;
+    font-size: 2rem;
+  }
+  
+  .right-side-div {
+    height: 80%;
+    width: 25%;
+    background-color: white;
+    color: black;
+    padding: 2rem 4rem 2rem 8rem;
+    border-top-right-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+  }
+
+  .forgot-form-div {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 1rem;
+    margin-left: -2rem;
+  }
+
+  .forgot-form-div input{
+    width: 88%;
+    height: 2.3rem;
+    border-radius: 3px;
+    border: 2px solid black;
+    padding: auto;
+    border-radius: 5px;
+  }
+  .forgot-form-div button {
+    width: 90%;
+    height: 2.5rem;
+    background-color: #107e7d;
+    border: none;
+    border-radius: 3px;
+    border-radius: 5px;
+    color: white;
+    font-weight: 600;
+  }
+  
+  .forget-password-para {
+    font-size: 1rem;
+    text-align: inherit;
+    color: #696666;
+  }
+  .forgot-image{
+    align-items: center;
+    justify-content: center;
+    width: 75%;
+
+  }
+  .forgot-password-registrated-email{
+    align-items: left;
+    font-display: left;
+    color: #696666;
+  }
+   
+  .digit-code-para{
+    color: #696666;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .forgot-password-sign-in-div{
+    font-size: small;
+    text-align: right!important;
+    width: 90%;
+    cursor: pointer;
+    color: #696666;
+  }
+  
+  
+  @media only screen and (max-width: 1025px) {
+    .welcome-to-mbacouncel {
+      font-size: 1.3rem;
+      font-weight: bolder;
+    }
+  
+    .create-account-p {
+      font-size: 1rem;
+    }
+    .signup-form-div button {
+      width: 100%;
+    }
+    .signup-icons-div button {
+      font-size: 10px;
+    }
+    .signup-form-div input {
+      width: 100%;
+    }
+  }
+  @media only screen and (max-width: 769px) {
+    .left-side-div {
+      display: none;
+      
+      
+    }
+    form button{
+      margin-left: 2rem;
+    }
+    form input {
+      margin-left: 2rem;
+    }
+  
+    .right-side-div {
+      padding: 2rem;
+      width: 50%;
+      border-radius: 1rem;
+    }
+  }
+  @media only screen and (max-width: 425px) {
+    .right-side-div {
+      padding: 1rem;
+      width: 85%;
+      border-radius: 1rem;
+    }
+    .welcome-to-mbacouncel {
+      font-size: 1.5rem;
+      line-height: 30px;
+    }
+    .create-account-p {
+      font-size: 1rem;
+    }
+  }
+  

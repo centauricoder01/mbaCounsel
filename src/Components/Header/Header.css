@@ -1,0 +1,105 @@
+.thumbs {
+  display: none;
+}
+.carousel.carousel-slider .control-arrow {
+  background-color: rgba(0, 0, 0, 0.182);
+}
+.HomeCarousel {
+  padding-top: 5rem;
+}
+
+.main-header-div {
+  margin-bottom: 2rem;
+}
+
+.text-center {
+  margin-left: 7rem;
+}
+
+.eventandnews {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.event {
+  width: 50%;
+  margin: auto;
+}
+
+.react-calendar {
+  width: 70% !important;
+  margin: auto;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  border: none !important;
+  border-radius: 5px;
+  height: 60% !important;
+}
+
+.news {
+  width: 50%;
+}
+.actualnews {
+  border: 1px solid black;
+  padding: 1rem;
+  width: 70%;
+  margin: auto;
+  height: 17rem;
+  overflow: hidden;
+  border-radius: 5px;
+}
+
+.crousal-bottom {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  text-align: center;
+  flex-wrap: wrap;
+  margin-bottom: 3rem;
+}
+
+@media (max-width: 1025px) {
+  .eventandnews {
+    width: 100%;
+  }
+  .react-calendar {
+    width: 90% !important;
+  }
+  .actualnews {
+    width: 90%;
+  }
+  .text-center {
+    margin-left: 1.5rem;
+  }
+}
+@media (max-width: 1000px) {
+  .HomeCarousel {
+    margin-bottom: -1rem;
+  }
+}
+@media (max-width: 920px) {
+  .HomeCarousel {
+    padding-top: 4rem;
+  }
+}
+@media (max-width: 800px) {
+  .HomeCarousel {
+    margin-bottom: -1.5rem;
+  }
+}
+
+@media (max-width: 520px) {
+  .HomeCarousel {
+    padding-top: 3.6rem;
+  }
+  .eventandnews {
+    flex-direction: column;
+  }
+  .news {
+    width: 90%;
+  }
+  .event {
+    width: 90%;
+    margin: auto;
+  }
+}

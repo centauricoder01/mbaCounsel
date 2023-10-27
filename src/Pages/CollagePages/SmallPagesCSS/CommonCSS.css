@@ -1,0 +1,136 @@
+/* OVERVIEW PAGE DESIGN START FROM HERE  */
+
+.main-collage-overview-div {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  gap: 3rem;
+  margin-bottom: 3rem;
+  align-items: top;
+}
+
+.main-collage-left-side-div {
+  width: 70%;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin: auto;
+  flex-direction: column;
+}
+
+.main-collage-right-side-div {
+  width: 30%;
+  display: flex;
+  margin: auto;
+  justify-content: center;
+  gap: 2rem;
+  flex-direction: column;
+}
+
+.collage-number-data {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  height: 8rem;
+  border: 1px solid black;
+  padding: 1rem;
+}
+
+.similar-collage-button-div {
+  width: 20%;
+  height: 2rem;
+  border-radius: 1rem;
+  border: none;
+  background-color: #337062;
+  color: white;
+}
+
+.single-collage-number-data-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+/* PROGRAMER OFFERED DESIGN START FROM HERE */
+
+.programs-fee-structure {
+  border: 1px solid black;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  justify-content: left;
+}
+
+.main-degree-granting-programme {
+  border: 1px solid black;
+  padding: 1rem;
+}
+
+.main-degree-granting-programme ul li {
+  line-height: 2rem;
+  list-style-type: square;
+}
+
+.my-table {
+  width: 95%;
+  border-collapse: collapse;
+  border: 1px solid rgb(108, 98, 248);
+  margin: auto;
+  padding: 1rem;
+}
+
+.my-table th,
+.my-table td {
+  border: 2px solid rgb(108, 98, 248);
+  padding: 8px;
+  height: 2rem;
+}
+
+.programs-Scholarship {
+  border: 1px solid black;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  justify-content: left;
+}
+
+/* ADDMISSION DESIGN START FROM HERE */
+
+.main-coolage-page-container {
+  display: flex;
+  width: 70%;
+  align-items: center;
+  border: 1px solid black;
+  border-radius: 1rem;
+  margin: auto;
+}
+
+.main-coolage-page-text-content {
+  width: 70%;
+  padding: 20px;
+}
+
+.main-collage-admission-in-blue {
+  color: blue;
+  font-size: 1.2rem;
+  margin-bottom: -1rem;
+}
+
+.main-coolage-page-custom-button {
+  width: 30%;
+  cursor: pointer;
+  background-color: #107e7d;
+  border: none;
+  padding: 22px;
+  font-size: 1.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  border-top-right-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+}

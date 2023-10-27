@@ -1,0 +1,103 @@
+.main {
+  background-color: #163457;
+  background-image: url(../../Assets/Mask_group.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.footer-iframe {
+  width: 300px;
+  height: 200px;
+}
+
+.main-upper-div {
+  display: grid;
+  justify-content: center;
+  padding: 1rem;
+  grid-template-columns: repeat(6, 1fr);
+}
+
+.logo-div img {
+  width: 50%;
+}
+
+.main-upper-div h3 {
+  color: yellow;
+}
+.logo-div {
+  text-align: center;
+}
+
+.main-logo-div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  width: 100% !important;
+}
+
+.icons {
+  font-size: 1.5rem;
+}
+
+.main-upper-div div {
+  text-align: center;
+}
+
+.main-middle-div {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.main-lower-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: yellow;
+  width: 100%;
+  color: black;
+  font-weight: bolder;
+}
+
+@media (max-width: 1025px) {
+  .main-upper-div {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 769px) {
+}
+
+@media (max-width: 426px) {
+  .main-upper-div {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .footer-iframe {
+    width: 200px;
+    height: 150px;
+  }
+}
+
+@media (max-width: 426px) {
+  .main-upper-div {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .footer-iframe {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+@media (max-width: 321px) {
+  .main-upper-div {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}

@@ -1,0 +1,372 @@
+.carrier-with-mba {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  width: 80%;
+  margin: auto;
+}
+
+.regular-mba {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 4rem;
+}
+
+.regular-mba button:nth-child(1) {
+  color: white;
+  border-radius: 5px;
+  padding: 1rem;
+  width: 10%;
+  background-color: red;
+  font-size: 1rem;
+  cursor: pointer;
+  border: 1px solid red;
+}
+
+.regular-mba button:nth-child(2) {
+  color: black;
+  border-radius: 5px;
+  padding: 1rem;
+  width: 10%;
+  cursor: pointer;
+  background-color: white;
+  font-size: 1rem;
+}
+
+/* -------------------------------------------------------------------- */
+
+.why-choose-us {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  width: 80%;
+  margin: auto;
+  margin-top: 5rem;
+}
+
+table {
+  width: 70%;
+  border-collapse: collapse;
+  margin: 20px auto;
+}
+th,
+td {
+  padding: 10px;
+  text-align: center;
+  border: 1px solid #ddd;
+}
+th {
+  background-color: #f2f2f2;
+}
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+tr:hover {
+  background-color: #f5f5f5;
+}
+
+.single-product-div {
+  text-align: center;
+  border-radius: 10px;
+  padding-bottom: 15px;
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px,
+    rgba(17, 17, 26, 0.05) 0px 8px 32px;
+}
+
+.main-centeral-div {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+}
+
+.apply-button-div {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  gap: 1rem;
+}
+.apply-button-div button {
+  border: 1px solid red;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.crousel-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+}
+
+.our-services {
+  margin-top: 5rem;
+}
+
+.our-services-crousal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.all-new-h1 {
+  width: 90%;
+  margin: auto;
+  font-size: 3rem;
+  margin-top: 5rem;
+  margin-bottom: 2rem;
+  color: rgb(171, 0, 0);
+}
+
+.Top-B-Schools-in-India-crousel-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.news-letter {
+  width: 50%;
+  margin: auto;
+  text-align: center;
+  margin-top: 3rem;
+  background-color: #d9ebf4;
+  padding: 2rem;
+  border-radius: 2rem;
+  margin-bottom: 1rem;
+}
+
+.input-field {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+}
+
+.submit-button {
+  padding: 10px 20px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.submit-button:hover {
+  background-color: #45a049;
+}
+
+.vertical-timeline.vertical-timeline--two-columns:before {
+  background-color: #003471;
+}
+
+.single-product-div-top-B-school {
+  text-align: center;
+  border-radius: 10px;
+  padding-bottom: 15px;
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px,
+    rgba(17, 17, 26, 0.05) 0px 8px 32px;
+  width: 25%;
+}
+
+.single-product-div-top-B-school img {
+  width: 100%;
+}
+
+/* media query start from here  */
+
+@media only screen and (max-width: 1024px) {
+  .carrier-with-mba img {
+    width: 60%;
+  }
+  .regular-mba button:nth-child(1) {
+    width: 30%;
+  }
+
+  .regular-mba button:nth-child(2) {
+    width: 30%;
+  }
+  /* ***************************** */
+
+  .single-product-div-top-B-school {
+    padding-bottom: 15px;
+    width: 30%;
+  }
+  .main-centeral-div {
+    gap: 3rem;
+  }
+
+  .top-left-side-div div p:nth-child(1) {
+    margin-bottom: -15px;
+  }
+
+  .right-side-div div p:nth-child(1) {
+    margin-bottom: -15px;
+  }
+
+  .apply-button-div {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    gap: 1rem;
+  }
+  .apply-button-div button {
+    border: 1px solid red;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .carrier-with-mba {
+    width: 90%;
+  }
+  .carrier-with-mba img {
+    width: 50%;
+  }
+
+  .regular-mba button:nth-child(1) {
+    width: 30%;
+  }
+
+  .regular-mba button:nth-child(2) {
+    width: 30%;
+  }
+
+  th,
+  td {
+    font-size: 14px;
+  }
+  table {
+    width: 80%;
+  }
+
+  .single-product-div img {
+    width: 100%;
+  }
+  .news-letter {
+    width: 70%;
+  }
+  .all-new-h1 {
+    font-size: 1.5rem;
+  }
+
+  /* ******************************************* */
+
+  .single-product-div-top-B-school {
+    text-align: center;
+    border-radius: 10px;
+    padding-bottom: 15px;
+    width: 30%;
+  }
+  .main-centeral-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .top-left-side-div div p:nth-child(1) {
+    margin-bottom: -15px;
+    font-size: 12px;
+  }
+
+  .right-side-div div p:nth-child(1) {
+    margin-bottom: -15px;
+    font-size: 12px;
+  }
+
+  .apply-button-div {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    gap: 1rem;
+  }
+  .apply-button-div button {
+    border: 1px solid red;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 12px;
+  }
+  .all-new-h1 {
+    font-size: 1.8rem;
+  }
+}
+
+@media only screen and (max-width: 426px) {
+  .carrier-with-mba {
+    width: 90%;
+    flex-direction: column;
+    padding-top: 5rem;
+  }
+
+  .carrier-with-mba img {
+    width: 100%;
+  }
+  .regular-mba button:nth-child(1) {
+    width: 40%;
+  }
+
+  .regular-mba button:nth-child(2) {
+    width: 40%;
+  }
+  th,
+  td {
+    font-size: 12px;
+  }
+  table {
+    width: 90%;
+  }
+  .news-letter {
+    width: 90%;
+    padding: 0.5rem;
+  }
+  .news-letter h1 {
+    font-size: 1.4rem;
+  }
+  .single-product-div-top-B-school {
+    text-align: center;
+    border-radius: 10px;
+    padding-bottom: 15px;
+    width: 80%;
+  }
+  .main-centeral-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .top-left-side-div div p:nth-child(1) {
+    margin-bottom: -15px;
+    font-size: 1rem;
+  }
+
+  .right-side-div div p:nth-child(1) {
+    margin-bottom: -15px;
+    font-size: 1rem;
+  }
+
+  .apply-button-div button {
+    padding: 15px;
+
+    font-size: 1rem;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  /*Small smartphones [325px -> 425px]*/
+}

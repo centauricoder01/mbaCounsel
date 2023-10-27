@@ -1,0 +1,161 @@
+.main-navbar {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-image: linear-gradient(0deg, #002147, #003471);
+  overflow: hidden;
+  position: fixed;
+  width: 100%;
+  z-index: 200;
+}
+
+.main-navbar img {
+  width: 20%;
+}
+
+.para-navbar-div {
+  color: black;
+}
+
+.first-link-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.second-link-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  width: 100%;
+}
+
+.first-link-div p,
+.second-link-div p {
+  color: white;
+}
+
+.button-32 {
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  font-size: 15px;
+  border-radius: 5px;
+  background-color: yellow;
+  cursor: pointer;
+}
+
+.navbar-input-box {
+  padding: 10px;
+  border-radius: 5px;
+  width: 25%;
+}
+
+/* RESPONSIVE DESIGN START FROM HERE */
+
+.GiHamburgerMenu {
+  display: none;
+}
+
+.button-15 {
+  background-image: linear-gradient(#42a1ec, #0070c9);
+  border: 1px solid #0077cc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  color: #ffffff;
+  cursor: pointer;
+  direction: ltr;
+  display: block;
+  font-family: "SF Pro Text", "SF Pro Icons", "AOS Icons", "Helvetica Neue",
+    Helvetica, Arial, sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  letter-spacing: -0.022em;
+  line-height: 1.47059;
+  width: 100%;
+  margin-top: 2rem;
+  overflow: visible;
+  padding: 4px 15px;
+  text-align: center;
+  vertical-align: baseline;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+}
+
+.button-15:disabled {
+  cursor: default;
+  opacity: 0.3;
+}
+
+.button-15:hover {
+  background-image: linear-gradient(#51a9ee, #147bcd);
+  border-color: #1482d0;
+  text-decoration: none;
+}
+
+.button-15:active {
+  background-image: linear-gradient(#3d94d9, #0067b9);
+  border-color: #006dbc;
+  outline: none;
+}
+
+.button-15:focus {
+  box-shadow: rgba(131, 192, 253, 0.5) 0 0 0 3px;
+  outline: none;
+}
+
+/* media query start from here  */
+
+@media only screen and (max-width: 1024px) {
+  .main-image-div {
+    width: 30%;
+  }
+
+  .main-links-div {
+    width: 70%;
+  }
+  .main-navbar img {
+    width: 20%;
+  }
+  .first-link-div,
+  .second-link-div {
+    gap: 2rem;
+    font-size: 10px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .GiHamburgerMenu {
+    display: block;
+    margin-right: 1rem;
+    z-index: 1000;
+  }
+  .main-links-div {
+    display: none;
+  }
+  .main-navbar {
+    justify-content: space-between;
+  }
+  hr {
+    color: rgb(78, 74, 74);
+  }
+  .main-navbar img {
+    width: 30%;
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  .main-navbar img {
+    width: 50%;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  /*Small smartphones [325px -> 425px]*/
+}
