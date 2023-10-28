@@ -158,6 +158,20 @@ li{
     justify-content: center;
 
 }
+.sliding-recruiter-main-div{
+    width: 100%;
+    overflow: hidden;
+
+}
+
+.sliding-receuiters{
+    margin-top: 2rem;
+    display: flex;
+    animation: slide 30s linear infinite;
+    gap: 5rem;
+    
+}
+
 
 .head-of-most-populer-college{
     width: 80%;
@@ -176,8 +190,7 @@ li{
     padding-bottom: 2rem;
 }
 .Faq-head{
-    margin-top: 6rem;
-    margin-bottom: 12rem;
+    margin-bottom: 4rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -213,3 +226,13 @@ li{
     margin: auto;
     margin-bottom: 6rem;
 }
+
+/* -------------------------------------------- */
+@keyframes slide {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }

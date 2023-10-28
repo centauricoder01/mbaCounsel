@@ -187,7 +187,20 @@ const Courses = () => {
           <div className="head-of-recruiter">
             <h1>|TOP RECRUITERS</h1>
           </div>
-          <div className="sliding-receuiters"></div>
+          <div className="sliding-recruiter-main-div">
+          <div className="sliding-receuiters">
+            <img src={require("../../Assets/hindustanUniliver.png")} alt="hindu" width={100}/>
+            <img src={require("../../Assets/hindustanUniliver.png")} alt="hindu" width={100}/>
+            <img src={require("../../Assets/hindustanUniliver.png")} alt="hindu" width={100}/>
+            <img src={require("../../Assets/hindustanUniliver.png")} alt="hindu" width={100}/>
+            <img src={require("../../Assets/hindustanUniliver.png")} alt="hindu" width={100}/>
+            <img src={require("../../Assets/hindustanUniliver.png")} alt="hindu" width={100}/>
+            <img src={require("../../Assets/hindustanUniliver.png")} alt="hindu" width={100}/>
+            <img src={require("../../Assets/hindustanUniliver.png")} alt="hindu" width={100}/>
+            <img src={require("../../Assets/hindustanUniliver.png")} alt="hindu" width={100}/>
+            <img src={require("../../Assets/hindustanUniliver.png")} alt="hindu" width={100}/>
+            <img src={require("../../Assets/hindustanUniliver.png")} alt="hindu" width={100}/>
+          </div></div>
         </div>
         <div className="most-populer-college">
           <div className="head-of-most-populer-college">
@@ -212,7 +225,7 @@ const Courses = () => {
           </div>
         </div>
         <div className="accrodin-of-faq">
-        <Collapse items={items} defaultActiveKey={['1']}  />;
+        <Collapse items={items} defaultActiveKey={['1']}  />
         </div>
         
           <Footer/>
