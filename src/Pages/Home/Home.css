@@ -37,6 +37,47 @@
 
 /* -------------------------------------------------------------------- */
 
+.overview-left {
+  width: 70%;
+  height: 230px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 30px;
+  background: linear-gradient(103.75deg, #eefa13 -13.9%, #d0a31c 79.68%);
+  color: #fff;
+  border-radius: 10px;
+  position: relative;
+  margin: auto;
+  margin-top: 10rem;
+}
+.overview-left p {
+  width: 55%;
+  font-size: 15px;
+  margin-top: 4px;
+  line-height: 24px;
+  color: black;
+}
+.overview-left button {
+  background-color: rgb(11, 11, 117);
+  border: 1px solid white;
+  color: white;
+  padding: 10px 25px;
+  border-radius: 6px;
+  letter-spacing: 1px;
+  font-size: 14px;
+  cursor: pointer;
+}
+.overview-left img {
+  width: 30%;
+  position: absolute;
+  right: 20px;
+  bottom: -1px;
+}
+
+/* ************************************************************************************** */
+
 .why-choose-us {
   display: flex;
   justify-content: center;
@@ -45,6 +86,10 @@
   width: 80%;
   margin: auto;
   margin-top: 5rem;
+}
+
+.why-choose-us img {
+  width: 50%;
 }
 
 table {
@@ -228,6 +273,14 @@ tr:hover {
     font-weight: bold;
     cursor: pointer;
   }
+
+  .overview-left {
+    margin-top: 5rem;
+  }
+
+  .overview-left img {
+    width: 40%;
+  }
 }
 
 @media only screen and (max-width: 768px) {
@@ -304,6 +357,26 @@ tr:hover {
   .all-new-h1 {
     font-size: 1.8rem;
   }
+
+  .overview-left {
+    width: 90%;
+  }
+
+  .overview-left button {
+    margin-top: 0px;
+  }
+
+  .why-choose-us {
+    flex-direction: column;
+    width: 95%;
+    margin: auto;
+  }
+  .overview-left img {
+    width: 40%;
+  }
+  .why-choose-us img {
+    width: 100%;
+  }
 }
 
 @media only screen and (max-width: 426px) {
@@ -364,6 +437,22 @@ tr:hover {
     padding: 15px;
 
     font-size: 1rem;
+  }
+
+  .overview-left {
+    height: 250px;
+    padding: 15px;
+    margin-top: 3rem;
+  }
+  .overview-left p {
+    width: 100%;
+    font-size: 14px; .overview-left {
+    margin-top: 5rem;
+  }
+    line-height: 18px;
+  }
+  .overview-left img {
+    display: none;
   }
 }
 

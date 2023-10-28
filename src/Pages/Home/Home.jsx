@@ -38,9 +38,50 @@ const Home = () => {
           amet a voluptatum animi vitae! Ab dolorem consequatur rem!
         </p>
       </div>
-      <div className="regular-mba">
-        <button>Regular MBA</button>
-        <button>Excluive MBA</button>
+
+      {/* display part start from here */}
+
+      <div className="overview-left">
+        <div>
+          <h2 style={{ color: "#BA274A", fontWeight: "bolder" }}>
+            {" "}
+            Ready to Elevate your MBA Journery
+          </h2>
+          <p>Book Your Free Counselling Now!</p>
+          <p>
+            Embark on a transformative MBA adventure with personalized guidance
+            and industry expertise. Our seasoned mentors are here to shape your
+            success story.
+          </p>
+        </div>
+        <div>
+          <button>Book Now </button>
+        </div>
+        <img src={require("../../Assets/find-arrow.png")} alt="find-arrow" />
+      </div>
+
+      <div className="why-choose-us">
+        <img
+          src={require("../../Assets/why-choose-us.png")}
+          alt="why-choose-us"
+        />
+        <ul>
+          <li>
+            Unleash MBA Excellence with Technology Powered Process along with
+            our experts
+          </li>
+          <li>Customized Strategies for Efficiency</li>
+          <li>Guidance from Industry Veterans and Expert Mentors</li>
+          <li>Our Journey Extends Beyond Admissions</li>
+          <li>Strategic Financial Guidance for You</li>
+          <li>Streamlined, Hassle-Free Process</li>
+          <li>Access Exclusive Features</li>
+          <li>Rooted in Honesty, Built on Transparency, Earned Trust</li>
+          <li>Together, We Sculpt Your Path to Success</li>
+          <li>Education without Boundaries, Knowledge without Borders</li>
+          <li>Join a Vibrant Network of Thriving Students</li>
+          <li>Empower Your Legacy in the World of Business</li>
+        </ul>
       </div>
 
       <div className="Top-Specializations">

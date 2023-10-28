@@ -134,3 +134,67 @@
   border-top-right-radius: 1rem;
   border-bottom-right-radius: 1rem;
 }
+
+/* PLACEMENT DESIGN PAGE  */
+
+.programs-placements-img-div {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.programs-placements-img-div img {
+  padding: 10px;
+}
+
+/* CAMPUS DESIGN PAGE */
+
+.main-collage-campus-div {
+  display: flex;
+  gap: 2rem;
+}
+
+.main-collage-campus-detail-div-left {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.main-collage-campus-detail-div-right {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.main-collage-campus-detail-div-right {
+  display: flex;
+  flex-direction: column;
+}
+
+.main-collage-campus-detail-div-right strong {
+  text-align: right;
+}
+
+.main-collage-campus-detail-div p {
+  line-height: 1.5rem;
+}
+
+/* FAQ DIV START FROM HERE  */
+
+.main-collage-faq-div {
+  width: 90%;
+  margin: auto;
+}
+
+/* FAQ STYLING START FROM HERE  */
+
+.main-collage-faq-div {
+  margin-bottom: 2rem;
+}
+
+.main-collage-faq-div-strong {
+  margin-bottom: 1rem;
+  font-size: 2rem;
+  color: blue;
+}

@@ -214,9 +214,9 @@ const Courses = () => {
         <div className="accrodin-of-faq">
         <Collapse items={items} defaultActiveKey={['1']}  />;
         </div>
-        <div className="footer-in-page">
+        
           <Footer/>
-        </div>
+        
 
       </div>
     </>
