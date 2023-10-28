@@ -192,3 +192,9 @@
 .main-collage-faq-div {
   margin-bottom: 2rem;
 }
+
+.main-collage-faq-div-strong {
+  margin-bottom: 1rem;
+  font-size: 2rem;
+  color: blue;
+}

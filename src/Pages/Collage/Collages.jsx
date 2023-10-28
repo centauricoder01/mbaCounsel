@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Collages.css";
 import Navbar from "../../Components/Navbar/Navbar";
 import Footer from "../../Components/Footer/Footer";
@@ -12,6 +12,7 @@ import Campus from "./SmallPages/Campus";
 import Faq from "./SmallPages/Faq";
 
 const Collages = () => {
+  const [button, setButton] = useState("Overview");
   return (
     <div>
       <Navbar />
@@ -65,12 +66,14 @@ const Collages = () => {
           </div>
         </div>
         <div className="call-to-action-button">
-          <button>Overview</button>
-          <button>Programs Offered</button>
-          <button>Admission</button>
-          <button>Placements</button>
-          <button>Campus Life</button>
-          <button>FAQs</button>
+          <button onClick={() => setButton("Overview")}>Overview</button>
+          <button onClick={() => setButton("Programs")}>
+            Programs Offered
+          </button>
+          <button onClick={() => setButton("Admission")}>Admission</button>
+          <button onClick={() => setButton("Placements")}>Placements</button>
+          <button onClick={() => setButton("Campus")}>Campus Life</button>
+          <button onClick={() => setButton("Faq")}>FAQs</button>
         </div>
 
         {/* MAIN PAGE START FROM HERE  */}
@@ -79,7 +82,13 @@ const Collages = () => {
         {/* <Admission /> */}
         {/* <Placements /> */}
         {/* <Campus /> */}
-        <Faq /> 
+        {/* <Faq />  */}
+        {button === "Overview" ? <Overview /> : null}
+        {button === "Programs" ? <Programs /> : null}
+        {button === "Admission" ? <Admission /> : null}
+        {button === "Placements" ? <Placements /> : null}
+        {button === "Campus" ? <Campus /> : null}
+        {button === "Faq" ? <Faq /> : null}
       </div>
       <Footer />
     </div>
