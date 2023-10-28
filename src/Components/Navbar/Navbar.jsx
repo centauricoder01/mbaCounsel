@@ -49,22 +49,22 @@ const Navbar = () => {
           </Link>
         </div>
         <div className="second-link-div">
-          <Link to={"/"}>
+          <Link to={"/courses"}>
             <p className="para-navbar-div">DUMMY</p>
           </Link>
-          <Link to={"/"}>
+          <Link to={"/courses"}>
             <p className="para-navbar-div">DUMMY</p>
           </Link>
-          <Link to={"/"}>
+          <Link to={"/courses"}>
             <p className="para-navbar-div">DUMMY</p>
           </Link>
-          <Link to={"/"}>
+          <Link to={"/courses"}>
             <p className="para-navbar-div">DUMMY</p>
           </Link>
-          <Link to={"/"}>
+          <Link to={"/courses"}>
             <p className="para-navbar-div">DUMMY</p>
           </Link>
-          <Link to={"/"}>
+          <Link to={"/courses"}>
             <p className="para-navbar-div">DUMMY</p>
           </Link>
           <input
