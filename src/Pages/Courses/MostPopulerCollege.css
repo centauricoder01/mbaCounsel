@@ -1,0 +1,97 @@
+
+
+.Symbiosis-International-University{
+    border: 2px solid black;
+    border-radius: 10px ;
+    width: 80%;
+    margin: auto;
+    margin-bottom: 3rem;
+}
+.icon-of-college{
+    display: flex;
+    gap: 2rem;
+}
+.icon-and-aply{
+    width: 100%;
+    display: flex;
+    /* align-items: center; */
+    justify-content:space-between;
+    padding-bottom: 2rem;
+    padding-top: 2rem;
+}
+.university-icon{
+    margin-left: 3rem;
+    width: 5rem;
+    height: 5rem;
+    border: 2px solid black;
+}
+.apply-of-college {
+    margin-right: 5rem;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 2rem;
+}
+.apply-now-button{
+    width: 10rem;
+    background-color: #107E7D;
+    color: white;
+    font-size: 1rem;
+    border-radius: 10px;
+    /* margin: 1rem; */
+    padding: 10px;
+    cursor: pointer;
+
+}
+.counsoult-button{
+    width: 10rem;
+    background-color:white;
+    color: black;
+    font-size: 1rem;
+    border-radius: 10px;
+    /* margin: 1rem; */
+    padding: 10px;
+    cursor: pointer;
+
+}
+.book-mark-image{
+    width: 3rem;
+}
+.establishment-of-college{
+    display: flex;
+    padding: 1rem;
+    /* padding-top: 2rem; */
+    font-size: 1rem;
+    /* padding-bottom: 2rem; */
+}
+.para-of-college{
+    padding: 1rem;
+}
+.buttons-to-see-next-populer-college{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    border-radius: 5px;
+    color: black;
+    background-color: white;
+    width: 20%;
+    margin: auto;
+    gap: 1rem;
+    border: 2px solid black;
+    padding: 1rem;
+    margin: auto;
+    margin-bottom: 4rem;
+    
+
+}
+.buttons-to-see-next-populer-college button{
+    text-decoration: none;
+    width: 3rem;
+    background-color: white;
+    color: black;
+    height: 1rem;
+    cursor: pointer;
+    border: none;
+
+}

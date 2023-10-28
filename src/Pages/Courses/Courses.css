@@ -1,0 +1,215 @@
+.main-course-container{
+    padding-top: 6rem;
+    
+}
+
+
+.main-course-container h2,h1{
+    color:#107E7D ;
+}
+
+.back-image img{
+    width: 100%;
+}
+.top-basic-para{
+    width: 90%;
+    margin: auto;
+    margin-top: 5rem; 
+    margin-bottom: 5rem;  
+}
+
+.program-details-main{
+width: 100%;
+background-color: #F6FBFF;
+
+
+}
+.program-details{
+    width: 90%;
+    margin: auto;
+    display: flex;
+   justify-content: center;
+   align-items: center;
+}
+.program-details-para h2{
+    margin-bottom: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #107E7D;
+}
+.main-skills-taught{
+    width: 90%;
+    margin: auto;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+}
+li{
+    list-style: none;
+}
+.item-in-skills-taught-list li{
+    display: flex;
+    gap: 1rem;
+}
+.main-types-of-mba-courses{
+    background-color: #f2f0f0;
+    margin-top: 6rem;
+    padding-bottom: 6rem;
+}
+
+.main-types-of-mba-courses h1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    padding-top: 5rem;
+    margin-bottom: 5rem;
+
+}
+
+.types-of-mba-courses{
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.types-of-mba-courses img:nth-child(2){
+    margin-left: -4rem;
+
+}
+.syllabus-h1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+
+}
+.eligibilty{
+    background-image: url(../../Assets/eligibility_background.png);
+    background-color: antiquewhite;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 15rem;
+    margin-bottom: 6rem;
+}
+.eligibilty-content{
+  width: 70%;
+  margin: auto;
+  padding-top: 1rem;
+}
+
+.carrer-scope {
+    margin-bottom: 6rem;
+}
+.carrer-scope h1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.carrer-scope-head{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    margin: auto;
+    margin-bottom: 6rem;
+}
+
+.list-in-carrer-scope{
+    color: white;
+    width: 30%;
+    margin: auto;
+    background-color:#002147;
+    border: 1px solid white;
+    border-radius: 1rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    
+
+}
+.scope-in-mba-text h3{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.scope-in-mba-all{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    margin: auto;
+}
+.recruiters{
+    margin-top: 6rem;
+    margin-bottom: 6rem;
+}
+
+.head-of-recruiter{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.head-of-most-populer-college{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.para-of-most-populer-college{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 2rem;
+}
+.Faq-head{
+    margin-top: 6rem;
+    margin-bottom: 12rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.faq-search-bar{
+    background-color: #002147;
+    color: white;
+    width: 65%;
+    margin: auto;
+    padding: 2rem;
+    margin-bottom: 6rem;
+    border-radius: 5px;
+
+}
+.faq-search-bar h2{
+    color: white;
+
+}
+.button-and-search{
+    display: flex;
+}
+.search-bar-for-faq{
+    width: 60%;
+    height: 2rem;
+}
+.button-and-search button{
+    background-color: #FFA800;
+    width: 3rem;
+    border: none;
+}
+.accrodin-of-faq{
+    width: 70%;
+    margin: auto;
+    margin-bottom: 6rem;
+}
