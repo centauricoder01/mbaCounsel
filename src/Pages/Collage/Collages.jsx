@@ -77,12 +77,6 @@ const Collages = () => {
         </div>
 
         {/* MAIN PAGE START FROM HERE  */}
-        {/* <Overview /> */}
-        {/* <Programs /> */}
-        {/* <Admission /> */}
-        {/* <Placements /> */}
-        {/* <Campus /> */}
-        {/* <Faq />  */}
         {button === "Overview" ? <Overview /> : null}
         {button === "Programs" ? <Programs /> : null}
         {button === "Admission" ? <Admission /> : null}
