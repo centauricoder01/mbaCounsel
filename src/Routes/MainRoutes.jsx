@@ -24,7 +24,6 @@ const MainRoutes = () => {
         <Route path="/Thanks" element={<Thanks />}></Route>
         <Route path="/Thanks" element={<Thanks />}></Route>
         <Route path="/collage" element={<Collages />}></Route>
-
         <Route path="/courses" element={<Courses />}></Route>
       </Routes>
     </div>
