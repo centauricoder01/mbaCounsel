@@ -10,6 +10,7 @@ import Thanks from "../Components/Authtication/Thanks/Thanks";
 import Collages from "../Pages/Collage/Collages";
 
 import Courses from "../Pages/Courses/Courses";
+import About from "../Pages/AboutUs/About";
 
 const MainRoutes = () => {
   return (
@@ -25,6 +26,7 @@ const MainRoutes = () => {
         <Route path="/Thanks" element={<Thanks />}></Route>
         <Route path="/collage" element={<Collages />}></Route>
         <Route path="/courses" element={<Courses />}></Route>
+        <Route path="/about" element={<About />}></Route>
       </Routes>
     </div>
   );
