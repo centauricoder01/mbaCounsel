@@ -10,6 +10,7 @@
 
 .main-header-div {
   margin-bottom: 2rem;
+  position: relative;
 }
 
 .text-center {
@@ -49,6 +50,11 @@
   border-radius: 5px;
 }
 
+.actualnews div + p {
+  margin-bottom: 1rem;
+  border: 1px solid red;
+}
+
 .crousal-bottom {
   display: flex;
   justify-content: space-evenly;
@@ -56,6 +62,35 @@
   text-align: center;
   flex-wrap: wrap;
   margin-bottom: 3rem;
+  margin-top: 4rem;
+}
+
+.header-latest-news {
+  display: flex;
+  justify-content: center;
+  height: 1rem;
+  align-items: center;
+  width: 80%;
+  margin: auto;
+  z-index: 100 !important;
+  position: absolute;
+  background-image: linear-gradient(to right, #002958, #003471);
+  color: white;
+  top: 55%;
+  left: 8%;
+  padding: 2rem;
+  border-radius: 10px;
+  gap: 1rem;
+}
+
+.header-latest-news hr {
+  color: red;
+  height: 3rem;
+}
+
+.header-latest-news p {
+  font-weight: bolder;
+  font-size: 1.4rem;
 }
 
 @media (max-width: 1025px) {
@@ -71,6 +106,9 @@
   .text-center {
     margin-left: 1.5rem;
   }
+  .header-latest-news {
+    top: 47%;
+  }
 }
 @media (max-width: 1000px) {
   .HomeCarousel {
@@ -85,6 +123,15 @@
 @media (max-width: 800px) {
   .HomeCarousel {
     margin-bottom: -1.5rem;
+  }
+  .header-latest-news {
+    top: 40%;
+    right: 10%;
+    width: 70%;
+  }
+  .header-latest-news p {
+    font-weight: bolder;
+    font-size: 1rem;
   }
 }
 

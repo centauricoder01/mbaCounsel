@@ -8,9 +8,9 @@ import Otp from "../Components/Authtication/Otp/Otp";
 import NewPassword from "../Components/Authtication/NewPassword/NewPassword";
 import Thanks from "../Components/Authtication/Thanks/Thanks";
 import Collages from "../Pages/Collage/Collages";
-
 import Courses from "../Pages/Courses/Courses";
 import About from "../Pages/AboutUs/About";
+import Exam from "../Pages/Exam/Exam";
 
 const MainRoutes = () => {
   return (
@@ -27,6 +27,7 @@ const MainRoutes = () => {
         <Route path="/collage" element={<Collages />}></Route>
         <Route path="/courses" element={<Courses />}></Route>
         <Route path="/about" element={<About />}></Route>
+        <Route path="/exam" element={<Exam />}></Route>
       </Routes>
     </div>
   );

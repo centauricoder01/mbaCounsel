@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Header from "../../Components/Header/Header";
 import Testimonials from "../../Components/Testimonials/Testimonials";
 import {
@@ -12,8 +12,30 @@ import { LuFiles } from "react-icons/lu";
 import { PiUserFocus } from "react-icons/pi";
 import Navbar from "../../Components/Navbar/Navbar";
 import Footer from "../../Components/Footer/Footer";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 const Home = () => {
+  const settingsLaptop = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 3,
+    slidesToScroll: 3,
+  };
+  const settingsTablet = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 2,
+    slidesToScroll: 2,
+  };
+
+  const [settingVal, setSettingVal] = useState(settingsLaptop);
+
+  const isSmallScreen = window.innerWidth;
+
   let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
   return (
     <div>
@@ -25,17 +47,15 @@ const Home = () => {
           alt="carrirbymba"
         />
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias ullam,
-          delectus aliquid nemo quas veritatis harum quaerat omnis, perferendis,
-          sunt incidunt in assumenda laudantium eius non corporis aliquam
-          possimus placeat dolorem! Ratione officia ea magni unde iure, fugiat
-          quam deleniti ipsa praesentium quo illo architecto totam cupiditate
-          dignissimos nihil quia accusantium magnam, suscipit corporis
-          voluptates, quaerat facilis quibusdam cum! Vel nam molestias cumque
-          hic quasi accusantium tempora porro! Laudantium ea quod porro
-          cupiditate sequi repudiandae quisquam, cum maxime minus ipsam fuga
-          omnis doloribus odit nostrum iste dolorem dolor ratione nemo corrupti
-          amet a voluptatum animi vitae! Ab dolorem consequatur rem!
+          Embark on a transformativе journеy with an MBA, whеrе businеss acumеn
+          mееts visionary lеadеrship. This program is your passport to thе
+          C-suitе, offеring global opportunitiеs and еntrеprеnеurial vеnturеs.
+          With a curriculum finеly tunеd to rеal-world challеngеs, MBA graduatеs
+          еmеrgе as stratеgists, dеcision-makеrs, and innovators. Practical
+          casеs, intеrnships, and projеcts еnsurе you'rе industry-rеady. An MBA
+          is morе than a dеgrее; it's a mindsеt, a plеdgе to еxcеl. Envision thе
+          futurе and craft your own succеss story in thе dynamic rеalm of
+          businеss
         </p>
       </div>
 
@@ -43,10 +63,7 @@ const Home = () => {
 
       <div className="overview-left">
         <div>
-          <h2 style={{ color: "#BA274A", fontWeight: "bolder" }}>
-            {" "}
-            Ready to Elevate your MBA Journery
-          </h2>
+          <h2>Ready to Elevate your MBA Journery</h2>
           <p>Book Your Free Counselling Now!</p>
           <p>
             Embark on a transformative MBA adventure with personalized guidance
@@ -88,43 +105,73 @@ const Home = () => {
         <h1 className="all-new-h1">Top Specializations</h1>
         <table border="1">
           <tr>
-            <th>Column 1</th>
-            <th>Column 2</th>
-            <th>Column 3</th>
+            <td> Marketing Management </td>
+            <td>International Business</td>
+            <td>Rural & Agri-Business</td>
           </tr>
           <tr>
-            <td>Row 1, Cell 1</td>
-            <td>Row 1, Cell 2</td>
-            <td>Row 1, Cell 3</td>
+            <td>Financial Management</td>
+            <td>Logistics Management</td>
+            <td>Pharma & Health Care Management</td>
           </tr>
           <tr>
-            <td>Row 2, Cell 1</td>
-            <td>Row 2, Cell 2</td>
-            <td>Row 2, Cell 3</td>
+            <td>Artificial Intelligence</td>
+            <td>E-Commerce </td>
+            <td>Entrepreneurship</td>
           </tr>
           <tr>
-            <td>Row 3, Cell 1</td>
-            <td>Row 3, Cell 2</td>
-            <td>Row 3, Cell 3</td>
+            <td>Business Analytics & Big Data</td>
+            <td>Supply Chain Management</td>
+            <td>Tourism & Hospitality Management</td>
           </tr>
           <tr>
-            <td>Row 4, Cell 1</td>
-            <td>Row 4, Cell 2</td>
-            <td>Row 4, Cell 3</td>
-          </tr>
-          <tr>
-            <td>Row 5, Cell 1</td>
-            <td>Row 5, Cell 2</td>
-            <td>Row 5, Cell 3</td>
-          </tr>
-          <tr>
-            <td>Row 6, Cell 1</td>
-            <td>Row 6, Cell 2</td>
-            <td>Row 6, Cell 3</td>
+            <td>Human Resource Management</td>
+            <td>Enterprise Management</td>
+            <td>Communications Management</td>
           </tr>
         </table>
       </div>
 
+      <div className="our-services top-feature-collage">
+        <h1 className="all-new-h1">Top Features Collages</h1>
+        <Slider {...settingVal}>
+          {arr.map((ele) => (
+            <div className="single-product-div-top-B-school">
+              <img
+                src={require("../../Assets/Mask-Group.png")}
+                alt="mask-group"
+              />
+              <h1 style={{ color: "black" }}>IIM Bangelore</h1>
+              <div className="main-centeral-div">
+                <div className="top-left-side-div">
+                  <div>
+                    <p>Duration</p>
+                    <p style={{ fontWeight: "bolder" }}>2 Years</p>
+                  </div>
+                  <div>
+                    <p>Course</p>
+                    <p style={{ fontWeight: "bolder" }}>MBBS, B.ED</p>
+                  </div>
+                </div>
+                <div className="top-right-side-div">
+                  <div>
+                    <p>Exam Accepted</p>
+                    <p style={{ fontWeight: "bolder" }}>CAT, CUET</p>
+                  </div>
+                  <div>
+                    <p>Average Package</p>
+                    <p style={{ fontWeight: "bolder" }}>60 LPA</p>
+                  </div>
+                </div>
+              </div>
+              <div className="apply-button-div">
+                <button className="apply-button">Apply Now</button>
+                <button className="compare-button">Compare +</button>
+              </div>
+            </div>
+          ))}
+        </Slider>
+      </div>
       <div className="our-services">
         <h1 className="all-new-h1">Our Services</h1>
         <div className="our-services-crousal">
@@ -258,32 +305,32 @@ const Home = () => {
                 src={require("../../Assets/Mask-Group.png")}
                 alt="mask-group"
               />
-              <h3>IIM Bangelore</h3>
+              <h1 style={{ color: "black" }}>IIM Bangelore</h1>
               <div className="main-centeral-div">
                 <div className="top-left-side-div">
                   <div>
                     <p>Duration</p>
-                    <p>2 Years</p>
+                    <p style={{ fontWeight: "bolder" }}>2 Years</p>
                   </div>
                   <div>
                     <p>Course</p>
-                    <p>MBBS, B.ED</p>
+                    <p style={{ fontWeight: "bolder" }}>MBBS, B.ED</p>
                   </div>
                 </div>
                 <div className="top-right-side-div">
                   <div>
                     <p>Exam Accepted</p>
-                    <p>CAT, CUET</p>
+                    <p style={{ fontWeight: "bolder" }}>CAT, CUET</p>
                   </div>
                   <div>
                     <p>Average Package</p>
-                    <p>60 LPA</p>
+                    <p style={{ fontWeight: "bolder" }}>60 LPA</p>
                   </div>
                 </div>
               </div>
               <div className="apply-button-div">
-                <button>Apply Now</button>
-                <button>Compare +</button>
+                <button className="apply-button">Apply Now</button>
+                <button className="compare-button">Compare +</button>
               </div>
             </div>
           ))}

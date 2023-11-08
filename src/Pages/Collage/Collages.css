@@ -2,16 +2,37 @@
   margin: 0rem;
   padding-top: 6rem;
   width: 100%;
+  position: relative;
 }
 
 .collage-page-background-div {
-  background-image: url("../../Assets/collage-page-img.png");
+  background-image: linear-gradient(
+      to bottom,
+      rgba(97, 97, 97, 0.5),
+      rgba(97, 97, 97, 0.5)
+    ),
+    url("../../Assets/collage-page-img.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   width: 100%;
   height: 50vh;
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.collage-page-background-div::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: inherit;
+  backdrop-filter: blur(10px); /* Adjust the blur intensity as needed */
+  z-index: -1;
 }
 
 .collage-page-background-button-div {
@@ -83,6 +104,10 @@
   gap: 1rem;
   width: 90%;
   margin: auto;
+  position: absolute;
+  top: 5%;
+  color: white;
+  left: 4%;
 }
 
 .collage-name-review {

@@ -4,7 +4,8 @@ import logo from "../../Assets/mbalogo.png";
 import { Link } from "react-router-dom";
 import { BsFillPersonFill } from "react-icons/bs";
 import { GiHamburgerMenu } from "react-icons/gi";
-import { Drawer } from "antd";
+import { Drawer, Input } from "antd";
+const { Search } = Input;
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
@@ -16,6 +17,9 @@ const Navbar = () => {
   const onClose = () => {
     setOpen(false);
   };
+
+  const onSearch = (value, _e, info) => console.log(info?.source, value);
+
   return (
     <div className="main-navbar">
       <div className="main-image-div">
@@ -58,18 +62,11 @@ const Navbar = () => {
           <Link to={"/courses"}>
             <p className="para-navbar-div">DUMMY</p>
           </Link>
-          <Link to={"/courses"}>
-            <p className="para-navbar-div">DUMMY</p>
-          </Link>
-          <Link to={"/courses"}>
-            <p className="para-navbar-div">DUMMY</p>
-          </Link>
-          <Link to={"/courses"}>
-            <p className="para-navbar-div">DUMMY</p>
-          </Link>
-          <input
-            type="text"
-            placeholder="Search for collages"
+
+          <Search
+            placeholder="Enter Collage Name"
+            onSearch={onSearch}
+            // enterButton
             className="navbar-input-box"
           />
         </div>
