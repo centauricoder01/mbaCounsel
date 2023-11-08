@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 import Calendar from "react-calendar";
 import "react-calendar/dist/Calendar.css";
 import { GiGiftOfKnowledge } from "react-icons/gi";
-import { BsBuildingsFill } from "react-icons/bs";
+import { BsBuildingsFill, BsFillArrowRightCircleFill } from "react-icons/bs";
 import { FaUniversity } from "react-icons/fa";
 import { HiOutlineStatusOnline } from "react-icons/hi";
 
@@ -37,6 +37,15 @@ const Header = () => {
             </div>
           </Link>
         </Carousel>
+      </div>
+      <div className="header-latest-news">
+        <p>Latest Notification</p>
+        <hr />
+        <p>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quaerat,
+          dolore. Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+          Voluptates, tempore.
+        </p>
       </div>
       <div className="crousal-bottom">
         <div className="first-div">
@@ -73,23 +82,116 @@ const Header = () => {
               molestias, modi nemo asperiores dignissimos non cum laudantium
               illum iste impedit!
             </p>
+            <div
+              style={{
+                display: "flex",
+                justifyContent: "space-between",
+                alignItems: "center",
+                marginTop: "-1rem",
+              }}
+            >
+              <p>
+                <i>10 aug 2012</i>
+              </p>
+              <p
+                style={{
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  gap: "1rem",
+                  cursor: "pointer",
+                }}
+              >
+                read more <BsFillArrowRightCircleFill />
+              </p>
+            </div>
+
             <hr />
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint quae
               tempore quos vero, quibusdam dolorem!
             </p>
+            <div
+              style={{
+                display: "flex",
+                justifyContent: "space-between",
+                alignItems: "center",
+                marginTop: "-1rem",
+              }}
+            >
+              <p>
+                <i>10 aug 2012</i>
+              </p>
+              <p
+                style={{
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  gap: "1rem",
+                  cursor: "pointer",
+                }}
+              >
+                read more <BsFillArrowRightCircleFill />
+              </p>
+            </div>
             <hr />
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
               Recusandae iste deserunt, voluptatem exercitationem iusto quia.
               Veniam, ad neque!
             </p>
+            <div
+              style={{
+                display: "flex",
+                justifyContent: "space-between",
+                alignItems: "center",
+                marginTop: "-1rem",
+              }}
+            >
+              <p>
+                <i>10 aug 2012</i>
+              </p>
+              <p
+                style={{
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  gap: "1rem",
+                  cursor: "pointer",
+                }}
+              >
+                read more <BsFillArrowRightCircleFill />
+              </p>
+            </div>
             <hr />
             <p>
               Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab
               dignissimos placeat at hic, quidem quas quae, error cum nostrum,
               dolore culpa?
             </p>
+            <div
+              style={{
+                display: "flex",
+                justifyContent: "space-between",
+                alignItems: "center",
+                marginTop: "-1rem",
+              }}
+            >
+              <p>
+                <i>10 aug 2012</i>
+              </p>
+              <p
+                style={{
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  gap: "1rem",
+                  cursor: "pointer",
+                }}
+              >
+                read more <BsFillArrowRightCircleFill />
+              </p>
+            </div>
             <hr />
           </div>
         </div>
