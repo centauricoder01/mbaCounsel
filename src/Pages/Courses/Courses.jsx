@@ -20,7 +20,7 @@ const Courses = () => {
       <Navbar />
       <div className="main-course-container">
         <div className="back-image">
-          <img src={require("../../Assets/mba_top_back_image.png")} alt="" />
+          <img src={require("../../Assets/mba-top-back-image.png")} alt="" />
         </div>
         <div className="top-basic-para">
           <p>
@@ -47,13 +47,13 @@ const Courses = () => {
                 entrepreneurs. The curriculum is designed so that students have
                 a thorough grasp of how to generate business ideas, develop
                 these ideas into service and product offerings, and then plan a
-                commercial project to bring business ideas to market. The
+                commercial project to bring business ideas to market.<br/> The
                 Required skill set in order to take up this course MBA
                 Entrepreneurship demands its aspirants to have the best
                 knowledge of management such as Understanding Strategy and
                 embracing opportunities, ability to take risks, Proactiveness,
                 Innovation, Self-discipline and Integrity as well as Decisive
-                and action-oriented mindset. This course teaches students all
+                and action-oriented mindset. <br/> This course teaches students all
                 the skills they need to launch a startup such as teamwork,
                 networking, creativity, leadership skills and flexibility in
                 decision making
@@ -166,7 +166,7 @@ const Courses = () => {
             
               <ul className="list-in-carrer-scope" >
               <div className="tittel-in-carrer-scope">
-              <h3>Top Job Profile</h3>
+              <h3 >Top Job Profile</h3>
               </div>
               
                 <li> <ImArrowRight/>  Small Business Owners</li> <hr />
@@ -189,17 +189,16 @@ const Courses = () => {
           </div>
           <div className="sliding-recruiter-main-div">
           <div className="sliding-receuiters">
-            <img src={require("../../Assets/hindustanUniliver.png")} alt="hindu" width={100}/>
-            <img src={require("../../Assets/hindustanUniliver.png")} alt="hindu" width={100}/>
-            <img src={require("../../Assets/hindustanUniliver.png")} alt="hindu" width={100}/>
-            <img src={require("../../Assets/hindustanUniliver.png")} alt="hindu" width={100}/>
-            <img src={require("../../Assets/hindustanUniliver.png")} alt="hindu" width={100}/>
-            <img src={require("../../Assets/hindustanUniliver.png")} alt="hindu" width={100}/>
-            <img src={require("../../Assets/hindustanUniliver.png")} alt="hindu" width={100}/>
-            <img src={require("../../Assets/hindustanUniliver.png")} alt="hindu" width={100}/>
-            <img src={require("../../Assets/hindustanUniliver.png")} alt="hindu" width={100}/>
-            <img src={require("../../Assets/hindustanUniliver.png")} alt="hindu" width={100}/>
-            <img src={require("../../Assets/hindustanUniliver.png")} alt="hindu" width={100}/>
+            <img src={require("../../Assets/sliding-images/hindustanUniliver.png")} alt="hindu" width={100}/>
+            <img src={require("../../Assets/sliding-images/sliding (10).png")} alt="hindu" width={100}/>
+            <img src={require("../../Assets/sliding-images/sliding (11).png")} alt="hindu" width={100}/>
+            <img src={require("../../Assets/sliding-images/sliding (12).png")} alt="hindu" width={100}/>
+            <img src={require("../../Assets/sliding-images/sliding (13).png")} alt="hindu" width={100}/>
+            <img src={require("../../Assets/sliding-images/sliding (14).png")} alt="hindu" width={100}/>
+            <img src={require("../../Assets/sliding-images/sliding (15).png")} alt="hindu" width={100}/>
+            <img src={require("../../Assets/sliding-images/sliding (16).png")} alt="hindu" width={100}/>
+            <img src={require("../../Assets/sliding-images/sliding (8).png")} alt="hindu" width={100}/>
+            <img src={require("../../Assets/sliding-images/sliding (9).png")} alt="hindu" width={100}/>
           </div></div>
         </div>
         <div className="most-populer-college">
@@ -207,7 +206,7 @@ const Courses = () => {
             <h1>|10 MOST POPULAR COLLEGES FOR ENTREPRENEURSHIP COURSE</h1>
           </div>
           <div className="para-of-most-populer-college">
-            <p>MBA Entrepreneurship is a new emerging specialization that many students are opting for in order to be independent entrepreneurs. Here is a list of the 10 most popular colleges for MBA Entrepreneurs in India</p>
+            <p >MBA Entrepreneurship is a new emerging specialization that many students are opting for in order to be independent entrepreneurs. Here is a list of the 10 most popular colleges for MBA Entrepreneurs in India</p>
           </div>
           <div className="all-populer-colleges">
           <PopulerCollge/>
@@ -228,10 +227,11 @@ const Courses = () => {
         <Collapse items={items} defaultActiveKey={['1']}  />
         </div>
         
-          <Footer/>
+         
         
 
       </div>
+      <Footer/>
     </>
   );
 };

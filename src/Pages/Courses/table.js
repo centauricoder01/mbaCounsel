@@ -4,9 +4,10 @@ import "./table.css"
 function SyllabusTable() {
   return (
     <div className="all-table">
-      <div className="frist-year">
+      <div className="first-year">
+      <h4>First Year</h4>
         <table className="first-year-table">
-        <h4>First Year</h4>
+       
           {/* ---------------------row --1 ------------ */}
           
           <tr>
@@ -76,8 +77,9 @@ function SyllabusTable() {
 
       {/* ----------------------------------End of first year Row--------------------- */}
       <div className="second-year">
-      <table className="second-year-table">
       <h4>Second Year</h4>
+      <table className="second-year-table">
+    
       {/* ---------------- second year row --1 ---------------- */}
       <tr>
             <td>
@@ -105,8 +107,9 @@ function SyllabusTable() {
 
 
       <div className="List-of-Elective-Area">
-      <table className="List-of-Elective-Area-table" >
       <h4>List of Elective Area</h4>
+      <table className="List-of-Elective-Area-table" >
+      
 
       {/* --------------------list of elective ---------------------------- */}
 

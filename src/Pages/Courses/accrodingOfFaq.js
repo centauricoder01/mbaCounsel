@@ -6,7 +6,7 @@ const items = [
     },
     {
       key: '2',
-      label: '2. Which are some of the most popular colleges offering MBA Entrepreneurship?',
+      label: '2.Which are some of the most popular colleges offering MBA Entrepreneurship?',
       children: <p>heelo</p>,
     },
     {

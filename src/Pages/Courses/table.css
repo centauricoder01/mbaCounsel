@@ -1,21 +1,67 @@
-.all-table{
+.all-table {
     width: 80%;
     margin: auto;
-    margin-bottom: 7rem;
+    margin-bottom: 10rem;
+  
+}
+
+td{
+    border: 1px solid black;
+}
+tr{
+    border: 1px solid black;
 }
 
 
 .first-year-table{
     width: 100%;
+    /* margin-top: 5rem; */
+    border: 1px solid black;
+    margin-bottom: 5rem;
+
 
 }
 
 .second-year-table{
     width: 100%;
+    /* margin-top: 5rem; */
+    border: 1px solid black;
+    margin-bottom: 5rem;
 
 }
 .List-of-Elective-Area-table{
     width: 100%;
+    /* margin-top: 5rem; */
+    border: 1px solid black;
+    margin-bottom: 5rem;
+}
+.all-table p{
+    font-family: 'Times New Roman', Times, serif;
+}
+.first-year h4{
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+    font-weight: 900;
+}
+.second-year h4{
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+    font-weight: 900;
+}
+.List-of-Elective-Area h4{
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+    font-weight: 900;
+}
+.first-year-table td,tr{
+    border: 1px solid black;
+}
+.second-year td,tr{
+    border: 1px solid black;
+}
+
+.List-of-Elective-Area td,tr{
+    border: 1px solid black;
 }
 
 
