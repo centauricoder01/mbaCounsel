@@ -1,153 +1,146 @@
 .main-signup-design {
-    background-image: url("../../../Assets/login-bg.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .left-side-div {
-    background-image: url("../../../Assets/login-first.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 30%;
-    height: fit-content;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    height: 60%;
-    margin-right: -5rem;
-    z-index: 100;
-    border-top-left-radius: 1rem;
-    border-bottom-left-radius: 1rem;
-  }
-  
-  .left-side-div img {
-    width: 30%;
-  }
-  
-  .left-side-div p {
+  background-image: url("../../../Assets/login-bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.left-side-div {
+  background-image: url("../../../Assets/login-first.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 30%;
+  height: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 60%;
+  margin-right: -5rem;
+  z-index: 100;
+  border-top-left-radius: 1rem;
+  border-bottom-left-radius: 1rem;
+}
+
+.left-side-div img {
+  width: 30%;
+}
+
+.left-side-div p {
+  font-weight: bolder;
+  color: white;
+  text-align: center;
+}
+
+.forget-password-head {
+  color: #17559c;
+  font-weight: 900;
+  align-items: left;
+  text-align: left;
+  font-size: 2rem;
+}
+
+.right-side-div-signup {
+  height: 80%;
+  width: 40%;
+  background-color: white;
+  color: black;
+  padding: 2rem 4rem 2rem 8rem;
+  border-top-right-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+}
+
+.forgot-form-div-otp {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.forgot-form-div-otp input {
+  width: 10%;
+  height: 30px;
+  border-radius: 3px;
+  border: 1px solid #696666;
+  padding: auto;
+  border-radius: 5px;
+}
+
+.otp-button-div button {
+  width: 90%;
+  height: 2.5rem;
+  background-color: #107e7d;
+  border: none;
+  border-radius: 3px;
+  border-radius: 5px;
+  color: white;
+  font-weight: 600;
+  margin-top: 1rem;
+  font-size: 1rem;
+}
+
+.forget-password-para {
+  font-size: 1rem;
+  text-align: inherit;
+  color: #696666;
+}
+
+.forgot-image-otp {
+  align-items: center;
+  justify-content: center;
+  width: 75%;
+}
+
+@media only screen and (max-width: 1025px) {
+  .welcome-to-mbacouncel {
+    font-size: 1.3rem;
     font-weight: bolder;
-    color: white;
-    text-align: center;
-  }
-  
-  .forget-password-head {
-    color:#17559C;
-    font-weight: 900;
-    align-items: left;
-    text-align: left;
-    font-size: 2rem;
-  }
-  
-  .right-side-div {
-    height: 80%;
-    width: 25%;
-    background-color: white;
-    color: black;
-    padding: 2rem 4rem 2rem 8rem;
-    border-top-right-radius: 1rem;
-    border-bottom-right-radius: 1rem;
   }
 
-  .forgot-form-div-otp {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    
-  }
-
-  .forgot-form-div-otp input{
-    width: 10%;
-    height: 30px;
-    border-radius: 3px;
-    border: 1px solid #696666;;
-    padding: auto;
-    border-radius: 5px;
-  }
-
-  .otp-button-div button {
-    width: 90%;
-    height: 2.5rem;
-    background-color: #107e7d;
-    border: none;
-    border-radius: 3px;
-    border-radius: 5px;
-    color: white;
-    font-weight: 600;
-    margin-top: 1rem;
+  .create-account-p {
     font-size: 1rem;
   }
-  
-  .forget-password-para {
+  .signup-form-div button {
+    width: 100%;
+  }
+  .signup-icons-div button {
+    font-size: 10px;
+  }
+  .signup-form-div input {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 769px) {
+  .left-side-div {
+    display: none;
+  }
+  form button {
+    margin-left: 2rem;
+  }
+  form input {
+    margin-left: 2rem;
+  }
+
+  .right-side-div-signup {
+    padding: 2rem;
+    width: 50%;
+    border-radius: 1rem;
+  }
+}
+@media only screen and (max-width: 425px) {
+  .right-side-div-signup {
+    padding: 1rem;
+    width: 85%;
+    border-radius: 1rem;
+  }
+  .welcome-to-mbacouncel {
+    font-size: 1.5rem;
+    line-height: 30px;
+  }
+  .create-account-p {
     font-size: 1rem;
-    text-align: inherit;
-    color: #696666;
   }
-
-  .forgot-image-otp{
-    align-items: center;
-    justify-content: center;
-    width: 75%;
-
-  }
-   
-  
-  
-  @media only screen and (max-width: 1025px) {
-    .welcome-to-mbacouncel {
-      font-size: 1.3rem;
-      font-weight: bolder;
-    }
-  
-    .create-account-p {
-      font-size: 1rem;
-    }
-    .signup-form-div button {
-      width: 100%;
-    }
-    .signup-icons-div button {
-      font-size: 10px;
-    }
-    .signup-form-div input {
-      width: 100%;
-    }
-  }
-  @media only screen and (max-width: 769px) {
-    .left-side-div {
-      display: none;
-      
-      
-    }
-    form button{
-      margin-left: 2rem;
-    }
-    form input {
-      margin-left: 2rem;
-    }
-  
-    .right-side-div {
-      padding: 2rem;
-      width: 50%;
-      border-radius: 1rem;
-    }
-  }
-  @media only screen and (max-width: 425px) {
-    .right-side-div {
-      padding: 1rem;
-      width: 85%;
-      border-radius: 1rem;
-    }
-    .welcome-to-mbacouncel {
-      font-size: 1.5rem;
-      line-height: 30px;
-    }
-    .create-account-p {
-      font-size: 1rem;
-    }
-  }
-  
+}

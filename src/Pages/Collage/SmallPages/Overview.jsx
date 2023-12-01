@@ -2,6 +2,9 @@ import React from "react";
 import { ImLocation } from "react-icons/im";
 import { AiFillCalendar } from "react-icons/ai";
 import "../SmallPagesCSS/CommonCSS.css";
+import { GiAchievement } from "react-icons/gi";
+import { FcMoneyTransfer } from "react-icons/fc";
+import { FaRupeeSign } from "react-icons/fa";
 
 const Overview = () => {
   let arr = [1, 2, 3, 4, 5];
@@ -9,10 +12,7 @@ const Overview = () => {
     <>
       <div className="main-collage-overview-div">
         <div className="main-collage-left-side-div">
-          <div
-            className="collage-details-div"
-            style={{ border: "1px solid black", padding: "5px" }}
-          >
+          <div className="collage-details-div">
             <p>
               Indian Institute of Management, Bangalore or IIM-B, is a top
               leading Graduate school of Management in Asia. Under the IIM Act
@@ -34,41 +34,49 @@ const Overview = () => {
 
           <div className="collage-number-data">
             <div className="single-collage-number-data-div">
-              <AiFillCalendar color="green" size={35} />
+              <AiFillCalendar color="green" size={50} />
               <p>
-                Establish in <br />
+                <span style={{ color: "#bb9b61" }}>Collage Type</span> <br />
+                Public
+              </p>
+            </div>
+            <hr />
+            <div className="single-collage-number-data-div">
+              <GiAchievement color="green" size={50} />{" "}
+              <p>
+                <span style={{ color: "#bb9b61" }}> Establish in</span> <br />
                 1978
               </p>
             </div>
             <hr />
             <div className="single-collage-number-data-div">
-              <AiFillCalendar color="green" size={35} />
+              <FcMoneyTransfer color="green" size={50} />
               <p>
-                Establish in <br />
-                1978
+                <span style={{ color: "#bb9b61" }}> Max. Package </span>
+                <br /> ₹ 52.1 LPA
               </p>
             </div>
             <hr />
             <div className="single-collage-number-data-div">
-              <AiFillCalendar color="green" size={35} />
+              <FaRupeeSign
+                color="green
+              "
+                size={50}
+              />{" "}
               <p>
-                Establish in <br />
-                1978
-              </p>
-            </div>
-            <hr />
-            <div className="single-collage-number-data-div">
-              <AiFillCalendar color="green" size={35} />
-              <p>
-                Establish in <br />
-                1978
+                <span style={{ color: "#bb9b61" }}>Fees (Approx) </span>
+                <br />₹ 9.45 - 12.64 Lakhs
               </p>
             </div>
           </div>
 
           <div
             className="collage-education-at-xiam"
-            style={{ border: "1px solid black", padding: "5px" }}
+            style={{
+              border: "1px solid #dbdbdb",
+              boxShadow: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px",
+              padding: "5px",
+            }}
           >
             <h2>Education at XIME, Bangalore</h2>
             <p>
@@ -84,7 +92,11 @@ const Overview = () => {
           </div>
           <div
             className="collage-Accreditations-Rankings"
-            style={{ border: "1px solid black", padding: "5px" }}
+            style={{
+              border: "1px solid #dbdbdb",
+              boxShadow: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px",
+              padding: "5px",
+            }}
           >
             <h2>Accreditations & Rankings</h2>
             <p>
@@ -97,7 +109,11 @@ const Overview = () => {
           </div>
           <div
             className="Vision-Mission"
-            style={{ border: "1px solid black", padding: "5px" }}
+            style={{
+              border: "1px solid #dbdbdb",
+              boxShadow: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px",
+              padding: "5px",
+            }}
           >
             <h2>Vision & Mission</h2>
             <p>
@@ -122,7 +138,11 @@ const Overview = () => {
         <div className="main-collage-right-side-div">
           <div
             className="collage-new-update"
-            style={{ border: "1px solid black", padding: "5px" }}
+            style={{
+              border: "1px solid #dbdbdb",
+              boxShadow: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px",
+              padding: "5px",
+            }}
           >
             <p>
               Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ad
@@ -137,7 +157,11 @@ const Overview = () => {
 
           <div
             className="collage-similar-collge-div"
-            style={{ border: "1px solid black", padding: "5px" }}
+            style={{
+              border: "1px solid #dbdbdb",
+              boxShadow: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px",
+              padding: "5px",
+            }}
           >
             <h2>Similar Colleges</h2>
             <hr />
@@ -154,15 +178,20 @@ const Overview = () => {
                   <img
                     src={require("../../../Assets/similar.png")}
                     alt="siliar"
+                    style={{ width: "3rem" }}
                   />
-                  <p>SIBM School of Business Management</p>
+                  <p style={{ marginTop: "0rem", marginBottom: "0rem" }}>
+                    SIBM School of Business Management Lorem ipsum dolor sit
+                    amet.
+                  </p>
                 </div>
                 <div
                   style={{
                     display: "flex",
-                    justifyContent: "space-between",
+                    justifyContent: "space-evenly",
                     alignItems: "center",
                     gap: "7px",
+                    marginTop: "1rem",
                   }}
                 >
                   <div
@@ -173,9 +202,17 @@ const Overview = () => {
                       gap: "7px",
                     }}
                   >
-                    <ImLocation />
-                    <p>Bangelore</p>
+                    <ImLocation size={20} />
+                    <p style={{ marginTop: "0rem", marginBottom: "0rem" }}>
+                      Bangelore
+                    </p>
                   </div>
+                  <button
+                    className="similar-collage-button-div"
+                    style={{ backgroundColor: "#2ea44f" }}
+                  >
+                    Compare
+                  </button>
                   <button className="similar-collage-button-div">Apply</button>
                 </div>
                 <hr />
@@ -185,7 +222,11 @@ const Overview = () => {
 
           <div
             className="collage-advertiment"
-            style={{ border: "1px solid black", padding: "5px" }}
+            style={{
+              border: "1px solid #dbdbdb",
+              boxShadow: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px",
+              padding: "5px",
+            }}
           >
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis
@@ -195,70 +236,11 @@ const Overview = () => {
         </div>
       </div>
 
-      {/* FOUNDER PART START FROM HERE  */}
-      <div
-        className="collage-founder"
-        style={{
-          border: "1px solid black",
-          padding: "5px",
-          width: "90%",
-          margin: "auto",
-        }}
-      >
-        <div
-          className="collage-founder-heading"
-          style={{
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-            width: "90%",
-            margin: "auto",
-            gap: "3rem",
-            marginTop: "3rem",
-          }}
-        >
-          <hr
-            style={{ width: "70%", backgroundColor: "blue", height: "1px" }}
-          />
-          <i style={{ fontSize: "1.5rem", fontWeight: "bolder" }}>Foundation</i>
-          <hr
-            style={{ width: "70%", backgroundColor: "blue", height: "1px" }}
-          />
-        </div>
-        <div
-          className="collage-founder-member"
-          style={{
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "space-evenly",
-            gap: "3rem",
-            marginTop: "2rem",
-          }}
-        >
-          <div
-            className="collage-founder-first-member"
-            style={{ textAlign: "center" }}
-          >
-            <img src={require("../../../Assets/f1.png")} alt="first-founder" />
-            <h3>Dr something prasath shetty</h3>
-            <p>something is happing</p>
-            <p>again something is happing</p>
-          </div>
-          <div
-            className="collage-founder-second-member"
-            style={{ textAlign: "center" }}
-          >
-            <img src={require("../../../Assets/f2.png")} alt="first-founder" />
-            <h3>Dr something prasath shetty</h3>
-            <p>something is happing</p>
-            <p>again something is happing</p>
-          </div>
-        </div>
-      </div>
       <div
         className="collage-faculty"
         style={{
-          border: "1px solid black",
+          border: "1px solid #dbdbdb",
+          boxShadow: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px",
           padding: "5px",
           width: "90%",
           margin: "auto",

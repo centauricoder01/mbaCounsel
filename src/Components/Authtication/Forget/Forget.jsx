@@ -12,7 +12,7 @@ const forget = () => {
           for MBA Aspirants
         </p>
       </div>
-      <div className="right-side-div">
+      <div className="right-side-div-signup">
         <p className="forget-password-head">Forgot Password</p>
         <p className="forget-password-para">
           Sit back & relax we sre here to help you out

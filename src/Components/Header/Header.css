@@ -68,7 +68,7 @@
 .header-latest-news {
   display: flex;
   justify-content: center;
-  height: 1rem;
+  height: 6rem;
   align-items: center;
   width: 80%;
   margin: auto;
@@ -77,7 +77,7 @@
   background-image: linear-gradient(to right, #002958, #003471);
   color: white;
   top: 55%;
-  left: 8%;
+  left: 10%;
   padding: 2rem;
   border-radius: 10px;
   gap: 1rem;

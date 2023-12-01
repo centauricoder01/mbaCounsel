@@ -1,7 +1,6 @@
 import React from "react";
 import { ImLocation } from "react-icons/im";
 
-
 const Placements = () => {
   let arr = [1, 2, 3, 4, 5, 6];
   return (
@@ -112,7 +111,11 @@ const Placements = () => {
         <div className="main-collage-right-side-div">
           <div
             className="collage-similar-collge-div"
-            style={{ border: "1px solid black", padding: "5px" }}
+            style={{
+              border: "1px solid #dbdbdb",
+              boxShadow: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px",
+              padding: "5px",
+            }}
           >
             <h2>Similar Colleges</h2>
             <hr />
@@ -129,15 +132,20 @@ const Placements = () => {
                   <img
                     src={require("../../../Assets/similar.png")}
                     alt="siliar"
+                    style={{ width: "3rem" }}
                   />
-                  <p>SIBM School of Business Management</p>
+                  <p style={{ marginTop: "0rem", marginBottom: "0rem" }}>
+                    SIBM School of Business Management Lorem ipsum dolor sit
+                    amet.
+                  </p>
                 </div>
                 <div
                   style={{
                     display: "flex",
-                    justifyContent: "space-between",
+                    justifyContent: "space-evenly",
                     alignItems: "center",
                     gap: "7px",
+                    marginTop: "1rem",
                   }}
                 >
                   <div
@@ -148,9 +156,17 @@ const Placements = () => {
                       gap: "7px",
                     }}
                   >
-                    <ImLocation />
-                    <p>Bangelore</p>
+                    <ImLocation size={20} />
+                    <p style={{ marginTop: "0rem", marginBottom: "0rem" }}>
+                      Bangelore
+                    </p>
                   </div>
+                  <button
+                    className="similar-collage-button-div"
+                    style={{ backgroundColor: "#2ea44f" }}
+                  >
+                    Compare
+                  </button>
                   <button className="similar-collage-button-div">Apply</button>
                 </div>
                 <hr />
@@ -160,7 +176,11 @@ const Placements = () => {
 
           <div
             className="collage-advertiment"
-            style={{ border: "1px solid black", padding: "5px" }}
+            style={{
+              border: "1px solid #dbdbdb",
+              boxShadow: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px",
+              padding: "5px",
+            }}
           >
             <h2>Advertisment</h2>
             <p>

@@ -1,354 +1,317 @@
-.main-course-container{
-    padding-top: 6rem;
-    
+.main-course-container {
+  padding-top: 6rem;
 }
-.main-course-container p{color: #696666;
-    font-family: 'Times New Roman', Times, serif;
-
-}
-
-
-.main-course-container h2{
-    color:#107E7D ;
+.main-course-container p {
+  color: #696666;
+  /* font-family: 'Times New Roman', Times, serif; */
 }
 
-.back-image img{
-    width: 100%;
-}
-.top-basic-para{
-    width: 90%;
-    margin: auto;
-    margin-top: 5rem; 
-    margin-bottom: 5rem; 
-    font-family: 'Times New Roman', Times, serif;
-font-size: 18px;
-font-weight: 400;
-line-height: 20px;
-letter-spacing: 0em;
-color: #696666;
-
- 
+.main-course-container h2 {
+  color: #107e7d;
 }
 
-.program-details-main{
-width: 100%;
-background-color: #F6FBFF;
-
-
+.back-image img {
+  width: 100%;
 }
-.program-details{
-    width: 90%;
-    margin: auto;
-    display: flex;
-   justify-content: center;
-   align-items: center;
-}
-.program-details-para h2{
-    margin-bottom: 4rem;
-    color: #107E7D;
-    font-family: Times New Roman;
-font-size: 28px;
-font-style: italic;
-font-weight: 700;
-line-height: 32px;
-letter-spacing: 0em;
-text-align: left;
-
-
-
-}
-.program-details-para p{
-   
-    font-size: medium;
-    padding: 1rem;
-   
-
-}
-.head-of-skills-taught h2{
-    margin-bottom: 4rem;
-    color: #107E7D;
-    font-family: Times New Roman;
-font-size: 28px;
-font-style: italic;
-font-weight: 700;
-line-height: 32px;
-letter-spacing: 0em;
-text-align: left;
-
-}
-.head-of-skills-taught p{
-    
-    font-size: 18px;
-  
-    
-
+.top-basic-para {
+  width: 90%;
+  margin: auto;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0em;
+  color: #696666;
 }
 
-.main-skills-taught{
-    width: 90%;
-    margin: auto;
-    margin-top: 5rem;
-    margin-bottom: 5rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 5rem;
+.program-details-main {
+  width: 100%;
+  background-color: #f6fbff;
+}
+.program-details {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.program-details-para h2 {
+  margin-bottom: 4rem;
+  color: #107e7d;
+  font-family: Times New Roman;
+  font-size: 28px;
+  font-style: italic;
+  font-weight: 700;
+  line-height: 32px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+.program-details-para p {
+  font-size: medium;
+  padding: 1rem;
+}
+.head-of-skills-taught h2 {
+  margin-bottom: 4rem;
+  color: #107e7d;
+  font-family: Times New Roman;
+  font-size: 28px;
+  font-style: italic;
+  font-weight: 700;
+  line-height: 32px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+.head-of-skills-taught p {
+  font-size: 18px;
 }
 
-.list-of-skills-taught h4{
-    font-family: 'Times New Roman', Times, serif;
-    font-style: italic;
-    font-weight: 900;
-    font: size 1rem;;
-
+.main-skills-taught {
+  width: 90%;
+  margin: auto;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5rem;
 }
 
-.item-in-skills-taught-list li{
-    font-family: 'Times New Roman', Times, serif;
-    display: flex;
-    gap: 1rem;
-    list-style: none;
-    color: #696666;
-}
-.main-types-of-mba-courses{
-    background-color: #f2f0f0;
-    margin-top: 6rem;
-    padding-bottom: 6rem;
+.list-of-skills-taught h4 {
+  font-family: "Times New Roman", Times, serif;
+  font-style: italic;
+  font-weight: 900;
+  font: size 1rem;
 }
 
-.main-types-of-mba-courses h1{
-    color:#107E7D;
-    font-family: 'Times New Roman', Times, serif;
-    font-style: italic;
-    font-weight: 800;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: auto;
-    padding-top: 5rem;
-    margin-bottom: 5rem;
-
+.item-in-skills-taught-list li {
+  font-family: "Times New Roman", Times, serif;
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+  color: #696666;
+}
+.main-types-of-mba-courses {
+  background-color: #f2f0f0;
+  margin-top: 6rem;
+  padding-bottom: 6rem;
 }
 
-.types-of-mba-courses{
-    width: 90%;
-    margin: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.types-of-mba-courses img:nth-child(2){
-    margin-left: -4rem;
-
-}
-.syllabus-h1{
-    color:#107E7D;
-    font-family: 'Times New Roman', Times, serif;
-    font-style: italic;
-  
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 5rem;
-    margin-bottom: 5rem;
-
-}
-.syllabus-h1 h1{font-weight: 800;
-    font-family: 'Times New Roman', Times, serif;
-    font-style: italic;
-
-}
-.eligibilty-content h4{
-    font-weight: 800;
-    font-family: 'Times New Roman', Times, serif;
-    font-style: italic;
+.main-types-of-mba-courses h1 {
+  color: #107e7d;
+  font-family: "Times New Roman", Times, serif;
+  font-style: italic;
+  font-weight: 800;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  padding-top: 5rem;
+  margin-bottom: 5rem;
 }
 
-
-
-.eligibilty{
-    background-image: url(../../Assets/eligibility_background.png);
-    background-color: antiquewhite;
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 100%;
-    height: 15rem;
-    margin-bottom: 6rem;
+.types-of-mba-courses {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.eligibilty-content{
+.types-of-mba-courses img:nth-child(2) {
+  margin-left: -4rem;
+}
+.syllabus-h1 {
+  color: #107e7d;
+  font-family: "Times New Roman", Times, serif;
+  font-style: italic;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+}
+.syllabus-h1 h1 {
+  font-weight: 800;
+  font-family: "Times New Roman", Times, serif;
+  font-style: italic;
+}
+.eligibilty-content h4 {
+  font-weight: 800;
+  font-family: "Times New Roman", Times, serif;
+  font-style: italic;
+}
+
+.eligibilty {
+  background-image: url(../../Assets/eligibility_background.png);
+  background-color: antiquewhite;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 15rem;
+  margin-bottom: 6rem;
+}
+.eligibilty-content {
   width: 70%;
   margin: auto;
   padding-top: 1rem;
 }
 
-.carrer-scope h1{
-    padding-bottom:3rem;
-    color:#107E7D;
-    font-family: 'Times New Roman', Times, serif;
-    font-style: italic;
-    font-weight: 900;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
+.carrer-scope h1 {
+  padding-bottom: 3rem;
+  color: #107e7d;
+  font-family: "Times New Roman", Times, serif;
+  font-style: italic;
+  font-weight: 900;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.carrer-scope-head{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 80%;
-    margin: auto;
-    margin-bottom: 6rem;
+.carrer-scope-head {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+  margin: auto;
+  margin-bottom: 6rem;
 }
 
-.list-in-carrer-scope{
-    color: white;
-    width: 30%;
-    margin: auto;
-    background-color:#002147;
-    border: 1px solid white;
-    border-radius: 1rem;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-    
-
+.list-in-carrer-scope {
+  color: white;
+  width: 30%;
+  margin: auto;
+  background-color: #002147;
+  border: 1px solid white;
+  border-radius: 1rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
-.tittel-in-carrer-scope h3{
-    display: flex;
-    font-family: 'Times New Roman', Times, serif;
-    font-style: italic;
-    font-weight: 900;
+.tittel-in-carrer-scope h3 {
+  display: flex;
+  font-family: "Times New Roman", Times, serif;
+  font-style: italic;
+  font-weight: 900;
 }
-.list-in-carrer-scope li{
-    list-style: none ;
-    font-family: 'Times New Roman', Times, serif;
-
+.list-in-carrer-scope li {
+  list-style: none;
+  font-family: "Times New Roman", Times, serif;
 }
 
-.scope-in-mba-all{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 80%;
-    margin: auto;
-    
+.scope-in-mba-all {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  margin: auto;
 }
-.recruiters{
-    margin-top: 6rem;
-    margin-bottom: 6rem;
-}
-
-.head-of-recruiter{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-}
- 
-.head-of-recruiter h1{
-    padding-bottom:3rem;
-    color:#107E7D;
-    font-family: 'Times New Roman', Times, serif;
-    font-style: italic;
-    font-weight: 900;
-
+.recruiters {
+  margin-top: 6rem;
+  margin-bottom: 6rem;
 }
 
-.sliding-recruiter-main-div{
-    width: 100%;
-    overflow: hidden;
-
+.head-of-recruiter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.sliding-receuiters{
-    margin-top: 2rem;
-    display: flex;
-    animation: slide 30s linear infinite;
-    gap: 8rem;
-    
-}
-.sliding-receuiters img{
-    width: 100%;
-    
+.head-of-recruiter h1 {
+  padding-bottom: 3rem;
+  color: #107e7d;
+  font-family: "Times New Roman", Times, serif;
+  font-style: italic;
+  font-weight: 900;
 }
 
-.head-of-most-populer-college{
-    color:#107E7D;
-    font-family: 'Times New Roman', Times, serif;
-    font-style: italic;
-    font-weight: 900;
-    padding-bottom: 3rem;
-    width: 90%;
-    margin: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.sliding-recruiter-main-div {
+  width: 100%;
+  overflow: hidden;
+}
 
+.sliding-receuiters {
+  margin-top: 2rem;
+  display: flex;
+  animation: slide 30s linear infinite;
+  gap: 8rem;
 }
-.head-of-most-populer-college h1{
-    font-weight: 900;
+.sliding-receuiters img {
+  width: 100%;
+}
 
+.head-of-most-populer-college {
+  color: #107e7d;
+  font-family: "Times New Roman", Times, serif;
+  font-style: italic;
+  font-weight: 900;
+  padding-bottom: 3rem;
+  width: 90%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.para-of-most-populer-college{
-    width: 80%;
-    margin: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-bottom: 2rem;
+.head-of-most-populer-college h1 {
+  font-weight: 900;
 }
-.Faq-head h1{
-    font-weight: 900;
-    color:#107E7D;
-    font-family: 'Times New Roman', Times, serif;
+.para-of-most-populer-college {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 2rem;
+}
+.Faq-head h1 {
+  font-weight: 900;
+  color: #107e7d;
+  font-family: "Times New Roman", Times, serif;
 
-    margin-bottom: 4rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  margin-bottom: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.faq-search-bar{
-    font-family: 'Times New Roman', Times, serif;
-    background-color: #002147;
-    font-weight: 900;
-    color: white;
-    width: 65%;
-    margin: auto;
-    padding: 2rem;
-    margin-bottom: 6rem;
-    border-radius: 5px;
-
+.faq-search-bar {
+  font-family: "Times New Roman", Times, serif;
+  background-color: #002147;
+  font-weight: 900;
+  color: white;
+  width: 65%;
+  margin: auto;
+  padding: 2rem;
+  margin-bottom: 6rem;
+  border-radius: 5px;
 }
-.faq-search-bar h2{
-    color: white;
-
+.faq-search-bar h2 {
+  color: white;
 }
-.button-and-search{
-    display: flex;
+.button-and-search {
+  display: flex;
 }
-.search-bar-for-faq{
-    width: 60%;
-    height: 2rem;
+.search-bar-for-faq {
+  width: 60%;
+  height: 2rem;
 }
-.button-and-search button{
-    background-color: #FFA800;
-    width: 3rem;
-    border: none;
+.button-and-search button {
+  background-color: #ffa800;
+  width: 3rem;
+  border: none;
 }
-.accrodin-of-faq{
-    font-family: 'Times New Roman', Times, serif;
-    width: 70%;
-    margin: auto;
-    margin-bottom: 6rem;
+.accrodin-of-faq {
+  font-family: "Times New Roman", Times, serif;
+  width: 70%;
+  margin: auto;
+  margin-bottom: 6rem;
 }
 
 /* -------------------------------------------- */
 @keyframes slide {
-    0% {
-      transform: translateX(100%);
-    }
-    100% {
-      transform: translateX(-100%);
-    }
+  0% {
+    transform: translateX(100%);
   }
+  100% {
+    transform: translateX(-100%);
+  }
+}

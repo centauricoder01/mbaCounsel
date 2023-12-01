@@ -25,15 +25,15 @@ const Navbar = () => {
       <div className="main-image-div">
         <img src={logo} alt="logo" />
       </div>
-      <div className="main-links-div">
-        <div className="first-link-div">
-          <Link to={"/"}>
+      <div className="main-links-div-navbar">
+        <div className="first-link-div-navbar">
+          <Link to={"/collage"}>
             <p className="para-navbar-div">PROGRAMS</p>
           </Link>
-          <Link to={"/collage"}>
+          <Link to={"/collagelist"}>
             <p className="para-navbar-div">COLLAGES</p>
           </Link>
-          <Link to={"/"}>
+          <Link to={"/about"}>
             <p className="para-navbar-div">ABOUT US</p>
           </Link>
           <Link to={"/"}>
@@ -52,7 +52,7 @@ const Navbar = () => {
             </button>
           </Link>
         </div>
-        <div className="second-link-div">
+        <div className="second-link-div-navbar">
           <Link to={"/courses"}>
             <p className="para-navbar-div">DUMMY</p>
           </Link>
