@@ -1,0 +1,19 @@
+.exam-tbale-main td,tr{
+    border: 1px solid #125BAE;
+    padding: 1rem 0;
+}
+.exam-tbale-main tr:nth-child(odd) td{
+    background-color: #F0F7FF;
+}
+.exam-tbale-main tr:nth-child(even) td{
+    background-color: #FFFFFF;
+}
+.exam-tbale-main th{
+    background-color: #F0F7FF;
+}
+
+
+
+
+
+/* fontWeight:"600", fontStyle:"italic", color:"#000080"  */

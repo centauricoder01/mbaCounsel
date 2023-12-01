@@ -11,6 +11,7 @@ import Collages from "../Pages/Collage/Collages";
 import Courses from "../Pages/Courses/Courses";
 import About from "../Pages/AboutUs/About";
 import Exam from "../Pages/Exam/Exam";
+import ContactUs from "../Pages/ContactUs/ContactUs";
 
 const MainRoutes = () => {
   return (
@@ -28,6 +29,7 @@ const MainRoutes = () => {
         <Route path="/courses" element={<Courses />}></Route>
         <Route path="/about" element={<About />}></Route>
         <Route path="/exam" element={<Exam />}></Route>
+        <Route path="/ContactUS" element={<ContactUs />}></Route>
       </Routes>
     </div>
   );

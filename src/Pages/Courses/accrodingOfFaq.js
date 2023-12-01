@@ -1,4 +1,4 @@
-const items = [
+const  items = [
     {
       key: '1',
       label: '1. What are the eligibility criteria one must fulfill in order to pursue an MBA Entrepreneurship?',

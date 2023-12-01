@@ -6,9 +6,18 @@ body {
   margin: 0px;
   font-family: "Times New Roman", sans-serif;
   transition: all 0.5s linear;
+  overflow-x: hidden;
 }
 
 a {
   text-decoration: none;
   /* color: white; */
+}
+
+
+body h1,h2,h3,h4,h5,h6,p,td,tr,li{
+  font-family: "Times New Roman", sans-serif;
+}
+html {
+  scroll-behavior: smooth;
 }

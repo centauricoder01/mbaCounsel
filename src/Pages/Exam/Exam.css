@@ -1,0 +1,334 @@
+
+.exam-page-main-container{
+    padding: 0 2rem ;
+}
+
+.exam-head-image{
+    width: 100%;
+    overflow: hidden;
+    height: 90%;
+   
+}
+.exam-top-back-image img{
+    width: 100%;
+}
+
+.main-crousel-exam-page{
+   
+    position: relative;
+    bottom: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.main-all-content-of-exam-page{
+    
+    margin-left: 6px;
+    width: 99%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+
+}
+
+.all-content-of-exam-page{
+    
+     display: flex;
+    justify-content: center;
+    align-items: center; 
+     display: flex;
+    justify-content: center;
+    align-items: start;
+    gap: 2rem;
+    border: 2px solid #000080;
+    border-radius: 5px;
+    overflow-x: auto;
+    margin-top: 2rem;
+    margin-bottom: 2rem; 
+ 
+}
+
+.all-content-of-exam-page button{
+    border: none;
+    background-color: white;
+    color: black;
+    cursor: pointer;
+    font-family: "Times New Roman", sans-serif;
+    font-size: 15px;
+   padding: 10px 3rem;
+   transition: all .3s ease;
+
+    
+}
+.main-all-content-of-exam-page a{
+    text-decoration:none;
+    color:black;
+}
+    
+
+.main-about-cat-and-populer-college{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 5rem;
+   
+   
+}
+/* -------------------------------------------- */
+.populer-college{
+    /* margin-right: 2rem; */
+    border: 1px solid #D9D9D9;
+    padding: 1rem;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+
+
+.all-college-of-populer-collge{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+    
+}
+
+.all-college-of-populer-collge-number2{
+    display: flex;
+    justify-content: space-between;
+   
+}
+
+
+
+.image-of-pop-col{
+    width: 50px;
+    height: 50px;
+}
+
+.about-cat-college{
+    border: 1px solid #D9D9D9;
+    box-shadow: rgba(82, 81, 81, 0.1) 0px 4px 12px;
+    padding: 0 2rem;
+}
+
+.compare-button{
+background-color:rgb(46, 164, 79);
+border: none;
+    border-radius: 3px;
+    color: #fff;
+    height: 2rem;
+    width: 30%;
+}
+.apply-button{
+    background-color: #337062;
+    border: none;
+    border-radius: 3px;
+    color: #fff;
+    height: 2rem;
+    width: 30%;
+
+}
+
+
+.view-more-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5rem;
+}
+
+.view-more-button button{
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+    background-color:#002147 ;
+    color: white;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+/* ------------------------------------- */
+
+
+
+.main-table-of-content{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 5rem;
+    margin: 3rem 0;
+
+}
+.table-of-content{
+    border: 1px solid black;
+    box-shadow: rgba(82, 81, 81, 0.1) 0px 4px 12px;
+    background-color:#F3F3F3;
+}
+
+
+.main-eligibility-in-exam{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 5rem;
+    margin: 3rem 0;
+}
+
+.eligibility-in-exam{
+    border: 1px solid #D9D9D9;
+    box-shadow: rgba(82, 81, 81, 0.1) 0px 4px 12px;
+}
+.main-cat-registration{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 5rem;
+    margin: 3rem 0;
+    
+}
+
+.cat-registration{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #D9D9D9;
+    box-shadow: rgba(82, 81, 81, 0.1) 0px 4px 12px;
+    /* gap: 2rem; */
+
+
+}
+.eligibility-in-exam h4{
+    padding: 2rem 0;
+}
+.eligibility-in-exam h5{
+    padding: 1rem 0;
+}
+.cat-registration h4{
+    padding: 2rem 0;
+}
+
+.main-syllabus-and-updated-exam-pattern{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 5rem;
+    margin: 3rem 0;
+}
+
+.syllabus-and-updated-exam-pattern{
+    display: flex;
+    flex-direction: column;
+    border: 2px solid black;
+    gap: 1rem;
+    border: 1px solid #D9D9D9;
+    box-shadow: rgba(82, 81, 81, 0.1) 0px 4px 12px;
+}
+.syllabus-and-updated-exam-pattern th, td{
+    text-align: center;
+    border: 1px solid black;
+
+}
+.other-text h4{
+    padding-bottom: 1rem;
+}
+.main-online-prepration{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 5rem;
+    margin: 3rem 0;
+}
+.online-prepration{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #D9D9D9;
+    box-shadow: rgba(82, 81, 81, 0.1) 0px 4px 12px;
+    gap: 1rem;
+}
+
+.cat-saprate-button{
+    display: flex;
+    gap: 1rem;
+    padding: 1rem;
+   
+}
+.cat-saprate-button button{
+    background-color: white;
+    border: 1px solid black;
+    color: #1048C3;
+    font-weight: 700;
+
+}
+
+
+
+.all-content-of-cat-participating-college{
+    border: 1px solid #D9D9D9;
+    box-shadow: rgba(82, 81, 81, 0.1) 0px 4px 12px;
+   margin-bottom: 5rem;
+    
+}
+.main-cat-participating-college{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 5rem;
+    margin: 3rem 0;
+
+}
+
+.cat-and-top-mba-participating-college{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 6rem;
+    padding: 2rem 0;
+}
+
+.main-other-college-in-exam-page{
+    margin:  3rem 1rem;
+    width: 94%;
+}
+
+
+/* ------------------------- */
+
+.all-content-of-exam-page button:hover{
+    background-color: #002147;
+    color: white;
+}
+
+.all-content-of-exam-page a:hover{
+    background-color: #002147;
+    color: white;
+}
+
+
+.table-of-content a{
+    text-decoration: none;
+}
+.cat-quant-buttons button:hover{
+    background-color: #000080;
+    color: white;
+}
+.prepration-book-unorder-list li{
+    list-style: none;
+
+}
+.prepration-book-unorder-list li::before{
+    content: '\2022';
+    color: #FF5D01;
+    font-size: 30px;
+    margin-right: 8px;
+
+}
+
+.table-of-syllabus-number-1 {
+    overflow: auto;
+}
+.table-2{
+    overflow: auto;
+}
+.table-3{
+    overflow: auto;
+}

@@ -3,9 +3,7 @@
     width: 100%;
     overflow-y: hidden;
 }
-.containerfluid{
-    overflow: hidden !important;
-}
+
 .containerfluid p{
     font-family: 'Times New Roman', Times, serif;
     /* font-style: italic; */
@@ -19,7 +17,8 @@
 }
 
 .vision-row{
-    margin-top: 5rem !important;
+    margin-top: 2rem !important ;
+    padding-top: 5rem;
     align-items: center;
    justify-content: center;
    background-image: url(../../Assets/vision_back_image.png);
@@ -29,15 +28,16 @@
 
 .vision-mission-head-tag {
     margin: auto;
-    width: 70%;
+    width: 50%;
     background-color: #002147;
     color: white;
     display: flex;
     border-radius: 5px;
     align-items: center;
     justify-content: center;
+    text-align: center;
     margin-bottom: 2rem;
-    padding-bottom: 1rem;
+
 
 }
 .mission-row{
@@ -57,19 +57,33 @@
     margin-bottom: 4rem;
     color: #107E7D;
 }
-.we-value-parts{position: relative;
+.we-value-parts{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
     margin-bottom: 6rem;
     gap: 1rem;
    
-
 }
 .we-value-parts img{
-    position: relative;
-    left: 6rem;
  padding: 1rem;
- margin: 2rem;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+   width: 11rem;
+   height: 11rem;
 } 
+
+.all-value-parts{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+   
+}
+
+
+
 .why-mba{
       background-image: url(../../Assets/why_mba_back_image.png);
       width: 100%;
@@ -110,6 +124,7 @@
     gap: 2rem;
     margin: 2rem;
     padding-top: 6rem;
+   
 }
 .why-mba-text h1{
     color: #107E7D;
@@ -121,6 +136,8 @@
     justify-content: center;
    gap: 5rem;
    margin-bottom: 2rem;
+   background-color: #F9FAFA;
+
 }
 .list-in-whyMBA h3{
     font-family: 'Times New Roman', Times, serif;
@@ -133,8 +150,16 @@
     /* font-style: italic; */
     color: #696666;
     font-weight: 700;
+    font-size: 18px;
 
 }
 .list-in-whyMBA p{
     font-style: italic;
+}
+
+.text-start-main{
+    display: flex;
+    justify-content: center;
+    
+    
 }

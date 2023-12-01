@@ -1,0 +1,67 @@
+
+  
+  @keyframes App-logo-spin {
+    0% {
+        transform: scale(0);
+       
+    }
+    100% {
+        transform: scale(1);
+       
+      
+        
+    }
+  }
+  
+
+
+.crousel-item {
+    padding: 2rem 0;
+    text-align: center;
+    border-radius: 5px;
+   
+    /* margin: 2rem 0; */
+  
+}
+.slick-center {
+    animation: App-logo-spin 0.7s ease-out;
+    background-color: #002147;
+    color: white;
+    border-radius: 5px;
+   
+    
+    
+  }
+  .crousel-item p{
+    background-color:#F8F8F8;
+    color: black;
+    padding: 1rem;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    
+    
+  }
+  .slick-center p{
+    background-color: transparent;
+    color: white;
+    padding: 1rem;
+    box-shadow:none !important;
+    
+  }
+
+  .slick-next:before {
+    content: '→';
+    color: black;
+padding: 0 10px;}
+
+    .slick-prev:before {
+        content: '←';
+    color: black;}
+
+
+    @media (max-width: 767px) {
+      .slick-slide {
+        margin-top: 4rem;
+        height: 200px; /* Set your mobile height */
+        width: 80%; /* Set your mobile width */
+      }
+    }
