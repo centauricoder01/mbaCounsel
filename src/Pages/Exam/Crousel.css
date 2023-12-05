@@ -60,6 +60,7 @@ padding: 0 10px;}
 
     @media (max-width: 767px) {
       .slick-slide {
+        overflow: auto;
         margin-top: 4rem;
         height: 200px; /* Set your mobile height */
         width: 80%; /* Set your mobile width */

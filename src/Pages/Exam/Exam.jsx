@@ -12,6 +12,7 @@ import OtherCollege from "./OtherCollege";
 import Navbar from "../../Components/Navbar/Navbar";
 import Footer from "../../Components/Footer/Footer";
 import "./ExamTable.css";
+import { FaDownload } from "react-icons/fa";
 
 const Exam = () => {
   const [activeButton, setActiveButton] = useState(null);
@@ -97,10 +98,8 @@ const Exam = () => {
             </a>
           </div>
         </div>
-        <div
-          className="row main-about-cat-and-populer-college"
-          id="main-about-cat-id"
-        >
+        <div className="row main-about-cat-and-populer-college"
+          id="main-about-cat-id">
           <div className="col-md-6 about-cat-college">
             <h3
               className="mt-4"
@@ -339,10 +338,8 @@ const Exam = () => {
             </div>
           </div>
         </div>
-        <div
-          className="row main-table-of-content"
-          id="main-table-of-content-id"
-        >
+        <div className="row main-table-of-content"
+          id="main-table-of-content-id" >
           <div className="col-md-6 table-of-content ">
             <h4 className="mb-3 mt-5">Table of Content</h4>
             <p>
@@ -761,8 +758,7 @@ const Exam = () => {
             </div>
           </div>
         </div>
-        <div
-          className="row main-cat-registration"
+        <div className="row main-cat-registration"
           id="main-cat-registration-id"
         >
           <div className="col-md-6 cat-registration">
@@ -1091,8 +1087,7 @@ const Exam = () => {
             </div>
           </div>
         </div>
-        <div
-          className="row main-syllabus-and-updated-exam-pattern"
+        <div  className="row main-syllabus-and-updated-exam-pattern"
           id="main-syllabus-and-update-id"
         >
           <div className="col-md-6 syllabus-and-updated-exam-pattern">
@@ -1548,8 +1543,7 @@ const Exam = () => {
             </div>
           </div>
         </div>
-        <div
-          className="row main-online-prepration"
+        <div  className="row main-online-prepration"
           id="main-online-prepration-id"
         >
           <div className="col-md-6 online-prepration">
@@ -1568,13 +1562,25 @@ const Exam = () => {
             </p>
             <div className="cat-quant-buttons">
               <div className="cat-saprate-button">
-                <p>CAT QUANT 2020 | Slot 1</p> <button> Download Now </button>
+                <p>CAT QUANT 2020 | Slot 1</p>{" "}
+                <button className="mb-2">
+                  {" "}
+                  Download <FaDownload />{" "}
+                </button>
               </div>
               <div className="cat-saprate-button">
-                <p>CAT LRDI 2020 |Slot 1 </p> <button> Download Now </button>
+                <p>CAT LRDI 2020 |Slot 1 </p>{" "}
+                <button className="mb-2">
+                  {" "}
+                  Download <FaDownload />{" "}
+                </button>
               </div>
               <div className="cat-saprate-button">
-                <p>CAT VARC 2020 | Slot 1 </p> <button> Download Now </button>
+                <p>CAT VARC 2020 | Slot 1 </p>{" "}
+                <button className="mb-2">
+                  {" "}
+                  Download <FaDownload />{" "}
+                </button>
               </div>
             </div>
             <h4>Prepration Books</h4>
@@ -1880,8 +1886,7 @@ const Exam = () => {
           </div>
         </div>
 
-        <div
-          className=" row main-cat-participating-college"
+        <div className=" row main-cat-participating-college"
           id="main-participating-college-id"
         >
           <div className="col-md-6 all-content-of-cat-participating-college  ">
@@ -1907,112 +1912,28 @@ const Exam = () => {
               Top IIMs accepting CAT 2021 score
             </p>
             <div className="cat-and-top-mba-participating-college">
-              <AllCollegeInExam
-                image={require("../../Assets/exam-page-IIM.png")}
-                head={"International Managment Institute"}
-                location={"new Delhi "}
-                money={"19.25 Lakh (Fees)"}
-                avgPackage={"26 Lakh (Average package)"}
-              />
-
-              <AllCollegeInExam
-                image={require("../../Assets/exam-page-IIM.png")}
-                head={"International Managment Institute"}
-                location={"new Delhi "}
-                money={"19.25 Lakh (Fees)"}
-                avgPackage={"26 Lakh (Average package)"}
-              />
-
-              <AllCollegeInExam
-                image={require("../../Assets/exam-page-IIM.png")}
-                head={"International Managment Institute"}
-                location={"new Delhi "}
-                money={"19.25 Lakh (Fees)"}
-                avgPackage={"26 Lakh (Average package)"}
-              />
-
-              <AllCollegeInExam
-                image={require("../../Assets/exam-page-IIM.png")}
-                head={"International Managment Institute"}
-                location={"new Delhi "}
-                money={"19.25 Lakh (Fees)"}
-                avgPackage={"26 Lakh (Average package)"}
-              />
-
-              <AllCollegeInExam
-                image={require("../../Assets/exam-page-IIM.png")}
-                head={"International Managment Institute"}
-                location={"new Delhi "}
-                money={"19.25 Lakh (Fees)"}
-                avgPackage={"26 Lakh (Average package)"}
-              />
-
-              <AllCollegeInExam
-                image={require("../../Assets/exam-page-IIM.png")}
-                head={"International Managment Institute"}
-                location={"new Delhi "}
-                money={"19.25 Lakh (Fees)"}
-                avgPackage={"26 Lakh (Average package)"}
-              />
+              <AllCollegeInExam />
+              <AllCollegeInExam />
+              <AllCollegeInExam />
+              <AllCollegeInExam />
+              <AllCollegeInExam />
+              <AllCollegeInExam />
+              <AllCollegeInExam />
+              <AllCollegeInExam />
             </div>
             <h4 className="mt-5 mb-5">
               Top MBA Colleges Accepting CAT in Non-IIM Category{" "}
             </h4>
 
             <div className="cat-and-top-mba-participating-college">
-              <AllCollegeInExam
-                image={require("../../Assets/exam-page-IIM.png")}
-                head={"International Managment Institute"}
-                location={"new Delhi "}
-                money={"19.25 Lakh (Fees)"}
-                avgPackage={"26 Lakh (Average package)"}
-              />
-
-              <AllCollegeInExam
-                image={require("../../Assets/exam-page-IIM.png")}
-                head={"International Managment Institute"}
-                location={"new Delhi "}
-                money={"19.25 Lakh (Fees)"}
-                avgPackage={"26 Lakh (Average package)"}
-              />
-
-              <AllCollegeInExam
-                image={require("../../Assets/exam-page-IIM.png")}
-                head={"International Managment Institute"}
-                location={"new Delhi "}
-                money={"19.25 Lakh (Fees)"}
-                avgPackage={"26 Lakh (Average package)"}
-              />
-
-              <AllCollegeInExam
-                image={require("../../Assets/exam-page-IIM.png")}
-                head={"International Managment Institute"}
-                location={"new Delhi "}
-                money={"19.25 Lakh (Fees)"}
-                avgPackage={"26 Lakh (Average package)"}
-              />
-
-              <AllCollegeInExam
-                image={require("../../Assets/exam-page-IIM.png")}
-                head={"International Managment Institute"}
-                location={"new Delhi "}
-                money={"19.25 Lakh (Fees)"}
-                avgPackage={"26 Lakh (Average package)"}
-              />
-
-              <AllCollegeInExam
-                image={require("../../Assets/exam-page-IIM.png")}
-                head={"International Managment Institute"}
-                location={"new Delhi "}
-                money={"19.25 Lakh (Fees)"}
-                avgPackage={"26 Lakh (Average package)"}
-              />
-            </div>
-
-            <h4 className=" mt-5 mb-3 "> Other Top Colleges</h4>
-
-            <div className="main-other-college-in-exam-page">
-              <OtherCollege />
+              <AllCollegeInExam />
+              <AllCollegeInExam />
+              <AllCollegeInExam />
+              <AllCollegeInExam />
+              <AllCollegeInExam />
+              <AllCollegeInExam />
+              <AllCollegeInExam />
+              <AllCollegeInExam />
             </div>
           </div>
           <div className="col-md-3 populer-college">
@@ -2190,6 +2111,13 @@ const Exam = () => {
             <div className="view-more-button">
               <button>View More</button>
             </div>
+          </div>
+        </div>
+
+        <div className="row main-other-college-in-exam-page">
+          <div className="col-md-10 other-college-in-exam-page">
+            <h3 className=" mb-5 "> Other Top Colleges</h3>
+            <OtherCollege />
           </div>
         </div>
       </div>
