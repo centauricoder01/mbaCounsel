@@ -2175,8 +2175,10 @@ const Exam = () => {
             <OtherCollege />
           </div>
         </div>
+        </div>
 
       </div>
+      
       <Footer />
     </>
   );
