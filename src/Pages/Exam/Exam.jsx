@@ -98,10 +98,8 @@ const Exam = () => {
             </a>
           </div>
         </div>
-        <div
-          className="row main-about-cat-and-populer-college"
-          id="main-about-cat-id"
-        >
+        <div className="row main-about-cat-and-populer-college"
+          id="main-about-cat-id">
           <div className="col-md-6 about-cat-college">
             <h3
               className="mt-4"
@@ -340,10 +338,8 @@ const Exam = () => {
             </div>
           </div>
         </div>
-        <div
-          className="row main-table-of-content"
-          id="main-table-of-content-id"
-        >
+        <div className="row main-table-of-content"
+          id="main-table-of-content-id" >
           <div className="col-md-6 table-of-content ">
             <h4 className="mb-3 mt-5">Table of Content</h4>
             <p>
@@ -762,8 +758,7 @@ const Exam = () => {
             </div>
           </div>
         </div>
-        <div
-          className="row main-cat-registration"
+        <div className="row main-cat-registration"
           id="main-cat-registration-id"
         >
           <div className="col-md-6 cat-registration">
@@ -1092,8 +1087,7 @@ const Exam = () => {
             </div>
           </div>
         </div>
-        <div
-          className="row main-syllabus-and-updated-exam-pattern"
+        <div  className="row main-syllabus-and-updated-exam-pattern"
           id="main-syllabus-and-update-id"
         >
           <div className="col-md-6 syllabus-and-updated-exam-pattern">
@@ -1549,9 +1543,15 @@ const Exam = () => {
             </div>
           </div>
         </div>
+
         <div
           className="row main-online-prepration"
           id="main-online-prepration-id">
+
+        <div  className="row main-online-prepration"
+          id="main-online-prepration-id"
+        >
+
           <div className="col-md-6 online-prepration">
             <h4
               className="mt-5"
@@ -1568,6 +1568,7 @@ const Exam = () => {
             </p>
             <div className="cat-quant-buttons">
               <div className="cat-saprate-button">
+
                 <p>CAT QUANT 2020 | Slot 1</p> <button  className="mb-2" > Download <FaDownload /></button>
               </div>
               <div className="cat-saprate-button">
@@ -1575,6 +1576,27 @@ const Exam = () => {
               </div>
               <div className="cat-saprate-button">
                 <p>CAT VARC 2020 | Slot 1 </p> <button  className="mb-2" >  Download <FaDownload /> </button>
+
+                <p>CAT QUANT 2020 | Slot 1</p>{" "}
+                <button className="mb-2">
+                  {" "}
+                  Download <FaDownload />{" "}
+                </button>
+              </div>
+              <div className="cat-saprate-button">
+                <p>CAT LRDI 2020 |Slot 1 </p>{" "}
+                <button className="mb-2">
+                  {" "}
+                  Download <FaDownload />{" "}
+                </button>
+              </div>
+              <div className="cat-saprate-button">
+                <p>CAT VARC 2020 | Slot 1 </p>{" "}
+                <button className="mb-2">
+                  {" "}
+                  Download <FaDownload />{" "}
+                </button>
+
               </div>
             </div>
             <h4>Prepration Books</h4>
@@ -1881,7 +1903,13 @@ const Exam = () => {
         </div>
 
         <div className=" row main-cat-participating-college"
+
+
           id="main-participating-college-id" >
+
+          id="main-participating-college-id"
+        >
+
           <div className="col-md-6 all-content-of-cat-participating-college  ">
             <h4
               className="mt-5"
@@ -1905,6 +1933,7 @@ const Exam = () => {
               Top IIMs accepting CAT 2021 score
             </p>
             <div className="cat-and-top-mba-participating-college">
+
              <AllCollegeInExam/>
              <AllCollegeInExam/>
              <AllCollegeInExam/>
@@ -1913,12 +1942,23 @@ const Exam = () => {
              <AllCollegeInExam/>
              <AllCollegeInExam/>
              <AllCollegeInExam/>
+
+              <AllCollegeInExam />
+              <AllCollegeInExam />
+              <AllCollegeInExam />
+              <AllCollegeInExam />
+              <AllCollegeInExam />
+              <AllCollegeInExam />
+              <AllCollegeInExam />
+              <AllCollegeInExam />
+
             </div>
             <h4 className="mt-5 mb-5">
               Top MBA Colleges Accepting CAT in Non-IIM Category{" "}
             </h4>
 
             <div className="cat-and-top-mba-participating-college">
+
             <AllCollegeInExam/>
             <AllCollegeInExam/>
             <AllCollegeInExam/>
@@ -1927,6 +1967,16 @@ const Exam = () => {
             <AllCollegeInExam/>
             <AllCollegeInExam/>
             <AllCollegeInExam/>
+
+              <AllCollegeInExam />
+              <AllCollegeInExam />
+              <AllCollegeInExam />
+              <AllCollegeInExam />
+              <AllCollegeInExam />
+              <AllCollegeInExam />
+              <AllCollegeInExam />
+              <AllCollegeInExam />
+
             </div>
           </div>
           <div className="col-md-3 populer-college">
@@ -2107,6 +2157,7 @@ const Exam = () => {
           </div>
          
         </div>
+
         
           <div className="row main-other-college-in-exam-page">
           
@@ -2116,6 +2167,15 @@ const Exam = () => {
               <OtherCollege />
             </div>
           </div>
+
+
+        <div className="row main-other-college-in-exam-page">
+          <div className="col-md-10 other-college-in-exam-page">
+            <h3 className=" mb-5 "> Other Top Colleges</h3>
+            <OtherCollege />
+          </div>
+        </div>
+
       </div>
       <Footer />
     </>

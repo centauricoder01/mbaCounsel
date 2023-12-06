@@ -12,6 +12,8 @@ import Courses from "../Pages/Courses/Courses";
 import About from "../Pages/AboutUs/About";
 import Exam from "../Pages/Exam/Exam";
 import ContactUs from "../Pages/ContactUs/ContactUs";
+import LatestNews from "../Pages/LatestNews/LatestNews";
+import Mainredirect from "../Pages/LatestNews/redirectFolder/Mainredirect"
 
 const MainRoutes = () => {
   return (
@@ -30,6 +32,9 @@ const MainRoutes = () => {
         <Route path="/about" element={<About />}></Route>
         <Route path="/exam" element={<Exam />}></Route>
         <Route path="/ContactUS" element={<ContactUs />}></Route>
+        <Route path="/LatestNews" element={<LatestNews />}></Route>
+        <Route path="/redirectFolder" element={<Mainredirect />}></Route>
+   
       </Routes>
     </div>
   );
