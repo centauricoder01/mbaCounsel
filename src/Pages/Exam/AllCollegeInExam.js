@@ -10,7 +10,11 @@ const AllCollegeInExam = () => {
                 src={require("../../Assets/Mask-Group.png")}
                 alt="mask-group"
               />
+
+              <h4 style={{ color: "black" }}>IIM Bangelore Lorem ipsum dolor, sit amet consectetur adipisic</h4>
+
               <h4 >IIM Bangelore Lorem ipsum dolor, sit amet consectetur adipisic</h4>
+
               <div className="main-centeral-div">
                 <div className="top-left-side-div">
                   <div>
