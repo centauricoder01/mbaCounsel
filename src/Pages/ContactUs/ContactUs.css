@@ -33,11 +33,19 @@
     gap: 1rem;
 }
 
-.para-text-of-contact-us-page h6,h4{
+.para-text-of-contact-us-page h6{
     
     font-weight: 700;
     font-style: italic;
 }
+
+
+.para-text-of-contact-us-page h4{
+    
+    font-weight: 700;
+    font-style: italic;
+}
+
 .images-components-of-contact-us-page{
 
     display: flex;

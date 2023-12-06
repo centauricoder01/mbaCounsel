@@ -1,0 +1,41 @@
+.main-head-image-of-redirect-page{
+  width: 100vw;
+  padding-top: 6rem;
+
+}
+
+
+.head-image-of-redirect-page img{
+  max-width: 103% !important;
+}
+.main-all-content-of-latest-news-redirect-page{
+  display: flex;
+  justify-content: center;
+  align-content:center;
+
+}
+.all-content-of-latest-news-redirect-page{
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.text-of-back-image-latest-news{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  bottom: 12rem;
+  color: white;
+}
+
+
+.head-image-of-redirect-page::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 58%;
+  background: rgba(0, 0, 0, 0.5)}

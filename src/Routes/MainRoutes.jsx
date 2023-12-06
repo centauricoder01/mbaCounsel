@@ -13,6 +13,8 @@ import About from "../Pages/AboutUs/About";
 import Exam from "../Pages/Exam/Exam";
 import CollageList from "../Pages/CollageList/CollageList";
 import ContactUs from "../Pages/ContactUs/ContactUs";
+import LatestNews from "../Pages/LatestNews/LatestNews";
+import Mainredirect from "../Pages/LatestNews/redirectFolder/Mainredirect"
 
 const MainRoutes = () => {
   return (
@@ -32,6 +34,9 @@ const MainRoutes = () => {
         <Route path="/exam" element={<Exam />}></Route>
         <Route path="/collagelist" element={<CollageList />}></Route>
         <Route path="/ContactUS" element={<ContactUs />}></Route>
+        <Route path="/LatestNews" element={<LatestNews />}></Route>
+        <Route path="/redirectFolder" element={<Mainredirect />}></Route>
+   
       </Routes>
     </div>
   );
