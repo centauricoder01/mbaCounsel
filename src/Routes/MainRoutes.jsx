@@ -12,6 +12,7 @@ import Courses from "../Pages/Courses/Courses";
 import About from "../Pages/AboutUs/About";
 import Exam from "../Pages/Exam/Exam";
 import CollageList from "../Pages/CollageList/CollageList";
+import ContactUs from "../Pages/ContactUs/ContactUs";
 
 const MainRoutes = () => {
   return (
@@ -30,6 +31,7 @@ const MainRoutes = () => {
         <Route path="/about" element={<About />}></Route>
         <Route path="/exam" element={<Exam />}></Route>
         <Route path="/collagelist" element={<CollageList />}></Route>
+        <Route path="/ContactUS" element={<ContactUs />}></Route>
       </Routes>
     </div>
   );

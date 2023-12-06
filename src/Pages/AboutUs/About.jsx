@@ -3,7 +3,7 @@ import Navbar from "../../Components/Navbar/Navbar";
 import "./About.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import CardsOfAbout from "./CardsOfAbout";
-import Footer  from "../../Components/Footer/Footer";
+import Footer from "../../Components/Footer/Footer";
 
 const About = () => {
   return (
@@ -11,13 +11,13 @@ const About = () => {
       <Navbar />
       <img
         src={require("../../Assets/about_us_head.png")}
-        className="img-fluid head-image"
+        className="img-fluid head-image pt-5"
         alt=""
       />
       <div className="containerfluid">
         <div className="row vision-row">
           <div className="col-lg-5 order-lg-1">
-            <h1 className="vision-mission-head-tag ">VISION </h1>
+            <h1 className="vision-mission-head-tag text-center ">VISION </h1>
             <p>
               We envision a future in India where aspirants and brilliant minds
               in pursuit of their masters are guided to the best colleges and
@@ -25,12 +25,18 @@ const About = () => {
               guarantees a prosperous career but focuses on the overall
               development of their students. We are zealous in bringing to you
               the top MBA colleges in India while guiding you with an elaborate
-              walkthrough for each program. <hr /> Statement : We envision - “To
-              be India’s only dedicated platform creating a complete ecosystem
-              of guidance and counseling to MBA aspirants out there”
+              walkthrough for each program.{" "}
+              <hr style={{ border: "1px solid black" }} />{" "}
+              <span style={{ color: "#107E7D", fontWeight: "600" }}>
+                {" "}
+                Statement{" "}
+              </span>{" "}
+              : We envision - “To be India’s only dedicated platform creating a
+              complete ecosystem of guidance and counseling to MBA aspirants out
+              there”
             </p>
           </div>
-          <div className="col-lg-5 order-lg-2 vision-image">
+          <div className="col-lg-5 order-md-2 vision-image">
             <img
               src={require("../../Assets/vision_about_us.png")}
               className="img-fluid"
@@ -41,7 +47,7 @@ const About = () => {
         {/* -------------------------------------------------------------------------------- */}
 
         <div className="row mission-row">
-          <div className="col-lg-5 order-lg-1 image-of-mission">
+          <div className="col-lg-5 order-md-2 image-of-mission">
             <img
               src={require("../../Assets/mission_about_us.png")}
               className="img-fluid "
@@ -59,61 +65,45 @@ const About = () => {
               in India, trending MBA specialization courses, and even assist
               them with a tailored plan for accommodation, finding an
               internship, financing your education, preparation guidance, and
-              much more. <hr />
-              Statement : Our mission is to “Administer and counsel MBA
-              aspirants addressing all their needs with every possibility,
-              guiding them to their rightful career choice.
+              much more. <hr style={{ border: "1px solid black" }} />{" "}
+              <span style={{ color: "#107E7D", fontWeight: "600" }}>
+                {" "}
+                Statement{" "}
+              </span>
+              : Our mission is to “Administer and counsel MBA aspirants
+              addressing all their needs with every possibility, guiding them to
+              their rightful career choice.
             </p>
           </div>
         </div>
         <div className="row">
           <div className="col-12 align-text">
-            <h2 style={{fontStyle:"italic", fontWeight:"800"}} >| WE VALUE </h2>
+            <h2 style={{ fontStyle: "italic", fontWeight: "800" }}>
+              | WE VALUE{" "}
+            </h2>
           </div>
         </div>
-        <div className="row   we-value-parts">
-          <div className="col-lg-2 order-lg-1">
+        <div className="row we-value-parts">
+          <div className="col-md-10   all-value-parts ">
+            <img src={require("../../Assets/accountability.png")} alt="" />
             <img
-              src={require("../../Assets/accountability.png")}
-              alt=""
-              className="img-fluid"
-            />
-          </div>
-          <div className="col-lg-2 order-lg-2">
-            <img
-              src={require("../../Assets/collab-and-partnership.png")}
-              alt=""
-              className="img-fluid"
-            />
-          </div>
-          <div className="col-lg-2 order-lg-3">
-            <img
-              src={require("../../Assets/innovation.png")}
-              alt=""
-              className="img-fluid"
-            />
-          </div>
-          <div className="col-lg-2 order-lg-4">
-            <img
-              src={require("../../Assets/result-oriented.png")}
-              alt=""
-              className="img-fluid"
-            />
-          </div>
-          <div className="col-lg-2 order-lg-5">
-            <img
-              src={require("../../Assets/employee-devlopment.png")}
-              alt=""
-              className="img-fluid"
-            />
+              src={require("../../Assets/collab-and-partnership.png")} alt=""  />
+
+            <img src={require("../../Assets/innovation.png")} alt="" />
+
+            <img src={require("../../Assets/result-oriented.png")} alt="" />
+
+            <img src={require("../../Assets/employee-devlopment.png")} alt="" />
           </div>
         </div>
         <div className="row why-mba">
           <div className="col-10">
-            <h2 style={{fontStyle:"italic", fontWeight:"600"}} >| WHY MBA COUNCEL</h2>
+            <h2 style={{ fontStyle: "italic", fontWeight: "600" }}>
+              | WHY MBA COUNCEL
+            </h2>
           </div>
           <div className="col-10">
-            <p style={{color:"white", fontStyle:"italic"}} >
+            <p style={{ color: "white", fontStyle: "italic" }}>
               A lot has changed since the pandemic shocked the globe. Today,
               given much to the necessary changes made in the nation’s education
               system, it has become critical to select from the range of
@@ -121,7 +111,9 @@ const About = () => {
             </p>
           </div>
           <div className="col-10">
-            <p style={{color:"white"}} >Now ask us what MBA COUNCEL has got for you: </p>
+            <p style={{ color: "white" }}>
+              Now ask us what MBA COUNCEL has got for you:{" "}
+            </p>
           </div>
           <div className="row cards-of-about  ">
             <div className="col-lg-4 order-lg-1 cardNoOne ">
@@ -155,10 +147,10 @@ const About = () => {
         </div>
         <div className="row why-mba-text">
           <div className="col-10  ">
-            <h1 style={{fontStyle:'italic'}} >| WHY MBA</h1>
+            <h1 style={{ fontStyle: "italic" }}>| WHY MBA</h1>
           </div>
           <div className="col-10 ">
-            <p style={{fontStyle:'italic'}}>
+            <p style={{ fontStyle: "italic", fontWeight: "600" }}>
               One of the most crucial questions for MBA aspirants is what it
               entails to do a Master’s in Business Administration. Given the
               radical rise in international and national business standards,
@@ -173,8 +165,10 @@ const About = () => {
           </div>
         </div>
         <div className="row ">
-          <div className="col-4 text-center">
-            <p>Here are the top 5 reasons to choose MBA as our career.</p>
+          <div className="col-10 text-start-main ">
+            <h6 style={{ fontWeight: "600", fontSize: "25px" }}>
+              Here are the top 5 reasons to choose MBA as our career.
+            </h6>
           </div>
         </div>
         <div className="row list-in-whyMBA mb-5">
@@ -203,7 +197,7 @@ const About = () => {
             </p>
           </div>
           <div className="col-10">
-            <h3 className="pb-4"> 
+            <h3 className="pb-4">
               3. Learn the In and Out of managing a Business:
             </h3>
             <p>
@@ -238,7 +232,7 @@ const About = () => {
           </div>
         </div>
       </div>
-      <Footer/>
+      <Footer />
     </>
   );
 };

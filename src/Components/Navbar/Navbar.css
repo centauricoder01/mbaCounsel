@@ -13,15 +13,11 @@
   overflow: hidden;
   position: fixed;
   width: 100%;
-  z-index: 200;
+  z-index: 2000 !important;
 }
 
 .main-navbar img {
   width: 20%;
-}
-
-.para-navbar-div {
-  color: black;
 }
 
 .first-link-div-navbar {

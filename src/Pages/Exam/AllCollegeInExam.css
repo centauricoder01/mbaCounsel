@@ -1,0 +1,24 @@
+
+.exam-card{
+    -webkit-box-shadow: 0px -1px 22px 6px rgba(0,0,0,0.28);
+-moz-box-shadow: 0px -1px 22px 6px rgba(0,0,0,0.28);
+box-shadow: 0px -1px 22px 6px rgba(0,0,0,0.28);
+}
+
+.card-body-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    
+}
+
+.other-cards-body{
+    width: 200px;
+    height: 210px;
+    background-color: #F1F1F1;
+    border-radius: 8px;
+    
+    
+}
