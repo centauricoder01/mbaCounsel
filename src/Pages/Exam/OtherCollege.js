@@ -11,7 +11,7 @@ const OtherCollege = () => {
         dots: true,
         infinite: true,
         speed: 500,
-        slidesToShow: 3,
+        slidesToShow: 5,
         slidesToScroll: 5, responsive: [
             {
               breakpoint: 1024,
@@ -45,6 +45,22 @@ const OtherCollege = () => {
    <>
  <Slider {...settings}>
       
+<OtherCollegeContent/>
+<OtherCollegeContent/>
+<OtherCollegeContent/>
+<OtherCollegeContent/>
+<OtherCollegeContent/>
+<OtherCollegeContent/>
+<OtherCollegeContent/>
+<OtherCollegeContent/>
+<OtherCollegeContent/>
+<OtherCollegeContent/>
+<OtherCollegeContent/>
+<OtherCollegeContent/>
+<OtherCollegeContent/>
+<OtherCollegeContent/>
+<OtherCollegeContent/>
+<OtherCollegeContent/>
 <OtherCollegeContent/>
 <OtherCollegeContent/>
 <OtherCollegeContent/>

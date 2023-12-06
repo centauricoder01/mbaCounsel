@@ -7,7 +7,7 @@ const OtherCollegeContent = () => {
 
 
   <div className="other-cards-body" >
-  <img src={require("../../Assets/exam-page-christ-university-other-number-1.png")} alt="" width={200} />
+  <img src={require("../../Assets/exam-page-christ-university-other-number-1.png")} alt="" width={218} />
     <h6 style={ {textAlign:"center" }}>Christ University
 Bangalore</h6>
   </div>

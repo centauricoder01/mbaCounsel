@@ -29,19 +29,22 @@
   align-items: center;
 }
 
-.all-content-of-exam-page {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  display: flex;
-  justify-content: center;
-  align-items: start;
-  gap: 2rem;
-  border: 2px solid #000080;
-  border-radius: 5px;
-  overflow-x: auto;
-  margin-top: 2rem;
-  margin-bottom: 2rem;
+.all-content-of-exam-page{
+    
+     display: flex;
+    justify-content: center;
+    align-items: center; 
+     display: flex;
+    justify-content: center;
+    align-items: start;
+    gap: 2rem;
+    /* border: 2px solid #000080; */
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    border-radius: 5px;
+    overflow-x: auto;
+    margin-top: 2rem;
+    margin-bottom: 2rem; 
+ 
 }
 
 .all-content-of-exam-page button {
@@ -237,27 +240,36 @@ td {
   box-shadow: rgba(82, 81, 81, 0.1) 0px 4px 12px;
   margin-bottom: 5rem;
 }
-.main-cat-participating-college {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  gap: 5rem;
-  margin: 3rem 0;
+.main-cat-participating-college{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 5rem;
+   margin-top: 3rem;
+
 }
 
-.cat-and-top-mba-participating-college {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  gap: 6rem;
-  padding: 2rem 0;
+.cat-and-top-mba-participating-college{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    padding: 2rem 0;
 }
 
-.main-other-college-in-exam-page {
-  margin: 3rem 1rem;
-  width: 94%;
+.main-other-college-in-exam-page{
+    margin-bottom: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+.other-college-in-exam-page{
+    border: 1px solid #D9D9D9;
+    box-shadow: rgba(82, 81, 81, 0.1) 0px 4px 12px;
+
+}
+
 
 /* ------------------------- */
 
