@@ -42,7 +42,7 @@ const Navbar = () => {
           </Link>
           <Link to={"/about"}>
             <Button style={{ backgroundColor: "transparent", border: "none" }}>
-              ABOUT US
+              ABOUT
             </Button>
           </Link>
           <Link to={"/"}>
