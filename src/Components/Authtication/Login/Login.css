@@ -37,16 +37,16 @@
 }
 
 .welcome-to-mbacouncel {
-  color: #17559C;
+  color: #17559c;
   font-weight: 900;
   align-items: center;
   text-align: center;
   font-size: 1.5rem;
 }
 
-.right-side-div {
+.right-side-div-signup {
   height: 80%;
-  width: 30%;
+  width: 40%;
   background-color: white;
   color: black;
   padding: 2rem 4rem 2rem 8rem;
@@ -64,7 +64,6 @@
   justify-content: space-evenly;
   align-items: center;
   gap: 1rem;
- 
 }
 
 .login-icons-div button {
@@ -106,7 +105,7 @@
 }
 
 .signup-form-div button {
-  color:white;
+  color: white;
   font-size: medium;
   width: 90%;
   height: 2.5rem;
@@ -124,18 +123,18 @@
   font-weight: bolder;
   cursor: pointer;
 }
-.forgot-password-sign-in-div{
+.forgot-password-sign-in-div {
   font-size: small;
-  text-align: right!important;
+  text-align: right !important;
   width: 90%;
   cursor: pointer;
   color: #696666;
 }
-.hr-under-login{
+.hr-under-login {
   width: 20%;
   margin-left: 0%;
 }
-.signup-form-div input{
+.signup-form-div input {
   border: 1px solid black;
   border-radius: 10px;
 }
@@ -145,7 +144,7 @@
     font-size: 1.3rem;
     font-weight: bolder;
   }
-                               
+
   .create-account-p {
     font-size: 1rem;
   }
@@ -162,24 +161,22 @@
 @media only screen and (max-width: 769px) {
   .left-side-div {
     display: none;
-    
-    
   }
-  form button{
+  form button {
     margin-left: 2rem;
   }
   form input {
     margin-left: 2rem;
   }
 
-  .right-side-div {
+  .right-side-div-signup {
     padding: 2rem;
     width: 50%;
     border-radius: 1rem;
   }
 }
 @media only screen and (max-width: 425px) {
-  .right-side-div {
+  .right-side-div-signup {
     padding: 1rem;
     width: 85%;
     border-radius: 1rem;

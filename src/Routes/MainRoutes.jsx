@@ -11,6 +11,7 @@ import Collages from "../Pages/Collage/Collages";
 import Courses from "../Pages/Courses/Courses";
 import About from "../Pages/AboutUs/About";
 import Exam from "../Pages/Exam/Exam";
+import CollageList from "../Pages/CollageList/CollageList";
 import ContactUs from "../Pages/ContactUs/ContactUs";
 import LatestNews from "../Pages/LatestNews/LatestNews";
 import Mainredirect from "../Pages/LatestNews/redirectFolder/Mainredirect"
@@ -35,6 +36,7 @@ const MainRoutes = () => {
         <Route path="/courses" element={<Courses />}></Route>
         <Route path="/about" element={<About />}></Route>
         <Route path="/exam" element={<Exam />}></Route>
+<<<<<<< HEAD
         <Route path="/contact" element={<ContactUs />}></Route>
         <Route path="/latestnews" element={<LatestNews />}></Route>
         <Route path="/redirectfolder" element={<Mainredirect />}></Route>
@@ -42,6 +44,12 @@ const MainRoutes = () => {
         <Route path="/allblogs" element={<BlogRedirect />}></Route>
         <Route path="/articles" element={<Articles />}></Route>
         <Route path="/allarticle" element={<ArticleRedirect />}></Route>
+=======
+        <Route path="/collagelist" element={<CollageList />}></Route>
+        <Route path="/ContactUS" element={<ContactUs />}></Route>
+        <Route path="/LatestNews" element={<LatestNews />}></Route>
+        <Route path="/redirectFolder" element={<Mainredirect />}></Route>
+>>>>>>> ed557ebf24d11c8d5534392c5f9f030243c52d5e
    
       </Routes>
     </div>

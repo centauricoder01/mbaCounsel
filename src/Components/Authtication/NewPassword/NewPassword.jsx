@@ -11,7 +11,7 @@ const NewPassword = () => {
           for MBA Aspirants
         </p>
       </div>
-      <div className="right-side-div">
+      <div className="right-side-div-signup">
         <p className="forget-password-head">Create New Password</p>
         <p className="forget-password-para">
           we'll ask for this password whenever you sign-in
@@ -26,8 +26,11 @@ const NewPassword = () => {
         </form>
         <div className="extra-content-at-bottom">
           <ul>
-          <h3  >Strong Password Tips</h3>
-            <li>Password should contain 8 characters,a combination of Numbers, words & special characters</li>
+            <h3>Strong Password Tips</h3>
+            <li>
+              Password should contain 8 characters,a combination of Numbers,
+              words & special characters
+            </li>
             {/* <li>Do not use email address, mobile /phone numbers or other personal information like D.O.B., Anniversary etc that can be easly obtained</li>
             <li>Do not use same password form multiple online accounts</li> */}
           </ul>

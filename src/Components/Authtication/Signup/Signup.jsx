@@ -15,7 +15,7 @@ const Signup = () => {
           for MBA Aspirants
         </p>
       </div>
-      <div className="right-side-div">
+      <div className="right-side-div-signup">
         <p className="welcome-to-mbacouncel">WELCOME TO MBACOUNCEL</p>
         <p className="create-account-p">Create a Acccount</p>
         <div className="signup-icons-div">

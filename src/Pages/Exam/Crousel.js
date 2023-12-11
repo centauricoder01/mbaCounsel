@@ -56,7 +56,6 @@ function App() {
         {carouselItems.map((item) => (
           <div className="crousel-item"
             key={item.id}
-         
           >
             <p>
               Lorem ipsum dolor sit amet consectetur, adipisicing elit.

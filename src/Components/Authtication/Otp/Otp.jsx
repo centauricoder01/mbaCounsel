@@ -12,7 +12,7 @@ const Otp = () => {
           for MBA Aspirants
         </p>
       </div>
-      <div className="right-side-div">
+      <div className="right-side-div-signup">
         <p className="forget-password-head">Forgot Password</p>
         <img
           src={require("../../../Assets/forgot-otp-image.png")}

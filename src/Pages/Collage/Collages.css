@@ -5,11 +5,17 @@
   position: relative;
 }
 
+.collage-details-div {
+  padding: 5px;
+  border: 1px solid #dbdbdb;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
 .collage-page-background-div {
   background-image: linear-gradient(
       to bottom,
-      rgba(97, 97, 97, 0.5),
-      rgba(97, 97, 97, 0.5)
+      rgba(0, 0, 0, 0.543),
+      rgba(0, 0, 0, 0.626)
     ),
     url("../../Assets/collage-page-img.png");
   background-size: cover;
@@ -36,13 +42,13 @@
 }
 
 .collage-page-background-button-div {
-  position: absolute;
-  bottom: 20px;
-  right: 20px;
   display: flex;
   justify-content: center;
-  align-items: center;
-  gap: 2rem;
+  gap: 1rem;
+}
+
+.collage-page-background-button-div p {
+  color: white;
 }
 
 .button-3 {
@@ -57,7 +63,8 @@
   display: inline-block;
   font-family: -apple-system, system-ui, "Segoe UI", Helvetica, Arial,
     sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
-  font-size: 14px;
+  font-size: 1rem;
+  height: 2.5rem;
   font-weight: 600;
   line-height: 20px;
   padding: 6px 16px;
@@ -69,6 +76,7 @@
   touch-action: manipulation;
   vertical-align: middle;
   white-space: nowrap;
+  width: 100%;
 }
 
 .button-3:focus:not(:focus-visible):not(.focus-visible) {
@@ -117,26 +125,38 @@
   width: 90%;
   margin: auto;
   margin-top: 1rem;
+  position: absolute;
+  color: white;
+  bottom: 1rem;
 }
 
-.collage-review-main-div,
 .collage-name-left-div {
   display: flex;
   justify-content: center;
-  align-items: center;
   gap: 1rem;
 }
 
+.collage-name-main-div p {
+  line-height: 25px;
+}
+
+.collage-review-main-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  width: 15%;
+}
+
 .call-to-action-button {
-  border: 1px solid black;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  width: 90%;
   margin: auto;
-  margin-top: 2rem;
   margin-bottom: 2rem;
   border-radius: 2px;
+  box-shadow: 3px -5px 11px 0px black;
 }
 
 .call-to-action-button button {
@@ -146,10 +166,13 @@
   background-color: white;
   transition: all 0.3s ease;
   cursor: pointer;
+  width: 100%;
 }
 
 .call-to-action-button button:hover {
-  background-color: #002147;
+  background-color: #0062d1;
   color: white;
   border-radius: 4px;
+  box-sizing: rgba(45, 35, 66, 0.4) 0 2px 4px,
+    rgba(45, 35, 66, 0.3) 0 7px 13px -3px, rgba(58, 65, 111, 0.5) 0 -3px 0 inset;
 }

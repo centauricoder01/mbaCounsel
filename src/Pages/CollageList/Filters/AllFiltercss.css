@@ -1,0 +1,4 @@
+.allFiltercss {
+  display: flex;
+  flex-direction: column;
+}

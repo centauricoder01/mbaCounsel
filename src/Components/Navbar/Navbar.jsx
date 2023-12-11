@@ -4,6 +4,9 @@ import logo from "../../Assets/mbalogo.png";
 import { Link } from "react-router-dom";
 import { BsFillPersonFill } from "react-icons/bs";
 import { GiHamburgerMenu } from "react-icons/gi";
+import Dropdown from "react-bootstrap/Dropdown";
+import Button from "react-bootstrap/Button";
+
 import { Drawer, Input } from "antd";
 const { Search } = Input;
 
@@ -25,26 +28,49 @@ const Navbar = () => {
       <div className="main-image-div">
         <img src={logo} alt="logo" />
       </div>
-      <div className="main-links-div">
-        <div className="first-link-div">
-          <Link to={"/"}>
-            <p className="para-navbar-div">PROGRAMS</p>
-          </Link>
+      <div className="main-links-div-navbar">
+        <div className="first-link-div-navbar">
           <Link to={"/collage"}>
-            <p className="para-navbar-div">COLLAGES</p>
+            <Button style={{ backgroundColor: "transparent", border: "none" }}>
+              PROGRAMS
+            </Button>
+          </Link>
+          <Link to={"/collagelist"}>
+            <Button style={{ backgroundColor: "transparent", border: "none" }}>
+              COLLAGES
+            </Button>
+          </Link>
+          <Link to={"/about"}>
+            <Button style={{ backgroundColor: "transparent", border: "none" }}>
+              ABOUT US
+            </Button>
           </Link>
           <Link to={"/"}>
-            <p className="para-navbar-div">ABOUT US</p>
+            <Button style={{ backgroundColor: "transparent", border: "none" }}>
+              SERVICES
+            </Button>
           </Link>
           <Link to={"/"}>
-            <p className="para-navbar-div">SERVICES</p>
+            <Button style={{ backgroundColor: "transparent", border: "none" }}>
+              ENTRANCES
+            </Button>
           </Link>
-          <Link to={"/"}>
-            <p className="para-navbar-div">ENTRANCES</p>
-          </Link>
-          <Link to={"/"}>
-            <p className="para-navbar-div">RESOURCES</p>
-          </Link>
+
+          <Dropdown>
+            <Dropdown.Toggle
+              id="dropdown-basic"
+              style={{ backgroundColor: "transparent", border: "none" }}
+            >
+              Dropdown Button
+            </Dropdown.Toggle>
+
+            <Dropdown.Menu>
+              <Dropdown.Item href="#/action-1">Blog</Dropdown.Item>
+              <Dropdown.Item href="#/action-2">Article </Dropdown.Item>
+              <Dropdown.Item href="#/action-3">Latest News</Dropdown.Item>
+            </Dropdown.Menu>
+          </Dropdown>
+
           <Link to={"/signup"}>
             <button className="button-32">
               <BsFillPersonFill />
@@ -52,15 +78,21 @@ const Navbar = () => {
             </button>
           </Link>
         </div>
-        <div className="second-link-div">
+        <div className="second-link-div-navbar">
           <Link to={"/courses"}>
-            <p className="para-navbar-div">DUMMY</p>
+            <Button style={{ backgroundColor: "transparent", border: "none" }}>
+              Dummy
+            </Button>
           </Link>
           <Link to={"/courses"}>
-            <p className="para-navbar-div">DUMMY</p>
+            <Button style={{ backgroundColor: "transparent", border: "none" }}>
+              Dummy
+            </Button>
           </Link>
           <Link to={"/courses"}>
-            <p className="para-navbar-div">DUMMY</p>
+            <Button style={{ backgroundColor: "transparent", border: "none" }}>
+              Dummy
+            </Button>
           </Link>
 
           <Search

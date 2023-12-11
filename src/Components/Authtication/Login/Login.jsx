@@ -15,7 +15,7 @@ const Login = () => {
           for MBA Aspirants
         </p>
       </div>
-      <div className="right-side-div">
+      <div className="right-side-div-signup">
         <p className="welcome-to-mbacouncel">WELCOME BACK</p>
         <p className="create-account-p">Login</p>
         <hr className="hr-under-login" />
