@@ -1,20 +1,19 @@
 import React from 'react'
-import "./AllComp.css"
+import "./BlogComps.css"
 import { Link } from 'react-router-dom';
+import { CiCalendar } from "react-icons/ci";
 
-const AllNewsComp = () => {
+const BlogComponent = () => {
   return (
-    <Link  className='main-latest-news' to={"/redirectFolder"}>
+    <Link  className='main-blogs' to={"/allblogs"}>
     <div >
-    <div class="card card-of-latest-news">
-  <img src={require("../../Assets/latest-news-demo-image.jpg")} class="card-img-top" alt="" />
+    <div class="card">
+  <img src={require("../../Assets/blog-demo-imgae.jpg")} class="card-img-top" alt="" />
   <div className='date-and-icon-of-latest-news' >
     <div className='icon-and-course-of-latest-news'>
-      <p>lorem</p> <span>|</span>
-      <p>lorem</p>
     </div>
     <div className='date-of-latest-news'>
-    <p>29-Nov-2023</p>
+    <p> <CiCalendar />   29-11-2323</p>
 
     </div>
   </div>
@@ -31,6 +30,6 @@ const AllNewsComp = () => {
   )
 }
 
-export default AllNewsComp;
+export default BlogComponent;
 
 

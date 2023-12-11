@@ -1,7 +1,15 @@
-.back-image-of-latest-new{
-  width: 100%;
- height: 40vh;
+
+.home-and-latest-news-of-latest-news-page{
+  margin-left: 1rem;
+  margin-top: 8rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+ 
+
 }
+
 .main-drop-down-of-latest-news{
   display: flex;
   justify-content: end;
@@ -16,20 +24,18 @@
 }
 
 .drop-down-number-one-latest-news{
-
   color: black;
-  width: 100%;
+  width: 10rem;
   height: 3rem;
   border: 1px solid black !important;
   border-radius: 5px;
 }
+
 .main-all-news-of-latest-news{
   margin-top: 4rem;
   display: flex;
   justify-content: center;
   align-items: center;
-
   gap: 1rem;
-
 }
 

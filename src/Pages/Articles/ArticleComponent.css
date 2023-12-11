@@ -1,0 +1,51 @@
+.main-article{
+  margin-bottom: 4rem;
+  width: 20rem;
+  text-decoration: none;
+}
+
+.card-face{
+  position: relative;
+  backface-visibility: hidden;
+  padding: 0.5rem;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.date-and-icon-of-article{
+  display: flex;
+  justify-content: space-between;
+  padding-top: 5px;
+  font-size: 1.2rem;
+ 
+
+}
+.icon-and-course-of-article{
+  display: flex;
+  gap: 10px;
+  font-size: 1.1rem;
+  color: rgb(147, 145, 145);
+ 
+  
+}
+.head-of-article{
+  text-align: justify;
+  color: rgb(34, 33, 33);
+  
+
+}
+
+.date-of-article{
+  font-size: 1.1rem;
+  color: rgb(147, 145, 145);
+
+}
+
+/* ------------------------- */
+.card-of-article:hover{
+  animation: moveUpward  ease 0.5s !important;
+}
+
+@keyframes moveUpward {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+  100% { transform: translateY(0); }
+}

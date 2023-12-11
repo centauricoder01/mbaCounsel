@@ -1,10 +1,12 @@
-.main-latest-news{
+.main-blogs{
   margin-bottom: 4rem;
-  width: 27rem;
+  width: 20rem;
   text-decoration: none;
 }
 
-.card{
+.card-face{
+  position: relative;
+  backface-visibility: hidden;
   padding: 0.5rem;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
@@ -24,27 +26,27 @@
  
   
 }
+.head-of-latest-news{
+  text-align: center;
+  color: rgb(34, 33, 33);
+  
 
+}
 
 .date-of-latest-news{
   font-size: 1.1rem;
   color: rgb(147, 145, 145);
 
 }
-.head-of-latest-news h5{
-  text-align: justify;
-  color: rgb(34, 33, 33);
-}
-
-
-
-
-
-
-
 
 /* ------------------------- */
-.card-of-latest-news:hover{
-  transform: scale(1.1) !important;
-  transition: transform 0.8s ease-in-out  !important;
+.card:hover{
+  animation: shake 2s ease-in-out !important;
+}
+
+@keyframes shake {
+  0% { transform: translate(0, 0); }
+  10%, 30%, 50%, 70%, 90% { transform: translate(-5px, 0); }
+  20%, 40%, 60%, 80% { transform: translate(5px, 0); }
+  100% { transform: translate(0, 0); }
 }

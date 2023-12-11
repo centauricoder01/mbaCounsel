@@ -14,6 +14,10 @@ import Exam from "../Pages/Exam/Exam";
 import ContactUs from "../Pages/ContactUs/ContactUs";
 import LatestNews from "../Pages/LatestNews/LatestNews";
 import Mainredirect from "../Pages/LatestNews/redirectFolder/Mainredirect"
+import Blog from "../Pages/Blog/Blog";
+import BlogRedirect from "../Pages/Blog/BlogRedirectFolder/BlogRedirect";
+import Articles from "../Pages/Articles/Articles";
+import ArticleRedirect from "../Pages/Articles/ArticleRedirect/ArticleRedirect";
 
 const MainRoutes = () => {
   return (
@@ -31,9 +35,13 @@ const MainRoutes = () => {
         <Route path="/courses" element={<Courses />}></Route>
         <Route path="/about" element={<About />}></Route>
         <Route path="/exam" element={<Exam />}></Route>
-        <Route path="/ContactUS" element={<ContactUs />}></Route>
-        <Route path="/LatestNews" element={<LatestNews />}></Route>
-        <Route path="/redirectFolder" element={<Mainredirect />}></Route>
+        <Route path="/contact" element={<ContactUs />}></Route>
+        <Route path="/latestnews" element={<LatestNews />}></Route>
+        <Route path="/redirectfolder" element={<Mainredirect />}></Route>
+        <Route path="/blogs" element={<Blog />}></Route>
+        <Route path="/allblogs" element={<BlogRedirect />}></Route>
+        <Route path="/articles" element={<Articles />}></Route>
+        <Route path="/allarticle" element={<ArticleRedirect />}></Route>
    
       </Routes>
     </div>

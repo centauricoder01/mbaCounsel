@@ -8,14 +8,17 @@ const LatestNews = () => {
     <>
       <Navbar />
 
-      <div className="main-back-image-of-latest-new">
-        <img
-          className="back-image-of-latest-new"
-          src={require("../../Assets/mba-top-back-image.png")}
-          alt=""
-        />
-      </div>
       <div className="container-fluid">
+      <div className="row main-home-and-article-of-article-page">
+          <div className="col-md-2 home-and-article-of-article-page ">
+            <p>Home / Latest News</p>
+          </div>
+        </div>
+        <div className="row main-article-head-back-text ">
+          <div className="col-md-12 article-head-back-text ">
+            <h1>Latest News</h1>
+          </div>
+        </div>
         <div className="row mt-5 main-drop-down-of-latest-news">
           <div className="col-md-1 drop-down-of-latest-news ">
             <div class="dropdown">
@@ -66,12 +69,12 @@ const LatestNews = () => {
                 </li>
                 <li>
                   <a class="dropdown-item" href="/">
-                    Another action
+                    Another 
                   </a>
                 </li>
                 <li>
                   <a class="dropdown-item" href="/">
-                    Something else here
+                    Something
                   </a>
                 </li>
               </ul>

@@ -1,25 +1,25 @@
 import React from 'react'
-import "./Mainredirect.css"
+import "./ArticleRedirect.css"
 import Navbar from '../../../Components/Navbar/Navbar'
 import Footer from '../../../Components/Footer/Footer'
 
-const Mainredirect = () => {
+const ArticleRedirect = () => {
   return (
     <>
     <Navbar/>
 
     <div className="container-fluid mb-5" >
-    <div className="row main-head-text-of-latest-news-redirect-page " >
-        <div className="col-md-11 mb-5 head-text-of-latest-news-redirect-page">
+    <div className="row main-head-text-of-article-redirect-page " >
+        <div className="col-md-11 mb-5 head-text-of-article-redirect-page">
            
             <p>Home / Latest News Details</p>
           
         </div>
       </div>
-    <div className="row main-all-content-of-latest-news-redirect-page ">
-      <div className="col-md-8 all-content-of-latest-news-redirect-page">
+    <div className="row main-all-content-of-article-redirect-page ">
+      <div className="col-md-8 all-content-of-article-redirect-page">
         <h2>Lorem ipsum, dolor sit amet consectetur siendas  Lorem ipsum dolor sit amet consectetur, adipisiusamus obcaecati. possimus!</h2>   
-       <div className='main-date-and-category-of-latest-news-redirect-page' >
+       <div className='main-date-and-category-of-redirect-page' >
        <h6>Date : 11-Dec-2023</h6>
         <h6 className='me-4' >Caterogy : MBAnews</h6>
        </div>
@@ -59,4 +59,4 @@ const Mainredirect = () => {
   )
 }
 
-export default Mainredirect
+export default ArticleRedirect

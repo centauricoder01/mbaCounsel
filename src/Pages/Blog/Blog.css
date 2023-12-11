@@ -1,0 +1,41 @@
+
+
+
+.blog-head-back-text{
+  margin-top: 10rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: none !important;
+
+}
+.search-of-blog{
+  width: 80%;
+  height: 3rem;
+}
+.main-search-and-count-of-blog{
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+
+ 
+}
+.count-of-blog{
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+}
+
+.search-bar-of-blog{
+  position: relative;
+  display: flex; 
+  align-content: center;
+  align-items: center;
+
+}
+.icon-of-search-bar{
+  position: relative;
+  right: 10%;
+}

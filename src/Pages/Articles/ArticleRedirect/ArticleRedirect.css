@@ -1,5 +1,5 @@
 
-.head-text-of-latest-news-redirect-page{
+.head-text-of-article-redirect-page{
   display: flex;
   justify-content: start;
   align-items: center;
@@ -9,24 +9,24 @@
 }
 
 
-.main-all-content-of-latest-news-redirect-page{
+.main-all-content-of-article-redirect-page{
   display: flex;
   justify-content: center;
   align-content:center;
 
 }
-.all-content-of-latest-news-redirect-page{
+.all-content-of-article-redirect-page{
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   gap: 2rem;
 }
-.main-date-and-category-of-latest-news-redirect-page{
+.main-date-and-category-of-redirect-page{
   display: flex;
   justify-content: space-between;
   margin-top: -3%;
 }
-.main-date-and-category-of-latest-news-redirect-page h6{
+.main-date-and-category-of-redirect-page h6{
   color: rgb(147, 145, 145);
 }
 
