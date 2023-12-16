@@ -6,24 +6,18 @@
   display: flex;
   gap: 3rem;
   margin-bottom: 3rem;
-  align-items: top;
 }
 
 .main-collage-left-side-div {
   width: 70%;
   display: flex;
-  justify-content: center;
   gap: 2rem;
-  margin: auto;
   flex-direction: column;
 }
 
 .main-collage-right-side-div {
   width: 30%;
   display: flex;
-  margin: auto;
-  justify-content: center;
-  gap: 2rem;
   flex-direction: column;
 }
 
