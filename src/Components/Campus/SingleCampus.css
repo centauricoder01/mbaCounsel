@@ -1,0 +1,10 @@
+.main-image-para-div-campus {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  width: 30%;
+}
+
+.main-image-para-div-campus p {
+  font-weight: bolder;
+}

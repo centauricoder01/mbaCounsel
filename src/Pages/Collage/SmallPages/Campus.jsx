@@ -1,5 +1,7 @@
 import React from "react";
 import { ImLocation } from "react-icons/im";
+import SingelCampus from "../../../Components/Campus/SingelCampus";
+import { campusdata } from "../SmallPagesCSS/Campusdata";
 
 const Campus = () => {
   let arr = [1, 2, 3, 4, 5, 6];
@@ -20,137 +22,19 @@ const Campus = () => {
               clubs. On campus, there are tennis courts, badminton courts,
               hockey grounds, and other sports facilities.
             </p>
-            <div className="main-collage-campus-div">
-              <div className="main-collage-campus-img-div">
-                <img
-                  src={require("../../../Assets/campus-img.png")}
-                  alt="campus-img"
-                />
-              </div>
-              <div className="main-collage-campus-detail-div-left">
-                <strong>Hostal</strong>
-                <p>
-                  IIM Bangalore features ten hostel buildings, one executive
-                  block, and executive housing at the Management Development
-                  Center, also known as MDC. Standard amenities include 24-hour
-                  Internet access, fully automatic washing machines, a hair
-                  salon, a music room, a student-run library, a leisure area,
-                  and a store on the hostel grounds. Laundry and ironing
-                  facilities, an intercom system, and visitor rooms are also
-                  available.
-                </p>
-              </div>
-            </div>
+
             <hr />
-            <div className="main-collage-campus-div">
-              <div className="main-collage-campus-detail-div-right">
-                <strong>Hostal</strong>
-                <p>
-                  IIM Bangalore features ten hostel buildings, one executive
-                  block, and executive housing at the Management Development
-                  Center, also known as MDC. Standard amenities include 24-hour
-                  Internet access, fully automatic washing machines, a hair
-                  salon, a music room, a student-run library, a leisure area,
-                  and a store on the hostel grounds. Laundry and ironing
-                  facilities, an intercom system, and visitor rooms are also
-                  available.
-                </p>
-              </div>
-              <div className="main-collage-campus-img-div">
-                <img
-                  src={require("../../../Assets/campus-img.png")}
-                  alt="campus-img"
+            {campusdata.map((ele) => (
+              <>
+                <SingelCampus
+                  key={ele.id}
+                  img={ele.img}
+                  short={ele.short}
+                  longpara={ele.longpara}
                 />
-              </div>
-            </div>
-            <hr />
-            <div className="main-collage-campus-div">
-              <div className="main-collage-campus-img-div">
-                <img
-                  src={require("../../../Assets/campus-img.png")}
-                  alt="campus-img"
-                />
-              </div>
-              <div className="main-collage-campus-detail-div-left">
-                <strong>Hostal</strong>
-                <p>
-                  IIM Bangalore features ten hostel buildings, one executive
-                  block, and executive housing at the Management Development
-                  Center, also known as MDC. Standard amenities include 24-hour
-                  Internet access, fully automatic washing machines, a hair
-                  salon, a music room, a student-run library, a leisure area,
-                  and a store on the hostel grounds. Laundry and ironing
-                  facilities, an intercom system, and visitor rooms are also
-                  available.
-                </p>
-              </div>
-            </div>
-            <hr />
-            <div className="main-collage-campus-div">
-              <div className="main-collage-campus-detail-div-right">
-                <strong>Hostal</strong>
-                <p>
-                  IIM Bangalore features ten hostel buildings, one executive
-                  block, and executive housing at the Management Development
-                  Center, also known as MDC. Standard amenities include 24-hour
-                  Internet access, fully automatic washing machines, a hair
-                  salon, a music room, a student-run library, a leisure area,
-                  and a store on the hostel grounds. Laundry and ironing
-                  facilities, an intercom system, and visitor rooms are also
-                  available.
-                </p>
-              </div>
-              <div className="main-collage-campus-img-div">
-                <img
-                  src={require("../../../Assets/campus-img.png")}
-                  alt="campus-img"
-                />
-              </div>
-            </div>
-            <hr />
-            <div className="main-collage-campus-div">
-              <div className="main-collage-campus-img-div">
-                <img
-                  src={require("../../../Assets/campus-img.png")}
-                  alt="campus-img"
-                />
-              </div>
-              <div className="main-collage-campus-detail-div-left">
-                <strong>Hostal</strong>
-                <p>
-                  IIM Bangalore features ten hostel buildings, one executive
-                  block, and executive housing at the Management Development
-                  Center, also known as MDC. Standard amenities include 24-hour
-                  Internet access, fully automatic washing machines, a hair
-                  salon, a music room, a student-run library, a leisure area,
-                  and a store on the hostel grounds. Laundry and ironing
-                  facilities, an intercom system, and visitor rooms are also
-                  available.
-                </p>
-              </div>
-            </div>
-            <hr />
-            <div className="main-collage-campus-div">
-              <div className="main-collage-campus-detail-div-right">
-                <strong>Hostal</strong>
-                <p>
-                  IIM Bangalore features ten hostel buildings, one executive
-                  block, and executive housing at the Management Development
-                  Center, also known as MDC. Standard amenities include 24-hour
-                  Internet access, fully automatic washing machines, a hair
-                  salon, a music room, a student-run library, a leisure area,
-                  and a store on the hostel grounds. Laundry and ironing
-                  facilities, an intercom system, and visitor rooms are also
-                  available.
-                </p>
-              </div>
-              <div className="main-collage-campus-img-div">
-                <img
-                  src={require("../../../Assets/campus-img.png")}
-                  alt="campus-img"
-                />
-              </div>
-            </div>
+                <hr />
+              </>
+            ))}
           </div>
         </div>
         <div className="main-collage-right-side-div">
