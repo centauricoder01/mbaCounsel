@@ -13,10 +13,11 @@ import Admission from "./SmallPages/Admission";
 import Placements from "./SmallPages/Placements";
 import Campus from "./SmallPages/Campus";
 import Faq from "./SmallPages/Faq";
+import Rating from "./SmallPages/Rating";
 
 const Collages = () => {
   const [button, setButton] = useState("Overview");
-  
+
   const [activeButton, setActiveButton] = useState(null);
 
   const HandleButton = (value, buttonId) => {
@@ -62,7 +63,7 @@ const Collages = () => {
                 </i>
                 <p>
                   Estd.Year: 2000 &nbsp; &nbsp; &nbsp; Location : Banagalore,
-                  Karnataka &nbsp; &nbsp;
+                  Karnataka &nbsp; &nbsp; Overall Rating : &nbsp;
                   <AiOutlineStar color="orange" />
                   <AiOutlineStar color="orange" />
                   <AiOutlineStar color="orange" />
@@ -132,6 +133,12 @@ const Collages = () => {
           >
             FAQs
           </button>
+          <button
+            onClick={() => HandleButton("rating", 7)}
+            style={getButtonStyles(7)}
+          >
+            Rating
+          </button>
         </div>
 
         {/* MAIN PAGE START FROM HERE  */}
@@ -141,6 +148,7 @@ const Collages = () => {
         {button === "Placements" ? <Placements /> : null}
         {button === "Campus" ? <Campus /> : null}
         {button === "Faq" ? <Faq /> : null}
+        {button === "rating" ? <Rating /> : null}
       </div>
       <Footer />
     </div>
