@@ -172,7 +172,7 @@ const Placements = () => {
             style={{
               border: "1px solid #dbdbdb",
               boxShadow: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px",
-              padding: "5px",
+              padding: "16px",
               borderRadius: "10px",
             }}
           >

@@ -6,9 +6,10 @@
 }
 
 .collage-details-div {
-  padding: 5px;
+  padding: 16px;
   border: 1px solid #dbdbdb;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  border-radius: 10px;
 }
 
 .collage-page-background-div {

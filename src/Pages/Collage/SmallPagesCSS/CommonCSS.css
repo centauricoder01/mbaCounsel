@@ -38,6 +38,7 @@
   padding: 1rem;
   border: 1px solid #dbdbdb;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  border-radius: 10px;
 }
 
 .similar-collage-button-div {
@@ -67,10 +68,11 @@
   justify-content: left;
   border: 1px solid #dbdbdb;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  border-radius: 10px;
 }
 
 .main-degree-granting-programme {
-  padding: 2rem;
+  padding: 16px;
   border: 1px solid #dbdbdb;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   border-radius: 10px;
@@ -104,6 +106,7 @@
   flex-direction: column;
   gap: 2rem;
   justify-content: left;
+  border-radius: 10px;
 }
 
 /* ADDMISSION DESIGN START FROM HERE */
