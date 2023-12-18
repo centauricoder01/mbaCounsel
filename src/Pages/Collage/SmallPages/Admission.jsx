@@ -9,10 +9,10 @@ const Admission = () => {
     <>
       <div className="main-collage-overview-div">
         <div className="main-collage-left-side-div">
-          <strong className="main-collage-admission-in-blue">
-            <i>IIM Bangalore Admission Process 2021</i>
-          </strong>
           <div className="main-degree-granting-programme">
+            <strong className="main-collage-admission-in-blue">
+              <i>IIM Bangalore Admission Process 2021</i>
+            </strong>
             <strong>
               <i>Eligibility criteria admission into PGP (MBA) :-</i>
             </strong>
@@ -213,7 +213,8 @@ const Admission = () => {
             style={{
               border: "1px solid #dbdbdb",
               boxShadow: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px",
-              padding: "5px",
+              padding: "16px",
+              borderRadius: "10px"
             }}
           >
             <h2>Similar Colleges</h2>

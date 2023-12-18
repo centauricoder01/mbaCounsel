@@ -7,10 +7,10 @@ const Placements = () => {
     <>
       <div className="main-collage-overview-div">
         <div className="main-collage-left-side-div">
-          <strong className="main-collage-admission-in-blue">
-            <i>Placements</i>
-          </strong>
           <div className="main-degree-granting-programme">
+            <strong className="main-collage-admission-in-blue">
+              <i>Placements</i>
+            </strong>
             <p>
               IIM-B is notoriously known for its high rate of placements and its
               ability to shape and produce brilliant professionals that shine in
@@ -109,14 +109,7 @@ const Placements = () => {
           </div>
         </div>
         <div className="main-collage-right-side-div">
-          <div
-            className="collage-similar-collge-div"
-            style={{
-              border: "1px solid #dbdbdb",
-              boxShadow: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px",
-              padding: "5px",
-            }}
-          >
+          <div className="collage-similar-collge-div">
             <h2>Similar Colleges</h2>
             <hr />
             {arr.map((ele) => (
@@ -180,6 +173,7 @@ const Placements = () => {
               border: "1px solid #dbdbdb",
               boxShadow: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px",
               padding: "5px",
+              borderRadius: "10px",
             }}
           >
             <h2>Advertisment</h2>

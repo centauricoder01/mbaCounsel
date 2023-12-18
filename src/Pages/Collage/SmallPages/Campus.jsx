@@ -9,10 +9,10 @@ const Campus = () => {
     <>
       <div className="main-collage-overview-div">
         <div className="main-collage-left-side-div">
-          <strong className="main-collage-admission-in-blue">
-            <i>Campus Life</i>
-          </strong>
           <div className="main-degree-granting-programme">
+            <strong className="main-collage-admission-in-blue">
+              <i>Campus Life</i>
+            </strong>
             <p>
               IIM Bangalore is one of the most mesmerising campuses in India,
               located in a serene place, away from the hustle and bustle of the
