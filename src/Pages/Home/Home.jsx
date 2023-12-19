@@ -15,7 +15,6 @@ import Footer from "../../Components/Footer/Footer";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import Article from "../../Components/Article/Article";
 
 const Home = () => {
   const settingsLaptop = {
@@ -76,30 +75,6 @@ const Home = () => {
           <button>Book Now </button>
         </div>
         <img src={require("../../Assets/find-arrow.png")} alt="find-arrow" />
-      </div>
-
-      <div className="why-choose-us">
-        <img
-          src={require("../../Assets/why-choose-us.png")}
-          alt="why-choose-us"
-        />
-        <ul>
-          <li>
-            Unleash MBA Excellence with Technology Powered Process along with
-            our experts
-          </li>
-          <li>Customized Strategies for Efficiency</li>
-          <li>Guidance from Industry Veterans and Expert Mentors</li>
-          <li>Our Journey Extends Beyond Admissions</li>
-          <li>Strategic Financial Guidance for You</li>
-          <li>Streamlined, Hassle-Free Process</li>
-          <li>Access Exclusive Features</li>
-          <li>Rooted in Honesty, Built on Transparency, Earned Trust</li>
-          <li>Together, We Sculpt Your Path to Success</li>
-          <li>Education without Boundaries, Knowledge without Borders</li>
-          <li>Join a Vibrant Network of Thriving Students</li>
-          <li>Empower Your Legacy in the World of Business</li>
-        </ul>
       </div>
 
       <div className="Top-Specializations">
@@ -297,6 +272,31 @@ const Home = () => {
           </VerticalTimelineElement>
         </VerticalTimeline>
       </div>
+
+      <div className="why-choose-us">
+        <img
+          src={require("../../Assets/why-choose-us.png")}
+          alt="why-choose-us"
+        />
+        <ul>
+          <li>
+            Unleash MBA Excellence with Technology Powered Process along with
+            our experts
+          </li>
+          <li>Customized Strategies for Efficiency</li>
+          <li>Guidance from Industry Veterans and Expert Mentors</li>
+          <li>Our Journey Extends Beyond Admissions</li>
+          <li>Strategic Financial Guidance for You</li>
+          <li>Streamlined, Hassle-Free Process</li>
+          <li>Access Exclusive Features</li>
+          <li>Rooted in Honesty, Built on Transparency, Earned Trust</li>
+          <li>Together, We Sculpt Your Path to Success</li>
+          <li>Education without Boundaries, Knowledge without Borders</li>
+          <li>Join a Vibrant Network of Thriving Students</li>
+          <li>Empower Your Legacy in the World of Business</li>
+        </ul>
+      </div>
+
       <div className="Top-B-Schools-in-India">
         <h1 className="all-new-h1">Top B-Schools in India</h1>
         <div className="Top-B-Schools-in-India-crousel-div">
@@ -351,7 +351,6 @@ const Home = () => {
         />
         <button className="submit-button">Submit</button>
       </div>
-      <Article />
       <Footer />
     </div>
   );

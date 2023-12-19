@@ -1,6 +1,7 @@
 import React from "react";
 import { ImLocation } from "react-icons/im";
 import { FiArrowRight } from "react-icons/fi";
+import Article from "../../../Components/Article/Article";
 
 const Admission = () => {
   let arr = [1, 2, 3, 4, 5, 6];
@@ -206,6 +207,7 @@ const Admission = () => {
               percentile.
             </p>
           </div>
+          <Article />
         </div>
         <div className="main-collage-right-side-div">
           <div

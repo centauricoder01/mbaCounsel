@@ -1,5 +1,7 @@
 import React from "react";
 import { ImLocation } from "react-icons/im";
+import Article from "../../../Components/Article/Article";
+import { FiArrowRight } from "react-icons/fi";
 
 const Programs = () => {
   let arr = [1, 2, 3, 4, 5, 6];
@@ -73,6 +75,15 @@ const Programs = () => {
               </tbody>
             </table>
           </div>
+          <div className="main-coolage-page-container">
+            <div className="main-coolage-page-text-content">
+              Lorem ipsum dolor sit. Ipsam, voluptatem.
+            </div>
+            <button className="main-coolage-page-custom-button">
+              Consult
+              <FiArrowRight />
+            </button>
+          </div>
           <div className="programs-Scholarship">
             <div>
               <strong>
@@ -117,6 +128,7 @@ const Programs = () => {
               </tbody>
             </table>
           </div>
+          <Article />
         </div>
         <div className="main-collage-right-side-div">
           <div

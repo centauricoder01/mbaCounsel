@@ -41,11 +41,13 @@ const Header = () => {
       <div className="header-latest-news">
         <p>Latest Notification</p>
         <hr />
-        <p>
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quaerat,
-          dolore. Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-          Voluptates, tempore.
-        </p>
+        <div className="marquee">
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quaerat,
+            dolore. Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+            Voluptates, tempore.
+          </p>
+        </div>
       </div>
       <div className="crousal-bottom">
         <div className="first-div">

@@ -14,6 +14,7 @@ import Placements from "./SmallPages/Placements";
 import Campus from "./SmallPages/Campus";
 import Faq from "./SmallPages/Faq";
 import Rating from "./SmallPages/Rating";
+import Article from "../../Components/Article/Article";
 
 const Collages = () => {
   const [button, setButton] = useState("Overview");

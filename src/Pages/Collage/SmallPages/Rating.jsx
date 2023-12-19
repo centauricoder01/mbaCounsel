@@ -2,6 +2,7 @@ import React from "react";
 import { Rate, Progress } from "antd";
 import { ImLocation } from "react-icons/im";
 import StudentRating from "./StudentRating";
+import Article from "../../../Components/Article/Article";
 
 const Rating = () => {
   let arr = [1, 2, 3, 4, 5, 6];
@@ -46,7 +47,9 @@ const Rating = () => {
         <StudentRating />
         <StudentRating />
         <StudentRating />
+        <Article />
       </div>
+
       <div className="main-collage-right-side-div">
         <div className="collage-similar-collge-div">
           <h2>Similar Colleges</h2>

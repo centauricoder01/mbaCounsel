@@ -1,5 +1,6 @@
 import React from "react";
 import { ImLocation } from "react-icons/im";
+import Article from "../../../Components/Article/Article";
 
 const Placements = () => {
   let arr = [1, 2, 3, 4, 5, 6];
@@ -107,6 +108,7 @@ const Placements = () => {
               <img src={require("../../../Assets/company.png")} alt="company" />
             </div>
           </div>
+          <Article />
         </div>
         <div className="main-collage-right-side-div">
           <div className="collage-similar-collge-div">

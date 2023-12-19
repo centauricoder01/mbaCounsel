@@ -1,5 +1,6 @@
 import React from "react";
 import "./Article.css";
+import { Link } from "react-router-dom";
 
 const Article = () => {
   let arr = [1, 2, 3, 4, 5, 6];
@@ -11,10 +12,12 @@ const Article = () => {
         {arr.map((ele) => (
           <div className="article-div-single-article-div" key={ele}>
             <p>
-              <b>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Tenetur, ratione.
-              </b>
+              <Link to={"/"}>
+                <b>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Tenetur, ratione.
+                </b>
+              </Link>
             </p>
             <p>Dec 13, 2024</p>
           </div>

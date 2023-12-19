@@ -2,6 +2,7 @@ import React from "react";
 import { ImLocation } from "react-icons/im";
 import SingelCampus from "../../../Components/Campus/SingelCampus";
 import { campusdata } from "../SmallPagesCSS/Campusdata";
+import Article from "../../../Components/Article/Article";
 
 const Campus = () => {
   let arr = [1, 2, 3, 4, 5, 6];
@@ -36,6 +37,7 @@ const Campus = () => {
               </>
             ))}
           </div>
+          <Article />
         </div>
         <div className="main-collage-right-side-div">
           <div

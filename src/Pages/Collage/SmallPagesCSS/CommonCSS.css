@@ -202,9 +202,19 @@
 }
 
 .main-collage-faq-div-strong {
-  margin-bottom: 1rem;
   font-size: 2rem;
-  color: blue;
+  display: flex;
+  justify-content: space-between;
+}
+
+.main-collage-faq-div-strong button {
+  border-radius: 10px;
+  width: 15%;
+  font-size: 1.5rem;
+  color: green;
+  background-color: #eeeeff;
+  border: none;
+  box-shadow: 0px 0px 8px -5px black;
 }
 
 /* RATING CSS START FROM HERE  */

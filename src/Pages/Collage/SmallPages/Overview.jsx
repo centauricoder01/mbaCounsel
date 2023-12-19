@@ -5,6 +5,7 @@ import "../SmallPagesCSS/CommonCSS.css";
 import { GiAchievement } from "react-icons/gi";
 import { FcMoneyTransfer } from "react-icons/fc";
 import { FaRupeeSign } from "react-icons/fa";
+import Article from "../../../Components/Article/Article";
 
 const Overview = () => {
   let arr = [1, 2, 3, 4, 5];
@@ -137,6 +138,32 @@ const Overview = () => {
               tradeoffs
             </p>
           </div>
+          <div
+            className="collage-faculty"
+            style={{
+              border: "1px solid #dbdbdb",
+              boxShadow: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px",
+              padding: "16px",
+              borderRadius: "10px",
+              width: "100%",
+              margin: "auto",
+              marginTop: "2rem",
+              marginBottom: "2rem",
+            }}
+          >
+            <h3 style={{ color: "blue" }}>
+              {" "}
+              <i>Faculty</i>{" "}
+            </h3>
+            <p>
+              The structure and Rigor that the faculty pushes breaks all
+              barriers. The faculties bring the best out of every single student
+              and provide the environment for students to shine in their
+              brightest light. The Approach of research with the right mindset
+              with rigor and address research questions.
+            </p>
+          </div>
+          <Article />
         </div>
         <div className="main-collage-right-side-div">
           <div
@@ -240,32 +267,6 @@ const Overview = () => {
             </p>
           </div>
         </div>
-      </div>
-
-      <div
-        className="collage-faculty"
-        style={{
-          border: "1px solid #dbdbdb",
-          boxShadow: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px",
-          padding: "16px",
-          borderRadius: "10px",
-          width: "90%",
-          margin: "auto",
-          marginTop: "2rem",
-          marginBottom: "2rem",
-        }}
-      >
-        <h3 style={{ color: "blue" }}>
-          {" "}
-          <i>Faculty</i>{" "}
-        </h3>
-        <p>
-          The structure and Rigor that the faculty pushes breaks all barriers.
-          The faculties bring the best out of every single student and provide
-          the environment for students to shine in their brightest light. The
-          Approach of research with the right mindset with rigor and address
-          research questions.
-        </p>
       </div>
     </>
   );
