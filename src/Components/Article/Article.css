@@ -1,0 +1,35 @@
+.main-article-div {
+  width: 80%;
+  margin: auto;
+  padding: 1rem;
+  background-color: #f3fbff;
+  box-shadow: 0px 0px 11px -7px black;
+  border-radius: 10px;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.all-article-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.article-div-para-tag {
+  width: 8%;
+  border-bottom: 2px solid black;
+  cursor: pointer;
+}
+
+.article-div-single-article-div {
+  width: 40%;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #dbdbdb;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  background-color: white;
+}
+
+.article-div-single-article-div p:nth-child(1) {
+  margin-bottom: -1px;
+}

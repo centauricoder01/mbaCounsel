@@ -15,6 +15,7 @@ import Footer from "../../Components/Footer/Footer";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import Article from "../../Components/Article/Article";
 
 const Home = () => {
   const settingsLaptop = {
@@ -350,6 +351,7 @@ const Home = () => {
         />
         <button className="submit-button">Submit</button>
       </div>
+      <Article />
       <Footer />
     </div>
   );
