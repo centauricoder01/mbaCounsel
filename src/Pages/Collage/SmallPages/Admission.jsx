@@ -144,10 +144,10 @@ const Admission = () => {
 
           <div className="main-coolage-page-container">
             <div className="main-coolage-page-text-content">
-              Lorem ipsum dolor sit. Ipsam, voluptatem.
+              For Admission Guidance
             </div>
             <button className="main-coolage-page-custom-button">
-              Consult
+              Click Here
               <FiArrowRight />
             </button>
           </div>

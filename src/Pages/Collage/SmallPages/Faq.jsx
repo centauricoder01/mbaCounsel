@@ -110,13 +110,36 @@ const items = [
 const Faq = () => {
   let arr = [1, 2, 3, 4, 5, 6];
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [formState, setFormState] = useState({
+    name: "",
+    email: "",
+    mobileno: "",
+    location: "",
+    course: "",
+    question: "",
+  });
 
+  // HANDLING THE VALUE OF FORM
+
+  const handleChange = (e) => {
+    setFormState({
+      ...formState,
+      [e.target.name]: e.target.value,
+    });
+  };
+
+  const handleSubmit = () => {
+    console.log(formState);
+  };
+
+  // HANDLE THE MODAL TO OPEN AND CLOSE
   const showModal = () => {
     setIsModalOpen(true);
   };
 
   const handleOk = () => {
     setIsModalOpen(false);
+    handleSubmit();
   };
 
   const handleCancel = () => {
@@ -131,7 +154,7 @@ const Faq = () => {
             <strong>
               <i style={{ color: "blue" }}>FAQs</i>
             </strong>
-            <button onClick={showModal}>Add Faqs</button>
+            <button onClick={showModal}>Ask Your Question</button>
           </div>
           <Collapse items={items} defaultActiveKey={["1"]} />
           <Modal
@@ -140,9 +163,53 @@ const Faq = () => {
             onOk={handleOk}
             onCancel={handleCancel}
           >
-            <input type="text" />
-            <input type="text" />
-            <input type="text" />
+            <div className="faq-modal-input-div">
+              <input
+                type="text"
+                name="name"
+                placeholder="Enter Name"
+                value={formState.name}
+                onChange={handleChange}
+              />
+              <input
+                type="text"
+                name="email"
+                placeholder="Enter Email"
+                value={formState.email}
+                onChange={handleChange}
+              />
+              <input
+                type="text"
+                name="mobileno"
+                placeholder="Enter Mobile No"
+                value={formState.mobileno}
+                onChange={handleChange}
+              />
+              <input
+                type="text"
+                name="location"
+                placeholder="Enter Location"
+                value={formState.input2}
+                onChange={handleChange}
+              />
+              <select
+                id="mba"
+                name="course"
+                value={formState.course}
+                onChange={handleChange}
+              >
+                <option value="volvo">MBA</option>
+                <option value="saab">Online MBA</option>
+                <option value="opel">Executive MBA</option>
+              </select>
+              <input
+                type="text"
+                name="question"
+                placeholder="Your Question"
+                value={formState.question}
+                onChange={handleChange}
+              />
+            </div>
           </Modal>
         </div>
         <div className="main-collage-right-side-div">

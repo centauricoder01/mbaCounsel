@@ -123,7 +123,9 @@
 
 .main-coolage-page-text-content {
   width: 70%;
-  padding: 20px;
+  padding: 8px;
+  font-size: 30px;
+  text-align: center;
 }
 
 .main-collage-admission-in-blue {
@@ -146,6 +148,7 @@
   gap: 1rem;
   border-top-right-radius: 1rem;
   border-bottom-right-radius: 1rem;
+  color: white;
 }
 
 /* PLACEMENT DESIGN PAGE  */
@@ -209,14 +212,31 @@
 
 .main-collage-faq-div-strong button {
   border-radius: 10px;
-  width: 15%;
-  font-size: 1.5rem;
+  width: 20%;
+  font-size: 20px;
   color: green;
   background-color: #eeeeff;
   border: none;
   box-shadow: 0px 0px 8px -5px black;
 }
 
+.faq-modal-input-div {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 1rem;
+  font-size: 1.2rem;
+}
+
+.faq-modal-input-div input,
+select {
+  width: 100%;
+  border-radius: 4px;
+  height: 3rem;
+  border: none;
+  box-shadow: 0px 0px 8px -5px black;
+  padding-left: 1rem;
+}
 /* RATING CSS START FROM HERE  */
 
 .review-left-side-div {
