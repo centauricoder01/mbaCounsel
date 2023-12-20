@@ -19,53 +19,79 @@ const CollageList = () => {
       id: 1,
       name: "Lorem ipsum dolor, sit amet consectetur adipisicing elit.",
       recomand: true,
+      ads: false,
     },
     {
       id: 2,
       name: "Lorem ipsum dolor",
       recomand: false,
+      ads: false,
     },
     {
       id: 3,
       name: "Lorem ipsum dolor, sit amet",
       recomand: false,
+      ads: false,
     },
     {
       id: 4,
       name: "Lorem ipsum dolor, sit adipisicing elit.",
       recomand: false,
+      ads: true,
     },
     {
       id: 5,
       name: "Lorem ipsum dolor, sit amet consectetur elit.",
       recomand: true,
+      ads: false,
     },
     {
       id: 6,
       name: "Lorem, sit amet consectetur adipisicing elit.",
       recomand: true,
+      ads: false,
     },
     {
       id: 7,
       name: " dolor, sit amet adipisicing elit.",
       recomand: false,
+      ads: false,
     },
     {
       id: 8,
       name: "Lorem ipsum dolor, sit amet adipisicing elit.",
       recomand: false,
+      ads: false,
     },
     {
       id: 9,
       name: "Lorem ipsum dolor, sit amet.",
       recomand: true,
+      ads: false,
     },
     {
       id: 10,
       name: "Lorem  , sit amet consectetur  elit.",
       recomand: false,
+      ads: false,
+    },
+    {
+      id: 11,
+      name: "Lorem  , sit amet consectetur  elit.",
+      recomand: false,
+      ads: false,
+    },
+    {
+      id: 12,
+      name: "Lorem  , sit amet consectetur  elit.",
+      recomand: false,
+      ads: true,
     },
   ];
+
+  const refreshPage = () => {
+    window.location.reload();
+  };
 
   const items = [
     {
@@ -87,6 +113,13 @@ const CollageList = () => {
 
       <div className="main-collagelist-div">
         <div className="main-collagelist-left-side-div scroll-container">
+          <button
+            onClick={() => {
+              refreshPage();
+            }}
+          >
+            Remove Filter
+          </button>
           <Collapse
             items={[
               {
@@ -95,6 +128,7 @@ const CollageList = () => {
                 children: <State />,
               },
             ]}
+            defaultActiveKey={["1"]}
           />
           <Collapse
             items={[
@@ -104,6 +138,7 @@ const CollageList = () => {
                 children: <City />,
               },
             ]}
+            defaultActiveKey={["2"]}
           />
           <Collapse
             items={[
@@ -113,6 +148,7 @@ const CollageList = () => {
                 children: <Stream />,
               },
             ]}
+            defaultActiveKey={["3"]}
           />
           <Collapse
             items={[
@@ -122,6 +158,7 @@ const CollageList = () => {
                 children: <Cources />,
               },
             ]}
+            defaultActiveKey={["4"]}
           />
           <Collapse
             items={[
@@ -131,6 +168,7 @@ const CollageList = () => {
                 children: <CollageType />,
               },
             ]}
+            defaultActiveKey={["5"]}
           />
           <Collapse
             items={[
@@ -140,6 +178,7 @@ const CollageList = () => {
                 children: <CollageType />,
               },
             ]}
+            defaultActiveKey={["6"]}
           />
           <Collapse
             items={[
@@ -149,6 +188,7 @@ const CollageList = () => {
                 children: <Fees />,
               },
             ]}
+            defaultActiveKey={["7"]}
           />
           <Collapse
             items={[
@@ -158,6 +198,7 @@ const CollageList = () => {
                 children: <Affiliation />,
               },
             ]}
+            defaultActiveKey={["8"]}
           />
           <Collapse
             items={[
@@ -167,6 +208,7 @@ const CollageList = () => {
                 children: <Duration />,
               },
             ]}
+            defaultActiveKey={["9"]}
           />
           <div
             style={{ display: "flex", gap: "2rem", flexDirection: "column" }}
@@ -198,58 +240,65 @@ const CollageList = () => {
             </Dropdown>
           </div>
           <div className="main-collagelist-show-div">
-            {arr.map((ele) => (
-              <div
-                key={ele}
-                className="single-product-div-top-B-school all-collage-list-div"
-              >
-                <img
-                  src={require("../../Assets/Mask-Group.png")}
-                  alt="mask-group"
-                />
-                {ele.recomand === true ? (
-                  <div className="collage-list-sponsored-div">
-                    <img
-                      src={require("../../Assets/recommended.png")}
-                      alt="sponsered"
-                    />
-                  </div>
-                ) : null}
-                <h2
-                  style={{ color: "black" }}
-                  className="single-product-div-top-B-school-h2-tag"
+            {arr.map((ele) =>
+              ele.ads === false ? (
+                <div
+                  key={ele}
+                  className="single-product-div-top-B-school all-collage-list-div"
                 >
-                  {ele.name}
-                </h2>
-                <div className="main-centeral-div">
-                  <div className="top-left-side-div">
-                    <div>
-                      <p>Duration</p>
-                      <p style={{ fontWeight: "bolder" }}>2 Years</p>
+                  <img
+                    src={require("../../Assets/Mask-Group.png")}
+                    alt="mask-group"
+                  />
+                  {ele.recomand === false ? (
+                    <div className="collage-list-sponsored-div">
+                      <img
+                        src={require("../../Assets/recommended.png")}
+                        alt="sponsered"
+                      />
                     </div>
-                    <div>
-                      <p>Course</p>
-                      <p style={{ fontWeight: "bolder" }}>MBBS, B.ED</p>
+                  ) : null}
+                  <h2
+                    style={{ color: "black" }}
+                    className="single-product-div-top-B-school-h2-tag"
+                  >
+                    {ele.name}
+                  </h2>
+                  <div className="main-centeral-div">
+                    <div className="top-left-side-div">
+                      <div>
+                        <p>Duration</p>
+                        <p style={{ fontWeight: "bolder" }}>2 Years</p>
+                      </div>
+                      <div>
+                        <p>Course</p>
+                        <p style={{ fontWeight: "bolder" }}>MBBS, B.ED</p>
+                      </div>
+                    </div>
+                    <div className="top-right-side-div">
+                      <div>
+                        <p>Exam Accepted</p>
+                        <p style={{ fontWeight: "bolder" }}>CAT, CUET</p>
+                      </div>
+                      <div>
+                        <p>Average Package</p>
+                        <p style={{ fontWeight: "bolder" }}>60 LPA</p>
+                      </div>
                     </div>
                   </div>
-                  <div className="top-right-side-div">
-                    <div>
-                      <p>Exam Accepted</p>
-                      <p style={{ fontWeight: "bolder" }}>CAT, CUET</p>
-                    </div>
-                    <div>
-                      <p>Average Package</p>
-                      <p style={{ fontWeight: "bolder" }}>60 LPA</p>
-                    </div>
-                  </div>
-                </div>
 
-                <div className="apply-button-div">
-                  <button className="apply-button">Apply Now</button>
-                  <button className="compare-button">Compare +</button>
+                  <div className="apply-button-div">
+                    <button className="apply-button">Apply Now</button>
+                    <button className="compare-button">Compare +</button>
+                  </div>
                 </div>
-              </div>
-            ))}
+              ) : (
+                <img
+                  src="https://c0.wallpaperflare.com/preview/931/255/701/banner-digital-graphics-lion.jpg"
+                  alt="adsbanner"
+                />
+              )
+            )}
           </div>
         </div>
       </div>
