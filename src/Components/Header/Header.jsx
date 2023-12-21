@@ -1,6 +1,5 @@
 import { useState } from "react";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
-import { Carousel } from "react-responsive-carousel";
 import "./Header.css";
 import { Link } from "react-router-dom";
 import Calendar from "react-calendar";
@@ -9,34 +8,21 @@ import { GiGiftOfKnowledge } from "react-icons/gi";
 import { BsBuildingsFill, BsFillArrowRightCircleFill } from "react-icons/bs";
 import { FaUniversity } from "react-icons/fa";
 import { HiOutlineStatusOnline } from "react-icons/hi";
+import Crousal from "../Crousal/Crousal";
+import banner from "../../Assets/Banner.png";
 
 const Header = () => {
   const [date, setDate] = useState(new Date());
   return (
     <div className="main-header-div">
       <div className="HomeCarousel">
-        <Carousel infiniteLoop autoPlay>
-          <Link to="/">
-            <div className="image">
-              <img src={require("../../Assets/Banner.png")} alt="banner-img" />
-            </div>
-          </Link>
-          <Link to="/">
-            <div className="image">
-              <img src={require("../../Assets/Banner.png")} alt="banner-img" />
-            </div>
-          </Link>
-          <Link to="/">
-            <div className="image">
-              <img src={require("../../Assets/Banner.png")} alt="banner-img" />
-            </div>
-          </Link>
-          <Link to="/">
-            <div className="image">
-              <img src={require("../../Assets/Banner.png")} alt="banner-img" />
-            </div>
-          </Link>
-        </Carousel>
+        <Crousal
+          images={[
+            banner,
+            "https://w0.peakpx.com/wallpaper/103/274/HD-wallpaper-laptop-red-sunset-background-laptop.jpg",
+            banner,
+          ]}
+        />
       </div>
       <div className="header-latest-news">
         <p>Latest Notification</p>

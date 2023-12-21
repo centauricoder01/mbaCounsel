@@ -61,7 +61,7 @@ const Navbar = () => {
               id="dropdown-basic"
               style={{ backgroundColor: "transparent", border: "none" }}
             >
-              Dropdown Button
+              Resources
             </Dropdown.Toggle>
 
             <Dropdown.Menu>

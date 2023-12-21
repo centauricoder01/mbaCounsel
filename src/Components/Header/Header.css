@@ -10,7 +10,6 @@
 
 .main-header-div {
   margin-bottom: 2rem;
-  position: relative;
 }
 
 .text-center {
@@ -73,11 +72,8 @@
   width: 80%;
   margin: auto;
   z-index: 100 !important;
-  position: absolute;
-  background-image: linear-gradient(to right, #002958, #003471);
   color: white;
-  top: 55%;
-  left: 10%;
+  margin-top: -20px;
   padding: 2rem;
   border-radius: 10px;
   gap: 1rem;
@@ -88,15 +84,22 @@
   height: 3rem;
 }
 
-.header-latest-news p {
+.header-latest-news > p {
   font-weight: bolder;
-  font-size: 1.4rem;
+  font-size: 1rem;
+  background-image: linear-gradient(to right, #002958, #003471);
+  text-align: center;
+  padding: 10px;
+  border-radius: 10px;
 }
 
 .marquee {
   width: 100%;
   overflow: hidden;
   white-space: nowrap;
+  font-weight: bolder;
+  font-size: 1.4rem;
+  color: black;
 }
 
 .marquee p {
