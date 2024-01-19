@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import "./Header.css";
 import { Link } from "react-router-dom";
@@ -10,30 +10,51 @@ import { FaUniversity } from "react-icons/fa";
 import { HiOutlineStatusOnline } from "react-icons/hi";
 import Crousal from "../Crousal/Crousal";
 import banner from "../../Assets/Banner.png";
+import { fetchData } from "../../API/Getrequest.js";
 
 const Header = () => {
   const [date, setDate] = useState(new Date());
+  const [banner, setBannner] = useState([]);
+  const [notification, setNotification] = useState([]);
+
+  const paragraphsFromBackend = [
+    "This is the first paragraph.",
+    "This is the second paragraph.",
+    "This is the third paragraph.",
+  ];
+  useEffect(() => {
+    fetchData("getbanner")
+      .then((res) => {
+        setBannner(res.allBanner);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  });
+
+  useEffect(() => {
+    fetchData("getnotification")
+      .then((res) => {
+        setNotification(res.allNotification);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  });
+
   return (
     <div className="main-header-div">
       <div className="HomeCarousel">
-        <Crousal
-          images={[
-            banner,
-            "https://w0.peakpx.com/wallpaper/103/274/HD-wallpaper-laptop-red-sunset-background-laptop.jpg",
-            banner,
-          ]}
-        />
+        <Crousal items={banner} />
       </div>
-      <div className="header-latest-news">
-        <p>Latest Notification</p>
-        <hr />
-        <div className="marquee">
-          <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quaerat,
-            dolore. Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-            Voluptates, tempore.
-          </p>
-        </div>
+      <div class="header-latest-news">
+        <div class="title">Latest Notification</div>
+
+        <ul>
+          {notification?.map((ele) => (
+            <li>{ele.Text}</li>
+          ))}
+        </ul>
       </div>
       <div className="crousal-bottom">
         <div className="first-div">

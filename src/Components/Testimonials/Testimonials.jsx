@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "./Testimonials.css";
 import { FaQuoteRight, FaQuoteLeft } from "react-icons/fa";
+import { fetchData } from "../../API/Getrequest";
 
 const testimonials = [
   {
@@ -43,6 +44,20 @@ const Testimonials = () => {
     autoplay: true,
     autoplaySpeed: 3000,
   };
+
+  const [testimonials, setTestimonials] = useState([]);
+
+  useEffect(() => {
+    fetchData("gettestimonial")
+      .then((res) => {
+        setTestimonials(res.allTestimonial);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }, []);
+
+  console.log(testimonials);
   return (
     <div className="container">
       <div className="baby-container">

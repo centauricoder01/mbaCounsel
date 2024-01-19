@@ -1,44 +1,37 @@
-import React from "react";
-import { useState, useEffect } from "react";
-import "./Crousal.css";
+import React, { useState, useEffect } from "react";
 
-const Crousal = ({ images }) => {
-  const [currentImageIndex, setCurrentImageIndex] = useState(0);
-
-  const nextImage = () => {
-    setCurrentImageIndex((currentImageIndex + 1) % images.length);
-  };
-
-  const prevImage = () => {
-    setCurrentImageIndex(
-      (currentImageIndex - 1 + images.length) % images.length
-    );
-  };
+const Carousel = ({ items }) => {
+  const [index, setIndex] = useState(0);
 
   useEffect(() => {
-    const timer = setInterval(() => {
-      nextImage();
-    }, 3000);
-    return () => clearInterval(timer);
-  }, [currentImageIndex]);
+    const interval = setInterval(() => {
+      setIndex((prevIndex) => (prevIndex + 1) % items.length);
+    }, 2000);
+    return () => clearInterval(interval);
+  }, [items]);
+
+  const nextItem = () => {
+    setIndex((prevIndex) => (prevIndex + 1) % items.length);
+  };
+
+  const prevItem = () => {
+    setIndex((prevIndex) => (prevIndex - 1 + items.length) % items.length);
+  };
 
   return (
-    <div className="carousel">
-      <button
-        className="carousel-button carousel-button-prev"
-        onClick={prevImage}
-      >
-        Previous
-      </button>
-      <img className="carousel-image" src={images[currentImageIndex]} alt="" />
-      <button
-        className="carousel-button carousel-button-next"
-        onClick={nextImage}
-      >
-        Next
-      </button>
+    <div style={{ position: "relative", zIndex: "-4" }}>
+      {/* <button onClick={prevItem}>Previous</button> */}
+      <img
+        src={items[index]?.Img}
+        alt={items[index]?.Img}
+        style={{ width: "100%", height: "30rem" }}
+      />
+      <h2 style={{ position: "absolute", top: "50%", left: "10%" }}>
+        {items[index]?.Text}
+      </h2>
+      {/* <button onClick={nextItem}>Next</button> */}
     </div>
   );
 };
 
-export default Crousal;
+export default Carousel;
