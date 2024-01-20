@@ -42,9 +42,16 @@
   padding: 1rem;
 }
 
-.testimonial-content p:nth-child(1) {
+.studentName {
   font-size: 1.5rem;
   font-weight: bolder;
+}
+
+.collegeName {
+  font-size: 1rem;
+  font-weight: bolder;
+  color: blue;
+  margin-top: -15px;
 }
 
 @media only screen and (max-width: 426px) {

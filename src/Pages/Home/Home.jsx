@@ -15,6 +15,8 @@ import Footer from "../../Components/Footer/Footer";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { fetchData } from "../../API/Getrequest";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   const settingsLaptop = {
@@ -32,11 +34,35 @@ const Home = () => {
     slidesToScroll: 2,
   };
 
+  const [addbanner, setAddBanner] = useState([]);
+  const [getServices, setGetServices] = useState([]);
+
   const [settingVal, setSettingVal] = useState(settingsLaptop);
 
   const isSmallScreen = window.innerWidth;
 
   let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+  useEffect(() => {
+    fetchData("getadsbanner")
+      .then((res) => {
+        setAddBanner(res.allAdsBanner);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }, []);
+
+  useEffect(() => {
+    fetchData("getservices")
+      .then((res) => {
+        setGetServices(res.allServices);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }, []);
+
   return (
     <div>
       <Navbar />
@@ -63,16 +89,14 @@ const Home = () => {
 
       <div className="overview-left">
         <div>
-          <h2>Ready to Elevate your MBA Journery</h2>
-          <p>Book Your Free Counselling Now!</p>
-          <p>
-            Embark on a transformative MBA adventure with personalized guidance
-            and industry expertise. Our seasoned mentors are here to shape your
-            success story.
-          </p>
+          <h2>{addbanner[0]?.Text || "SomeValue"}</h2>
+          <p>{addbanner[0]?.Subtitle || "SomeValue"}</p>
+          <p>{addbanner[0]?.Desc || "SomeValue"}</p>
         </div>
         <div>
-          <button>Book Now </button>
+          <Link to={addbanner[0]?.Url || "SomeValue"}>
+            <button>Book Now </button>
+          </Link>
         </div>
         <img src={require("../../Assets/find-arrow.png")} alt="find-arrow" />
       </div>
@@ -151,27 +175,16 @@ const Home = () => {
       <div className="our-services">
         <h1 className="all-new-h1">Our Services</h1>
         <div className="our-services-crousal">
-          <div className="single-product-div">
-            <img
-              src={require("../../Assets/Mask-Group.png")}
-              alt="mask-group"
-            />
-            <h3>Lorem ipsum dolor sit amet.</h3>
-          </div>
-          <div className="single-product-div">
-            <img
-              src={require("../../Assets/Mask-Group.png")}
-              alt="mask-group"
-            />
-            <h3>Lorem ipsum dolor sit amet.</h3>
-          </div>
-          <div className="single-product-div">
-            <img
-              src={require("../../Assets/Mask-Group.png")}
-              alt="mask-group"
-            />
-            <h3>Lorem ipsum dolor sit amet.</h3>
-          </div>
+          {getServices?.map((ele) => (
+            <div className="single-product-div">
+              <img
+                src={ele.Img}
+                alt="mask-group"
+                className="main-services-class"
+              />
+              <h5>{ele.Text}</h5>
+            </div>
+          ))}
         </div>
       </div>
       <div className="Explore-our-in-Demand-Features">

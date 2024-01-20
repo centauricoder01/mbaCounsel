@@ -130,14 +130,6 @@ d tr:hover {
   background-color: #f5f5f5 !important;
 }
 
-.single-product-div {
-  text-align: center;
-  border-radius: 10px;
-  padding-bottom: 15px;
-  box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px,
-    rgba(17, 17, 26, 0.05) 0px 8px 32px;
-}
-
 .main-centeral-div {
   display: flex;
   justify-content: space-between;
@@ -182,6 +174,22 @@ d tr:hover {
   align-items: center;
   gap: 2rem;
   flex-wrap: wrap;
+}
+
+.single-product-div {
+  text-align: center;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px,
+    rgba(17, 17, 26, 0.05) 0px 8px 32px;
+  width: 30%;
+  height: 20rem;
+}
+
+.main-services-class {
+  width: 100%;
+  height: 80%;
+  object-fit: cover;
 }
 
 .all-new-h1 {

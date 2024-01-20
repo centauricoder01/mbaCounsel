@@ -57,7 +57,6 @@ const Testimonials = () => {
       });
   }, []);
 
-  console.log(testimonials);
   return (
     <div className="container">
       <div className="baby-container">
@@ -65,14 +64,15 @@ const Testimonials = () => {
           {testimonials.map((testimonial) => (
             <div key={testimonial.id} className="testimonial-item">
               <img
-                src={testimonial.image}
-                alt={`Testimonial ${testimonial.id}`}
+                src={testimonial.Img}
+                alt={`Testimonial ${testimonial.Name}`}
                 className="testimonial-image"
               />
               <div className="testimonial-content">
-                <p>Elvish Bhaiiiiiii....</p>
+                <p className="studentName">{testimonial.Name}</p>
+                <p className="collegeName">{testimonial.College}</p>
                 <p className="testimonial-review">
-                  <FaQuoteLeft color="orange" /> {testimonial.review}
+                  <FaQuoteLeft color="orange" /> {testimonial.Review}
                   <FaQuoteRight color="orange" />
                 </p>
               </div>

@@ -4,10 +4,10 @@ const Carousel = ({ items }) => {
   const [index, setIndex] = useState(0);
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      setIndex((prevIndex) => (prevIndex + 1) % items.length);
-    }, 2000);
-    return () => clearInterval(interval);
+    // const interval = setInterval(() => {
+    //   setIndex((prevIndex) => (prevIndex + 1) % items.length);
+    // }, 2000);
+    // return () => clearInterval(interval);
   }, [items]);
 
   const nextItem = () => {

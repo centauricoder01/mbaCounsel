@@ -16,6 +16,7 @@ const Header = () => {
   const [date, setDate] = useState(new Date());
   const [banner, setBannner] = useState([]);
   const [notification, setNotification] = useState([]);
+  const [latestnews, setLatestNews] = useState([]);
 
   const paragraphsFromBackend = [
     "This is the first paragraph.",
@@ -30,7 +31,9 @@ const Header = () => {
       .catch((err) => {
         console.log(err);
       });
-  });
+  }, []);
+
+  // GET NOTIFICATION API
 
   useEffect(() => {
     fetchData("getnotification")
@@ -40,7 +43,18 @@ const Header = () => {
       .catch((err) => {
         console.log(err);
       });
-  });
+  }, []);
+
+  // GET LATEST NEWS API
+  useEffect(() => {
+    fetchData("getlatestnews")
+      .then((res) => {
+        setLatestNews(res.allNews);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }, []);
 
   return (
     <div className="main-header-div">
@@ -86,122 +100,35 @@ const Header = () => {
         <div className="news">
           <h1 className="text-center">News</h1>
           <div className="actualnews">
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero
-              molestias, modi nemo asperiores dignissimos non cum laudantium
-              illum iste impedit!
-            </p>
-            <div
-              style={{
-                display: "flex",
-                justifyContent: "space-between",
-                alignItems: "center",
-                marginTop: "-1rem",
-              }}
-            >
-              <p>
-                <i>10 aug 2012</i>
-              </p>
-              <p
-                style={{
-                  display: "flex",
-                  justifyContent: "center",
-                  alignItems: "center",
-                  gap: "1rem",
-                  cursor: "pointer",
-                }}
-              >
-                read more <BsFillArrowRightCircleFill />
-              </p>
-            </div>
-
-            <hr />
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint quae
-              tempore quos vero, quibusdam dolorem!
-            </p>
-            <div
-              style={{
-                display: "flex",
-                justifyContent: "space-between",
-                alignItems: "center",
-                marginTop: "-1rem",
-              }}
-            >
-              <p>
-                <i>10 aug 2012</i>
-              </p>
-              <p
-                style={{
-                  display: "flex",
-                  justifyContent: "center",
-                  alignItems: "center",
-                  gap: "1rem",
-                  cursor: "pointer",
-                }}
-              >
-                read more <BsFillArrowRightCircleFill />
-              </p>
-            </div>
-            <hr />
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Recusandae iste deserunt, voluptatem exercitationem iusto quia.
-              Veniam, ad neque!
-            </p>
-            <div
-              style={{
-                display: "flex",
-                justifyContent: "space-between",
-                alignItems: "center",
-                marginTop: "-1rem",
-              }}
-            >
-              <p>
-                <i>10 aug 2012</i>
-              </p>
-              <p
-                style={{
-                  display: "flex",
-                  justifyContent: "center",
-                  alignItems: "center",
-                  gap: "1rem",
-                  cursor: "pointer",
-                }}
-              >
-                read more <BsFillArrowRightCircleFill />
-              </p>
-            </div>
-            <hr />
-            <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab
-              dignissimos placeat at hic, quidem quas quae, error cum nostrum,
-              dolore culpa?
-            </p>
-            <div
-              style={{
-                display: "flex",
-                justifyContent: "space-between",
-                alignItems: "center",
-                marginTop: "-1rem",
-              }}
-            >
-              <p>
-                <i>10 aug 2012</i>
-              </p>
-              <p
-                style={{
-                  display: "flex",
-                  justifyContent: "center",
-                  alignItems: "center",
-                  gap: "1rem",
-                  cursor: "pointer",
-                }}
-              >
-                read more <BsFillArrowRightCircleFill />
-              </p>
-            </div>
-            <hr />
+            {latestnews?.map((ele) => (
+              <>
+                <p>{ele.ShortDesc}</p>
+                <div
+                  style={{
+                    display: "flex",
+                    justifyContent: "space-between",
+                    alignItems: "center",
+                    marginTop: "-1rem",
+                  }}
+                >
+                  <p>
+                    <i>{ele.Date}</i>
+                  </p>
+                  <p
+                    style={{
+                      display: "flex",
+                      justifyContent: "center",
+                      alignItems: "center",
+                      gap: "1rem",
+                      cursor: "pointer",
+                    }}
+                  >
+                    read more <BsFillArrowRightCircleFill />
+                  </p>
+                </div>
+                <hr />
+              </>
+            ))}
           </div>
         </div>
       </div>
