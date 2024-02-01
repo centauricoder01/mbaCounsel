@@ -14,7 +14,7 @@ import Exam from "../Pages/Exam/Exam";
 import CollageList from "../Pages/CollageList/CollageList";
 import ContactUs from "../Pages/ContactUs/ContactUs";
 import LatestNews from "../Pages/LatestNews/LatestNews";
-import Mainredirect from "../Pages/LatestNews/redirectFolder/Mainredirect"
+import Mainredirect from "../Pages/LatestNews/redirectFolder/Mainredirect";
 import Blog from "../Pages/Blog/Blog";
 import BlogRedirect from "../Pages/Blog/BlogRedirectFolder/BlogRedirect";
 import Articles from "../Pages/Articles/Articles";
@@ -33,7 +33,7 @@ const MainRoutes = () => {
         <Route path="/Newpassword" element={<NewPassword />}></Route>
         <Route path="/Thanks" element={<Thanks />}></Route>
         <Route path="/Thanks" element={<Thanks />}></Route>
-        <Route path="/collage" element={<Collages />}></Route>
+        <Route path="/collage/:id" element={<Collages />}></Route>
         <Route path="/courses" element={<Courses />}></Route>
         <Route path="/about" element={<About />}></Route>
         <Route path="/exam" element={<Exam />}></Route>

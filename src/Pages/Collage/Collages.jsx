@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
 import "./Collages.css";
 import Navbar from "../../Components/Navbar/Navbar";
 import Footer from "../../Components/Footer/Footer";
@@ -18,6 +19,8 @@ import Article from "../../Components/Article/Article";
 
 const Collages = () => {
   const [button, setButton] = useState("Overview");
+  const [singleCollegeData, setSingleCollegeData] = useState("");
+  const { id } = useParams();
 
   const [activeButton, setActiveButton] = useState(null);
 
@@ -32,6 +35,18 @@ const Collages = () => {
     };
   };
 
+  useEffect(() => {
+    fetch(`http://localhost:3001/api/v1/college/getbyid/${id}`)
+      .then((response) => response.json())
+      .then((data) => setSingleCollegeData(data.collegeById))
+      .catch((err) => console.log(err));
+  }, [id]);
+
+  if (singleCollegeData === "") {
+    return <div>Loading Data...</div>;
+  }
+
+  console.log(singleCollegeData, "Some Value of Single College Data");
   return (
     <div>
       <Navbar />
@@ -44,15 +59,15 @@ const Collages = () => {
             <p>
               <AiOutlineArrowRight />
             </p>
-            <p>Something</p>
+            <p>Home</p>
             <p>
               <AiOutlineArrowRight />
             </p>
-            <p>Something</p>
+            <p>College List</p>
             <p>
               <AiOutlineArrowRight />
             </p>
-            <p>Something</p>
+            <p>{singleCollegeData.collegeName}</p>
           </div>
 
           <div className="collage-name-review">
@@ -60,7 +75,7 @@ const Collages = () => {
               <img src={require("../../Assets/collage-logo.png")} alt="logo" />
               <div className="collage-name-main-div">
                 <i style={{ fontWeight: "bolder", fontSize: "1.8rem" }}>
-                  Indian Institute of Management
+                  {singleCollegeData.collegeName}
                 </i>
                 <p>
                   Estd.Year: 2000 &nbsp; &nbsp; &nbsp; Location : Banagalore,
@@ -143,12 +158,24 @@ const Collages = () => {
         </div>
 
         {/* MAIN PAGE START FROM HERE  */}
-        {button === "Overview" ? <Overview /> : null}
-        {button === "Programs" ? <Programs /> : null}
-        {button === "Admission" ? <Admission /> : null}
-        {button === "Placements" ? <Placements /> : null}
-        {button === "Campus" ? <Campus /> : null}
-        {button === "Faq" ? <Faq /> : null}
+        {button === "Overview" ? (
+          <Overview innerHTMLValue={singleCollegeData.collegeOverview} />
+        ) : null}
+        {button === "Programs" ? (
+          <Programs innerHTMLValue={singleCollegeData.collegePrograms} />
+        ) : null}
+        {button === "Admission" ? (
+          <Admission innerHTMLValue={singleCollegeData.collegeAdmission} />
+        ) : null}
+        {button === "Placements" ? (
+          <Placements innerHTMLValue={singleCollegeData.collegePlacement} />
+        ) : null}
+        {button === "Campus" ? (
+          <Campus innerHTMLValue={singleCollegeData.collegeCampusLife} />
+        ) : null}
+        {button === "Faq" ? (
+          <Faq innerHTMLValue={singleCollegeData.collegefaqs} />
+        ) : null}
         {button === "rating" ? <Rating /> : null}
       </div>
       <Footer />

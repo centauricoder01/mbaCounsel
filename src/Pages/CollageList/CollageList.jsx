@@ -1,3 +1,5 @@
+import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import Navbar from "../../Components/Navbar/Navbar";
 import Footer from "../../Components/Footer/Footer";
 import "./CollageList.css";
@@ -14,6 +16,7 @@ import Affiliation from "./Filters/Affiliation";
 import { MdOutlineVerified } from "react-icons/md";
 
 const CollageList = () => {
+  const [collegeData, setCollegeData] = useState([]);
   let arr = [
     {
       id: 1,
@@ -107,6 +110,17 @@ const CollageList = () => {
       label: <p>Degree</p>,
     },
   ];
+
+  useEffect(() => {
+    fetch("http://localhost:3001/api/v1/college/getcollege")
+      .then((response) => response.json())
+      .then((data) => setCollegeData(data.allCollege))
+      .catch((err) => console.log(err));
+  }, []);
+
+  if (arr.length === 0) {
+    return <div>Loading College....</div>;
+  }
   return (
     <>
       <Navbar />
@@ -240,17 +254,14 @@ const CollageList = () => {
             </Dropdown>
           </div>
           <div className="main-collagelist-show-div">
-            {arr.map((ele) =>
-              ele.ads === false ? (
+            {collegeData?.map(
+              (ele) => (
                 <div
                   key={ele}
                   className="single-product-div-top-B-school all-collage-list-div"
                 >
-                  <img
-                    src={require("../../Assets/Mask-Group.png")}
-                    alt="mask-group"
-                  />
-                  {ele.recomand === false ? (
+                  <img src={ele.collegePhoto} alt="mask-group" />
+                  {ele.collegeRecommended === false ? (
                     <div className="collage-list-sponsored-div">
                       <img
                         src={require("../../Assets/recommended.png")}
@@ -262,42 +273,65 @@ const CollageList = () => {
                     style={{ color: "black" }}
                     className="single-product-div-top-B-school-h2-tag"
                   >
-                    {ele.name}
+                    {ele.collegeName}
                   </h2>
                   <div className="main-centeral-div">
                     <div className="top-left-side-div">
                       <div>
-                        <p>Duration</p>
-                        <p style={{ fontWeight: "bolder" }}>2 Years</p>
+                        <p>Rating</p>
+                        <p style={{ fontWeight: "bolder" }}>
+                          {ele.collegeRating}
+                        </p>
                       </div>
                       <div>
                         <p>Course</p>
-                        <p style={{ fontWeight: "bolder" }}>MBBS, B.ED</p>
+                        <p style={{ fontWeight: "bolder" }}>
+                          {ele.collegecoursespecilzationfees?.map((ele) => (
+                            <strong>{ele.course}&nbsp; </strong>
+                          ))}
+                        </p>
                       </div>
                     </div>
                     <div className="top-right-side-div">
                       <div>
                         <p>Exam Accepted</p>
-                        <p style={{ fontWeight: "bolder" }}>CAT, CUET</p>
+                        <p style={{ fontWeight: "bolder" }}>
+                          {ele.collegeEntranceExam?.map((ele) => (
+                            <strong>{ele}&nbsp;</strong>
+                          ))}
+                        </p>
                       </div>
                       <div>
                         <p>Average Package</p>
-                        <p style={{ fontWeight: "bolder" }}>60 LPA</p>
+                        <p style={{ fontWeight: "bolder" }}>
+                          {ele.collegeAvgPackage}
+                        </p>
                       </div>
                     </div>
                   </div>
 
                   <div className="apply-button-div">
                     <button className="apply-button">Apply Now</button>
-                    <button className="compare-button">Compare +</button>
+                    {/* <button className="compare-button">Compare +</button> */}
+                    <button className="compare-button">
+                      <Link
+                        to={`/collage/${ele._id}`}
+                        style={{ color: "white" }}
+                      >
+                        Know More...
+                      </Link>
+                    </button>
                   </div>
                 </div>
-              ) : (
-                <img
-                  src="https://c0.wallpaperflare.com/preview/931/255/701/banner-digital-graphics-lion.jpg"
-                  alt="adsbanner"
-                />
               )
+              // ele.ads === false ? (
+              //   <div>I will add this if there is some adds content is there...</div>
+              // ) : (
+              //   <img
+              //     src="https://c0.wallpaperflare.com/preview/931/255/701/banner-digital-graphics-lion.jpg"
+              //     alt="adsbanner"
+              //   />
+              // )
             )}
           </div>
         </div>
