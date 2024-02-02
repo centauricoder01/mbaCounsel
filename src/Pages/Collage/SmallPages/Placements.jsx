@@ -2,12 +2,12 @@ import React from "react";
 import { ImLocation } from "react-icons/im";
 import Article from "../../../Components/Article/Article";
 
-const Placements = () => {
+const Placements = ({ innerHTMLValue }) => {
   let arr = [1, 2, 3, 4, 5, 6];
   return (
     <>
       <div className="main-collage-overview-div">
-        <div className="main-collage-left-side-div">
+        {/* <div className="main-collage-left-side-div">
           <div className="main-degree-granting-programme">
             <strong className="main-collage-admission-in-blue">
               <i>Placements</i>
@@ -79,7 +79,15 @@ const Placements = () => {
               </tbody>
             </table>
           </div>
+        </div> */}
+        <div>
+          <div
+            className="main-degree-granting-programme"
+            dangerouslySetInnerHTML={{ __html: innerHTMLValue }}
+          />
 
+          <Article />
+          {/* 
           <strong className="main-collage-admission-in-blue">
             <i>Top Recruiter</i>
           </strong>
@@ -107,9 +115,9 @@ const Placements = () => {
               <img src={require("../../../Assets/company.png")} alt="company" />
               <img src={require("../../../Assets/company.png")} alt="company" />
             </div>
-          </div>
-          <Article />
+          </div> */}
         </div>
+
         <div className="main-collage-right-side-div">
           <div className="collage-similar-collge-div">
             <h2>Similar Colleges</h2>

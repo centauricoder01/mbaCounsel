@@ -46,7 +46,7 @@ const Collages = () => {
     return <div>Loading Data...</div>;
   }
 
-  console.log(singleCollegeData, "Some Value of Single College Data");
+  const numRating = parseInt(singleCollegeData.collegeRating);
   return (
     <div>
       <Navbar />
@@ -72,21 +72,27 @@ const Collages = () => {
 
           <div className="collage-name-review">
             <div className="collage-name-left-div">
-              <img src={require("../../Assets/collage-logo.png")} alt="logo" />
+              <img
+                src={singleCollegeData.collegeLogo}
+                width={100}
+                height={100}
+                style={{ borderRadius: "10px" }}
+                alt="logo"
+              />
               <div className="collage-name-main-div">
                 <i style={{ fontWeight: "bolder", fontSize: "1.8rem" }}>
                   {singleCollegeData.collegeName}
                 </i>
                 <p>
-                  Estd.Year: 2000 &nbsp; &nbsp; &nbsp; Location : Banagalore,
-                  Karnataka &nbsp; &nbsp; Overall Rating : &nbsp;
-                  <AiOutlineStar color="orange" />
-                  <AiOutlineStar color="orange" />
-                  <AiOutlineStar color="orange" />
-                  <AiOutlineStar color="orange" />
-                  <AiOutlineStar color="orange" />
+                  Estd.Year: {singleCollegeData.collegeEstYear} &nbsp; &nbsp;
+                  &nbsp; Location : {singleCollegeData.collegeCity},{" "}
+                  {singleCollegeData.collegeState} &nbsp; &nbsp; Overall Rating
+                  : &nbsp;
+                  {Array.from({ length: numRating }, (_, index) => (
+                    <AiOutlineStar key={index} color="orange" />
+                  ))}
                   &nbsp;
-                  <span>(4.6/5 Review)</span>
+                  <span>({singleCollegeData.collegeRating}/5 Review)</span>
                   <br />
                   College Type : Government &nbsp; &nbsp; Affiliation :
                   Autonomus &nbsp; &nbsp; Accredation : NAAC &nbsp; &nbsp; NIRF

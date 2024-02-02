@@ -1,16 +1,16 @@
 import React from "react";
 import { ImLocation } from "react-icons/im";
-import SingelCampus from "../../../Components/Campus/SingelCampus";
-import { campusdata } from "../SmallPagesCSS/Campusdata";
+// import SingelCampus from "../../../Components/Campus/SingelCampus";
+// import { campusdata } from "../SmallPagesCSS/Campusdata";
 import Article from "../../../Components/Article/Article";
 
-const Campus = () => {
+const Campus = ({ innerHTMLValue }) => {
   let arr = [1, 2, 3, 4, 5, 6];
   return (
     <>
       <div className="main-collage-overview-div">
         <div className="main-collage-left-side-div">
-          <div className="main-degree-granting-programme">
+          {/* <div className="main-degree-granting-programme">
             <strong className="main-collage-admission-in-blue">
               <i>Campus Life</i>
             </strong>
@@ -36,7 +36,12 @@ const Campus = () => {
                 <hr />
               </>
             ))}
-          </div>
+          </div> */}
+
+          <div
+            className="main-degree-granting-programme"
+            dangerouslySetInnerHTML={{ __html: innerHTMLValue }}
+          />
           <Article />
         </div>
         <div className="main-collage-right-side-div">

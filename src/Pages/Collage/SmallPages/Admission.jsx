@@ -3,14 +3,14 @@ import { ImLocation } from "react-icons/im";
 import { FiArrowRight } from "react-icons/fi";
 import Article from "../../../Components/Article/Article";
 
-const Admission = () => {
+const Admission = ({ innerHTMLValue }) => {
   let arr = [1, 2, 3, 4, 5, 6];
 
   return (
     <>
       <div className="main-collage-overview-div">
         <div className="main-collage-left-side-div">
-          <div className="main-degree-granting-programme">
+          {/* <div className="main-degree-granting-programme">
             <strong className="main-collage-admission-in-blue">
               <i>IIM Bangalore Admission Process 2021</i>
             </strong>
@@ -95,7 +95,11 @@ const Admission = () => {
               of the final aggregate score calculated using the scores of
               criteria as weighted in the above table.
             </p>
-          </div>
+          </div> */}
+          <div
+            className="main-degree-granting-programme"
+            dangerouslySetInnerHTML={{ __html: innerHTMLValue }}
+          />
 
           <div className="programs-fee-structure">
             <i>Eligibility criteria admission for other courses</i>

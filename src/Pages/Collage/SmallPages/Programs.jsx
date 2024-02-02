@@ -3,13 +3,13 @@ import { ImLocation } from "react-icons/im";
 import Article from "../../../Components/Article/Article";
 import { FiArrowRight } from "react-icons/fi";
 
-const Programs = () => {
+const Programs = ({ innerHTMLValue }) => {
   let arr = [1, 2, 3, 4, 5, 6];
   return (
     <>
       <div className="main-collage-overview-div">
         <div className="main-collage-left-side-div">
-          <div className="main-degree-granting-programme">
+          {/* <div className="main-degree-granting-programme">
             <strong>
               <i>Degree-Granting Programmes</i>
             </strong>
@@ -42,7 +42,11 @@ const Programs = () => {
               <li>N. S. Ramaswamy Pre-doctoral Fellowship (NSR Pre-doc)</li>
               <li> Mahatma Gandhi National Fellowship</li>
             </ul>
-          </div>
+          </div> */}
+          <div
+            className="main-degree-granting-programme"
+            dangerouslySetInnerHTML={{ __html: innerHTMLValue }}
+          />
 
           <div className="programs-fee-structure">
             <strong>

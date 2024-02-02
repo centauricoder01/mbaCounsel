@@ -7,13 +7,14 @@ import { FcMoneyTransfer } from "react-icons/fc";
 import { FaRupeeSign } from "react-icons/fa";
 import Article from "../../../Components/Article/Article";
 
-const Overview = () => {
+const Overview = ({ innerHTMLValue }) => {
   let arr = [1, 2, 3, 4, 5];
+  console.log(innerHTMLValue, "InnerHTMLValue");
   return (
     <>
       <div className="main-collage-overview-div">
         <div className="main-collage-left-side-div">
-          <div className="collage-details-div">
+          {/* <div className="collage-details-div">
             <p>
               Indian Institute of Management, Bangalore or IIM-B, is a top
               leading Graduate school of Management in Asia. Under the IIM Act
@@ -31,7 +32,11 @@ const Overview = () => {
               Administration (Business Analytics) – two years full time are the
               degree programmes available.
             </p>
-          </div>
+          </div> */}
+          <div
+            className="collage-details-div"
+            dangerouslySetInnerHTML={{ __html: innerHTMLValue }}
+          />
 
           <div className="collage-number-data">
             <div className="single-collage-number-data-div">
