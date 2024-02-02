@@ -20,6 +20,7 @@ import BlogRedirect from "../Pages/Blog/BlogRedirectFolder/BlogRedirect";
 import Articles from "../Pages/Articles/Articles";
 import ArticleRedirect from "../Pages/Articles/ArticleRedirect/ArticleRedirect";
 import Rating from "../Pages/Collage/SmallPages/Rating";
+import Pagenotfound from "../Components/PageNotFound/Pagenotfound";
 
 const MainRoutes = () => {
   return (
@@ -49,6 +50,7 @@ const MainRoutes = () => {
         <Route path="/LatestNews" element={<LatestNews />}></Route>
         <Route path="/redirectFolder" element={<Mainredirect />}></Route>
         <Route path="/rating" element={<Rating />}></Route>
+        <Route path="*" element={<Pagenotfound />}></Route>
       </Routes>
     </div>
   );

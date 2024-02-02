@@ -51,7 +51,12 @@ const Collages = () => {
     <div>
       <Navbar />
       <div className="main-collage-div">
-        <div className="collage-page-background-div">
+        <div
+          className="collage-page-background-div"
+          style={{
+            backgroundImage: `linear-gradient(to bottom, rgba(0, 0, 0, 0.543), rgba(0, 0, 0, 0.626)), url(${singleCollegeData.collegePhoto})`,
+          }}
+        >
           <div className="collage-path-div">
             <p>
               <AiFillHome />
