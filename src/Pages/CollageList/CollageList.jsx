@@ -260,15 +260,15 @@ const CollageList = () => {
                   key={ele}
                   className="single-product-div-top-B-school all-collage-list-div"
                 >
-                  <img src={ele.collegePhoto} alt="mask-group" />
-                  {ele.collegeRecommended === false ? (
+                  <img src={ele.collegePhoto} alt="mask-group" className="collegephoto" />
+                  {/* {ele.collegeRecommended === false ? (
                     <div className="collage-list-sponsored-div">
                       <img
                         src={require("../../Assets/recommended.png")}
                         alt="sponsered"
                       />
                     </div>
-                  ) : null}
+                  ) : null} */}
                   <h2
                     style={{ color: "black" }}
                     className="single-product-div-top-B-school-h2-tag"

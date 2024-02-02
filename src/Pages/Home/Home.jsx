@@ -36,6 +36,7 @@ const Home = () => {
 
   const [addbanner, setAddBanner] = useState([]);
   const [getServices, setGetServices] = useState([]);
+  const [collegeData, setCollegeData] = useState([]);
 
   const [settingVal, setSettingVal] = useState(settingsLaptop);
 
@@ -61,6 +62,11 @@ const Home = () => {
       .catch((err) => {
         console.log(err);
       });
+
+    fetch("http://localhost:3001/api/v1/college/getcollege")
+      .then((response) => response.json())
+      .then((data) => setCollegeData(data.allCollege))
+      .catch((err) => console.log(err));
   }, []);
 
   return (
@@ -313,32 +319,40 @@ const Home = () => {
       <div className="Top-B-Schools-in-India">
         <h1 className="all-new-h1">Top B-Schools in India</h1>
         <div className="Top-B-Schools-in-India-crousel-div">
-          {arr.map((ele) => (
+          {collegeData?.map((ele) => (
             <div className="single-product-div-top-B-school">
-              <img
-                src={require("../../Assets/Mask-Group.png")}
-                alt="mask-group"
-              />
-              <h1 style={{ color: "black" }}>IIM Bangelore</h1>
+              <img src={ele.collegePhoto} alt="mask-group" />
+              <h2 style={{ color: "black" }}>{ele.collegeName}</h2>
               <div className="main-centeral-div">
                 <div className="top-left-side-div">
                   <div>
-                    <p>Duration</p>
-                    <p style={{ fontWeight: "bolder" }}>2 Years</p>
+                    <p>Rating</p>
+                    <p style={{ fontWeight: "bolder" }}>{ele.collegeRating}</p>
                   </div>
                   <div>
                     <p>Course</p>
-                    <p style={{ fontWeight: "bolder" }}>MBBS, B.ED</p>
+                    <p style={{ fontWeight: "bolder" }}>
+                      {ele.collegecoursespecilzationfees?.map((ele) => (
+                        <strong>{ele.course}&nbsp; </strong>
+                      ))}
+                    </p>
                   </div>
                 </div>
                 <div className="top-right-side-div">
                   <div>
                     <p>Exam Accepted</p>
-                    <p style={{ fontWeight: "bolder" }}>CAT, CUET</p>
+                    <p style={{ fontWeight: "bolder" }}>
+                      {ele.collegeEntranceExam?.map((ele) => (
+                        <strong>{ele}&nbsp;</strong>
+                      ))}
+                    </p>
                   </div>
                   <div>
                     <p>Average Package</p>
-                    <p style={{ fontWeight: "bolder" }}>60 LPA</p>
+                    <p style={{ fontWeight: "bolder" }}>
+                      {" "}
+                      {ele.collegeAvgPackage}
+                    </p>
                   </div>
                 </div>
               </div>

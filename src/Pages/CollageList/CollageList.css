@@ -25,6 +25,11 @@
 
 .all-collage-list-div {
   position: relative;
+  width: 31%;
+}
+
+.collegephoto {
+  height: 15rem;
 }
 
 .collage-list-sponsored-div {
@@ -69,7 +74,7 @@
 .main-collagelist-show-div {
   display: flex;
   flex-wrap: wrap;
-  gap: 3rem;
+  gap: 2rem;
   padding: 1rem;
 }
 
@@ -79,6 +84,7 @@
 
 .main-collagelist-show-div img {
   width: 100%;
+  height: 14rem;
 }
 
 #components-dropdown-demo-arrow .ant-btn {
