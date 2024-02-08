@@ -1,27 +1,14 @@
-import React, { useState } from "react";
+import React from "react";
 import "./Navbar.css";
 import logo from "../../Assets/mbalogo.png";
 import { Link } from "react-router-dom";
-import { BsFillPersonFill } from "react-icons/bs";
-import { GiHamburgerMenu } from "react-icons/gi";
-import Dropdown from "react-bootstrap/Dropdown";
-import Button from "react-bootstrap/Button";
+import { Container, Nav, Navbar, Row, Col, NavDropdown } from "react-bootstrap";
+import DropDownMenu from "./DropDownMenu";
+import DropDownSubMenu from "./DropDownSubMenu";
+import MultiLevelDropdown from "../MultiLevelDropdown/MultiLevelDropdown";
 
-import { Drawer, Input } from "antd";
-const { Search } = Input;
-
-const Navbar = () => {
-  const [open, setOpen] = useState(false);
-
-  const showDrawer = () => {
-    setOpen(true);
-  };
-
-  const onClose = () => {
-    setOpen(false);
-  };
-
-  const onSearch = (value, _e, info) => console.log(info?.source, value);
+const MainNavbar = () => {
+  // Logic for opening the Menu section
 
   return (
     <div className="main-navbar">
@@ -32,172 +19,71 @@ const Navbar = () => {
       </div>
       <div className="main-links-div-navbar">
         <div className="first-link-div-navbar">
-          <Link to={"/collage"}>
-            <Button style={{ backgroundColor: "transparent", border: "none" }}>
-              PROGRAMS
-            </Button>
-          </Link>
-          <Link to={"/collagelist"}>
-            <Button style={{ backgroundColor: "transparent", border: "none" }}>
-              COLLAGES
-            </Button>
-          </Link>
-          <Link to={"/about"}>
-            <Button style={{ backgroundColor: "transparent", border: "none" }}>
-              ABOUT
-            </Button>
-          </Link>
-          <Link to={"/"}>
-            <Button style={{ backgroundColor: "transparent", border: "none" }}>
-              SERVICES
-            </Button>
-          </Link>
-          <Link to={"/"}>
-            <Button style={{ backgroundColor: "transparent", border: "none" }}>
-              ENTRANCES
-            </Button>
-          </Link>
-
-          <Dropdown>
-            <Dropdown.Toggle
-              id="dropdown-basic"
-              style={{ backgroundColor: "transparent", border: "none" }}
-            >
-              Resources
-            </Dropdown.Toggle>
-
-            <Dropdown.Menu>
-              <Dropdown.Item href="#/action-1">Blog</Dropdown.Item>
-              <Dropdown.Item href="#/action-2">Article </Dropdown.Item>
-              <Dropdown.Item href="#/action-3">Latest News</Dropdown.Item>
-            </Dropdown.Menu>
-          </Dropdown>
-
-          <Link to={"/signup"}>
-            <button className="button-32">
-              <BsFillPersonFill />
-              Login/Register
-            </button>
-          </Link>
+          <ul>
+            <DropDownMenu title="Tools" id="collasible-nav-dropdown">
+              <NavDropdown.Item href="#action/3.1">
+                College Comparision
+              </NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.1">
+                ROI calculator
+              </NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.1">
+                Intership Finder
+              </NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.1">
+                Carrier Guru
+              </NavDropdown.Item>
+            </DropDownMenu>
+            <li>Services</li>
+            <li>About US</li>
+            <li>Contact US</li>
+            <input type="text" placeholder="Search college Here" />
+          </ul>
         </div>
         <div className="second-link-div-navbar">
-          <Link to={"/courses"}>
-            <Button style={{ backgroundColor: "transparent", border: "none" }}>
-              Dummy
-            </Button>
-          </Link>
-          <Link to={"/courses"}>
-            <Button style={{ backgroundColor: "transparent", border: "none" }}>
-              Dummy
-            </Button>
-          </Link>
-          <Link to={"/courses"}>
-            <Button style={{ backgroundColor: "transparent", border: "none" }}>
-              Dummy
-            </Button>
-          </Link>
-
-          <Search
-            placeholder="Enter Collage Name"
-            onSearch={onSearch}
-            // enterButton
-            className="navbar-input-box"
-          />
+          <ul>
+            <MultiLevelDropdown />
+            <DropDownMenu title="Programs" id="collasible-nav-dropdown">
+              <NavDropdown.Item href="#action/3.1">Online MBA</NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.1">PGDM</NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.1">
+                Executive MBA
+              </NavDropdown.Item>
+            </DropDownMenu>
+            <DropDownMenu title="Entrance Exam" id="collasible-nav-dropdown">
+              <NavDropdown.Item href="#action/3.1">
+                Regular MBA
+              </NavDropdown.Item>
+              <DropDownSubMenu href="#action/3.7" title="Online MBA">
+                <NavDropdown.Item href="#action/8.1">
+                  Laptop MBA
+                </NavDropdown.Item>
+                <NavDropdown.Item href="#action/8.2">
+                  Mobile MBA
+                </NavDropdown.Item>
+              </DropDownSubMenu>
+            </DropDownMenu>
+            <DropDownMenu title="Resources" id="collasible-nav-dropdown">
+              <NavDropdown.Item href="#action/3.1">
+                Web Development
+              </NavDropdown.Item>
+              <DropDownSubMenu href="#action/3.7" title="Deisgn">
+                <NavDropdown.Item href="#action/8.1">Html</NavDropdown.Item>
+                <NavDropdown.Item href="#action/8.2">CSS</NavDropdown.Item>
+                {/* <DropDownSubMenu href="#action/3.7" title="Development">
+                  <NavDropdown.Item href="#action/9.1">
+                    Javascript
+                  </NavDropdown.Item>
+                  <NavDropdown.Item href="#action/9.2">Jquery</NavDropdown.Item>
+                </DropDownSubMenu> */}
+              </DropDownSubMenu>
+            </DropDownMenu>
+            <button className="login-signup-button">Login/Signup</button>
+          </ul>
         </div>
       </div>
-      <GiHamburgerMenu
-        size={35}
-        onClick={showDrawer}
-        color="white"
-        className="GiHamburgerMenu"
-      />
-
-      <Drawer title="Surprice" placement="right" onClose={onClose} open={open}>
-        <Link to={"/"}>
-          <p
-            className="para-navbar-div"
-            onClose={onClose}
-            open={open}
-            color="black"
-          >
-            Home
-          </p>
-          <hr />
-        </Link>
-        <Link to={"/about"}>
-          <p className="para-navbar-div" onClose={onClose}>
-            About
-          </p>
-          <hr />
-        </Link>
-        <Link to={"/product"}>
-          <p className="para-navbar-div" onClose={onClose}>
-            Product
-          </p>
-          <hr />
-        </Link>
-        <Link to={"/contact"}>
-          <p className="para-navbar-div" onClose={onClose}>
-            Contact
-          </p>
-          <hr />
-        </Link>
-        <Link to={"/contact"}>
-          <p className="para-navbar-div" onClose={onClose}>
-            Contact
-          </p>
-          <hr />
-        </Link>
-        <Link to={"/contact"}>
-          <p className="para-navbar-div" onClose={onClose}>
-            Contact
-          </p>
-          <hr />
-        </Link>
-        <Link to={"/contact"}>
-          <p className="para-navbar-div" onClose={onClose}>
-            Contact
-          </p>
-          <hr />
-        </Link>
-        <Link to={"/contact"}>
-          <p className="para-navbar-div" onClose={onClose}>
-            Contact
-          </p>
-          <hr />
-        </Link>
-        <Link to={"/contact"}>
-          <p className="para-navbar-div" onClose={onClose}>
-            Contact
-          </p>
-          <hr />
-        </Link>
-        <Link to={"/contact"}>
-          <p className="para-navbar-div" onClose={onClose}>
-            Contact
-          </p>
-          <hr />
-        </Link>
-        <Link to={"/contact"}>
-          <p className="para-navbar-div" onClose={onClose}>
-            Contact
-          </p>
-          <hr />
-        </Link>
-        <Link to={"/contact"}>
-          <p className="para-navbar-div" onClose={onClose}>
-            Contact
-          </p>
-          <hr />
-        </Link>
-        <Link to={"/contact"}>
-          <button className="button-15" onClose={onClose}>
-            Register/Login
-          </button>
-        </Link>
-      </Drawer>
     </div>
   );
 };
 
-export default Navbar;
+export default MainNavbar;

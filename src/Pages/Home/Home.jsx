@@ -141,32 +141,40 @@ const Home = () => {
       <div className="our-services top-feature-collage">
         <h1 className="all-new-h1">Top Features Collages</h1>
         <Slider {...settingVal}>
-          {arr.map((ele) => (
+          {collegeData?.map((ele) => (
             <div className="single-product-div-top-B-school">
-              <img
-                src={require("../../Assets/Mask-Group.png")}
-                alt="mask-group"
-              />
-              <h1 style={{ color: "black" }}>IIM Bangelore</h1>
+              <img src={ele.collegePhoto} alt="mask-group" />
+              <h2 style={{ color: "black" }}>{ele.collegeName}</h2>
               <div className="main-centeral-div">
                 <div className="top-left-side-div">
                   <div>
-                    <p>Duration</p>
-                    <p style={{ fontWeight: "bolder" }}>2 Years</p>
+                    <p>Rating</p>
+                    <p style={{ fontWeight: "bolder" }}>{ele.collegeRating}</p>
                   </div>
                   <div>
                     <p>Course</p>
-                    <p style={{ fontWeight: "bolder" }}>MBBS, B.ED</p>
+                    <p style={{ fontWeight: "bolder" }}>
+                      {ele.collegecoursespecilzationfees?.map((ele) => (
+                        <strong>{ele.course}&nbsp; </strong>
+                      ))}
+                    </p>
                   </div>
                 </div>
                 <div className="top-right-side-div">
                   <div>
                     <p>Exam Accepted</p>
-                    <p style={{ fontWeight: "bolder" }}>CAT, CUET</p>
+                    <p style={{ fontWeight: "bolder" }}>
+                      {ele.collegeEntranceExam?.map((ele) => (
+                        <strong>{ele}&nbsp;</strong>
+                      ))}
+                    </p>
                   </div>
                   <div>
                     <p>Average Package</p>
-                    <p style={{ fontWeight: "bolder" }}>60 LPA</p>
+                    <p style={{ fontWeight: "bolder" }}>
+                      {" "}
+                      {ele.collegeAvgPackage}
+                    </p>
                   </div>
                 </div>
               </div>
@@ -175,6 +183,39 @@ const Home = () => {
                 <button className="compare-button">Compare +</button>
               </div>
             </div>
+            // <div className="single-product-div-top-B-school">
+            //   <img
+            //     src={require("../../Assets/Mask-Group.png")}
+            //     alt="mask-group"
+            //   />
+            //   <h1 style={{ color: "black" }}>IIM Bangelore</h1>
+            //   <div className="main-centeral-div">
+            //     <div className="top-left-side-div">
+            //       <div>
+            //         <p>Duration</p>
+            //         <p style={{ fontWeight: "bolder" }}>2 Years</p>
+            //       </div>
+            //       <div>
+            //         <p>Course</p>
+            //         <p style={{ fontWeight: "bolder" }}>MBBS, B.ED</p>
+            //       </div>
+            //     </div>
+            //     <div className="top-right-side-div">
+            //       <div>
+            //         <p>Exam Accepted</p>
+            //         <p style={{ fontWeight: "bolder" }}>CAT, CUET</p>
+            //       </div>
+            //       <div>
+            //         <p>Average Package</p>
+            //         <p style={{ fontWeight: "bolder" }}>60 LPA</p>
+            //       </div>
+            //     </div>
+            //   </div>
+            //   <div className="apply-button-div">
+            //     <button className="apply-button">Apply Now</button>
+            //     <button className="compare-button">Compare +</button>
+            //   </div>
+            // </div>
           ))}
         </Slider>
       </div>
