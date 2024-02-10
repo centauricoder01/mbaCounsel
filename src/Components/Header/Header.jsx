@@ -63,10 +63,11 @@ const Header = () => {
       </div>
       <div class="header-latest-news">
         <div class="title">Latest Notification</div>
-
         <ul>
           {notification?.map((ele) => (
-            <li>{ele.Text}</li>
+            <li>
+              <Link to={"/"}>{ele.Text}</Link>
+            </li>
           ))}
         </ul>
       </div>

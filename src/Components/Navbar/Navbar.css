@@ -11,25 +11,64 @@
   );
   position: fixed;
   width: 100%;
-  z-index: 2;
+  z-index: 20;
   color: white;
+  padding: 0rem 1rem;
 }
 
-.main-navbar img {
+.main-image-div img {
+  width: 70%;
+}
+
+.main-links-div-navbar {
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.GiHamburgerMenu {
+  display: none;
+}
+
+.main-image-div {
   width: 20%;
+  display: flex;
+  gap: 1rem;
+}
+
+.navbar-input-search-button {
+  position: absolute;
+  top: 64%;
+  right: 2%;
+  border: none;
+  background: transparent;
+}
+
+.first-link-div-navbar {
+  width: 100%;
+  padding-top: 1rem;
+  /* border: 1px solid red; */
+}
+.second-link-div-navbar {
+  width: 100%;
+  padding-top: 1rem;
 }
 
 .first-link-div-navbar > ul {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: right;
+  align-items: normal;
   list-style: none;
   gap: 3rem;
+  width: 100%;
 }
 
 .second-link-div-navbar > ul {
+  width: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: left;
   align-items: center;
   list-style: none;
   gap: 3rem;
@@ -56,7 +95,12 @@
   background-color: #8181ff;
   color: white;
   border: none;
-  padding: 4px;
+  padding: 10px;
+  font-weight: bolder;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
 }
 /* MAIN DESIGN FOR NAVBAR START FROM HERE */
 
@@ -125,4 +169,25 @@
   right: 100%;
   margin-left: auto;
   margin-right: 1px;
+}
+
+@media screen and (max-width: 768px) {
+  .main-links-div-navbar {
+    display: none;
+  }
+
+  .GiHamburgerMenu {
+    display: block;
+  }
+
+  .main-navbar {
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .main-image-div {
+    width: 40%;
+    display: flex;
+    gap: 1rem;
+  }
 }

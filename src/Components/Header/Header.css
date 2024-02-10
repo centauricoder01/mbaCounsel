@@ -5,7 +5,7 @@
   background-color: rgba(0, 0, 0, 0.182);
 }
 .HomeCarousel {
-  padding-top: 5rem;
+  padding-top: 9rem;
 }
 
 .main-header-div {
@@ -69,23 +69,23 @@
   justify-content: center;
   height: 6rem;
   align-items: center;
-  width: 80%;
+  width: 99%;
   margin: auto;
-  z-index: 100 !important;
+  /* z-index: 10; */
   margin-top: -20px;
   padding: 2rem;
   border-radius: 10px;
   gap: 1rem;
+  overflow: hidden;
 }
 
 .header-latest-news .title {
   position: absolute;
   background: #df2020;
-  z-index: 200;
+  z-index: 10;
   padding: 10px;
-  border-radius: 5px;
   height: 3rem;
-  left: 0;
+  left: 6px;
   color: white;
 }
 
