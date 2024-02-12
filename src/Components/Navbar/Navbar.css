@@ -191,3 +191,8 @@
     gap: 1rem;
   }
 }
+
+.dropdown-menu.show {
+  border-radius: 0px;
+  margin-top: 20px;
+}

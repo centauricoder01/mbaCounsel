@@ -6,6 +6,11 @@ import { FaRegArrowAltCircleRight } from "react-icons/fa";
 const MultiLevelDropdown = () => {
   const [isOpen, setIsOpen] = useState(false);
   const node = useRef();
+  const [hoveredPara, setHoveredPara] = useState(null);
+
+  const handleParaHover = (index) => {
+    setHoveredPara(index);
+  };
 
   const handleClickOutside = (e) => {
     if (node.current && !node.current.contains(e.target)) {
@@ -27,16 +32,40 @@ const MultiLevelDropdown = () => {
       </li>
       {isOpen && (
         <div className="multileveldropdown-main-div" ref={node}>
-          <div>
-            <p>PGDM</p>
-            <p>Online</p>
-            <p>Executive</p>
-            <p>Normal</p>
+          <div className="para-tags-container">
+            <p
+              className={hoveredPara === 0 ? "active" : ""}
+              onMouseEnter={() => handleParaHover(0)}
+              onMouseLeave={() => handleParaHover(null)}
+            >
+              PGDM
+            </p>
+            <p
+              className={hoveredPara === 1 ? "active" : ""}
+              onMouseEnter={() => handleParaHover(1)}
+              onMouseLeave={() => handleParaHover(null)}
+            >
+              Online
+            </p>
+            <p
+              className={hoveredPara === 2 ? "active" : ""}
+              onMouseEnter={() => handleParaHover(2)}
+              onMouseLeave={() => handleParaHover(null)}
+            >
+              Executive
+            </p>
+            <p
+              className={hoveredPara === 3 ? "active" : ""}
+              onMouseEnter={() => handleParaHover(3)}
+              onMouseLeave={() => handleParaHover(null)}
+            >
+              Normal
+            </p>
           </div>
-
           <hr />
-
-          <div>
+          <div
+            className={`selectable-div ${hoveredPara !== null ? "active" : ""}`}
+          >
             <h5>All States</h5>
             <p>Karnataka</p>
             <p>Maharashtra</p>
@@ -50,20 +79,20 @@ const MultiLevelDropdown = () => {
             <p>Chennai</p>
             <h6>show more... </h6>
           </div>
-
           <hr />
-
-          <div>
+          <div
+            className={`selectable-div ${hoveredPara !== null ? "active" : ""}`}
+          >
             <h5>Popular Searches</h5>
             <p>Best MBA College</p>
             <p>Top MBA College</p>
             <p>Highest Placement in MBA</p>
             <p>Top Placement in MBA</p>
           </div>
-
           <hr />
-
-          <div>
+          <div
+            className={`selectable-div ${hoveredPara !== null ? "active" : ""}`}
+          >
             <h5>Top Colleges</h5>
             <p>Xavier School of Management</p>
             <p>Indian Institute Of Management</p>

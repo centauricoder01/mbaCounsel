@@ -103,7 +103,7 @@ const CollageList = () => {
     },
     {
       key: "2",
-      label: <p>Collage</p>,
+      label: <p>College</p>,
     },
     {
       key: "3",
@@ -178,7 +178,7 @@ const CollageList = () => {
             items={[
               {
                 key: "5",
-                label: "Collage Type",
+                label: "College Type",
                 children: <CollageType />,
               },
             ]}
@@ -250,7 +250,7 @@ const CollageList = () => {
               placement="bottomLeft"
               arrow
             >
-              <Button>Sort By: Collage</Button>
+              <Button>Sort By: College</Button>
             </Dropdown>
           </div>
           <div className="main-collagelist-show-div">
@@ -260,7 +260,11 @@ const CollageList = () => {
                   key={ele}
                   className="single-product-div-top-B-school all-collage-list-div"
                 >
-                  <img src={ele.collegePhoto} alt="mask-group" className="collegephoto" />
+                  <img
+                    src={ele.collegePhoto}
+                    alt="mask-group"
+                    className="collegephoto"
+                  />
                   {/* {ele.collegeRecommended === false ? (
                     <div className="collage-list-sponsored-div">
                       <img

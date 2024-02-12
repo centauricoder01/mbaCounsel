@@ -1,10 +1,14 @@
 .main-collagelist-div {
-  padding-top: 8rem;
+  padding-top: 10rem;
   display: flex;
   gap: 2rem;
   width: 90%;
   margin: auto;
   margin-bottom: 2rem;
+}
+
+:where(.css-dev-only-do-not-override-1b0bdye).ant-collapse {
+  margin-bottom: 1rem;
 }
 
 .single-product-div-top-B-school-h2-tag {
@@ -118,6 +122,17 @@
   .ant-collapse-item:last-child
   > .ant-collapse-content {
   border-radius: 0rem;
+}
+
+:where(.css-dev-only-do-not-override-1b0bdye).ant-collapse
+  > .ant-collapse-item:last-child,
+:where(.css-dev-only-do-not-override-1b0bdye).ant-collapse
+  > .ant-collapse-item:last-child
+  > .ant-collapse-header {
+  background-color: lightblue;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+  border: none;
 }
 
 @media only screen and (max-width: 1024px) {
