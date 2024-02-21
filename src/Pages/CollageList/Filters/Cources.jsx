@@ -14,7 +14,7 @@ const Cources = ({ filterValue, onvaluechange, showingValue }) => {
   return (
     <div className="allFiltercss">
       {showingValue.map((ele) => (
-        <Checkbox onChange={onChange} value={ele.coursesValue}>
+        <Checkbox key={ele._id} onChange={onChange} value={ele.coursesValue}>
           {ele.coursesValue}
         </Checkbox>
       ))}

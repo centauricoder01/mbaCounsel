@@ -16,7 +16,13 @@ import ExamAccepted from "./Filters/ExamAccepted";
 
 const CollageList = () => {
   const [collegeData, setCollegeData] = useState([]);
-  const [filterValue, setFilterValue] = useState([]);
+  const [stateValue, setStateValue] = useState([]);
+  const [CityValue, setCityValue] = useState([]);
+  const [courseValue, setCourseValue] = useState([]);
+  const [collegeTypeValue, setcollegeTypeValue] = useState([]);
+  const [entranceExamValue, setEntranceExamValue] = useState([]);
+  const [affiliationValue, setAffiliationValue] = useState([]);
+  const [accreditionValue, setaccreditionValue] = useState([]);
   const [backendData, setBackendData] = useState({
     state: null,
     city: null,
@@ -86,7 +92,15 @@ const CollageList = () => {
     return <div>Loading College....</div>;
   }
 
-  console.log(backendData);
+  console.log(
+    stateValue,
+    CityValue,
+    courseValue,
+    collegeTypeValue,
+    entranceExamValue,
+    affiliationValue,
+    accreditionValue
+  );
 
   return (
     <>
@@ -108,8 +122,8 @@ const CollageList = () => {
                 label: "State",
                 children: (
                   <State
-                    filterValue={filterValue}
-                    onvaluechange={setFilterValue}
+                    filterValue={stateValue}
+                    onvaluechange={setStateValue}
                     showingValue={backendData.state}
                   />
                 ),
@@ -124,8 +138,8 @@ const CollageList = () => {
                 label: "City",
                 children: (
                   <City
-                    filterValue={filterValue}
-                    onvaluechange={setFilterValue}
+                    filterValue={CityValue}
+                    onvaluechange={setCityValue}
                     showingValue={backendData.city}
                   />
                 ),
@@ -141,8 +155,8 @@ const CollageList = () => {
                 label: "Cources",
                 children: (
                   <Cources
-                    filterValue={filterValue}
-                    onvaluechange={setFilterValue}
+                    filterValue={courseValue}
+                    onvaluechange={setCourseValue}
                     showingValue={backendData.course}
                   />
                 ),
@@ -157,8 +171,8 @@ const CollageList = () => {
                 label: "College Type",
                 children: (
                   <CollageType
-                    filterValue={filterValue}
-                    onvaluechange={setFilterValue}
+                    filterValue={collegeTypeValue}
+                    onvaluechange={setcollegeTypeValue}
                     showingValue={backendData.collegetype}
                   />
                 ),
@@ -173,8 +187,8 @@ const CollageList = () => {
                 label: "Enterance Exam Accepted",
                 children: (
                   <ExamAccepted
-                    filterValue={filterValue}
-                    onvaluechange={setFilterValue}
+                    filterValue={entranceExamValue}
+                    onvaluechange={setEntranceExamValue}
                     showingValue={backendData.entranceexam}
                   />
                 ),
@@ -189,8 +203,8 @@ const CollageList = () => {
                 label: "Affilication",
                 children: (
                   <Fees
-                    filterValue={filterValue}
-                    onvaluechange={setFilterValue}
+                    filterValue={affiliationValue}
+                    onvaluechange={setAffiliationValue}
                     showingValue={backendData.affiliation}
                   />
                 ),
@@ -205,8 +219,8 @@ const CollageList = () => {
                 label: "Accredition",
                 children: (
                   <Affiliation
-                    filterValue={filterValue}
-                    onvaluechange={setFilterValue}
+                    filterValue={accreditionValue}
+                    onvaluechange={setaccreditionValue}
                     showingValue={backendData.accredition}
                   />
                 ),

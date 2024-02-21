@@ -11,13 +11,11 @@ const City = ({ filterValue, onvaluechange, showingValue }) => {
     }
   };
 
-
   return (
     <div className="allFiltercss">
-     
       {showingValue.map((item) =>
         item.cityValue.map((city) => (
-          <Checkbox onChange={onChange} value={city}>
+          <Checkbox key={city._id} onChange={onChange} value={city}>
             {city}
           </Checkbox>
         ))

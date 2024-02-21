@@ -14,7 +14,11 @@ const CollageType = ({ filterValue, onvaluechange, showingValue }) => {
   return (
     <div className="allFiltercss">
       {showingValue.map((ele) => (
-        <Checkbox onChange={onChange} value={ele.collegeTypeValue}>
+        <Checkbox
+          key={ele._id}
+          onChange={onChange}
+          value={ele.collegeTypeValue}
+        >
           {ele.collegeTypeValue}
         </Checkbox>
       ))}
