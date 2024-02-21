@@ -1,3 +1,5 @@
+import axios from "axios";
+
 function fetchData(path) {
   return fetch(`http://localhost:3001/api/v1/home/${path}`)
     .then((response) => {
@@ -15,4 +17,7 @@ function fetchData(path) {
     });
 }
 
-export { fetchData };
+function getAttributeDetails(path) {
+  return axios.get(`http://localhost:3001/api/v1/${path}`);
+}
+export { fetchData, getAttributeDetails };

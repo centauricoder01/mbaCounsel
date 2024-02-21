@@ -7,16 +7,25 @@ import { Button, Dropdown } from "antd";
 import { Collapse } from "antd";
 import State from "./Filters/State";
 import City from "./Filters/City";
-import Stream from "./Filters/Stream";
 import Cources from "./Filters/Cources";
 import CollageType from "./Filters/CollageType";
 import Fees from "./Filters/Fees";
-import Duration from "./Filters/Duration";
 import Affiliation from "./Filters/Affiliation";
+import { getAttributeDetails } from "../../API/Getrequest";
+import ExamAccepted from "./Filters/ExamAccepted";
 
 const CollageList = () => {
   const [collegeData, setCollegeData] = useState([]);
   const [filterValue, setFilterValue] = useState([]);
+  const [backendData, setBackendData] = useState({
+    state: null,
+    city: null,
+    accredition: null,
+    affiliation: null,
+    entranceexam: null,
+    course: null,
+    collegetype: null,
+  });
 
   const refreshPage = () => {
     window.location.reload();
@@ -44,11 +53,41 @@ const CollageList = () => {
       .catch((err) => console.log(err));
   }, []);
 
+  useEffect(() => {
+    const paths = [
+      "attribute/getstate",
+      "attribute/getcity",
+      "attribute/getaccredition",
+      "attribute/getaffiliation",
+      "attribute/getentranceexam",
+      "attribute/getcourse",
+      "attribute/getcollegetype",
+    ];
+
+    Promise.all(paths.map((path) => getAttributeDetails(path)))
+      .then((responses) => {
+        const data = responses.map((response) => response.data);
+        setBackendData({
+          state: data[0].allstate,
+          city: data[1].allCity,
+          accredition: data[2].allAccredition,
+          affiliation: data[3].allAffiliation,
+          entranceexam: data[4].allEntranceExam,
+          course: data[5].allCourses,
+          collegetype: data[6].allCollegeTypeValue,
+        });
+      })
+      .catch((error) => {
+        console.error("Error:", error);
+      });
+  }, []);
+
   if (collegeData.length === 0) {
     return <div>Loading College....</div>;
   }
 
-  console.log(filterValue);
+  console.log(backendData);
+
   return (
     <>
       <Navbar />
@@ -71,6 +110,7 @@ const CollageList = () => {
                   <State
                     filterValue={filterValue}
                     onvaluechange={setFilterValue}
+                    showingValue={backendData.state}
                   />
                 ),
               },
@@ -86,27 +126,14 @@ const CollageList = () => {
                   <City
                     filterValue={filterValue}
                     onvaluechange={setFilterValue}
+                    showingValue={backendData.city}
                   />
                 ),
               },
             ]}
             defaultActiveKey={["2"]}
           />
-          <Collapse
-            items={[
-              {
-                key: "3",
-                label: "Stream",
-                children: (
-                  <Stream
-                    filterValue={filterValue}
-                    onvaluechange={setFilterValue}
-                  />
-                ),
-              },
-            ]}
-            defaultActiveKey={["3"]}
-          />
+
           <Collapse
             items={[
               {
@@ -116,6 +143,7 @@ const CollageList = () => {
                   <Cources
                     filterValue={filterValue}
                     onvaluechange={setFilterValue}
+                    showingValue={backendData.course}
                   />
                 ),
               },
@@ -131,6 +159,7 @@ const CollageList = () => {
                   <CollageType
                     filterValue={filterValue}
                     onvaluechange={setFilterValue}
+                    showingValue={backendData.collegetype}
                   />
                 ),
               },
@@ -143,9 +172,10 @@ const CollageList = () => {
                 key: "6",
                 label: "Enterance Exam Accepted",
                 children: (
-                  <CollageType
+                  <ExamAccepted
                     filterValue={filterValue}
                     onvaluechange={setFilterValue}
+                    showingValue={backendData.entranceexam}
                   />
                 ),
               },
@@ -156,11 +186,12 @@ const CollageList = () => {
             items={[
               {
                 key: "7",
-                label: "Avg Fee Per Year (in Rupees)",
+                label: "Affilication",
                 children: (
                   <Fees
                     filterValue={filterValue}
                     onvaluechange={setFilterValue}
+                    showingValue={backendData.affiliation}
                   />
                 ),
               },
@@ -171,32 +202,19 @@ const CollageList = () => {
             items={[
               {
                 key: "8",
-                label: "Affiliation",
+                label: "Accredition",
                 children: (
                   <Affiliation
                     filterValue={filterValue}
                     onvaluechange={setFilterValue}
+                    showingValue={backendData.accredition}
                   />
                 ),
               },
             ]}
             defaultActiveKey={["8"]}
           />
-          <Collapse
-            items={[
-              {
-                key: "8",
-                label: "Course Duration",
-                children: (
-                  <Duration
-                    filterValue={filterValue}
-                    onvaluechange={setFilterValue}
-                  />
-                ),
-              },
-            ]}
-            defaultActiveKey={["9"]}
-          />
+
           <div
             style={{ display: "flex", gap: "2rem", flexDirection: "column" }}
           >

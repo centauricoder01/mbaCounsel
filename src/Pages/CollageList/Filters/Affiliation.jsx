@@ -2,7 +2,7 @@ import React from "react";
 import { Checkbox } from "antd";
 import "./AllFiltercss.css";
 
-const Affiliation = ({ filterValue, onvaluechange }) => {
+const Affiliation = ({ filterValue, onvaluechange, showingValue }) => {
   const onChange = (e) => {
     if (e.target.checked) {
       onvaluechange([...filterValue, e.target.value]);
@@ -13,10 +13,12 @@ const Affiliation = ({ filterValue, onvaluechange }) => {
 
   return (
     <div className="allFiltercss">
-      <Checkbox onChange={onChange} value={"VTU"}>
-        VTU
-      </Checkbox>
-      <Checkbox onChange={onChange} value={"DU"}>
+      {showingValue.map((e) => (
+        <Checkbox onChange={onChange} value={e.accreditionValue}>
+          {e.accreditionValue}
+        </Checkbox>
+      ))}
+      {/* <Checkbox onChange={onChange} value={"DU"}>
         DU
       </Checkbox>
       <Checkbox onChange={onChange} value={"BHU"}>
@@ -24,7 +26,7 @@ const Affiliation = ({ filterValue, onvaluechange }) => {
       </Checkbox>
       <Checkbox onChange={onChange} value={"IIM"}>
         IIM
-      </Checkbox>
+      </Checkbox> */}
     </div>
   );
 };

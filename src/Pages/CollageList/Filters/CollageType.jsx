@@ -2,7 +2,7 @@ import React from "react";
 import { Checkbox } from "antd";
 import "./AllFiltercss.css";
 
-const CollageType = ({ filterValue, onvaluechange }) => {
+const CollageType = ({ filterValue, onvaluechange, showingValue }) => {
   const onChange = (e) => {
     if (e.target.checked) {
       onvaluechange([...filterValue, e.target.value]);
@@ -13,12 +13,11 @@ const CollageType = ({ filterValue, onvaluechange }) => {
 
   return (
     <div className="allFiltercss">
-      <Checkbox onChange={onChange} value={"government"}>
-        Government
-      </Checkbox>
-      <Checkbox onChange={onChange} value={"private"}>
-        Private
-      </Checkbox>
+      {showingValue.map((ele) => (
+        <Checkbox onChange={onChange} value={ele.collegeTypeValue}>
+          {ele.collegeTypeValue}
+        </Checkbox>
+      ))}
     </div>
   );
 };

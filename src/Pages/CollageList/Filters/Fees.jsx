@@ -1,33 +1,25 @@
 import React from "react";
-import { Input } from "antd";
 import { Checkbox } from "antd";
 import "./AllFiltercss.css";
 
-const { Search } = Input;
+const Fees = ({ filterValue, onvaluechange, showingValue }) => {
+  const onChange = (e) => {
+    if (e.target.checked) {
+      onvaluechange([...filterValue, e.target.value]);
+    } else {
+      onvaluechange(filterValue.filter((item) => item !== e.target.value));
+    }
+  };
 
-const Fees = () => {
- const onSearch = (value, _e, info) => console.log(info?.source, value);
- const onChange = (e) => {
-   console.log(`checked = ${e.target.checked}`);
- };
-
- return (
-   <div className="allFiltercss">
-     {/* <Search
-       placeholder="Find State"
-       onSearch={onSearch}
-       style={{
-         width: 200,
-       }}
-     /> */}
-     <Checkbox onChange={onChange}>Rajasthan</Checkbox>
-     <Checkbox onChange={onChange}>Punjab</Checkbox>
-     <Checkbox onChange={onChange}>Kerala</Checkbox>
-     <Checkbox onChange={onChange}>Assam</Checkbox>
-     <Checkbox onChange={onChange}>Jammu & Kashmir</Checkbox>
-     <Checkbox onChange={onChange}>Orrisa</Checkbox>
-   </div>
- );
+  return (
+    <div className="allFiltercss">
+      {showingValue.map((ele) => (
+        <Checkbox onChange={onChange} value={ele.affiliationValue}>
+          {ele.affiliationValue}
+        </Checkbox>
+      ))}
+    </div>
+  );
 };
 
 export default Fees;
