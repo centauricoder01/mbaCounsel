@@ -1,32 +1,25 @@
 import React from "react";
-import { Input } from "antd";
 import { Checkbox } from "antd";
 import "./AllFiltercss.css";
 
-const { Search } = Input;
-
-const Cources = () => {
-  const onSearch = (value, _e, info) => console.log(info?.source, value);
+const Cources = ({ filterValue, onvaluechange }) => {
   const onChange = (e) => {
-    console.log(`checked = ${e.target.checked}`);
+    if (e.target.checked) {
+      onvaluechange([...filterValue, e.target.value]);
+    } else {
+      onvaluechange(filterValue.filter((item) => item !== e.target.value));
+    }
   };
 
   return (
     <div className="allFiltercss">
-      <Search
-        placeholder="Find Courses"
-        onSearch={onSearch}
-        style={{
-          width: 200,
-        }}
-      />
-      <Checkbox onChange={onChange}>MBA in Marketing (85)</Checkbox>
-      <Checkbox onChange={onChange}>PGDM (55)</Checkbox>
-      <Checkbox onChange={onChange}>MBA in Finance (75)</Checkbox>
-      <Checkbox onChange={onChange}>MBA in Human Resource (75)</Checkbox>
-      <Checkbox onChange={onChange}>Distance MBA (55)</Checkbox>
-      <Checkbox onChange={onChange}>Online MBA (55)</Checkbox>
-      <Checkbox onChange={onChange}>ePGDM (55)</Checkbox>
+      <Checkbox onChange={onChange} >MBA in Marketing</Checkbox>
+      <Checkbox onChange={onChange} >PGDM </Checkbox>
+      <Checkbox onChange={onChange} >MBA in Finance </Checkbox>
+      <Checkbox onChange={onChange} >MBA in Human Resource </Checkbox>
+      <Checkbox onChange={onChange} >Distance MBA </Checkbox>
+      <Checkbox onChange={onChange} >Online MBA </Checkbox>
+      <Checkbox onChange={onChange} >ePGDM </Checkbox>
     </div>
   );
 };

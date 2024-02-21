@@ -13,13 +13,13 @@ const Fees = () => {
 
  return (
    <div className="allFiltercss">
-     <Search
+     {/* <Search
        placeholder="Find State"
        onSearch={onSearch}
        style={{
          width: 200,
        }}
-     />
+     /> */}
      <Checkbox onChange={onChange}>Rajasthan</Checkbox>
      <Checkbox onChange={onChange}>Punjab</Checkbox>
      <Checkbox onChange={onChange}>Kerala</Checkbox>

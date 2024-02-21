@@ -1,31 +1,43 @@
 import React from "react";
-import { Input } from "antd";
 import { Checkbox } from "antd";
 import "./AllFiltercss.css";
-const { Search } = Input;
 
-
-const City = () => {
-  const onSearch = (value, _e, info) => console.log(info?.source, value);
+const City = ({ filterValue, onvaluechange }) => {
   const onChange = (e) => {
-    console.log(`checked = ${e.target.checked}`);
+    if (e.target.checked) {
+      onvaluechange([...filterValue, e.target.value]);
+    } else {
+      onvaluechange(filterValue.filter((item) => item !== e.target.value));
+    }
   };
 
   return (
     <div className="allFiltercss">
-      <Search
+      {/* <Search
         placeholder="Find City"
         onSearch={onSearch}
         style={{
           width: 200,
         }}
-      />
-      <Checkbox onChange={onChange}>Mangalore (55)</Checkbox>
-      <Checkbox onChange={onChange}>Bangalore (85)</Checkbox>
-      <Checkbox onChange={onChange}>Tumkur (75)</Checkbox>
-      <Checkbox onChange={onChange}>Gulbarga (75)</Checkbox>
-      <Checkbox onChange={onChange}>Bijapur (55)</Checkbox>
-      <Checkbox onChange={onChange}>Mysore (55)</Checkbox>
+      /> */}
+      <Checkbox onChange={onChange} value={"Mangalore"}>
+        Mangalore
+      </Checkbox>
+      <Checkbox onChange={onChange} value={"Bangalore"}>
+        Bangalore
+      </Checkbox>
+      <Checkbox onChange={onChange} value={"Tumkur"}>
+        Tumkur
+      </Checkbox>
+      <Checkbox onChange={onChange} value={"Gulbarga"}>
+        Gulbarga
+      </Checkbox>
+      <Checkbox onChange={onChange} value={"Bijapur"}>
+        Bijapur
+      </Checkbox>
+      <Checkbox onChange={onChange} value={"Mysore"}>
+        Mysore
+      </Checkbox>
     </div>
   );
 };

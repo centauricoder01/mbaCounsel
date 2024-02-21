@@ -1,28 +1,30 @@
 import React from "react";
-import { Input } from "antd";
 import { Checkbox } from "antd";
-import "./AllFiltercss.css"
-const { Search } = Input;
+import "./AllFiltercss.css";
 
-const Affiliation = () => {
-  const onSearch = (value, _e, info) => console.log(info?.source, value);
+const Affiliation = ({ filterValue, onvaluechange }) => {
   const onChange = (e) => {
-    console.log(`checked = ${e.target.checked}`);
+    if (e.target.checked) {
+      onvaluechange([...filterValue, e.target.value]);
+    } else {
+      onvaluechange(filterValue.filter((item) => item !== e.target.value));
+    }
   };
 
   return (
     <div className="allFiltercss">
-      <Search
-        placeholder="Find University"
-        onSearch={onSearch}
-        style={{
-          width: 200,
-        }}
-      />
-      <Checkbox onChange={onChange}>Alliance University</Checkbox>
-      <Checkbox onChange={onChange}>Bangalore University</Checkbox>
-      <Checkbox onChange={onChange}>Bennet University</Checkbox>
-      <Checkbox onChange={onChange}>Amity University</Checkbox>
+      <Checkbox onChange={onChange} value={"VTU"}>
+        VTU
+      </Checkbox>
+      <Checkbox onChange={onChange} value={"DU"}>
+        DU
+      </Checkbox>
+      <Checkbox onChange={onChange} value={"BHU"}>
+        BHU
+      </Checkbox>
+      <Checkbox onChange={onChange} value={"IIM"}>
+        IIM
+      </Checkbox>
     </div>
   );
 };

@@ -13,13 +13,13 @@ const ExamAccepted = () => {
 
  return (
    <div className="allFiltercss">
-     <Search
+     {/* <Search
        placeholder="Find State"
        onSearch={onSearch}
        style={{
          width: 200,
        }}
-     />
+     /> */}
      <Checkbox onChange={onChange}>XAT (36)</Checkbox>
      <Checkbox onChange={onChange}>CAT (36)</Checkbox>
      <Checkbox onChange={onChange}>SNAP (36)</Checkbox>

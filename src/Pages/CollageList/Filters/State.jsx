@@ -1,31 +1,43 @@
 import React from "react";
-import { Input } from "antd";
 import { Checkbox } from "antd";
 import "./AllFiltercss.css";
 
-const { Search } = Input;
-
-const State = () => {
-  const onSearch = (value, _e, info) => console.log(info?.source, value);
+const State = ({ filterValue, onvaluechange }) => {
   const onChange = (e) => {
-    console.log(`checked = ${e.target.checked}`);
+    if (e.target.checked) {
+      onvaluechange([...filterValue, e.target.value]);
+    } else {
+      onvaluechange(filterValue.filter((item) => item !== e.target.value));
+    }
   };
 
   return (
     <div className="allFiltercss">
-      <Search
+      {/* <Search
         placeholder="Find State"
         onSearch={onSearch}
         style={{
           width: 200,
         }}
-      />
-      <Checkbox onChange={onChange}>Rajasthan</Checkbox>
-      <Checkbox onChange={onChange}>Punjab</Checkbox>
-      <Checkbox onChange={onChange}>Kerala</Checkbox>
-      <Checkbox onChange={onChange}>Assam</Checkbox>
-      <Checkbox onChange={onChange}>Jammu & Kashmir</Checkbox>
-      <Checkbox onChange={onChange}>Orrisa</Checkbox>
+      /> */}
+      <Checkbox onChange={onChange} value={"Rajasthan"}>
+        Rajasthan
+      </Checkbox>
+      <Checkbox onChange={onChange} value={"Punjab"}>
+        Punjab
+      </Checkbox>
+      <Checkbox onChange={onChange} value={"Kerala"}>
+        Kerala
+      </Checkbox>
+      <Checkbox onChange={onChange} value={"Assam"}>
+        Assam
+      </Checkbox>
+      <Checkbox onChange={onChange} value={"Jammu & Kashmir"}>
+        Jammu & Kashmir
+      </Checkbox>
+      <Checkbox onChange={onChange} value={"Orrisa"}>
+        Orrisa
+      </Checkbox>
     </div>
   );
 };

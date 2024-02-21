@@ -45,7 +45,7 @@ const MainRoutes = () => {
         <Route path="/allblogs" element={<BlogRedirect />}></Route>
         <Route path="/articles" element={<Articles />}></Route>
         <Route path="/allarticle" element={<ArticleRedirect />}></Route>
-        <Route path="/collagelist" element={<CollageList />}></Route>
+        <Route path="/collegelist" element={<CollageList />}></Route>
         <Route path="/ContactUS" element={<ContactUs />}></Route>
         <Route path="/LatestNews" element={<LatestNews />}></Route>
         <Route path="/redirectFolder" element={<Mainredirect />}></Route>
