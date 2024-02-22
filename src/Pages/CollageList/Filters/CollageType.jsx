@@ -11,6 +11,7 @@ const CollageType = ({ filterValue, onvaluechange, showingValue }) => {
     }
   };
 
+
   return (
     <div className="allFiltercss">
       {showingValue?.map((ele) => (

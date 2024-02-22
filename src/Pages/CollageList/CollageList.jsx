@@ -90,14 +90,80 @@ const CollageList = () => {
   }, []);
 
   useEffect(() => {
+    // FILTER FOR STATE VALUE
     if (stateValue.length !== 0) {
       let val = collegeData.filter((college) =>
         stateValue.includes(college.collegeState)
       );
       setFilterData(val);
     }
-    
-  }, [stateValue]);
+
+    // FILTER FOR CITY VALUE
+    if (CityValue.length !== 0) {
+      let val = collegeData.filter((college) =>
+        CityValue.includes(college.collegeCity)
+      );
+      setFilterData(val);
+    }
+
+    // COURSEVLUAE FOR CITY VALUE
+    if (courseValue.length !== 0) {
+      let val = collegeData.filter((college) =>
+        college.collegecoursespecilzationfees.some((course) =>
+          courseValue.includes(course.course)
+        )
+      );
+
+      setFilterData(val);
+    }
+
+    // entranceExamValue FOR CITY VALUE
+    if (entranceExamValue.length !== 0) {
+      let val = collegeData.filter((college) =>
+        college.collegeEntranceExam.some((course) =>
+          entranceExamValue.includes(course)
+        )
+      );
+      setFilterData(val);
+    }
+    // entranceExamValue FOR CITY VALUE
+    if (accreditionValue.length !== 0) {
+      let val = collegeData.filter((college) =>
+        college.collegeAccreditation.some((course) =>
+          accreditionValue.includes(course)
+        )
+      );
+      setFilterData(val);
+    }
+
+    // FILTER FOR CITY VALUE
+    if (affiliationValue.length !== 0) {
+      let val = collegeData.filter((college) =>
+        affiliationValue.includes(college.collegeAffiliation)
+      );
+
+      setFilterData(val);
+    }
+
+    if (
+      stateValue.length === 0 &&
+      CityValue.length === 0 &&
+      courseValue.length === 0 &&
+      collegeTypeValue.length === 0 &&
+      entranceExamValue.length === 0 &&
+      affiliationValue.length === 0 &&
+      accreditionValue.length === 0
+    ) {
+      setFilterData(collegeData);
+    }
+  }, [
+    stateValue,
+    CityValue,
+    courseValue,
+    entranceExamValue,
+    accreditionValue,
+    affiliationValue,
+  ]);
 
   console.log(collegeData);
 
