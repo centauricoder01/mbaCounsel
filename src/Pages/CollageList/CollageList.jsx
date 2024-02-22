@@ -16,6 +16,7 @@ import ExamAccepted from "./Filters/ExamAccepted";
 
 const CollageList = () => {
   const [collegeData, setCollegeData] = useState([]);
+  const [fitlerData, setFilterData] = useState([]);
   const [stateValue, setStateValue] = useState([]);
   const [CityValue, setCityValue] = useState([]);
   const [courseValue, setCourseValue] = useState([]);
@@ -88,24 +89,21 @@ const CollageList = () => {
       });
   }, []);
 
-  if (collegeData.length === 0) {
-    return <div>Loading College....</div>;
-  }
+  useEffect(() => {
+    if (stateValue.length !== 0) {
+      let val = collegeData.filter((college) =>
+        stateValue.includes(college.collegeState)
+      );
+      setFilterData(val);
+    }
+    
+  }, [stateValue]);
 
-  console.log(
-    stateValue,
-    CityValue,
-    courseValue,
-    collegeTypeValue,
-    entranceExamValue,
-    affiliationValue,
-    accreditionValue
-  );
+  console.log(collegeData);
 
   return (
     <>
       <Navbar />
-
       <div className="main-collagelist-div">
         <div className="main-collagelist-left-side-div scroll-container">
           <button
@@ -259,68 +257,137 @@ const CollageList = () => {
             </Dropdown>
           </div>
           <div className="main-collagelist-show-div">
-            {collegeData?.map((ele) => (
-              <div
-                key={ele}
-                className="single-product-div-top-B-school all-collage-list-div"
-              >
-                <img
-                  src={ele.collegePhoto}
-                  alt="mask-group"
-                  className="collegephoto"
-                />
-                <h2
-                  style={{ color: "black" }}
-                  className="single-product-div-top-B-school-h2-tag"
-                >
-                  {ele.collegeName}
-                </h2>
-                <div className="main-centeral-div">
-                  <div className="top-left-side-div">
-                    <div>
-                      <p>Rating</p>
-                      <p style={{ fontWeight: "bolder" }}>
-                        {ele.collegeRating}
-                      </p>
+            {fitlerData.length !== 0
+              ? fitlerData.map((ele) => (
+                  <div
+                    key={ele._id}
+                    className="single-product-div-top-B-school all-collage-list-div"
+                  >
+                    <img
+                      src={ele.collegePhoto}
+                      alt="mask-group"
+                      className="collegephoto"
+                    />
+                    <h2
+                      style={{ color: "black" }}
+                      className="single-product-div-top-B-school-h2-tag"
+                    >
+                      {ele.collegeName}
+                    </h2>
+                    <div className="main-centeral-div">
+                      <div className="top-left-side-div">
+                        <div>
+                          <p>Rating</p>
+                          <p style={{ fontWeight: "bolder" }}>
+                            {ele.collegeRating}
+                          </p>
+                        </div>
+                        <div>
+                          <p>Course</p>
+                          <p style={{ fontWeight: "bolder" }}>
+                            {ele.collegecoursespecilzationfees?.map((ele) => (
+                              <strong>{ele.course}&nbsp; </strong>
+                            ))}
+                          </p>
+                        </div>
+                      </div>
+                      <div className="top-right-side-div">
+                        <div>
+                          <p>Exam Accepted</p>
+                          <p style={{ fontWeight: "bolder" }}>
+                            {ele.collegeEntranceExam?.map((ele) => (
+                              <strong>{ele}&nbsp;</strong>
+                            ))}
+                          </p>
+                        </div>
+                        <div>
+                          <p>Average Package</p>
+                          <p style={{ fontWeight: "bolder" }}>
+                            {ele.collegeAvgPackage}
+                          </p>
+                        </div>
+                      </div>
                     </div>
-                    <div>
-                      <p>Course</p>
-                      <p style={{ fontWeight: "bolder" }}>
-                        {ele.collegecoursespecilzationfees?.map((ele) => (
-                          <strong>{ele.course}&nbsp; </strong>
-                        ))}
-                      </p>
-                    </div>
-                  </div>
-                  <div className="top-right-side-div">
-                    <div>
-                      <p>Exam Accepted</p>
-                      <p style={{ fontWeight: "bolder" }}>
-                        {ele.collegeEntranceExam?.map((ele) => (
-                          <strong>{ele}&nbsp;</strong>
-                        ))}
-                      </p>
-                    </div>
-                    <div>
-                      <p>Average Package</p>
-                      <p style={{ fontWeight: "bolder" }}>
-                        {ele.collegeAvgPackage}
-                      </p>
-                    </div>
-                  </div>
-                </div>
 
-                <div className="apply-button-div">
-                  <button className="apply-button">Apply Now</button>
-                  {/* <button className="compare-button">Compare +</button> */}
-                  <button className="compare-button">
-                    <Link to={`/collage/${ele._id}`} style={{ color: "white" }}>
-                      Know More...
-                    </Link>
-                  </button>
-                </div>
-              </div>
-            ))}
+                    <div className="apply-button-div">
+                      <button className="apply-button">Apply Now</button>
+                      {/* <button className="compare-button">Compare +</button> */}
+                      <button className="compare-button">
+                        <Link
+                          to={`/collage/${ele._id}`}
+                          style={{ color: "white" }}
+                        >
+                          Know More...
+                        </Link>
+                      </button>
+                    </div>
+                  </div>
+                ))
+              : collegeData?.map((ele) => (
+                  <div
+                    key={ele._id}
+                    className="single-product-div-top-B-school all-collage-list-div"
+                  >
+                    <img
+                      src={ele.collegePhoto}
+                      alt="mask-group"
+                      className="collegephoto"
+                    />
+                    <h2
+                      style={{ color: "black" }}
+                      className="single-product-div-top-B-school-h2-tag"
+                    >
+                      {ele.collegeName}
+                    </h2>
+                    <div className="main-centeral-div">
+                      <div className="top-left-side-div">
+                        <div>
+                          <p>Rating</p>
+                          <p style={{ fontWeight: "bolder" }}>
+                            {ele.collegeRating}
+                          </p>
+                        </div>
+                        <div>
+                          <p>Course</p>
+                          <p style={{ fontWeight: "bolder" }}>
+                            {ele.collegecoursespecilzationfees?.map((ele) => (
+                              <strong>{ele.course}&nbsp; </strong>
+                            ))}
+                          </p>
+                        </div>
+                      </div>
+                      <div className="top-right-side-div">
+                        <div>
+                          <p>Exam Accepted</p>
+                          <p style={{ fontWeight: "bolder" }}>
+                            {ele.collegeEntranceExam?.map((ele) => (
+                              <strong>{ele}&nbsp;</strong>
+                            ))}
+                          </p>
+                        </div>
+                        <div>
+                          <p>Average Package</p>
+                          <p style={{ fontWeight: "bolder" }}>
+                            {ele.collegeAvgPackage}
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="apply-button-div">
+                      <button className="apply-button">Apply Now</button>
+                      {/* <button className="compare-button">Compare +</button> */}
+                      <button className="compare-button">
+                        <Link
+                          to={`/collage/${ele._id}`}
+                          style={{ color: "white" }}
+                        >
+                          Know More...
+                        </Link>
+                      </button>
+                    </div>
+                  </div>
+                ))}
           </div>
         </div>
       </div>
@@ -330,3 +397,7 @@ const CollageList = () => {
 };
 
 export default CollageList;
+
+//  {
+
+//  }

@@ -13,7 +13,7 @@ const Affiliation = ({ filterValue, onvaluechange, showingValue }) => {
 
   return (
     <div className="allFiltercss">
-      {showingValue.map((e) => (
+      {showingValue?.map((e) => (
         <Checkbox key={e._id} onChange={onChange} value={e.accreditionValue}>
           {e.accreditionValue}
         </Checkbox>

@@ -13,7 +13,7 @@ const Fees = ({ filterValue, onvaluechange, showingValue }) => {
 
   return (
     <div className="allFiltercss">
-      {showingValue.map((ele) => (
+      {showingValue?.map((ele) => (
         <Checkbox
           key={ele._id}
           onChange={onChange}
