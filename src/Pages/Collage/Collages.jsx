@@ -15,7 +15,7 @@ import Placements from "./SmallPages/Placements";
 import Campus from "./SmallPages/Campus";
 import Faq from "./SmallPages/Faq";
 import Rating from "./SmallPages/Rating";
-import Article from "../../Components/Article/Article";
+import { Helmet } from "react-helmet";
 
 const Collages = () => {
   const [button, setButton] = useState("Overview");
@@ -35,21 +35,28 @@ const Collages = () => {
     };
   };
 
+  const collegeDetailsValue = JSON.parse(localStorage.getItem("collegelist"));
+
   useEffect(() => {
-    fetch(`http://localhost:3001/api/v1/college/getbyid/${id}`)
-      .then((response) => response.json())
-      .then((data) => setSingleCollegeData(data.collegeById))
-      .catch((err) => console.log(err));
-  }, [id]);
+    setSingleCollegeData(collegeDetailsValue);
+  }, [collegeDetailsValue]);
 
   if (singleCollegeData === "") {
     return <div>Loading Data...</div>;
   }
+  console.log(singleCollegeData.collegeRating);
 
   const numRating = parseInt(singleCollegeData.collegeRating);
   return (
     <div>
       <Navbar />
+      <Helmet>
+        <title>{`${singleCollegeData.collegeName} | MBACounsel`}</title>
+        <meta
+          name="description"
+          content={singleCollegeData.collegeMetaDescription}
+        />
+      </Helmet>
       <div className="main-collage-div">
         <div
           className="collage-page-background-div"

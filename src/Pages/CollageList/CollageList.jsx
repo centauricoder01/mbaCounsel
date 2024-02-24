@@ -13,6 +13,7 @@ import Fees from "./Filters/Fees";
 import Affiliation from "./Filters/Affiliation";
 import { getAttributeDetails } from "../../API/Getrequest";
 import ExamAccepted from "./Filters/ExamAccepted";
+import { Helmet } from "react-helmet";
 
 const CollageList = () => {
   const [collegeData, setCollegeData] = useState([]);
@@ -165,11 +166,13 @@ const CollageList = () => {
     affiliationValue,
   ]);
 
-  console.log(collegeData);
-
   return (
     <>
       <Navbar />
+      <Helmet>
+        <title>{"College Details | MBACounsel"}</title>
+        <meta name="description" content={"pageDescription"} />
+      </Helmet>
       <div className="main-collagelist-div">
         <div className="main-collagelist-left-side-div scroll-container">
           <button
@@ -193,6 +196,7 @@ const CollageList = () => {
                 ),
               },
             ]}
+            className="filter-collapse-divs"
             defaultActiveKey={["1"]}
           />
           <Collapse
@@ -209,6 +213,7 @@ const CollageList = () => {
                 ),
               },
             ]}
+            className="filter-collapse-divs"
             defaultActiveKey={["2"]}
           />
 
@@ -226,6 +231,7 @@ const CollageList = () => {
                 ),
               },
             ]}
+            className="filter-collapse-divs"
             defaultActiveKey={["4"]}
           />
           <Collapse
@@ -242,6 +248,7 @@ const CollageList = () => {
                 ),
               },
             ]}
+            className="filter-collapse-divs"
             defaultActiveKey={["5"]}
           />
           <Collapse
@@ -258,6 +265,7 @@ const CollageList = () => {
                 ),
               },
             ]}
+            className="filter-collapse-divs"
             defaultActiveKey={["6"]}
           />
           <Collapse
@@ -274,6 +282,7 @@ const CollageList = () => {
                 ),
               },
             ]}
+            className="filter-collapse-divs"
             defaultActiveKey={["7"]}
           />
           <Collapse
@@ -290,6 +299,7 @@ const CollageList = () => {
                 ),
               },
             ]}
+            className="filter-collapse-divs"
             defaultActiveKey={["8"]}
           />
 
@@ -378,9 +388,17 @@ const CollageList = () => {
                     <div className="apply-button-div">
                       <button className="apply-button">Apply Now</button>
                       {/* <button className="compare-button">Compare +</button> */}
-                      <button className="compare-button">
+                      <button
+                        className="compare-button"
+                        onClick={() =>
+                          localStorage.setItem(
+                            "collegelist",
+                            JSON.stringify(ele)
+                          )
+                        }
+                      >
                         <Link
-                          to={`/collage/${ele._id}`}
+                          to={`/collage/${ele.collegeName}`}
                           style={{ color: "white" }}
                         >
                           Know More...
@@ -443,9 +461,18 @@ const CollageList = () => {
                     <div className="apply-button-div">
                       <button className="apply-button">Apply Now</button>
                       {/* <button className="compare-button">Compare +</button> */}
-                      <button className="compare-button">
+                      <button
+                        className="compare-button"
+                        onClick={() =>
+                          localStorage.setItem(
+                            "collegelist",
+                            JSON.stringify(ele)
+                          )
+                        }
+                      >
                         <Link
-                          to={`/collage/${ele._id}`}
+                          to={`/college/${ele.collegeName.replace(/ /g, "-")}`} // it replace space with -
+                          // to={`/college/${ele.collegeName}`} it replace space with % and look good.
                           style={{ color: "white" }}
                         >
                           Know More...

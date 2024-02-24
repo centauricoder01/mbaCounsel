@@ -34,7 +34,7 @@ const MainRoutes = () => {
         <Route path="/Newpassword" element={<NewPassword />}></Route>
         <Route path="/Thanks" element={<Thanks />}></Route>
         <Route path="/Thanks" element={<Thanks />}></Route>
-        <Route path="/collage/:id" element={<Collages />}></Route>
+        <Route path="/college/:id" element={<Collages />}></Route>
         <Route path="/courses" element={<Courses />}></Route>
         <Route path="/about" element={<About />}></Route>
         <Route path="/exam" element={<Exam />}></Route>
