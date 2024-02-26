@@ -1,12 +1,13 @@
 import React, { useState, useRef, useEffect } from "react";
 import "./MultiLevelDropdown.css";
 import { IoMdArrowDropdown } from "react-icons/io";
-import { FaRegArrowAltCircleRight } from "react-icons/fa";
+import { getAttributeDetails } from "../../API/Getrequest";
 
 const MultiLevelDropdown = () => {
   const [isOpen, setIsOpen] = useState(false);
   const node = useRef();
   const [hoveredPara, setHoveredPara] = useState(null);
+  const [courseValue, setCourseValue] = useState([]);
 
   const handleParaHover = (index) => {
     setHoveredPara(index);
@@ -14,7 +15,6 @@ const MultiLevelDropdown = () => {
 
   const handleClickOutside = (e) => {
     if (node.current && !node.current.contains(e.target)) {
-      // outside click
       setIsOpen(false);
     }
   };
@@ -25,6 +25,12 @@ const MultiLevelDropdown = () => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
   }, []);
+
+  useEffect(() => {
+    getAttributeDetails("attribute/getcourse")
+      .then((res) => setCourseValue(res.data.allCourses))
+      .catch((err) => console.log(err));
+  }, []);
   return (
     <>
       <li onClick={() => setIsOpen(!isOpen)} style={{ cursor: "pointer" }}>
@@ -33,34 +39,18 @@ const MultiLevelDropdown = () => {
       {isOpen && (
         <div className="multileveldropdown-main-div" ref={node}>
           <div className="para-tags-container">
-            <p
-              className={hoveredPara === 0 ? "active" : ""}
-              onMouseEnter={() => handleParaHover(0)}
-              onMouseLeave={() => handleParaHover(null)}
-            >
-              PGDM
-            </p>
-            <p
-              className={hoveredPara === 1 ? "active" : ""}
-              onMouseEnter={() => handleParaHover(1)}
-              onMouseLeave={() => handleParaHover(null)}
-            >
-              Online
-            </p>
-            <p
-              className={hoveredPara === 2 ? "active" : ""}
-              onMouseEnter={() => handleParaHover(2)}
-              onMouseLeave={() => handleParaHover(null)}
-            >
-              Executive
-            </p>
-            <p
-              className={hoveredPara === 3 ? "active" : ""}
-              onMouseEnter={() => handleParaHover(3)}
-              onMouseLeave={() => handleParaHover(null)}
-            >
-              Normal
-            </p>
+            {courseValue.length !== 0
+              ? courseValue.map((ele, index) => (
+                  <p
+                    className={hoveredPara === index ? "active" : ""}
+                    onMouseEnter={() => handleParaHover(index)}
+                    onMouseLeave={() => handleParaHover(null)}
+                    key={ele._id}
+                  >
+                    {ele.coursesValue}
+                  </p>
+                ))
+              : null}
           </div>
           <hr />
           <div
