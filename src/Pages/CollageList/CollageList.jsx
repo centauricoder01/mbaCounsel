@@ -209,6 +209,7 @@ const CollageList = () => {
                     filterValue={CityValue}
                     onvaluechange={setCityValue}
                     showingValue={backendData.city}
+                    checkstatevalue={stateValue}
                   />
                 ),
               },

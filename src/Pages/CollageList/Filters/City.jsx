@@ -1,8 +1,14 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Checkbox } from "antd";
 import "./AllFiltercss.css";
 
-const City = ({ filterValue, onvaluechange, showingValue }) => {
+const City = ({
+  filterValue,
+  onvaluechange,
+  showingValue,
+  checkstatevalue,
+}) => {
+  const [filterCityValue, setFilterCityValue] = useState([]);
   const onChange = (e) => {
     if (e.target.checked) {
       onvaluechange([...filterValue, e.target.value]);
@@ -11,15 +17,38 @@ const City = ({ filterValue, onvaluechange, showingValue }) => {
     }
   };
 
+  let filteredCities = showingValue
+    ?.filter((obj) => checkstatevalue?.includes(obj.stateValue))
+    ?.map((obj) => obj?.cityValue);
+
+  useEffect(() => {
+    setFilterCityValue(filteredCities?.flat());
+  }, [checkstatevalue]);
+
+  if (showingValue === null) {
+    return <p>Loading Value...</p>;
+  }
+
+  console.log(filterCityValue, "FILTER CITY");
+
   return (
     <div className="allFiltercss">
-      {showingValue?.map((item) =>
-        item.cityValue.map((city) => (
-          <Checkbox key={city._id} onChange={onChange} value={city}>
-            {city}
-          </Checkbox>
-        ))
-      )}
+      {filterCityValue?.length !== 0
+        ? filterCityValue?.map((city) => (
+            <Checkbox key={city} onChange={onChange} value={city}>
+              {city}
+            </Checkbox>
+          ))
+        : null}
+      {filterCityValue?.length === 0 || filterCityValue === undefined
+        ? showingValue?.map((item) =>
+            item.cityValue.map((city) => (
+              <Checkbox key={city} onChange={onChange} value={city}>
+                {city}
+              </Checkbox>
+            ))
+          )
+        : null}
     </div>
   );
 };
