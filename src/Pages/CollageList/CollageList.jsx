@@ -398,7 +398,7 @@ const CollageList = () => {
                         }
                       >
                         <Link
-                          to={`/collage/${ele.collegeName}`}
+                          to={`/collage/${ele.collegeCollegeUrl}`}
                           style={{ color: "white" }}
                         >
                           Know More...
@@ -471,7 +471,10 @@ const CollageList = () => {
                         }
                       >
                         <Link
-                          to={`/college/${ele.collegeName.replace(/ /g, "-")}`} // it replace space with -
+                          to={`/college/${ele.collegeCollegeUrl.replace(
+                            / /g,
+                            "-"
+                          )}`} // it replace space with -
                           // to={`/college/${ele.collegeName}`} it replace space with % and look good.
                           style={{ color: "white" }}
                         >

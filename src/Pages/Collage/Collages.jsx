@@ -20,7 +20,6 @@ import { Helmet } from "react-helmet";
 const Collages = () => {
   const [button, setButton] = useState("Overview");
   const [singleCollegeData, setSingleCollegeData] = useState("");
-  const { id } = useParams();
 
   const [activeButton, setActiveButton] = useState(null);
 
@@ -51,7 +50,7 @@ const Collages = () => {
     <div>
       <Navbar />
       <Helmet>
-        <title>{`${singleCollegeData.collegeName} | MBACounsel`}</title>
+        <title>{`${singleCollegeData.collegeTitle}`}</title>
         <meta
           name="description"
           content={singleCollegeData.collegeMetaDescription}
