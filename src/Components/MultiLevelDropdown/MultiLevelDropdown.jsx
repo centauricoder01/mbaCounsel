@@ -127,7 +127,7 @@ const MultiLevelDropdown = () => {
                 }
               >
                 <Link
-                  to={`/collage/${ele.collegeCollegeUrl}`}
+                  to={`/college/${ele.collegeCollegeUrl}`}
                   style={{ color: "black" }}
                 >
                   {ele.collegeName}

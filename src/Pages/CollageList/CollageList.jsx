@@ -399,7 +399,7 @@ const CollageList = () => {
                         }
                       >
                         <Link
-                          to={`/collage/${ele.collegeCollegeUrl}`}
+                          to={`/college/${ele.collegeCollegeUrl}`}
                           style={{ color: "white" }}
                         >
                           Know More...
