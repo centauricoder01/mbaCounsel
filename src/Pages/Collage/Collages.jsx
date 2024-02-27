@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
 import "./Collages.css";
 import Navbar from "../../Components/Navbar/Navbar";
 import Footer from "../../Components/Footer/Footer";
@@ -43,7 +42,6 @@ const Collages = () => {
   if (singleCollegeData === "") {
     return <div>Loading Data...</div>;
   }
-  console.log(singleCollegeData.collegeRating);
 
   const numRating = parseInt(singleCollegeData.collegeRating);
   return (

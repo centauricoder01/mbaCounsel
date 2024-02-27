@@ -2,15 +2,22 @@ import React, { useState, useRef, useEffect } from "react";
 import "./MultiLevelDropdown.css";
 import { IoMdArrowDropdown } from "react-icons/io";
 import { getAttributeDetails } from "../../API/Getrequest";
+import { Link } from "react-router-dom";
 
 const MultiLevelDropdown = () => {
-  const [isOpen, setIsOpen] = useState(false);
   const node = useRef();
+  const [isOpen, setIsOpen] = useState(false);
+  const [filterStateValue, setFilterStateValue] = useState([]);
   const [hoveredPara, setHoveredPara] = useState(null);
   const [courseValue, setCourseValue] = useState([]);
+  const [itemsToShow, setItemsToShow] = useState(5);
 
   const handleParaHover = (index) => {
     setHoveredPara(index);
+  };
+
+  const showMoreItems = () => {
+    setItemsToShow(itemsToShow + 5); // show 5 more items
   };
 
   const handleClickOutside = (e) => {
@@ -30,7 +37,32 @@ const MultiLevelDropdown = () => {
     getAttributeDetails("attribute/getcourse")
       .then((res) => setCourseValue(res.data.allCourses))
       .catch((err) => console.log(err));
+
+    fetch("http://localhost:3001/api/v1/college/getcollege")
+      .then((response) => response.json())
+      .then((data) => setFilterStateValue(data.allCollege))
+      .catch((err) => console.log(err));
   }, []);
+
+  if (filterStateValue.length === 0) {
+    return <p>Loading Details....</p>;
+  }
+
+  let stateSeen = new Set();
+  let citySeen = new Set();
+
+  let uniqueStates = filterStateValue.filter((ele) => {
+    let duplicate = stateSeen.has(ele.collegeState);
+    stateSeen.add(ele.collegeState);
+    return !duplicate;
+  });
+
+  let uniqueCities = filterStateValue.filter((ele) => {
+    let duplicate = citySeen.has(ele.collegeCity);
+    citySeen.add(ele.collegeCity);
+    return !duplicate;
+  });
+
   return (
     <>
       <li onClick={() => setIsOpen(!isOpen)} style={{ cursor: "pointer" }}>
@@ -56,18 +88,21 @@ const MultiLevelDropdown = () => {
           <div
             className={`selectable-div ${hoveredPara !== null ? "active" : ""}`}
           >
+            {/* SHOWING ALL THE STATE OF COLLEGES */}
             <h5>All States</h5>
-            <p>Karnataka</p>
-            <p>Maharashtra</p>
-            <p>Rajasthan</p>
-            <p>Tamil Nadu</p>
-            <h6>show more... </h6>
+            {uniqueStates?.map((ele) => (
+              <p key={ele._id}>{ele.collegeState}</p>
+            ))}
+            {/* SHOWING ALL THE CITIES OF COLLEGES */}
             <h5>All City</h5>
-            <p>Jaipur</p>
-            <p>Agra</p>
-            <p>Bhopal</p>
-            <p>Chennai</p>
-            <h6>show more... </h6>
+            {uniqueCities?.slice(0, itemsToShow).map((item, index) => (
+              <p key={index}>{item.collegeState}</p>
+            ))}
+            {itemsToShow < uniqueCities.length && (
+              <p onClick={showMoreItems} style={{ cursor: "pointer" }}>
+                Show more...
+              </p>
+            )}
           </div>
           <hr />
           <div
@@ -84,11 +119,21 @@ const MultiLevelDropdown = () => {
             className={`selectable-div ${hoveredPara !== null ? "active" : ""}`}
           >
             <h5>Top Colleges</h5>
-            <p>Xavier School of Management</p>
-            <p>Indian Institute Of Management</p>
-            <p>Indian Institute Of Management</p>
-            <p>S. P. Jain Institute of Management and Research</p>
-            <h6>show more...</h6>
+            {filterStateValue.map((ele) => (
+              <p
+                key={ele._id}
+                onClick={() =>
+                  localStorage.setItem("collegelist", JSON.stringify(ele))
+                }
+              >
+                <Link
+                  to={`/collage/${ele.collegeCollegeUrl}`}
+                  style={{ color: "black" }}
+                >
+                  {ele.collegeName}
+                </Link>
+              </p>
+            ))}
           </div>
         </div>
       )}
