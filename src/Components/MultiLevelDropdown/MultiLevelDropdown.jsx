@@ -91,12 +91,36 @@ const MultiLevelDropdown = () => {
             {/* SHOWING ALL THE STATE OF COLLEGES */}
             <h5>All States</h5>
             {uniqueStates?.map((ele) => (
-              <p key={ele._id}>{ele.collegeState}</p>
+              <p
+                key={ele._id}
+                onClick={() =>
+                  localStorage.setItem(
+                    "dropdownstatevalue",
+                    JSON.stringify(ele.collegeState)
+                  )
+                }
+              >
+                <Link to={`/collegelist`} style={{ color: "black" }}>
+                  {ele.collegeState}
+                </Link>
+              </p>
             ))}
             {/* SHOWING ALL THE CITIES OF COLLEGES */}
             <h5>All City</h5>
             {uniqueCities?.slice(0, itemsToShow).map((item, index) => (
-              <p key={index}>{item.collegeState}</p>
+              <p
+                key={index}
+                onClick={() =>
+                  localStorage.setItem(
+                    "dropdowncityvalue",
+                    JSON.stringify(item.collegeCity)
+                  )
+                }
+              >
+                <Link to={`/collegelist`} style={{ color: "black" }}>
+                  {item.collegeCity}
+                </Link>
+              </p>
             ))}
             {itemsToShow < uniqueCities.length && (
               <p onClick={showMoreItems} style={{ cursor: "pointer" }}>
