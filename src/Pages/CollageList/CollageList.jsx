@@ -158,6 +158,8 @@ const CollageList = () => {
       setFilterData(collegeData);
     }
   }, [
+    collegeData,
+    collegeTypeValue.length,
     stateValue,
     CityValue,
     courseValue,
@@ -165,6 +167,8 @@ const CollageList = () => {
     accreditionValue,
     affiliationValue,
   ]);
+
+  console.log(stateValue, "StateValue");
 
   return (
     <>
