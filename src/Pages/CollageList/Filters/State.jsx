@@ -23,6 +23,11 @@ const State = ({ filterValue, onvaluechange, showingValue }) => {
     }
   };
 
+  if (performance.navigation.type === 1) {
+    console.log("This page is reloaded");
+    localStorage.removeItem("dropdownstatevalue");
+  }
+
   return (
     <div className="allFiltercss">
       {showingValue?.map((ele) => (
