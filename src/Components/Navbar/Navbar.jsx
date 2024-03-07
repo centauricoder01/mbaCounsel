@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./Navbar.css";
 import logo from "../../Assets/mbalogo.png";
 import { Link } from "react-router-dom";
@@ -12,9 +12,13 @@ import { GiHamburgerMenu } from "react-icons/gi";
 import { FaPhone } from "react-icons/fa6";
 import { FaYoutube, FaInstagram, FaLinkedin } from "react-icons/fa";
 import { CiLogin } from "react-icons/ci";
+import { getAttributeDetails } from "../../API/Getrequest";
 
 const MainNavbar = () => {
-  // Logic for opening the Menu section
+  const [backendData, setBackendData] = useState({
+    entranceexam: null,
+    course: null,
+  }); // Logic for opening the Menu section
   const [open, setOpen] = useState(false);
   const showDrawer = () => {
     setOpen(true);
@@ -22,6 +26,22 @@ const MainNavbar = () => {
   const onClose = () => {
     setOpen(false);
   };
+
+  useEffect(() => {
+    const paths = ["attribute/getentranceexam", "attribute/getcourse"];
+
+    Promise.all(paths.map((path) => getAttributeDetails(path)))
+      .then((responses) => {
+        const data = responses.map((response) => response.data);
+        setBackendData({
+          entranceexam: data[0].allEntranceExam,
+          course: data[1].allCourses,
+        });
+      })
+      .catch((error) => {
+        console.error("Error:", error);
+      });
+  }, []);
 
   return (
     <div className="main-navbar">
@@ -75,19 +95,31 @@ const MainNavbar = () => {
                 Executive MBA
               </NavDropdown.Item>
             </DropDownMenu>
+
+            {/* ENTRANCE EXAM */}
             <DropDownMenu title="Entrance Exam" id="collasible-nav-dropdown">
-              <NavDropdown.Item href="#action/3.1">
-                Regular MBA
-              </NavDropdown.Item>
-              <DropDownSubMenu href="#action/3.7" title="Online MBA">
-                <NavDropdown.Item href="#action/8.1">
-                  Laptop MBA
-                </NavDropdown.Item>
-                <NavDropdown.Item href="#action/8.2">
-                  Mobile MBA
-                </NavDropdown.Item>
-              </DropDownSubMenu>
+              {backendData?.entranceexam?.map((ele) => {
+                let formattedString = ele.entranceExamFullForm.replace(
+                  / /g,
+                  "-"
+                );
+                return (
+                  <NavDropdown.Item
+                    href={`/exam/${formattedString}`}
+                    key={ele._id}
+                    onClick={() =>
+                      localStorage.setItem(
+                        "examlist",
+                        JSON.stringify(ele.entranceExamFullForm)
+                      )
+                    }
+                  >
+                    {ele.entranceExamFullForm}
+                  </NavDropdown.Item>
+                );
+              })}
             </DropDownMenu>
+            {/* TOOLS */}
             <DropDownMenu title="Tools" id="collasible-nav-dropdown">
               <NavDropdown.Item href="#action/3.1">
                 College Comparision
@@ -102,6 +134,7 @@ const MainNavbar = () => {
                 Carrier Guru
               </NavDropdown.Item>
             </DropDownMenu>
+            {/* RESOURCES */}
             <DropDownMenu title="Resources" id="collasible-nav-dropdown">
               <NavDropdown.Item href="#action/3.1">
                 Web Development

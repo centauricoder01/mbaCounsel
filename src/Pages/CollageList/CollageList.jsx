@@ -168,8 +168,6 @@ const CollageList = () => {
     affiliationValue,
   ]);
 
-  console.log(stateValue, "StateValue");
-
   return (
     <>
       <Navbar />

@@ -1,68 +1,61 @@
-.main-all-listed-college-in-exam-page{
-    text-align: center;
-    border-radius: 10px;
-    padding-bottom: 15px;
-    box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
-    width: 47%;
+.main-all-listed-college-in-exam-page {
+  text-align: center;
+  border-radius: 10px;
+  padding-bottom: 15px;
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px,
+    rgba(17, 17, 26, 0.05) 0px 8px 32px;
+  width: 47%;
 }
-.main-all-listed-college-in-exam-page img{
-    width: 100%;
-}
-
-.main-apply-button-div{
-    display: flex;
-    align-content: center;
-    gap: 1rem;
-    justify-content: center;
-    width: 95%;
-    margin: auto;
-    
-    }
-
-.main-apply-button-div button{
-    color: white;
-    border: none;
-    height: 2rem;
-    border-radius: 5px;
-        cursor: pointer;
-        font-size: 1rem;
-        font-weight: 700;
-        width: 50%;
-
+.main-all-listed-college-in-exam-page img {
+  width: 100%;
 }
 
-    .main-apply-button{
-   background-color: #337062;
-    }
-    .main-compare-button{ 
-     background-color:#2ea44f;
+.main-apply-button-div {
+  display: flex;
+  align-content: center;
+  gap: 1rem;
+  justify-content: center;
+  width: 95%;
+  margin: auto;
+}
 
-    }
+.main-apply-button-div button {
+  color: white;
+  border: none;
+  height: 2rem;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 700;
+  width: 50%;
+}
 
-
+.main-apply-button {
+  background-color: #337062;
+}
+.main-compare-button {
+  background-color: #2ea44f;
+}
+.slick-slide {
+  height: auto !important;
+}
 /* --------------------------------------------------- */
 
 /* other-collage CSS */
 
-
-.other-cards-body{
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-    margin-bottom: 2rem;
-    padding-inline: 2rem;
-    gap: 1rem;
-
-
-
+.other-cards-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  margin-bottom: 2rem;
+  padding-inline: 2rem;
+  height: auto;
 }
 
-.main-all-listed-college-in-exam-page h4{
-    font-style: none !important;
+.main-all-listed-college-in-exam-page h4 {
+  font-style: none !important;
 }
-
 
 /* -------------------------------------- */
