@@ -19,18 +19,9 @@ const Signup = () => {
         <p className="welcome-to-mbacouncel">WELCOME TO MBACOUNCEL</p>
         <p className="create-account-p">Create a Acccount</p>
         <div className="signup-icons-div">
-          <button>
-            <FcGoogle size={30} />
-            Signup with Google
-          </button>
-          <button>
-            <ImLinkedin size={30} />
-            Signup with Linkedin
-          </button>
-          <button>
-            <BsFacebook size={30} />
-            Signup with Facebook
-          </button>
+          <FcGoogle size={30} cursor={"pointer"} />
+          <ImLinkedin size={30} color="#0063c8" cursor={"pointer"} />
+          <BsFacebook size={30} color="#0866ff" cursor={"pointer"} />
         </div>
         <div className="or-tag-div">
           <hr />

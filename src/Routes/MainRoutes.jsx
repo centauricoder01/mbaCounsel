@@ -38,7 +38,6 @@ const MainRoutes = () => {
         <Route path="/courses" element={<Courses />}></Route>
         <Route path="/about" element={<About />}></Route>
         <Route path="/exam/:id" element={<Exam />}></Route>
-
         <Route path="/contact" element={<ContactUs />}></Route>
         <Route path="/latestnews" element={<LatestNews />}></Route>
         <Route path="/redirectfolder" element={<Mainredirect />}></Route>
