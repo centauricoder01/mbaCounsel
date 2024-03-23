@@ -25,8 +25,9 @@ const Login = () => {
     // checking the values
     postUserDetails("authticate/loginuser", loginUser)
       .then((res) => {
-        console.log(res.data.);
-        // navigate("/");
+        alert(res.data.message);
+        console.log(res.data);
+        navigate("/");
       })
       .catch((err) => {
         alert("Invalid email or Password");
