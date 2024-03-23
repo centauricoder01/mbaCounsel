@@ -3,7 +3,6 @@
   background-repeat: no-repeat;
   background-size: cover;
   width: 100vw;
-  /* height: 100vh; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -19,7 +18,7 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  height: 80% !important;
+  height: 70vh !important;
   margin-right: -5rem;
   z-index: 100;
   border-top-left-radius: 1rem;
@@ -36,11 +35,6 @@
   text-align: center;
 }
 
-.welcome-to-mbacouncel {
-  text-align: center;
-  font-size: 1.5rem;
-}
-
 .right-side-div-signup {
   height: 100% !important;
   width: 40%;
@@ -52,7 +46,14 @@
 }
 
 .create-account-p {
-  font-size: 1.3rem;
+  text-align: center;
+  font-size: 1.5rem !important;
+  color: #17559c;
+}
+
+.google-and-form-tag-divider {
+  text-align: center;
+  margin-top: 1rem;
 }
 
 .signup-icons-div {
@@ -134,10 +135,10 @@
     border-radius: 1rem;
   }
 }
-@media only screen and (max-width: 425px) {
+@media only screen and (max-width: 426px) {
   .right-side-div-signup {
     padding: 1rem;
-    width: 85%;
+    width: 85% !important;
     border-radius: 1rem;
   }
   .welcome-to-mbacouncel {

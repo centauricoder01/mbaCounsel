@@ -2,12 +2,16 @@ import React, { useState } from "react";
 import "./Signup.css";
 import { FcGoogle } from "react-icons/fc";
 import { Link } from "react-router-dom";
+import { postUserDetails } from "../../../API/Getrequest.js";
+import { useNavigate } from "react-router-dom";
 
 const Signup = () => {
+  const navigate = useNavigate();
   const [signupUser, setSignupUser] = useState({
     name: "",
     email: "",
     phoneNo: "",
+    location: "",
     currentEducation: "",
     CourseLooking: "",
     password: "",
@@ -17,10 +21,17 @@ const Signup = () => {
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     // Update the state immediately
-    setSignupUser((prevInput) => ({
-      ...prevInput,
-      [name]: value,
-    }));
+    if (name === "phoneNo") {
+      setSignupUser((prevInput) => ({
+        ...prevInput,
+        phoneNo: Number(value),
+      }));
+    } else {
+      setSignupUser((prevInput) => ({
+        ...prevInput,
+        [name]: value,
+      }));
+    }
   };
 
   const handleSubmit = (e) => {
@@ -29,6 +40,12 @@ const Signup = () => {
     if (signupUser.password !== signupUser.comfirmpassword) {
       alert("Password are not matching, please try again...");
     } else {
+      postUserDetails("authticate/adduser", signupUser)
+        .then((res) => {
+          alert(res.data.message);
+          navigate("/login");
+        })
+        .catch((err) => console.log(err));
       console.log(signupUser);
     }
   };
@@ -42,15 +59,12 @@ const Signup = () => {
         </p>
       </div>
       <div className="right-side-div-signup">
-        <p className="welcome-to-mbacouncel">WELCOME TO MBACOUNCEL</p>
         <p className="create-account-p">Create a Acccount</p>
         <div className="signup-icons-div">
           <FcGoogle size={30} cursor={"pointer"} />
         </div>
-        <div className="or-tag-div">
-          <hr />
-          <p>OR</p>
-          <hr />
+        <div className="google-and-form-tag-divider">
+          <p>---OR---</p>
         </div>
         <form className="signup-form-div" onSubmit={handleSubmit}>
           <input
@@ -66,6 +80,14 @@ const Signup = () => {
             placeholder="Phone No*"
             name="phoneNo"
             value={signupUser.phoneNo}
+            onChange={handleInputChange}
+            required
+          />
+          <input
+            type="text"
+            placeholder="Location*"
+            name="location"
+            value={signupUser.location}
             onChange={handleInputChange}
             required
           />

@@ -20,4 +20,8 @@ function fetchData(path) {
 function getAttributeDetails(path) {
   return axios.get(`http://localhost:3001/api/v1/${path}`);
 }
-export { fetchData, getAttributeDetails };
+
+function postUserDetails(path, data) {
+  return axios.post(`http://localhost:3001/api/v1/${path}`, data);
+}
+export { fetchData, getAttributeDetails, postUserDetails };
