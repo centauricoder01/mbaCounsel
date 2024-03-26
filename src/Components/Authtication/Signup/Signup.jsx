@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 import "./Signup.css";
-import { FcGoogle } from "react-icons/fc";
 import { Link } from "react-router-dom";
 import { postUserDetails } from "../../../API/Getrequest.js";
 import { useNavigate } from "react-router-dom";
+import { GoogleLogin } from "@react-oauth/google";
+import { jwtDecode } from "jwt-decode";
 
 const Signup = () => {
   const navigate = useNavigate();
@@ -49,6 +50,7 @@ const Signup = () => {
       console.log(signupUser);
     }
   };
+  console.log(process.env.CLIENT_ID, "THIS IS CLIENT ID");
   return (
     <div className="main-signup-design">
       <div className="left-side-div">
@@ -61,7 +63,16 @@ const Signup = () => {
       <div className="right-side-div-signup">
         <p className="create-account-p">Create a Acccount</p>
         <div className="signup-icons-div">
-          <FcGoogle size={30} cursor={"pointer"} />
+          {/* HANDLING GOOGLE LOGIN DETAILS HERE */}
+          <GoogleLogin
+            onSuccess={(credentialResponse) => {
+              const decoded = jwtDecode(credentialResponse?.credential);
+              console.log(decoded);
+            }}
+            onError={() => {
+              console.log("Login Failed");
+            }}
+          />
         </div>
         <div className="google-and-form-tag-divider">
           <p>---OR---</p>

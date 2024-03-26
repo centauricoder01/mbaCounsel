@@ -4,10 +4,17 @@ import "./index.css";
 import App from "./App";
 import { BrowserRouter } from "react-router-dom";
 // import { Provider } from "react-redux";
+import { GoogleOAuthProvider } from "@react-oauth/google";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  <BrowserRouter>
-    <App />
-  </BrowserRouter>
+  <GoogleOAuthProvider
+    clientId={
+      "721327633323-lmdbqk4lplcrhmi35im8f6i9lqsm37m5.apps.googleusercontent.com"
+    }
+  >
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
+  </GoogleOAuthProvider>
 );
