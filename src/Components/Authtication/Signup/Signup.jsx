@@ -3,11 +3,14 @@ import "./Signup.css";
 import { Link } from "react-router-dom";
 import { postUserDetails } from "../../../API/Getrequest.js";
 import { useNavigate } from "react-router-dom";
-import { GoogleLogin } from "@react-oauth/google";
-import { jwtDecode } from "jwt-decode";
+import { useGoogleLogin } from "@react-oauth/google";
+import { FcGoogle } from "react-icons/fc";
 
 const Signup = () => {
   const navigate = useNavigate();
+  const [email, setEmail] = useState(false);
+  const [google, setGoogle] = useState(false);
+  const [hidegoogle, setHideGoogle] = useState(true);
   const [signupUser, setSignupUser] = useState({
     name: "",
     email: "",
@@ -50,7 +53,15 @@ const Signup = () => {
       console.log(signupUser);
     }
   };
-  console.log(process.env.CLIENT_ID, "THIS IS CLIENT ID");
+
+  const login = useGoogleLogin({
+    onSuccess: (tokenResponse) => {
+      setGoogle(true);
+      setHideGoogle(false);
+    },
+    onError: (error) => console.log(error),
+  });
+
   return (
     <div className="main-signup-design">
       <div className="left-side-div">
@@ -61,89 +72,146 @@ const Signup = () => {
         </p>
       </div>
       <div className="right-side-div-signup">
-        <p className="create-account-p">Create a Acccount</p>
-        <div className="signup-icons-div">
-          {/* HANDLING GOOGLE LOGIN DETAILS HERE */}
-          <GoogleLogin
-            onSuccess={(credentialResponse) => {
-              const decoded = jwtDecode(credentialResponse?.credential);
-              console.log(decoded);
-            }}
-            onError={() => {
-              console.log("Login Failed");
-            }}
-          />
-        </div>
-        <div className="google-and-form-tag-divider">
-          <p>---OR---</p>
-        </div>
-        <form className="signup-form-div" onSubmit={handleSubmit}>
-          <input
-            type="text"
-            placeholder="Full name*"
-            name="name"
-            value={signupUser.name}
-            onChange={handleInputChange}
-            required
-          />
-          <input
-            type="number"
-            placeholder="Phone No*"
-            name="phoneNo"
-            value={signupUser.phoneNo}
-            onChange={handleInputChange}
-            required
-          />
-          <input
-            type="text"
-            placeholder="Location*"
-            name="location"
-            value={signupUser.location}
-            onChange={handleInputChange}
-            required
-          />
-          <input
-            type="text"
-            placeholder="Currently Studying*"
-            name="currentEducation"
-            value={signupUser.currentEducation}
-            onChange={handleInputChange}
-            required
-          />
-          <input
-            type="text"
-            placeholder="Course Looking*"
-            name="CourseLooking"
-            value={signupUser.CourseLooking}
-            onChange={handleInputChange}
-            required
-          />
-          <input
-            type="email"
-            placeholder="Email*"
-            name="email"
-            value={signupUser.email}
-            onChange={handleInputChange}
-            required
-          />
-          <input
-            type="password"
-            placeholder="Password*"
-            name="password"
-            value={signupUser.password}
-            onChange={handleInputChange}
-            required
-          />
-          <input
-            type="password"
-            placeholder="confirm Password*"
-            name="comfirmpassword"
-            value={signupUser.comfirmpassword}
-            onChange={handleInputChange}
-            required
-          />
-          <button type="submit">Create Account</button>
-        </form>
+        {/* SIGNUP USING EMAIL  */}
+        {hidegoogle ? (
+          <>
+            <p className="create-account-p">Create a Acccount</p>
+            <div className="signup-using-email">
+              <button
+                onClick={() => {
+                  setEmail(true);
+                  setHideGoogle(false);
+                }}
+              >
+                Continue with Email
+              </button>
+            </div>
+            <div className="google-and-form-tag-divider">
+              <p>--- or continue with ---</p>
+            </div>
+            <div className="signup-using-google">
+              {/* HANDLING GOOGLE LOGIN DETAILS HERE */}
+              <button onClick={() => login()}>
+                <FcGoogle size={30} />
+                Continue with Google
+              </button>
+            </div>
+          </>
+        ) : null}
+        {google ? (
+          <>
+            <p className="create-account-p">
+              Tell us something more about yourself
+            </p>
+            <form className="signup-form-div">
+              <input
+                type="number"
+                placeholder="Phone No*"
+                name="phoneNo"
+                value={signupUser.phoneNo}
+                onChange={handleInputChange}
+                required
+              />
+              <input
+                type="text"
+                placeholder="Location*"
+                name="location"
+                value={signupUser.location}
+                onChange={handleInputChange}
+                required
+              />
+              <input
+                type="text"
+                placeholder="Currently Studying*"
+                name="currentEducation"
+                value={signupUser.currentEducation}
+                onChange={handleInputChange}
+                required
+              />
+              <input
+                type="text"
+                placeholder="Course Looking*"
+                name="CourseLooking"
+                value={signupUser.CourseLooking}
+                onChange={handleInputChange}
+                required
+              />
+              <button>Save</button>
+            </form>
+          </>
+        ) : null}
+
+        {/* SIGNUP USING MAIN START FROM HERE  */}
+        {email ? (
+          <form className="signup-form-div" onSubmit={handleSubmit}>
+            <p className="create-account-p">Create a Acccount</p>
+            <input
+              type="text"
+              placeholder="Full name*"
+              name="name"
+              value={signupUser.name}
+              onChange={handleInputChange}
+              required
+            />
+            <input
+              type="number"
+              placeholder="Phone No*"
+              name="phoneNo"
+              value={signupUser.phoneNo}
+              onChange={handleInputChange}
+              required
+            />
+            <input
+              type="text"
+              placeholder="Location*"
+              name="location"
+              value={signupUser.location}
+              onChange={handleInputChange}
+              required
+            />
+            <input
+              type="text"
+              placeholder="Currently Studying*"
+              name="currentEducation"
+              value={signupUser.currentEducation}
+              onChange={handleInputChange}
+              required
+            />
+            <input
+              type="text"
+              placeholder="Course Looking*"
+              name="CourseLooking"
+              value={signupUser.CourseLooking}
+              onChange={handleInputChange}
+              required
+            />
+            <input
+              type="email"
+              placeholder="Email*"
+              name="email"
+              value={signupUser.email}
+              onChange={handleInputChange}
+              required
+            />
+            <input
+              type="password"
+              placeholder="Password*"
+              name="password"
+              value={signupUser.password}
+              onChange={handleInputChange}
+              required
+            />
+            <input
+              type="password"
+              placeholder="confirm Password*"
+              name="comfirmpassword"
+              value={signupUser.comfirmpassword}
+              onChange={handleInputChange}
+              required
+            />
+            <button type="submit">Create Account</button>
+          </form>
+        ) : null}
         <p className="already-have-account">
           Already Have an Account?{" "}
           <Link to={"/login"}>
