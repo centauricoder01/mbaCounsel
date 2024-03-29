@@ -1,8 +1,26 @@
-import React from "react";
+import React, { useState } from "react";
 import "./forget.css";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { postUserDetails } from "../../../API/Getrequest";
 
-const forget = () => {
+const Forget = () => {
+  const navigate = useNavigate();
+  const [getForgetEmail, setForgetEmail] = useState("");
+
+  const handleForgetPasswordSubmit = (e) => {
+    e.preventDefault();
+    console.log(getForgetEmail);
+    postUserDetails("authticate/forgetpassword", { email: getForgetEmail })
+      .then((res) => {
+        alert(res.data.message);
+        console.log(res.data);
+        navigate("/login");
+      })
+      .catch((err) => {
+        alert("Invalid email");
+        console.log(err);
+      });
+  };
   return (
     <div className="main-signup-design">
       <div className="left-side-div">
@@ -25,19 +43,19 @@ const forget = () => {
         <p className="forgot-password-registrated-email">
           Enter your registrated email
         </p>
-        <form className="forgot-form-div">
-          <input type="email" placeholder="Email" />
-
-          <button type="submit">
-            <Link to={"/otp"}>Reset Password</Link>
-          </button>
+        <form className="forgot-form-div" onSubmit={handleForgetPasswordSubmit}>
+          <input
+            type="email"
+            placeholder="Email"
+            value={getForgetEmail}
+            onChange={(e) => setForgetEmail(e.target.value)}
+            required
+          />
+          <button type="submit">Reset Password</button>
         </form>
-        <p className="digit-code-para">
-          6 Digit code has been sen to your registrated e-mail
-        </p>
       </div>
     </div>
   );
 };
 
-export default forget;
+export default Forget;

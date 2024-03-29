@@ -33,7 +33,6 @@ const Login = () => {
         alert("Invalid email or Password");
         console.log(err);
       });
-    console.log(loginUser);
   };
 
   return (

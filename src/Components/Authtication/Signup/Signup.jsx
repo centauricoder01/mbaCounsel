@@ -3,8 +3,9 @@ import "./Signup.css";
 import { Link } from "react-router-dom";
 import { postUserDetails } from "../../../API/Getrequest.js";
 import { useNavigate } from "react-router-dom";
-import { useGoogleLogin } from "@react-oauth/google";
+import { useGoogleLogin, GoogleLogin } from "@react-oauth/google";
 import { FcGoogle } from "react-icons/fc";
+import { jwtDecode } from "jwt-decode";
 
 const Signup = () => {
   const navigate = useNavigate();
@@ -54,13 +55,15 @@ const Signup = () => {
     }
   };
 
-  const login = useGoogleLogin({
-    onSuccess: (tokenResponse) => {
-      setGoogle(true);
-      setHideGoogle(false);
-    },
-    onError: (error) => console.log(error),
-  });
+  // const login = useGoogleLogin({
+  //   onSuccess: (tokenResponse) => {
+  //     console.log(tokenResponse, "This is response Token");
+  //     setGoogle(true);
+  //     setHideGoogle(false);
+  //   },
+  //   onError: (error) => console.log(error),
+  //   scope: "email profile openid",
+  // });
 
   return (
     <div className="main-signup-design">
@@ -89,12 +92,23 @@ const Signup = () => {
             <div className="google-and-form-tag-divider">
               <p>--- or continue with ---</p>
             </div>
-            <div className="signup-using-google">
-              {/* HANDLING GOOGLE LOGIN DETAILS HERE */}
+            {/* <div className="signup-using-google">
+              HANDLING GOOGLE LOGIN DETAILS HERE
               <button onClick={() => login()}>
                 <FcGoogle size={30} />
                 Continue with Google
               </button>
+            </div> */}
+            <div className="signup-using-google">
+              <GoogleLogin
+                onSuccess={(credentialResponse) => {
+                  const decoded = jwtDecode(credentialResponse?.credential);
+                  console.log(decoded);
+                }}
+                onError={() => {
+                  console.log("Login Failed");
+                }}
+              />
             </div>
           </>
         ) : null}
