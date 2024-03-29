@@ -21,6 +21,7 @@ const Signup = () => {
     CourseLooking: "",
     password: "",
     comfirmpassword: "",
+    googleLogin: false,
   });
 
   const handleInputChange = (e) => {
@@ -58,26 +59,32 @@ const Signup = () => {
               navigate("/otp");
             })
             .catch((err) => {
+              alert("Internal Server Error, Please try again...");
               console.log(err);
             });
         })
         .catch((err) => {
           console.log(err);
-          alert(err);
+          alert("Internal Server Error, Please try again...");
         });
       console.log(signupUser);
     }
   };
 
-  // const login = useGoogleLogin({
-  //   onSuccess: (tokenResponse) => {
-  //     console.log(tokenResponse, "This is response Token");
-  //     setGoogle(true);
-  //     setHideGoogle(false);
-  //   },
-  //   onError: (error) => console.log(error),
-  //   scope: "email profile openid",
-  // });
+  const handleGoogleSubmit = (e) => {
+    e.preventDefault();
+    postUserDetails("authticate/addAuthUser", signupUser)
+      .then((res) => {
+        alert(res.data.message);
+        navigate("/");
+        console.log(res.data);
+      })
+      .catch((err) => {
+        alert("Internal Server Error, Please try again...");
+        console.log(err);
+      });
+    console.log(signupUser);
+  };
 
   return (
     <div className="main-signup-design">
@@ -117,6 +124,15 @@ const Signup = () => {
               <GoogleLogin
                 onSuccess={(credentialResponse) => {
                   const decoded = jwtDecode(credentialResponse?.credential);
+                  setGoogle(true);
+                  setHideGoogle(false);
+                  setSignupUser((prevInput) => ({
+                    ...prevInput,
+                    name: decoded.name,
+                    email: decoded.email,
+                    googleLogin: true,
+                    emailverified: true,
+                  }));
                   console.log(decoded);
                 }}
                 onError={() => {
@@ -131,7 +147,7 @@ const Signup = () => {
             <p className="create-account-p">
               Tell us something more about yourself
             </p>
-            <form className="signup-form-div">
+            <form className="signup-form-div" onSubmit={handleGoogleSubmit}>
               <input
                 type="number"
                 placeholder="Phone No*"
@@ -164,7 +180,7 @@ const Signup = () => {
                 onChange={handleInputChange}
                 required
               />
-              <button>Save</button>
+              <button type="submit">Save</button>
             </form>
           </>
         ) : null}
