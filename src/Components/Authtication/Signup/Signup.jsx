@@ -45,12 +45,26 @@ const Signup = () => {
     if (signupUser.password !== signupUser.comfirmpassword) {
       alert("Password are not matching, please try again...");
     } else {
-      postUserDetails("authticate/adduser", signupUser)
+      postUserDetails("authticate/addAuthUser", signupUser)
         .then((res) => {
           alert(res.data.message);
-          navigate("/login");
+          postUserDetails("authticate/emailverification", {
+            email: signupUser.email,
+          })
+            .then((res) => {
+              console.log(res);
+              localStorage.setItem("otpemail", signupUser.email);
+              alert("Verification mail has been send to you...");
+              navigate("/otp");
+            })
+            .catch((err) => {
+              console.log(err);
+            });
         })
-        .catch((err) => console.log(err));
+        .catch((err) => {
+          console.log(err);
+          alert(err);
+        });
       console.log(signupUser);
     }
   };
