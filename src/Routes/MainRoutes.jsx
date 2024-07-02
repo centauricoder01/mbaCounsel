@@ -33,7 +33,6 @@ const MainRoutes = () => {
         <Route path="/Otp" element={<Otp />}></Route>
         <Route path="/Newpassword" element={<NewPassword />}></Route>
         <Route path="/Thanks" element={<Thanks />}></Route>
-        <Route path="/Thanks" element={<Thanks />}></Route>
         <Route path="/college/:id" element={<Collages />}></Route>
         <Route path="/courses" element={<Courses />}></Route>
         <Route path="/about" element={<About />}></Route>
@@ -46,9 +45,6 @@ const MainRoutes = () => {
         <Route path="/articles" element={<Articles />}></Route>
         <Route path="/allarticle" element={<ArticleRedirect />}></Route>
         <Route path="/collegelist" element={<CollageList />}></Route>
-        <Route path="/ContactUS" element={<ContactUs />}></Route>
-        <Route path="/LatestNews" element={<LatestNews />}></Route>
-        <Route path="/redirectFolder" element={<Mainredirect />}></Route>
         <Route path="/rating" element={<Rating />}></Route>
         <Route path="*" element={<Pagenotfound />}></Route>
       </Routes>
