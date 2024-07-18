@@ -173,6 +173,7 @@ const CollageList = () => {
     justifyContent: "space-between",
     alignItems: "center",
     gap: "1rem",
+    marginBottom: "0rem",
   };
 
   console.log("Yes, you are in this page....");
@@ -315,7 +316,7 @@ const CollageList = () => {
           />
         </div>
         <div className="main-collagelist-right-side-div">
-          <div className="collagelist-right-side-top-div">
+          {/* <div className="collagelist-right-side-top-div">
             <Dropdown
               menu={{
                 items,
@@ -325,7 +326,7 @@ const CollageList = () => {
             >
               <Button>Sort By: College</Button>
             </Dropdown>
-          </div>
+          </div> */}
           <div className="main-collagelist-show-div">
             {fitlerData.length !== 0
               ? fitlerData.map((ele) => (
@@ -339,21 +340,31 @@ const CollageList = () => {
                       className="CollegeLogo"
                     />
                     <p
-                      style={{ color: "black" }}
+                      style={{ color: "black", marginBottom: "0rem" }}
                       className="single-product-div-top-B-school-h2-tag"
                     >
                       {ele.collegeName}
                     </p>
                     <div
-                      className="top-left-side-div"
+                      // className="top-left-side-div"
                       style={{ padding: "1rem" }}
                     >
                       <div style={sameDisplayStyle}>
-                        <p style={{ fontWeight: "bolder" }}>Rating</p>
-                        <p style={{ fontSize: "12px" }}>{ele.collegeRating}</p>
+                        <p
+                          style={{ fontWeight: "bolder", marginBottom: "0rem" }}
+                        >
+                          Rating
+                        </p>
+                        <p style={{ fontSize: "12px" }}>
+                          {ele.collegeRating} ⭐
+                        </p>
                       </div>
                       <div style={sameDisplayStyle}>
-                        <p style={{ fontWeight: "bolder" }}>Course</p>
+                        <p
+                          style={{ fontWeight: "bolder", marginBottom: "0rem" }}
+                        >
+                          Course
+                        </p>
                         <div
                           style={{
                             display: "flex",
@@ -367,7 +378,11 @@ const CollageList = () => {
                         </div>
                       </div>
                       <div style={sameDisplayStyle}>
-                        <p style={{ fontWeight: "bolder" }}>Exam Accepted</p>
+                        <p
+                          style={{ fontWeight: "bolder", marginBottom: "0rem" }}
+                        >
+                          Exam Accepted
+                        </p>
                         <div
                           style={{
                             display: "flex",
@@ -383,14 +398,16 @@ const CollageList = () => {
                       <div style={sameDisplayStyle}>
                         <p style={{ fontWeight: "bolder" }}>Average Package</p>
                         <p style={{ fontSize: "12px" }}>
-                          {ele.collegeAvgPackage}
+                          ₹ {ele.collegeAvgPackage}
                         </p>
                       </div>
                     </div>
 
-                    <div className="apply-button-div">
+                    <div
+                      className="apply-button-div"
+                      style={{ marginTop: "-1rem" }}
+                    >
                       <button className="apply-button">Apply Now</button>
-                      {/* <button className="compare-button">Compare +</button> */}
                       <button
                         className="compare-button"
                         onClick={() =>
@@ -420,12 +437,12 @@ const CollageList = () => {
                       alt="mask-group"
                       className="collegephoto"
                     />
-                    <h2
+                    <p
                       style={{ color: "black" }}
                       className="single-product-div-top-B-school-h2-tag"
                     >
                       {ele.collegeName}
-                    </h2>
+                    </p>
                     <div className="main-centeral-div">
                       <div className="top-left-side-div">
                         <div>
