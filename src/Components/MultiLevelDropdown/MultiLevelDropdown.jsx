@@ -66,7 +66,7 @@ const MultiLevelDropdown = () => {
   return (
     <>
       <li onClick={() => setIsOpen(!isOpen)} style={{ cursor: "pointer" }}>
-        Institution <IoMdArrowDropdown />
+        Colleges <IoMdArrowDropdown />
       </li>
       {isOpen && (
         <div className="multileveldropdown-main-div" ref={node}>

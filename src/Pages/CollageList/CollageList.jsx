@@ -168,6 +168,14 @@ const CollageList = () => {
     affiliationValue,
   ]);
 
+  const sameDisplayStyle = {
+    display: "flex",
+    justifyContent: "space-between",
+    alignItems: "center",
+    gap: "1rem",
+  };
+
+  console.log("Yes, you are in this page....");
   return (
     <>
       <Navbar />
@@ -305,23 +313,6 @@ const CollageList = () => {
             className="filter-collapse-divs"
             defaultActiveKey={["8"]}
           />
-
-          <div
-            style={{ display: "flex", gap: "2rem", flexDirection: "column" }}
-          >
-            <div className="main-collagelist-first-img-div">
-              <img
-                src={require("../../Assets/collage-list-1.png")}
-                alt="collage-list-1"
-              />
-            </div>
-            <div className="main-collagelist-second-img-div">
-              <img
-                src={require("../../Assets/collage-list-2.png")}
-                alt="collage-list-2"
-              />
-            </div>
-          </div>
         </div>
         <div className="main-collagelist-right-side-div">
           <div className="collagelist-right-side-top-div">
@@ -343,48 +334,57 @@ const CollageList = () => {
                     className="single-product-div-top-B-school all-collage-list-div"
                   >
                     <img
-                      src={ele.collegePhoto}
+                      src={ele.collegeLogo}
                       alt="mask-group"
-                      className="collegephoto"
+                      className="CollegeLogo"
                     />
-                    <h2
+                    <p
                       style={{ color: "black" }}
                       className="single-product-div-top-B-school-h2-tag"
                     >
                       {ele.collegeName}
-                    </h2>
-                    <div className="main-centeral-div">
-                      <div className="top-left-side-div">
-                        <div>
-                          <p>Rating</p>
-                          <p style={{ fontWeight: "bolder" }}>
-                            {ele.collegeRating}
-                          </p>
-                        </div>
-                        <div>
-                          <p>Course</p>
-                          <p style={{ fontWeight: "bolder" }}>
-                            {ele.collegecoursespecilzationfees?.map((ele) => (
-                              <strong>{ele.course}&nbsp; </strong>
-                            ))}
-                          </p>
+                    </p>
+                    <div
+                      className="top-left-side-div"
+                      style={{ padding: "1rem" }}
+                    >
+                      <div style={sameDisplayStyle}>
+                        <p style={{ fontWeight: "bolder" }}>Rating</p>
+                        <p style={{ fontSize: "12px" }}>{ele.collegeRating}</p>
+                      </div>
+                      <div style={sameDisplayStyle}>
+                        <p style={{ fontWeight: "bolder" }}>Course</p>
+                        <div
+                          style={{
+                            display: "flex",
+                            gap: "10px",
+                            flexWrap: "wrap",
+                          }}
+                        >
+                          {ele.collegecoursespecilzationfees?.map((ele) => (
+                            <p style={{ fontSize: "12px" }}>{ele.course}</p>
+                          ))}
                         </div>
                       </div>
-                      <div className="top-right-side-div">
-                        <div>
-                          <p>Exam Accepted</p>
-                          <p style={{ fontWeight: "bolder" }}>
-                            {ele.collegeEntranceExam?.map((ele) => (
-                              <strong>{ele}&nbsp;</strong>
-                            ))}
-                          </p>
+                      <div style={sameDisplayStyle}>
+                        <p style={{ fontWeight: "bolder" }}>Exam Accepted</p>
+                        <div
+                          style={{
+                            display: "flex",
+                            gap: "10px",
+                            flexWrap: "wrap",
+                          }}
+                        >
+                          {ele.collegeEntranceExam?.map((ele) => (
+                            <p style={{ fontSize: "12px" }}>{ele}&nbsp;</p>
+                          ))}
                         </div>
-                        <div>
-                          <p>Average Package</p>
-                          <p style={{ fontWeight: "bolder" }}>
-                            {ele.collegeAvgPackage}
-                          </p>
-                        </div>
+                      </div>
+                      <div style={sameDisplayStyle}>
+                        <p style={{ fontWeight: "bolder" }}>Average Package</p>
+                        <p style={{ fontSize: "12px" }}>
+                          {ele.collegeAvgPackage}
+                        </p>
                       </div>
                     </div>
 
@@ -446,11 +446,11 @@ const CollageList = () => {
                       <div className="top-right-side-div">
                         <div>
                           <p>Exam Accepted</p>
-                          <p style={{ fontWeight: "bolder" }}>
+                          <div style={{ fontWeight: "bolder" }}>
                             {ele.collegeEntranceExam?.map((ele) => (
-                              <strong>{ele}&nbsp;</strong>
+                              <p>{ele}&nbsp;</p>
                             ))}
-                          </p>
+                          </div>
                         </div>
                         <div>
                           <p>Average Package</p>
@@ -496,7 +496,3 @@ const CollageList = () => {
 };
 
 export default CollageList;
-
-//  {
-
-//  }

@@ -187,7 +187,7 @@ const MainNavbar = () => {
           <p>Contact Us</p>
         </Link>
         <Link to={"/"}>
-          <p>Institution</p>
+          <p>Colleges</p>
         </Link>
         <Link to={"/"}>
           <p>Programs</p>
