@@ -13,6 +13,10 @@ const BlogRedirect = () => {
           <img className='img-fluid  back-image-of-blog-redirct-page' src={require("../../../Assets/latest-news-back-image-redirect.jpg")} alt="" />
           <div  className='text-of-back-image-blog'>
             <h1>Blog Details</h1>
+            {/* <p>Home / Blog Details</p> */}
+          </div>
+          <div  className='text-of-back-image-blog-two'>
+            {/* <h1>Blog Details</h1> */}
             <p>Home / Blog Details</p>
           </div>
         </div>
@@ -40,7 +44,15 @@ const BlogRedirect = () => {
         </ul>
         <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa laudantium sunt eveniet. Quo distinctio, ad, minus laborum perspiciatis ut in molestias recusandae quam eveniet iste laudantium delectus, aperiam repudiandae sequi.</h4>
       </div>
-      <div className="col-md-3 border border-dark ">
+      <div className="col-md-3 border border-dark cont-promp-main ">
+      <div className='cont-promp'></div>
+      <div className='cont-promp'></div>
+      <div className='cont-promp'></div>
+      <div className='cont-promp'></div>
+      <div className='cont-promp'></div>
+      <div className='cont-promp'></div>
+      <div className='cont-promp'></div>
+      <div className='cont-promp'></div>
        
       </div>
     </div>

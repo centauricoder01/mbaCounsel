@@ -34,6 +34,8 @@
 }
 
 .date-of-latest-news{
+  display: flex;
+  justify-content: space-between !important;
   font-size: 1.1rem;
   color: rgb(147, 145, 145);
 
