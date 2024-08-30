@@ -24,4 +24,9 @@ function getAttributeDetails(path) {
 function postUserDetails(path, data) {
   return axios.post(`http://localhost:3001/api/v1/${path}`, data);
 }
+
+export const GetRequest = (path) => {
+  return axios.get(`http://localhost:3001/api/v1/${path}`);
+};
+
 export { fetchData, getAttributeDetails, postUserDetails };

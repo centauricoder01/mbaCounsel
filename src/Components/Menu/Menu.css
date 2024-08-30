@@ -1,0 +1,21 @@
+.categoryLink p {
+  width: 90%;
+  margin: auto;
+  font-size: 15px;
+  margin-bottom: 5px;
+  color: blue !important;
+}
+
+:where(.css-dev-only-do-not-override-1b0bdye).ant-drawer .ant-drawer-body {
+  padding: 0px;
+}
+
+:where(.css-dev-only-do-not-override-1b0bdye).ant-drawer .ant-drawer-close {
+  display: none;
+}
+
+.dropdownCategory-para {
+  color: blue;
+  font-weight: bolder;
+  font-size: 1rem;
+}

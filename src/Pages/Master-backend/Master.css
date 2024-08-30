@@ -1,0 +1,107 @@
+.main-master-div-form {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  margin: auto;
+  padding: 1rem;
+  background-color: white;
+  border-radius: 5px;
+  border: none;
+  gap: 1rem;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.main-master-div-form input {
+  width: 70%;
+  height: 2.5rem;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: none;
+  background-color: #e7e7e7;
+}
+
+.main-master-modal-form {
+  width: 100% !important;
+}
+
+/* table design start from here */
+
+.styled-table {
+  border-collapse: collapse;
+  margin: 25px 0;
+  font-size: 0.9em;
+  font-family: sans-serif;
+  min-width: 400px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+  width: 100%;
+}
+
+.styled-table thead tr {
+  background-color: #009879;
+  color: #ffffff;
+  text-align: left;
+}
+
+.styled-table th,
+.styled-table td {
+  padding: 12px 15px;
+}
+
+.styled-table tbody tr {
+  border-bottom: 1px solid #dddddd;
+}
+
+.styled-table tbody tr:nth-of-type(even) {
+  background-color: #f3f3f3;
+}
+
+.styled-table tbody tr:last-of-type {
+  border-bottom: 2px solid #009879;
+}
+
+.main-model-form-div {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.main-model-form-div input {
+  width: 60%;
+  height: 2rem;
+  border-radius: 5px;
+  padding-left: 1rem;
+  background-color: #e7e7e7;
+  border: none;
+}
+
+/* dropdown design start from here  */
+
+.dropdown {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.dropdown select {
+  width: 70%;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  border: none;
+  background-color: #e7e7e7;
+}
+
+/* Style the dropdown items */
+.dropdown select option {
+  padding: 10px;
+}
+
+.main-edit-button {
+  width: 4rem;
+}
+
+.main-delete-button {
+  width: 4rem;
+}

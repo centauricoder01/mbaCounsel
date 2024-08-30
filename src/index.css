@@ -1,11 +1,18 @@
 @import url("https://fonts.cdnfonts.com/css/times-new-roman");
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 
-body {
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700&display=swap");
+
+* {
   padding: 0px;
   margin: 0px;
   font-family: "Times New Roman", sans-serif !important;
   transition: all 0.5s linear;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--grey);
   overflow-x: hidden;
 }
 
@@ -13,10 +20,78 @@ a {
   text-decoration: none !important;
 }
 
-
-body h1,h2,h3,h4,h5,h6,p,td,tr,li{
-  font-family: "Times New Roman", sans-serif;
-}
 html {
   scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+:root {
+  --poppins: "Poppins", sans-serif;
+  --lato: "Lato", sans-serif;
+  --light: #f9f9f9;
+  --blue: #3c91e6;
+  --light-blue: #cfe8ff;
+  --grey: #eee;
+  --dark-grey: #aaaaaa;
+  --dark: #342e37;
+  --red: #db504a;
+  --yellow: #ffce26;
+  --light-yellow: #fff2c6;
+  --orange: #fd7238;
+  --light-orange: #ffe0d3;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+.main-div-common-design {
+  width: 90%;
+  margin: 1rem auto;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  border-radius: 1rem;
+  padding: 3rem;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.main-edit-button {
+  background-color: rgb(133, 133, 245);
+  color: white;
+  width: 50%;
+  height: 2.5rem;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+
+.main-delete-button {
+  background-color: rgb(224, 42, 42);
+  color: white;
+  width: 40%;
+  height: 2.5rem;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+
+hr {
+  margin: 0rem !important;
+}
+
+.styled-table th {
+  color: black;
+}
+
+.styled-table thead tr th {
+  text-align: center;
 }

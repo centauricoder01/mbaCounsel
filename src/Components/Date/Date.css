@@ -1,0 +1,10 @@
+.main-date-div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.datepicker-class {
+  width: 430px;
+  height: 43px;
+}

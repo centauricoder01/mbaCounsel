@@ -12,17 +12,12 @@
 }
 
 .multileveldropdown-main-div div {
-  width: 30%;
   background-color: transparent;
 }
 
-/* .multileveldropdown-main-div div:hover {
-  background-color: #cae2ff;
-} */
 .multileveldropdown-main-div > div:first-child > p {
   font-weight: bolder;
   padding: 1rem;
-  
   font-size: 20px;
 }
 
@@ -34,6 +29,15 @@
 .selectable-div {
   padding-left: 1rem;
   padding-top: 1rem;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: top;
+  gap: 2rem;
+  width: 80%;
+}
+
+.selectable-div div {
+  width: 25%;
 }
 
 .multileveldropdown-main-div h5 {
@@ -43,18 +47,21 @@
 /* ParaTags.css */
 .para-tags-container {
   background-color: rgb(183, 183, 183);
-  padding-left: 3rem;
+  width: 20%;
 }
 
 .para-tags-container p {
   cursor: pointer;
-  padding: 10px;
   transition: background-color 0.3s ease;
   font-size: 1.5rem;
 }
 
+.para-tags-container p:hover {
+  background-color: rgb(194, 194, 245);
+}
+
 .para-tags-container p.active {
-  background-color: white;
+  background-color: rgb(194, 194, 245);
 }
 
 .selectable-div {
