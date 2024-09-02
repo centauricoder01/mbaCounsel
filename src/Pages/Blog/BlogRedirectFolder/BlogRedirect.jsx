@@ -17,7 +17,7 @@ const BlogRedirect = () => {
           </div>
           <div  className='text-of-back-image-blog-two'>
             {/* <h1>Blog Details</h1> */}
-            <p>Home / Blog Details</p>
+            <p style={{cursor:"pointer"}}>Home / Blog Details</p>
           </div>
         </div>
       </div>

@@ -39,7 +39,7 @@ const Blog = () => {
           </div>
           <div className="col-md-12 blog-head-back-text-two ">
             {/* <h1>Blog</h1> */}
-            <p>Home / Blog</p>
+            <p style={{cursor:"pointer"}}>Home / Blog</p>
           </div>
         </div>
         <div className="row mt-5 main-search-and-count-of-blog">

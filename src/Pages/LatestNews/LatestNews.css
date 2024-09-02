@@ -1,13 +1,25 @@
 
 .home-and-latest-news-of-latest-news-page{
   margin-left: 1rem;
-  margin-top: 8rem;
+  margin-top: 1rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
  
 
+}
+.main-article-head-back-text{
+  background-image: url(../../Assets/article-demo-image.jpg);
+}
+.main-article-head-back-text{
+  margin-top: 9rem;
+  padding-top: 2rem;
+}
+.latest-news-view-more-button{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
 }
 
 .main-drop-down-of-latest-news{
@@ -32,10 +44,21 @@
 }
 
 .main-all-news-of-latest-news{
-  margin-top: 4rem;
+  margin-top: 2rem;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 1rem;
 }
 
+/* Increase dropdown transition speed */
+.dropdown-menu {
+  transition: opacity 0.2s ease, transform 0.1s ease;
+  opacity: 0;
+  transform: translateY(-10px);
+}
+
+.dropdown-menu.show {
+  opacity: 1;
+  transform: translateY(0);
+}

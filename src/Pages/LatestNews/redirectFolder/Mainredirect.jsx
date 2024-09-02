@@ -10,10 +10,16 @@ const Mainredirect = () => {
 
     <div className="container-fluid mb-5" >
     <div className="row main-head-text-of-latest-news-redirect-page " >
-        <div className="col-md-11 mb-5 head-text-of-latest-news-redirect-page">
-           
-            <p>Home / Latest News Details</p>
-          
+    <div className="col-md-12 head-image-of-blog-redirect-page">
+          <img className='img-fluid  back-image-of-blog-redirct-page' src={require("../../../Assets/latest-news-back-image-redirect.jpg")} alt="" />
+          <div  className='text-of-back-image-blog'>
+            <h1 >latest news Details</h1>
+            {/* <p>Home / Blog Details</p> */}
+          </div>
+          <div  className='text-of-back-image-blog-two'>
+            {/* <h1>Blog Details</h1> */}
+            <p style={{cursor:"pointer"}}>Home / latest news / 01</p>
+          </div>
         </div>
       </div>
     <div className="row main-all-content-of-latest-news-redirect-page ">
