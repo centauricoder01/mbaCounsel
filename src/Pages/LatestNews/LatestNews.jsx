@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./LatestNews.css";
+import { Link } from "react-router-dom";
 import Navbar from "../../Components/Navbar/Navbar";
 import Footer from "../../Components/Footer/Footer";
 import AllNewsComp from "./AllNewsComp";
@@ -30,7 +31,9 @@ const LatestNews = () => {
             <h1 >Latest News</h1>
           </div>
           <div className="col-md-2 home-and-latest-of-article-page ">
-            <p style={{cursor:"pointer"}}>Home / Latest News</p>
+          <p style={{ cursor: "pointer" }}>
+              <Link to="/" style={{ color: "white", textDecoration: "none"}} >Home</Link> / Latest news
+            </p>
           </div>
         </div>
         <div className="row mt-5 main-drop-down-of-latest-news">

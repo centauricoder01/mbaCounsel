@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom"; // Import Link from react-router-dom
 import "./Blog.css";
 import Navbar from "../../Components/Navbar/Navbar";
 import Footer from "../../Components/Footer/Footer";
@@ -21,7 +22,7 @@ const Blog = () => {
 
   const loadMoreBlogs = () => {
     if (visibleCount < blogs.length) {
-      setVisibleCount(prevCount => prevCount + 40);
+      setVisibleCount((prevCount) => prevCount + 40);
     } else {
       setHasMore(false); // No more blogs to load
     }
@@ -39,7 +40,9 @@ const Blog = () => {
           </div>
           <div className="col-md-12 blog-head-back-text-two ">
             {/* <h1>Blog</h1> */}
-            <p style={{cursor:"pointer"}}>Home / Blog</p>
+            <p style={{ cursor: "pointer" }}>
+              <Link to="/" style={{ color: "white", textDecoration: "none"}} >Home</Link> / Blogs
+            </p>
           </div>
         </div>
         <div className="row mt-5 main-search-and-count-of-blog">
@@ -49,8 +52,15 @@ const Blog = () => {
             </h4>
           </div>
           <div className="col-md-3 search-bar-of-blog ">
-            <input className="form-control search-of-blog" type="search" placeholder="Search Our Blog" aria-label="Search"/>
-            <i className="icon-of-search-bar" ><IoSearchOutline /></i>
+            <input
+              className="form-control search-of-blog"
+              type="search"
+              placeholder="Search Our Blog"
+              aria-label="Search"
+            />
+            <i className="icon-of-search-bar">
+              <IoSearchOutline />
+            </i>
           </div>
         </div>
         <div className="row main-all-news-of-latest-news">
@@ -68,7 +78,9 @@ const Blog = () => {
         {hasMore && (
           <div className="row">
             <div className="col-md-12 view-more-button-blog-page">
-              <button className="btn btn-primary" onClick={loadMoreBlogs}>Load More</button>
+              <button className="btn btn-primary" onClick={loadMoreBlogs}>
+                Load More
+              </button>
             </div>
           </div>
         )}
