@@ -333,7 +333,7 @@ td {
 
 .latest-news-for-exam-page {
   color: #696666;
-  font-size: 1.3rem;
+  /* font-size: 1.3rem; */
   padding: 0% 2%;
 }
 
@@ -347,7 +347,7 @@ td {
 }
 .Similar-Entrance-Exam-div a {
   color: #696666;
-  font-size: 1.3rem;
+  /* font-size: 1.3rem; */
 }
 
 .Similar-Entrance-Exam-div a:hover {

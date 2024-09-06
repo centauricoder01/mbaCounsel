@@ -39,6 +39,8 @@ const Courses = () => {
     }, 5000); // 5 seconds
     return () => clearTimeout(timer); // Cleanup timer on unmount
   }, []);
+
+
     // Handle form input change
     const handleInputChange = (e) => {
       const { name, value } = e.target;
@@ -52,6 +54,8 @@ const Courses = () => {
   const handleClosePopup = () => {
     setShowPopup(false);
   };
+
+
    // Handle form submit without page refresh
    const handleSubmit = (e) => {
     e.preventDefault();
@@ -68,6 +72,12 @@ const Courses = () => {
     // Close the popup after submission
     handleClosePopup();
   };
+
+    // Handle button click to show popup immediately
+    const handleShowPopup = () => {
+      setShowPopup(true);
+    };
+
   return (
     <>
       <Navbar />
@@ -129,6 +139,7 @@ const Courses = () => {
                 type="button"
                 className="btn btn-success w-25 "
                 style={{ fontSize: "1.2rem" }}
+                onClick={handleShowPopup} // Show popup when clicking this button
               >
                 Get More Information  &nbsp;<FaHandPointer />
               </button>
