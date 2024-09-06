@@ -1,11 +1,9 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./Courses.css";
 import Navbar from "../../Components/Navbar/Navbar";
 import Footer from "../../Components/Footer/Footer";
 import { FcSearch } from "react-icons/fc";
 import { FaHome } from "react-icons/fa";
-import { useState } from "react";
-import "../Exam/Exam.css";
 import RightSideSimilerColleges from "../Exam/RightSideSimilerColleges";
 import AllCollegeInExam from "../Exam/AllCollegeInExam";
 import { FaHandPointer } from "react-icons/fa";
@@ -13,7 +11,8 @@ import { FaHandPointer } from "react-icons/fa";
 const Courses = () => {
   const [value, setValue] = useState(1);
 
-  const [activeButton, setActiveButton] = useState(null);
+  const [activeButton, setActiveButton] = useState(null)
+  const [showPopup, setShowPopup] = useState(false);;
 
   const HandleButton = (value, buttonId) => {
     setActiveButton(buttonId);
@@ -25,9 +24,39 @@ const Courses = () => {
       borderBottom: activeButton === buttonId ? "2px solid blue" : "none",
     };
   };
+
+   // Open the popup after 5 seconds
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setShowPopup(true);
+    }, 5000); // 5 seconds
+    return () => clearTimeout(timer); // Cleanup timer on unmount
+  }, []);
+
+  // Handle closing of the popup
+  const handleClosePopup = () => {
+    setShowPopup(false);
+  };
   return (
     <>
       <Navbar />
+      {showPopup && (
+          <div className="popup-container">
+            <div className="popup-form">
+              <button className="close-popup" onClick={handleClosePopup}>
+                X
+              </button>
+              <h2>Course Enquiry</h2>
+              <form>
+                <input type="text" placeholder="Name" required />
+                <input type="email" placeholder="Email" required />
+                <input type="tel" placeholder="Phone Number" required />
+                <input type="text" placeholder="Course" required />
+                <button type="submit">Submit</button>
+              </form>
+            </div>
+          </div>
+        )}
 
       <div className="containerfluid main-mba-course ">
         <div className="row">
