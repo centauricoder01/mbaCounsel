@@ -1,0 +1,118 @@
+.main-collegecard-container {
+  width: 100%;
+  max-width: 300px;
+  text-align: center;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
+    rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+  border-radius: 5px;
+  overflow: hidden;
+  margin: auto;
+}
+
+.collegecard-image-container {
+  position: relative;
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.collegecard-two-inner-info-div p {
+  margin-bottom: 5px !important;
+}
+
+.collegecard-image-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.collegecard-image {
+  width: 100%;
+}
+
+.collegecard-rating-tag {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background-color: #ffb400;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 14px;
+  color: white;
+}
+
+.collegecard-college-name-container {
+  position: absolute;
+  bottom: 10px;
+  width: 93%;
+  background: rgba(0, 0, 0, 0.55);
+  padding: 10px;
+}
+
+.collegecard-college-name-para {
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  margin: 0;
+}
+
+.collegecard-two-inner-info-div {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.collegecard-child-divs {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.collegecard-bottom-buttons {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px;
+}
+
+.collegecard-bottom-button-first,
+.collegecard-bottom-button-second {
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  color: white;
+  flex: 1;
+  margin: 0 5px;
+}
+
+.collegecard-bottom-button-first {
+  background-color: #337062;
+}
+
+.collegecard-bottom-button-second {
+  background-color: #2ea44f;
+}
+
+@media (max-width: 768px) {
+  .main-collegecard-container {
+    width: 80%;
+  }
+
+  .collegecard-image {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .main-collegecard-container {
+    width: 100%;
+  }
+
+  .collegecard-bottom-buttons {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .collegecard-bottom-button-first,
+  .collegecard-bottom-button-second {
+    margin: 0;
+  }
+}

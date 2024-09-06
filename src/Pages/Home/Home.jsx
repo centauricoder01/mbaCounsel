@@ -17,6 +17,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { fetchData } from "../../API/Getrequest";
 import { Link } from "react-router-dom";
+import { CollegeCard } from "../../Components/CollegeCard/CollegeCard";
 
 const Home = () => {
   const settingsLaptop = {
@@ -39,10 +40,6 @@ const Home = () => {
   const [collegeData, setCollegeData] = useState([]);
 
   const [settingVal, setSettingVal] = useState(settingsLaptop);
-
-  const isSmallScreen = window.innerWidth;
-
-  let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 
   useEffect(() => {
     fetchData("getadsbanner")
@@ -142,80 +139,7 @@ const Home = () => {
         <h1 className="all-new-h1">Top Features Collages</h1>
         <Slider {...settingVal}>
           {collegeData?.map((ele) => (
-            <div className="single-product-div-top-B-school">
-              <img src={ele.collegePhoto} alt="mask-group" />
-              <h2 style={{ color: "black" }}>{ele.collegeName}</h2>
-              <div className="main-centeral-div">
-                <div className="top-left-side-div">
-                  <div>
-                    <p>Rating</p>
-                    <p style={{ fontWeight: "bolder" }}>{ele.collegeRating}</p>
-                  </div>
-                  <div>
-                    <p>Course</p>
-                    <p style={{ fontWeight: "bolder" }}>
-                      {ele.collegecoursespecilzationfees?.map((ele) => (
-                        <strong>{ele.course}&nbsp; </strong>
-                      ))}
-                    </p>
-                  </div>
-                </div>
-                <div className="top-right-side-div">
-                  <div>
-                    <p>Exam Accepted</p>
-                    <p style={{ fontWeight: "bolder" }}>
-                      {ele.collegeEntranceExam?.map((ele) => (
-                        <strong>{ele}&nbsp;</strong>
-                      ))}
-                    </p>
-                  </div>
-                  <div>
-                    <p>Average Package</p>
-                    <p style={{ fontWeight: "bolder" }}>
-                      {" "}
-                      {ele.collegeAvgPackage}
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div className="apply-button-div">
-                <button className="apply-button">Apply Now</button>
-                <button className="compare-button">Compare +</button>
-              </div>
-            </div>
-            // <div className="single-product-div-top-B-school">
-            //   <img
-            //     src={require("../../Assets/Mask-Group.png")}
-            //     alt="mask-group"
-            //   />
-            //   <h1 style={{ color: "black" }}>IIM Bangelore</h1>
-            //   <div className="main-centeral-div">
-            //     <div className="top-left-side-div">
-            //       <div>
-            //         <p>Duration</p>
-            //         <p style={{ fontWeight: "bolder" }}>2 Years</p>
-            //       </div>
-            //       <div>
-            //         <p>Course</p>
-            //         <p style={{ fontWeight: "bolder" }}>MBBS, B.ED</p>
-            //       </div>
-            //     </div>
-            //     <div className="top-right-side-div">
-            //       <div>
-            //         <p>Exam Accepted</p>
-            //         <p style={{ fontWeight: "bolder" }}>CAT, CUET</p>
-            //       </div>
-            //       <div>
-            //         <p>Average Package</p>
-            //         <p style={{ fontWeight: "bolder" }}>60 LPA</p>
-            //       </div>
-            //     </div>
-            //   </div>
-            //   <div className="apply-button-div">
-            //     <button className="apply-button">Apply Now</button>
-            //     <button className="compare-button">Compare +</button>
-            //   </div>
-            // </div>
+            <CollegeCard />
           ))}
         </Slider>
       </div>
@@ -360,49 +284,14 @@ const Home = () => {
       <div className="Top-B-Schools-in-India">
         <h1 className="all-new-h1">Top B-Schools in India</h1>
         <div className="Top-B-Schools-in-India-crousel-div">
-          {collegeData?.map((ele) => (
-            <div className="single-product-div-top-B-school">
-              <img src={ele.collegePhoto} alt="mask-group" />
-              <h2 style={{ color: "black" }}>{ele.collegeName}</h2>
-              <div className="main-centeral-div">
-                <div className="top-left-side-div">
-                  <div>
-                    <p>Rating</p>
-                    <p style={{ fontWeight: "bolder" }}>{ele.collegeRating}</p>
-                  </div>
-                  <div>
-                    <p>Course</p>
-                    <p style={{ fontWeight: "bolder" }}>
-                      {ele.collegecoursespecilzationfees?.map((ele) => (
-                        <strong>{ele.course}&nbsp; </strong>
-                      ))}
-                    </p>
-                  </div>
-                </div>
-                <div className="top-right-side-div">
-                  <div>
-                    <p>Exam Accepted</p>
-                    <p style={{ fontWeight: "bolder" }}>
-                      {ele.collegeEntranceExam?.map((ele) => (
-                        <strong>{ele}&nbsp;</strong>
-                      ))}
-                    </p>
-                  </div>
-                  <div>
-                    <p>Average Package</p>
-                    <p style={{ fontWeight: "bolder" }}>
-                      {" "}
-                      {ele.collegeAvgPackage}
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div className="apply-button-div">
-                <button className="apply-button">Apply Now</button>
-                <button className="compare-button">Compare +</button>
-              </div>
-            </div>
+          {collegeData.slice(0, 8)?.map((ele) => (
+            <CollegeCard />
           ))}
+        </div>
+        <div className="top-b-school-in-india-view-more-button">
+          <a href="/collegelist">
+            <button>View More...</button>
+          </a>
         </div>
       </div>
       <Testimonials />
