@@ -12,7 +12,14 @@ const Courses = () => {
   const [value, setValue] = useState(1);
 
   const [activeButton, setActiveButton] = useState(null)
-  const [showPopup, setShowPopup] = useState(false);;
+  const [showPopup, setShowPopup] = useState(false);
+    // Form input state
+    const [formData, setFormData] = useState({
+      name: "",
+      email: "",
+      phone: "",
+      course: "",
+    });
 
   const HandleButton = (value, buttonId) => {
     setActiveButton(buttonId);
@@ -32,10 +39,34 @@ const Courses = () => {
     }, 5000); // 5 seconds
     return () => clearTimeout(timer); // Cleanup timer on unmount
   }, []);
+    // Handle form input change
+    const handleInputChange = (e) => {
+      const { name, value } = e.target;
+      setFormData((prevState) => ({
+        ...prevState,
+        [name]: value,
+      }));
+    };
 
   // Handle closing of the popup
   const handleClosePopup = () => {
     setShowPopup(false);
+  };
+   // Handle form submit without page refresh
+   const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log("Form Data Submitted:", formData);
+
+    // You can now send `formData` to the backend via an API call
+    // For example:
+    // fetch('/api/submitForm', {
+    //   method: 'POST',
+    //   headers: { 'Content-Type': 'application/json' },
+    //   body: JSON.stringify(formData)
+    // })
+
+    // Close the popup after submission
+    handleClosePopup();
   };
   return (
     <>
@@ -44,14 +75,42 @@ const Courses = () => {
           <div className="popup-container">
             <div className="popup-form">
               <button className="close-popup" onClick={handleClosePopup}>
-                X
+                &times;
               </button>
               <h2>Course Enquiry</h2>
-              <form>
-                <input type="text" placeholder="Name" required />
-                <input type="email" placeholder="Email" required />
-                <input type="tel" placeholder="Phone Number" required />
-                <input type="text" placeholder="Course" required />
+              <form onSubmit={handleSubmit}>
+                <input
+                  type="text"
+                  name="name"
+                  placeholder="Name"
+                  value={formData.name}
+                  onChange={handleInputChange}
+                  required
+                />
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="Email"
+                  value={formData.email}
+                  onChange={handleInputChange}
+                  required
+                />
+                <input
+                  type="tel"
+                  name="phone"
+                  placeholder="Phone Number"
+                  value={formData.phone}
+                  onChange={handleInputChange}
+                  required
+                />
+                <input
+                  type="text"
+                  name="course"
+                  placeholder="Course"
+                  value={formData.course}
+                  onChange={handleInputChange}
+                  required
+                />
                 <button type="submit">Submit</button>
               </form>
             </div>
