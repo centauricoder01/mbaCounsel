@@ -1,11 +1,9 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./Courses.css";
 import Navbar from "../../Components/Navbar/Navbar";
 import Footer from "../../Components/Footer/Footer";
 import { FcSearch } from "react-icons/fc";
 import { FaHome } from "react-icons/fa";
-import { useState } from "react";
-import "../Exam/Exam.css";
 import RightSideSimilerColleges from "../Exam/RightSideSimilerColleges";
 import AllCollegeInExam from "../Exam/AllCollegeInExam";
 import { FaHandPointer } from "react-icons/fa";
@@ -13,7 +11,15 @@ import { FaHandPointer } from "react-icons/fa";
 const Courses = () => {
   const [value, setValue] = useState(1);
 
-  const [activeButton, setActiveButton] = useState(null);
+  const [activeButton, setActiveButton] = useState(null)
+  const [showPopup, setShowPopup] = useState(false);
+    // Form input state
+    const [formData, setFormData] = useState({
+      name: "",
+      email: "",
+      phone: "",
+      course: "",
+    });
 
   const HandleButton = (value, buttonId) => {
     setActiveButton(buttonId);
@@ -25,9 +31,91 @@ const Courses = () => {
       borderBottom: activeButton === buttonId ? "2px solid blue" : "none",
     };
   };
+
+   // Open the popup after 5 seconds
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setShowPopup(true);
+    }, 5000); // 5 seconds
+    return () => clearTimeout(timer); // Cleanup timer on unmount
+  }, []);
+    // Handle form input change
+    const handleInputChange = (e) => {
+      const { name, value } = e.target;
+      setFormData((prevState) => ({
+        ...prevState,
+        [name]: value,
+      }));
+    };
+
+  // Handle closing of the popup
+  const handleClosePopup = () => {
+    setShowPopup(false);
+  };
+   // Handle form submit without page refresh
+   const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log("Form Data Submitted:", formData);
+
+    // You can now send `formData` to the backend via an API call
+    // For example:
+    // fetch('/api/submitForm', {
+    //   method: 'POST',
+    //   headers: { 'Content-Type': 'application/json' },
+    //   body: JSON.stringify(formData)
+    // })
+
+    // Close the popup after submission
+    handleClosePopup();
+  };
   return (
     <>
       <Navbar />
+      {showPopup && (
+          <div className="popup-container">
+            <div className="popup-form">
+              <button className="close-popup" onClick={handleClosePopup}>
+                &times;
+              </button>
+              <h2>Course Enquiry</h2>
+              <form onSubmit={handleSubmit}>
+                <input
+                  type="text"
+                  name="name"
+                  placeholder="Name"
+                  value={formData.name}
+                  onChange={handleInputChange}
+                  required
+                />
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="Email"
+                  value={formData.email}
+                  onChange={handleInputChange}
+                  required
+                />
+                <input
+                  type="tel"
+                  name="phone"
+                  placeholder="Phone Number"
+                  value={formData.phone}
+                  onChange={handleInputChange}
+                  required
+                />
+                <input
+                  type="text"
+                  name="course"
+                  placeholder="Course"
+                  value={formData.course}
+                  onChange={handleInputChange}
+                  required
+                />
+                <button type="submit">Submit</button>
+              </form>
+            </div>
+          </div>
+        )}
 
       <div className="containerfluid main-mba-course ">
         <div className="row">
