@@ -8,6 +8,8 @@ import RightSideSimilerColleges from "../Exam/RightSideSimilerColleges";
 import AllCollegeInExam from "../Exam/AllCollegeInExam";
 import { FaHandPointer } from "react-icons/fa";
 import {CollegeCard} from "../../Components/CollegeCard/CollegeCard"
+import CollegeCarousel from "../../Components/SlideCollegeCarousel/CollegeCarousel";
+import AccrodionForCourses from "./AccrodianForCourses";
 
 const Courses = () => {
   const [value, setValue] = useState(1);
@@ -311,7 +313,11 @@ const Courses = () => {
                 </ul>
               </div>
               </div>
-              <div className="about-cat-college"><h2> hello karan</h2></div>
+              <div className="about-cat-college">
+              <h2 className="head-tag-of-program-detals pt-3 ">
+                | FEATURED COLLEGES
+              </h2>
+              <CollegeCarousel/></div>
             </div>
             <div className="col-md-3 pb-5 ">
               <RightSideSimilerColleges
@@ -432,7 +438,11 @@ const Courses = () => {
                   </li>
                 </ul>
               </div></div>
-             <div className="about-cat-college"><h2>hello karan </h2></div>
+              <div className="about-cat-college">
+              <h2 className="head-tag-of-program-detals pt-3 ">
+                | FEATURED COLLEGES
+              </h2>
+              <CollegeCarousel/></div>
             </div>
             <div className="col-md-3 pb-5 ">
               <RightSideSimilerColleges
@@ -553,7 +563,11 @@ const Courses = () => {
                   </li>
                 </ul>
               </div></div>
-             <div className="about-cat-college"><h2>hello karan </h2></div>
+              <div className="about-cat-college">
+              <h2 className="head-tag-of-program-detals pt-3 ">
+                | FEATURED COLLEGES
+              </h2>
+              <CollegeCarousel/></div>
             </div>
             <div className="col-md-3 pb-5 ">
               <RightSideSimilerColleges
@@ -674,7 +688,11 @@ const Courses = () => {
                   </li>
                 </ul>
               </div></div>
-             <div className="about-cat-college"><h2>hello karan </h2></div>
+              <div className="about-cat-college">
+              <h2 className="head-tag-of-program-detals pt-3 ">
+                | FEATURED COLLEGES
+              </h2>
+              <CollegeCarousel/></div>
             </div>
             <div className="col-md-3 pb-5">
               <RightSideSimilerColleges
@@ -795,7 +813,11 @@ const Courses = () => {
                   </li>
                 </ul>
               </div></div>
-             <div className="about-cat-college"><h2>hello karan </h2></div>
+              <div className="about-cat-college">
+              <h2 className="head-tag-of-program-detals pt-3 ">
+                | FEATURED COLLEGES
+              </h2>
+              <CollegeCarousel/></div>
             </div>
             <div className="col-md-3 pb-5">
               <RightSideSimilerColleges
@@ -843,7 +865,12 @@ const Courses = () => {
 
                 
               </div></div>
-              <div className="about-cat-college"> <h2>hello karan</h2></div>
+              
+              <div className="about-cat-college">
+              <h2 className="head-tag-of-program-detals pt-3 ">
+                | FEATURED COLLEGES
+              </h2>
+              <CollegeCarousel/></div>
             </div>
             <div className="col-md-3 ">
               <RightSideSimilerColleges
@@ -860,6 +887,9 @@ const Courses = () => {
             id="main-about-cat-id"
           >
             <div className="col-md-8 text-of-program-details d-flex flex-column gap-5  ">
+            <div>
+              <AccrodionForCourses/>
+            </div>
               <div className="about-cat-college"><h2 className="head-tag-of-program-detals pt-3">| FAQ</h2>
               <div className="col-md-10 m-auto pb-5 mb-5 search-bar-head-in-faq">
                 <h2>Frequently asked question and answer</h2>
@@ -870,7 +900,11 @@ const Courses = () => {
                   </button>
                 </div>
               </div></div>
-              <div className="about-cat-college"><h2> hello karan</h2></div>
+              <div className="about-cat-college">
+              <h2 className="head-tag-of-program-detals pt-3 ">
+                | FEATURED COLLEGES
+              </h2>
+              <CollegeCarousel/></div>
             </div>
             <div className="col-md-3 ">
               <RightSideSimilerColleges
