@@ -7,19 +7,20 @@ import { FaHome } from "react-icons/fa";
 import RightSideSimilerColleges from "../Exam/RightSideSimilerColleges";
 import AllCollegeInExam from "../Exam/AllCollegeInExam";
 import { FaHandPointer } from "react-icons/fa";
+import {CollegeCard} from "../../Components/CollegeCard/CollegeCard"
 
 const Courses = () => {
   const [value, setValue] = useState(1);
 
-  const [activeButton, setActiveButton] = useState(null)
+  const [activeButton, setActiveButton] = useState(null);
   const [showPopup, setShowPopup] = useState(false);
-    // Form input state
-    const [formData, setFormData] = useState({
-      name: "",
-      email: "",
-      phone: "",
-      course: "",
-    });
+  // Form input state
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    course: "",
+  });
 
   const HandleButton = (value, buttonId) => {
     setActiveButton(buttonId);
@@ -32,7 +33,7 @@ const Courses = () => {
     };
   };
 
-   // Open the popup after 5 seconds
+  // Open the popup after 5 seconds
   useEffect(() => {
     const timer = setTimeout(() => {
       setShowPopup(true);
@@ -40,24 +41,22 @@ const Courses = () => {
     return () => clearTimeout(timer); // Cleanup timer on unmount
   }, []);
 
-
-    // Handle form input change
-    const handleInputChange = (e) => {
-      const { name, value } = e.target;
-      setFormData((prevState) => ({
-        ...prevState,
-        [name]: value,
-      }));
-    };
+  // Handle form input change
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prevState) => ({
+      ...prevState,
+      [name]: value,
+    }));
+  };
 
   // Handle closing of the popup
   const handleClosePopup = () => {
     setShowPopup(false);
   };
 
-
-   // Handle form submit without page refresh
-   const handleSubmit = (e) => {
+  // Handle form submit without page refresh
+  const handleSubmit = (e) => {
     e.preventDefault();
     console.log("Form Data Submitted:", formData);
 
@@ -73,59 +72,59 @@ const Courses = () => {
     handleClosePopup();
   };
 
-    // Handle button click to show popup immediately
-    const handleShowPopup = () => {
-      setShowPopup(true);
-    };
+  // Handle button click to show popup immediately
+  const handleShowPopup = () => {
+    setShowPopup(true);
+  };
 
   return (
     <>
       <Navbar />
       {showPopup && (
-          <div className="popup-container">
-            <div className="popup-form">
-              <button className="close-popup" onClick={handleClosePopup}>
-                &times;
-              </button>
-              <h2>Course Enquiry</h2>
-              <form onSubmit={handleSubmit}>
-                <input
-                  type="text"
-                  name="name"
-                  placeholder="Name"
-                  value={formData.name}
-                  onChange={handleInputChange}
-                  required
-                />
-                <input
-                  type="email"
-                  name="email"
-                  placeholder="Email"
-                  value={formData.email}
-                  onChange={handleInputChange}
-                  required
-                />
-                <input
-                  type="tel"
-                  name="phone"
-                  placeholder="Phone Number"
-                  value={formData.phone}
-                  onChange={handleInputChange}
-                  required
-                />
-                <input
-                  type="text"
-                  name="course"
-                  placeholder="Course"
-                  value={formData.course}
-                  onChange={handleInputChange}
-                  required
-                />
-                <button type="submit">Submit</button>
-              </form>
-            </div>
+        <div className="popup-container">
+          <div className="popup-form">
+            <button className="close-popup" onClick={handleClosePopup}>
+              &times;
+            </button>
+            <h2>Course Enquiry</h2>
+            <form onSubmit={handleSubmit}>
+              <input
+                type="text"
+                name="name"
+                placeholder="Name"
+                value={formData.name}
+                onChange={handleInputChange}
+                required
+              />
+              <input
+                type="email"
+                name="email"
+                placeholder="Email"
+                value={formData.email}
+                onChange={handleInputChange}
+                required
+              />
+              <input
+                type="tel"
+                name="phone"
+                placeholder="Phone Number"
+                value={formData.phone}
+                onChange={handleInputChange}
+                required
+              />
+              <input
+                type="text"
+                name="course"
+                placeholder="Course"
+                value={formData.course}
+                onChange={handleInputChange}
+                required
+              />
+              <button type="submit">Submit</button>
+            </form>
           </div>
-        )}
+        </div>
+      )}
 
       <div className="containerfluid main-mba-course ">
         <div className="row">
@@ -141,7 +140,8 @@ const Courses = () => {
                 style={{ fontSize: "1.2rem" }}
                 onClick={handleShowPopup} // Show popup when clicking this button
               >
-                Get More Information  &nbsp;<FaHandPointer />
+                Get More Information &nbsp;
+                <FaHandPointer />
               </button>
             </div>
           </div>
@@ -205,8 +205,8 @@ const Courses = () => {
             className="row main-about-cat-and-populer-college"
             id="main-about-cat-id"
           >
-            <div className="col-md-8 text-of-program-details about-cat-college  ">
-              <h2 className="head-tag-of-program-detals pt-3">
+            <div className="col-md-8 text-of-program-details d-flex flex-column gap-5   ">
+              <div className="about-cat-college"><h2 className="head-tag-of-program-detals pt-3 ">
                 | PROGRAM DETAILS
               </h2>
 
@@ -310,6 +310,8 @@ const Courses = () => {
                   </li>
                 </ul>
               </div>
+              </div>
+              <div className="about-cat-college"><h2> hello karan</h2></div>
             </div>
             <div className="col-md-3 pb-5 ">
               <RightSideSimilerColleges
@@ -322,11 +324,11 @@ const Courses = () => {
         ) : null}
         {value === 2 ? (
           <div
-            className="row main-about-cat-and-populer-college"
+            className="row main-about-cat-and-populer-college "
             id="main-about-cat-id"
           >
-            <div className="col-md-8 text-of-program-details about-cat-college  ">
-              <h2 className="head-tag-of-program-detals pt-3">
+            <div className="col-md-8 text-of-program-details d-flex flex-column gap-5 ">
+             <div className="about-cat-college"> <h2 className="head-tag-of-program-detals pt-3">
                 | SALIENT FEATURES
               </h2>
 
@@ -429,7 +431,8 @@ const Courses = () => {
                     Vision Casting
                   </li>
                 </ul>
-              </div>
+              </div></div>
+             <div className="about-cat-college"><h2>hello karan </h2></div>
             </div>
             <div className="col-md-3 pb-5 ">
               <RightSideSimilerColleges
@@ -445,8 +448,10 @@ const Courses = () => {
             className="row main-about-cat-and-populer-college"
             id="main-about-cat-id"
           >
-            <div className="col-md-8 text-of-program-details about-cat-college  ">
-              <h2 className="head-tag-of-program-detals pt-3">| ADMISSION</h2>
+            <div className="col-md-8 text-of-program-details d-flex flex-column gap-5 ">
+             <div className="about-cat-college"> <h2 className="head-tag-of-program-detals pt-3">
+                | ADMISSION PROCESS
+              </h2>
 
               <p>
                 MBA in Entrepreneurship is a 2-years full-time post graduation
@@ -547,7 +552,8 @@ const Courses = () => {
                     Vision Casting
                   </li>
                 </ul>
-              </div>
+              </div></div>
+             <div className="about-cat-college"><h2>hello karan </h2></div>
             </div>
             <div className="col-md-3 pb-5 ">
               <RightSideSimilerColleges
@@ -563,8 +569,10 @@ const Courses = () => {
             className="row main-about-cat-and-populer-college"
             id="main-about-cat-id"
           >
-            <div className="col-md-8 text-of-program-details about-cat-college  ">
-              <h2 className="head-tag-of-program-detals pt-3">| SYLLABUS</h2>
+            <div className="col-md-8 text-of-program-details d-flex flex-column gap-5 ">
+             <div className="about-cat-college"> <h2 className="head-tag-of-program-detals pt-3">
+                | SYLLABUS
+              </h2>
 
               <p>
                 MBA in Entrepreneurship is a 2-years full-time post graduation
@@ -665,7 +673,8 @@ const Courses = () => {
                     Vision Casting
                   </li>
                 </ul>
-              </div>
+              </div></div>
+             <div className="about-cat-college"><h2>hello karan </h2></div>
             </div>
             <div className="col-md-3 pb-5">
               <RightSideSimilerColleges
@@ -681,8 +690,8 @@ const Courses = () => {
             className="row main-about-cat-and-populer-college"
             id="main-about-cat-id"
           >
-            <div className="col-md-8 text-of-program-details about-cat-college  ">
-              <h2 className="head-tag-of-program-detals pt-3">
+            <div className="col-md-8 text-of-program-details d-flex flex-column gap-5 ">
+             <div className="about-cat-college"> <h2 className="head-tag-of-program-detals pt-3">
                 | FUTURE SCOPE
               </h2>
 
@@ -785,7 +794,8 @@ const Courses = () => {
                     Vision Casting
                   </li>
                 </ul>
-              </div>
+              </div></div>
+             <div className="about-cat-college"><h2>hello karan </h2></div>
             </div>
             <div className="col-md-3 pb-5">
               <RightSideSimilerColleges
@@ -801,8 +811,8 @@ const Courses = () => {
             className="row main-about-cat-and-populer-college"
             id="main-about-cat-id"
           >
-            <div className="col-md-8 text-of-program-details about-cat-college  ">
-              <h2 className="head-tag-of-program-detals pt-3">
+            <div className="col-md-8 text-of-program-details d-flex flex-column gap-5 mb-4   ">
+              <div className="about-cat-college"><h2 className="head-tag-of-program-detals pt-3">
                 | TOP COLLEGES
               </h2>
 
@@ -814,24 +824,26 @@ const Courses = () => {
               </p>
 
               <div className="cat-and-top-mba-participating-college">
-                <AllCollegeInExam />
-                <AllCollegeInExam />
-                <AllCollegeInExam />
-                <AllCollegeInExam />
-                <AllCollegeInExam />
-                <AllCollegeInExam />
-                <AllCollegeInExam />
-                <AllCollegeInExam />
 
-                <AllCollegeInExam />
-                <AllCollegeInExam />
-                <AllCollegeInExam />
-                <AllCollegeInExam />
-                <AllCollegeInExam />
-                <AllCollegeInExam />
-                <AllCollegeInExam />
-                <AllCollegeInExam />
-              </div>
+              <CollegeCard/>
+              <CollegeCard/>
+              <CollegeCard/>
+              <CollegeCard/>
+              <CollegeCard/>
+              <CollegeCard/>
+              <CollegeCard/>
+              <CollegeCard/>
+              <CollegeCard/>
+              <CollegeCard/>
+              <CollegeCard/>
+              <CollegeCard/>
+              <CollegeCard/>
+              <CollegeCard/>
+              <CollegeCard/>
+
+                
+              </div></div>
+              <div className="about-cat-college"> <h2>hello karan</h2></div>
             </div>
             <div className="col-md-3 ">
               <RightSideSimilerColleges
@@ -847,8 +859,8 @@ const Courses = () => {
             className="row main-about-cat-and-populer-college"
             id="main-about-cat-id"
           >
-            <div className="col-md-8 text-of-program-details about-cat-college  ">
-              <h2 className="head-tag-of-program-detals pt-3">| FAQ</h2>
+            <div className="col-md-8 text-of-program-details d-flex flex-column gap-5  ">
+              <div className="about-cat-college"><h2 className="head-tag-of-program-detals pt-3">| FAQ</h2>
               <div className="col-md-10 m-auto pb-5 mb-5 search-bar-head-in-faq">
                 <h2>Frequently asked question and answer</h2>
                 <div className="input-and-search">
@@ -857,7 +869,8 @@ const Courses = () => {
                     <FcSearch />
                   </button>
                 </div>
-              </div>
+              </div></div>
+              <div className="about-cat-college"><h2> hello karan</h2></div>
             </div>
             <div className="col-md-3 ">
               <RightSideSimilerColleges

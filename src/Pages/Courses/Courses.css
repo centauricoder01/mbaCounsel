@@ -520,79 +520,82 @@ li {
 
 /* .pop up form section */
 
-/* Courses.css */
+/* Popup container styling */
 .popup-container {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100vw;
-  height: 100vh;
-  background-color: rgba(0, 0, 0, 0.6);
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Background overlay */
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 1000;
+  z-index: 1000; /* Ensure the popup is on top */
 }
 
+/* Popup form styling */
 .popup-form {
-  background-color: white;
+  background-color: #fff;
   padding: 20px;
-  border-radius: 8px;
+  border-radius: 10px;
   width: 90%;
-  max-width: 400px;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-}
-
-.popup-form h2 {
-  margin-bottom: 15px;
+  max-width: 500px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
   text-align: center;
+  z-index: 1001;
 }
 
-.popup-form input {
-  display: block;
+/* Form inputs styling */
+.popup-form input[type="text"],
+.popup-form input[type="email"],
+.popup-form input[type="tel"],
+.popup-form input[type="text"] {
   width: 100%;
   padding: 10px;
   margin: 10px 0;
   border: 1px solid #ccc;
-  border-radius: 4px;
+  border-radius: 5px;
+  font-size: 1rem;
 }
 
-.popup-form button {
-  width: 100%;
-  padding: 10px;
-  background-color: blue;
+/* Submit button styling */
+.popup-form button[type="submit"] {
+  background-color: #28a745;
   color: white;
+  padding: 10px 20px;
   border: none;
-  border-radius: 4px;
+  border-radius: 5px;
   cursor: pointer;
+  font-size: 1rem;
 }
 
-.popup-form button:hover {
-  background-color: darkblue;
-}
-
+/* Close button styling */
 .close-popup {
   position: absolute;
   top: 10px;
   right: 10px;
-  background-color: red;
-  color: white;
+  background: none;
   border: none;
-  padding: 5px 10px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #000;
   cursor: pointer;
 }
 
-.close-popup:hover {
-  background-color: darkred;
-}
-
-/* Responsive design */
-@media (max-width: 768px) {
+/* Responsive Design */
+@media (max-width: 600px) {
   .popup-form {
+    width: 95%;
+  }
+
+  .popup-form button[type="submit"] {
     width: 100%;
-    padding: 15px;
+    font-size: 1.1rem;
   }
 }
+
 
 /* ---------------------------------- */
 /* ------------------------------------ */
