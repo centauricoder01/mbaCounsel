@@ -10,7 +10,7 @@ const ViewArticle = () => {
 
   // HERE WE ARE HANDLING ONCLICK BUTTONS
   const confirm = (e, id) => {
-    fetch("http://localhost:3001/api/v1/article/deletearticle", {
+    fetch("http://148.66.155.154:3001/api/v1/article/deletearticle", {
       method: "DELETE",
       headers: {
         "Content-Type": "application/json",

@@ -124,8 +124,8 @@ const Home = ({ tableData, tablelabel, popover, DeleteFunc, EditFunc }) => {
             </tr>
           </thead>
           <tbody>
-            {tableData.map((row) => (
-              <tr key={row.id}>
+            {tableData.map((row, i) => (
+              <tr key={i}>
                 {row.Img ? (
                   <td>
                     <img

@@ -10,7 +10,7 @@ const ViewLatestNews = () => {
 
   // HERE WE ARE HANDLING ONCLICK BUTTONS
   const confirm = (e, id) => {
-    fetch("http://localhost:3001/api/v1/news/deletenews", {
+    fetch("http://148.66.155.154:3001/api/v1/news/deletenews", {
       method: "DELETE",
       headers: {
         "Content-Type": "application/json",

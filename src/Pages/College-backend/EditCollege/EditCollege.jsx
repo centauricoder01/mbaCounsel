@@ -239,7 +239,7 @@ const EditCollege = () => {
       delete catchinput.collegecoursespecilzationfees[i]._id;
     }
     axios
-      .put("http://localhost:3001/api/v1/college/updatecollege", {
+      .put("http://148.66.155.154:3001/api/v1/college/updatecollege", {
         id,
         catchinput,
       })

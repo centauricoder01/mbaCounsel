@@ -1,7 +1,7 @@
 import axios from "axios";
 
 function fetchData(path) {
-  return fetch(`http://localhost:3001/api/v1/home/${path}`)
+  return fetch(`http://148.66.155.154:3001/api/v1/home/${path}`)
     .then((response) => {
       if (!response.ok) {
         throw new Error("Network response was not ok");
@@ -18,15 +18,15 @@ function fetchData(path) {
 }
 
 function getAttributeDetails(path) {
-  return axios.get(`http://localhost:3001/api/v1/${path}`);
+  return axios.get(`http://148.66.155.154:3001/api/v1/${path}`);
 }
 
 function postUserDetails(path, data) {
-  return axios.post(`http://localhost:3001/api/v1/${path}`, data);
+  return axios.post(`http://148.66.155.154:3001/api/v1/${path}`, data);
 }
 
 export const GetRequest = (path) => {
-  return axios.get(`http://localhost:3001/api/v1/${path}`);
+  return axios.get(`http://148.66.155.154:3001/api/v1/${path}`);
 };
 
 export { fetchData, getAttributeDetails, postUserDetails };

@@ -11,7 +11,7 @@ const ViewExam = () => {
   // HERE WE ARE HANDLING ONCLICK BUTTONS
   const confirm = (e, id) => {
     console.log(e);
-    fetch("http://localhost:3001/api/v1/exam/deleteexam", {
+    fetch("http://148.66.155.154:3001/api/v1/exam/deleteexam", {
       method: "DELETE",
       headers: {
         "Content-Type": "application/json",

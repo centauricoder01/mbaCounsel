@@ -24,9 +24,6 @@ const ArticleComponent = () => {
   </div>
  
 </div>
-
-
-
       
     </div></Link>
   )

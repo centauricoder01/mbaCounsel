@@ -60,7 +60,7 @@ const Home = () => {
         console.log(err);
       });
 
-    fetch("http://localhost:3001/api/v1/college/getcollege")
+    fetch("http://148.66.155.154:3001/api/v1/college/getcollege")
       .then((response) => response.json())
       .then((data) => setCollegeData(data.allCollege))
       .catch((err) => console.log(err));
