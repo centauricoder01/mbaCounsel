@@ -22,14 +22,12 @@ const AddState = () => {
     PutRequest("attribute/updatestate", { id, statevalue })
       .then((res) => console.log(res))
       .catch((err) => console.log(err));
-    window.location.reload();
   };
 
   const DeleteFunc = (id) => {
     DeleteRequest("attribute/deletestate", id)
       .then((res) => console.log(res))
       .catch((err) => console.log(err));
-    window.location.reload();
   };
 
   const PostFunc = (value) => {
@@ -43,7 +41,7 @@ const AddState = () => {
     PostRequest("attribute/addstate", affiliationvalue)
       .then((res) => console.log(res))
       .catch((err) => console.log(err));
-    window.location.reload();
+    // window.location.reload();
   };
 
   useEffect(() => {

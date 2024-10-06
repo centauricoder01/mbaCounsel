@@ -9,7 +9,7 @@ const ViewCouses = () => {
 
   // HERE WE ARE HANDLING ONCLICK BUTTONS
   const confirm = (e, id) => {
-    fetch("http://148.66.155.154:3001/api/v1/course/detailed-courses", {
+    fetch("https://api.mbacounsel.com/api/v1/course/detailed-courses", {
       method: "DELETE",
       headers: {
         "Content-Type": "application/json",
