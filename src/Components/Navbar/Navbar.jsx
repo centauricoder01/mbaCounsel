@@ -66,9 +66,21 @@ const MainNavbar = () => {
       <div className="main-links-div-navbar">
         <div className="first-link-div-navbar">
           <ul>
-            <li>About Us</li>
-            <li>Services</li>
-            <li>Contact Us</li>
+            <li>
+              <Link to={"/about"} style={{ color: "white" }}>
+                About Us
+              </Link>
+            </li>
+            <li>
+              <Link to={"/contact"} style={{ color: "white" }}>
+                Services
+              </Link>
+            </li>
+            <li>
+              <Link to={"/contact"} style={{ color: "white" }}>
+                Contact Us
+              </Link>
+            </li>
             <li>
               <button className="login-signup-button">
                 <CiLogin />
