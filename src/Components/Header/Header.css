@@ -140,7 +140,7 @@
   .react-calendar {
     width: 90% !important;
   }
-  .home-page-news-main-div {
+  .home-page-news-main-div > div {
     width: 90%;
   }
   .text-center {

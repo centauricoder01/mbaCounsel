@@ -7,6 +7,14 @@
   margin: auto;
 }
 
+.carrier-with-mba img {
+  width: 40%;
+}
+
+.carrier-with-mba p{
+  font-weight: bolder;
+}
+
 .regular-mba {
   display: flex;
   justify-content: center;

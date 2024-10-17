@@ -17,36 +17,14 @@ const Header = () => {
 
   useEffect(() => {
     fetchData("getbanner")
-      .then((res) => {
-        setBannner(res.allBanner);
-      })
-      .catch((err) => {
-        console.log(err);
-      });
-  }, []);
-
-  // GET NOTIFICATION API
-
-  useEffect(() => {
+      .then((res) => setBannner(res.allBanner))
+      .catch(console.log);
     fetchData("getnotification")
-      .then((res) => {
-        setNotification(res.allNotification);
-      })
-      .catch((err) => {
-        console.log(err);
-      });
-  }, []);
-
-  // GET LATEST NEWS API
-  useEffect(() => {
+      .then((res) => setNotification(res.allNotification))
+      .catch(console.log);
     fetchData("getlatestnews")
-      .then((res) => {
-        setLatestNews(res.allNews);
-        console.log(res.allNews, "ALL news Value");
-      })
-      .catch((err) => {
-        console.log(err);
-      });
+      .then((res) => setLatestNews(res.allNews))
+      .catch(console.log);
   }, []);
 
   return (
