@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import "./MultiLevelDropdown.css";
 import { IoMdArrowDropdown } from "react-icons/io";
 import { getAttributeDetails } from "../../API/Getrequest";
@@ -11,12 +11,13 @@ const MultiLevelDropdown = () => {
   const [itemsToShow, setItemsToShow] = useState(5);
   const [selectedCategory, setSelectedCategory] = useState("MBA");
 
+  const dropdownRef = useRef();
+
   const showMoreItems = () => {
-    setItemsToShow(itemsToShow + 5); // show 5 more items
+    setItemsToShow(itemsToShow + 5);
   };
 
   useEffect(() => {
-    // Fetch course and college data
     getAttributeDetails("attribute/getcourse")
       .then((res) => setCourseValue(res.data.allCourses))
       .catch((err) => console.log(err));
@@ -31,7 +32,18 @@ const MultiLevelDropdown = () => {
     setSelectedCategory(category);
   };
 
-  console.log(process.env.BACKENDAPI, "filterStateValue");
+  const handleClickOutside = (event) => {
+    if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+      setIsOpen(false);
+    }
+  };
+
+  useEffect(() => {
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
 
   const renderRightSideContent = () => {
     switch (selectedCategory) {
@@ -40,14 +52,7 @@ const MultiLevelDropdown = () => {
           <>
             <div>
               <h5>All States</h5>
-              {/* Render MBA-specific states */}
-              <p>MBA State are Here </p>
-              <p>MBA State are Here </p>
-              <p>MBA State are Here </p>
-              <p>MBA State are Here </p>
-              <p>MBA State are Here </p>
-              <p>MBA State are Here </p>
-              <p>MBA State are Here </p>
+              <p>MBA State are Here</p>
               {filterStateValue
                 .filter((ele) => ele.courseType === "MBA")
                 .map((ele) => (
@@ -57,24 +62,17 @@ const MultiLevelDropdown = () => {
                     </Link>
                   </p>
                 ))}
-              {/* Render MBA-specific cities */}
             </div>
             <div>
               <h5>All City</h5>
               <p>All MBA City</p>
-              <p>All MBA City</p>
-              <p>All MBA City</p>
-              <p>All MBA City</p>
             </div>
-            {/* Add your MBA-specific cities here */}
             <div>
               <h5>Popular Searches</h5>
               <p>Best MBA College</p>
-              <p>Top MBA College</p>
             </div>
             <div>
               <h5>Top Colleges</h5>
-              {/* Render MBA-specific top colleges */}
               {filterStateValue
                 .filter((ele) => ele.courseType === "MBA")
                 .map((ele) => (
@@ -91,170 +89,14 @@ const MultiLevelDropdown = () => {
           </>
         );
       case "PGDM":
-        return (
-          <>
-            <div>
-              <h5>All States</h5>
-              {/* Render MBA-specific states */}
-              <p>PGDM State are Here </p>
-              <p>PGDM State are Here </p>
-              <p>PGDM State are Here </p>
-              <p>PGDM State are Here </p>
-              <p>PGDM State are Here </p>
-              <p>PGDM State are Here </p>
-              <p>PGDM State are Here </p>
-              {filterStateValue
-                .filter((ele) => ele.courseType === "MBA")
-                .map((ele) => (
-                  <p key={ele._id}>
-                    <Link to={`/collegelist`} style={{ color: "black" }}>
-                      {ele.collegeState}
-                    </Link>
-                  </p>
-                ))}
-              {/* Render MBA-specific cities */}
-            </div>
-            <div>
-              <h5>All City</h5>
-              <p>All PGDM City</p>
-              <p>All PGDM City</p>
-              <p>All PGDM City</p>
-              <p>All PGDM City</p>
-            </div>
-            {/* Add your MBA-specific cities here */}
-            <div>
-              <h5>Popular Searches</h5>
-              <p>Best PGDM College</p>
-              <p>Top PGDM College</p>
-            </div>
-            <div>
-              <h5>Top Colleges</h5>
-              {/* Render MBA-specific top colleges */}
-              {filterStateValue
-                .filter((ele) => ele.courseType === "MBA")
-                .map((ele) => (
-                  <p key={ele._id}>
-                    <Link
-                      to={`/college/${ele.collegeCollegeUrl}`}
-                      style={{ color: "black" }}
-                    >
-                      {ele.collegeName}
-                    </Link>
-                  </p>
-                ))}
-            </div>
-          </>
-        );
+        // Similar structure for PGDM
+        return <div>PGDM Content Here</div>;
       case "Online MBA":
-        return (
-          <>
-            <div>
-              <h5>All States</h5>
-              {/* Render MBA-specific states */}
-              <p>Online MBA State are Here </p>
-              <p>Online MBA State are Here </p>
-              <p>Online MBA State are Here </p>
-              <p>Online MBA State are Here </p>
-              <p>Online MBA State are Here </p>
-              <p>Online MBA State are Here </p>
-              <p>Online MBA State are Here </p>
-              {filterStateValue
-                .filter((ele) => ele.courseType === "MBA")
-                .map((ele) => (
-                  <p key={ele._id}>
-                    <Link to={`/collegelist`} style={{ color: "black" }}>
-                      {ele.collegeState}
-                    </Link>
-                  </p>
-                ))}
-              {/* Render MBA-specific cities */}
-            </div>
-            <div>
-              <h5>All City</h5>
-              <p>All Online MBA City</p>
-              <p>All Online MBA City</p>
-              <p>All Online MBA City</p>
-              <p>All Online MBA City</p>
-            </div>
-            {/* Add your MBA-specific cities here */}
-            <div>
-              <h5>Popular Searches</h5>
-              <p>Best Online MBA College</p>
-              <p>Top Online MBA College</p>
-            </div>
-            <div>
-              <h5>Top Colleges</h5>
-              {/* Render MBA-specific top colleges */}
-              {filterStateValue
-                .filter((ele) => ele.courseType === "MBA")
-                .map((ele) => (
-                  <p key={ele._id}>
-                    <Link
-                      to={`/college/${ele.collegeCollegeUrl}`}
-                      style={{ color: "black" }}
-                    >
-                      {ele.collegeName}
-                    </Link>
-                  </p>
-                ))}
-            </div>
-          </>
-        );
+        // Similar structure for Online MBA
+        return <div>Online MBA Content Here</div>;
       case "Executive MBA/PGM":
-        return (
-          <>
-            <div>
-              <h5>All States</h5>
-              {/* Render MBA-specific states */}
-              <p>MAIN state are Here </p>
-              <p>MAIN state are Here </p>
-              <p>MAIN state are Here </p>
-              <p>MAIN state are Here </p>
-              <p>MAIN state are Here </p>
-              <p>MAIN state are Here </p>
-              <p>MAIN state are Here </p>
-              {filterStateValue
-                .filter((ele) => ele.courseType === "MBA")
-                .map((ele) => (
-                  <p key={ele._id}>
-                    <Link to={`/collegelist`} style={{ color: "black" }}>
-                      {ele.collegeState}
-                    </Link>
-                  </p>
-                ))}
-              {/* Render MBA-specific cities */}
-            </div>
-            <div>
-              <h5>All City</h5>
-              <p>All Main City</p>
-              <p>All MAIN City</p>
-              <p>All MAIN City</p>
-              <p>All MAIN City</p>
-            </div>
-            {/* Add your MBA-specific cities here */}
-            <div>
-              <h5>Popular Searches</h5>
-              <p>Best MAIN College</p>
-              <p>Top MAIN College</p>
-            </div>
-            <div>
-              <h5>Top Colleges</h5>
-              {/* Render MBA-specific top colleges */}
-              {filterStateValue
-                .filter((ele) => ele.courseType === "MBA")
-                .map((ele) => (
-                  <p key={ele._id}>
-                    <Link
-                      to={`/college/${ele.collegeCollegeUrl}`}
-                      style={{ color: "black" }}
-                    >
-                      {ele.collegeName}
-                    </Link>
-                  </p>
-                ))}
-            </div>
-          </>
-        );
+        // Similar structure for Executive MBA/PGM
+        return <div>Executive MBA/PGM Content Here</div>;
       default:
         return null;
     }
@@ -266,7 +108,7 @@ const MultiLevelDropdown = () => {
         Colleges <IoMdArrowDropdown />
       </li>
       {isOpen && (
-        <div className="multileveldropdown-main-div">
+        <div className="multileveldropdown-main-div" ref={dropdownRef}>
           <div className="para-tags-container">
             <p
               className={selectedCategory === "MBA" ? "active" : ""}

@@ -165,14 +165,8 @@ const MainNavbar = () => {
             <div>
               <input
                 type="text"
-                placeholder="Search College"
-                style={{
-                  width: "260%",
-                  height: "40px",
-                  border: "none",
-                  borderRadius: "5px",
-                  paddingLeft: "5px",
-                }}
+                placeholder="Search"
+                className="home-page-search-bar"
               />
               <button className="navbar-input-search-button">
                 <IoMdSearch />
