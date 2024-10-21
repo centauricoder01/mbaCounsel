@@ -54,6 +54,7 @@ import NewCategory from "../Pages/Master-backend/AddNewsCategory/NewCategory";
 import AddArticle from "../Pages/Article-backend/AddArticle";
 import ViewArticle from "../Pages/Article-backend/ViewArticle";
 import UserLoginDetails from "../Pages/UserLoginDetails-backend/UserLoginDetails";
+import AdminLogin from "../Pages/Admin-login/AdminLogin";
 
 const MainRoutes = () => {
   return (
@@ -63,7 +64,7 @@ const MainRoutes = () => {
         <Route path="/signup" element={<Signup />}></Route>
         <Route path="/login" element={<Login />}></Route>
         <Route path="/forget" element={<Forget />}></Route>
-        <Route path="/Otp" element={<Otp />}></Route>
+        <Route path="/verifyemail" element={<Otp />}></Route>
         <Route path="/Newpassword" element={<NewPassword />}></Route>
         <Route path="/Thanks" element={<Thanks />}></Route>
         <Route path="/college/:id" element={<Collages />}></Route>
@@ -82,6 +83,7 @@ const MainRoutes = () => {
 
         {/************ HERE IS THE ROUTES OF THE DASHBOARD *************/}
 
+        <Route path="/adminlogin" element={<AdminLogin />} />
         <Route path="/dashboard" element={<Dashboard />} />
         {/* Add collage list */}
         <Route path="/addcollege" element={<AddCollege />} />

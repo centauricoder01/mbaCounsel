@@ -18,57 +18,44 @@ const Signup = () => {
     phoneNo: "",
     location: "",
     currentEducation: "",
-    CourseLooking: "",
+    courseLooking: "",
     password: "",
-    comfirmpassword: "",
-    googleLogin: false,
+
+    // googleLogin: false,
   });
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
-    // Update the state immediately
-    if (name === "phoneNo") {
-      setSignupUser((prevInput) => ({
-        ...prevInput,
-        phoneNo: Number(value),
-      }));
-    } else {
-      setSignupUser((prevInput) => ({
-        ...prevInput,
-        [name]: value,
-      }));
-    }
+    setSignupUser((prevInput) => ({
+      ...prevInput,
+      [name]: value,
+    }));
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // checking the values
-    if (signupUser.password !== signupUser.comfirmpassword) {
-      alert("Password are not matching, please try again...");
-    } else {
-      postUserDetails("authticate/addAuthUser", signupUser)
-        .then((res) => {
-          alert(res.data.message);
-          postUserDetails("authticate/emailverification", {
-            email: signupUser.email,
-          })
-            .then((res) => {
-              console.log(res);
-              localStorage.setItem("otpemail", signupUser.email);
-              alert("Verification mail has been send to you...");
-              navigate("/otp");
-            })
-            .catch((err) => {
-              alert("Internal Server Error, Please try again...");
-              console.log(err);
-            });
-        })
-        .catch((err) => {
-          console.log(err);
-          alert("Internal Server Error, Please try again...");
+    postUserDetails("authticate/addAuthUser", signupUser)
+      .then((res) => {
+        
+        alert(res.data.message);
+        sessionStorage.setItem("userEmail", signupUser.email);
+
+        setSignupUser({
+          name: "",
+          email: "",
+          phoneNo: "",
+          location: "",
+          currentEducation: "",
+          courseLooking: "",
+          password: "",
         });
-      console.log(signupUser);
-    }
+        navigate("/verifyemail");
+      })
+      .catch((err) => {
+        console.log(err);
+        alert("Internal Server Error, Please try again...");
+      });
+    console.log(signupUser);
   };
 
   const handleGoogleSubmit = (e) => {
@@ -121,7 +108,7 @@ const Signup = () => {
               </button>
             </div> */}
             <div className="signup-using-google">
-              <GoogleLogin
+              {/* <GoogleLogin
                 onSuccess={(credentialResponse) => {
                   const decoded = jwtDecode(credentialResponse?.credential);
                   setGoogle(true);
@@ -138,7 +125,7 @@ const Signup = () => {
                 onError={() => {
                   console.log("Login Failed");
                 }}
-              />
+              /> */}
             </div>
           </>
         ) : null}
@@ -175,8 +162,8 @@ const Signup = () => {
               <input
                 type="text"
                 placeholder="Course Looking*"
-                name="CourseLooking"
-                value={signupUser.CourseLooking}
+                name="courseLooking"
+                value={signupUser.courseLooking}
                 onChange={handleInputChange}
                 required
               />
@@ -224,8 +211,8 @@ const Signup = () => {
             <input
               type="text"
               placeholder="Course Looking*"
-              name="CourseLooking"
-              value={signupUser.CourseLooking}
+              name="courseLooking"
+              value={signupUser.courseLooking}
               onChange={handleInputChange}
               required
             />
@@ -242,14 +229,6 @@ const Signup = () => {
               placeholder="Password*"
               name="password"
               value={signupUser.password}
-              onChange={handleInputChange}
-              required
-            />
-            <input
-              type="password"
-              placeholder="confirm Password*"
-              name="comfirmpassword"
-              value={signupUser.comfirmpassword}
               onChange={handleInputChange}
               required
             />

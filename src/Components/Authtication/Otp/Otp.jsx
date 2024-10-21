@@ -8,16 +8,15 @@ const Otp = () => {
 
   const [getOtp, setGetOtp] = useState("");
   const handleOtpSubmit = () => {
-    console.log(getOtp);
-    const otpemail = localStorage.getItem("otpemail") || "";
-    console.log(otpemail, getOtp);
+    const email = sessionStorage.getItem("userEmail");
+    console.log(email, getOtp);
     postUserDetails("authticate/verifymail", {
-      email: otpemail,
-      otp: Number(getOtp),
+      email: email,
+      otp: getOtp,
     })
       .then((res) => {
         alert(res.data.message);
-        if (res.data.message === "OTP Verified, Access Granted") {
+        if (res.data.success) {
           navigate("/");
         } else {
           setGetOtp("");
