@@ -6,6 +6,10 @@
 .pnp.js
 .env
 
+start.sh
+/start.sh
+./start.sh
+
 # testing
 /coverage
 
