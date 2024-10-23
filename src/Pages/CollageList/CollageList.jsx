@@ -176,7 +176,6 @@ const CollageList = () => {
     marginBottom: "0rem",
   };
 
-  console.log("Yes, you are in this page....");
   return (
     <>
       <Navbar />
