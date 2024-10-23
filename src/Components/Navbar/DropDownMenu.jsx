@@ -10,7 +10,6 @@ const DropDownMenu = (props) => {
         const element = divEl.current;
         if (element) {
           const children = element.querySelectorAll(".dropdown-menu.show");
-          // @ts-ignore
           for (const child of children) {
             child.classList.remove("show");
           }
