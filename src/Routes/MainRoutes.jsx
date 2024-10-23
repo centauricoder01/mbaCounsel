@@ -54,92 +54,81 @@ import NewCategory from "../Pages/Master-backend/AddNewsCategory/NewCategory";
 import AddArticle from "../Pages/Article-backend/AddArticle";
 import ViewArticle from "../Pages/Article-backend/ViewArticle";
 import UserLoginDetails from "../Pages/UserLoginDetails-backend/UserLoginDetails";
-import AdminLogin from "../Pages/Admin-login/AdminLogin";
+import { ProtectedRoute } from "../Components/ProtectRoute/ProtectRoute";
+
+const publicRoutes = [
+  { path: "/", element: <Home /> },
+  { path: "/signup", element: <Signup /> },
+  { path: "/login", element: <Login /> },
+  { path: "/forget", element: <Forget /> },
+  { path: "/verifyemail", element: <Otp /> },
+  { path: "/Newpassword", element: <NewPassword /> },
+  { path: "/Thanks", element: <Thanks /> },
+  { path: "/college/:id", element: <Collages /> },
+  { path: "/courses", element: <Courses /> },
+  { path: "/about", element: <About /> },
+  { path: "/exam/:id", element: <Exam /> },
+  { path: "/contact", element: <ContactUs /> },
+  { path: "/latestnews", element: <LatestNews /> },
+  { path: "/redirectfolder", element: <Mainredirect /> },
+  { path: "/blogs", element: <Blog /> },
+  { path: "/allblogs", element: <BlogRedirect /> },
+  { path: "/articles", element: <Articles /> },
+  { path: "/allarticle", element: <ArticleRedirect /> },
+  { path: "/collegelist", element: <CollageList /> },
+  { path: "/rating", element: <Rating /> },
+  { path: "/dashlogin", element: <Logindash /> },
+];
+
+const protectedRoutes = [
+  { path: "/dashboard", element: <Dashboard /> },
+  { path: "/addcollege", element: <AddCollege /> },
+  { path: "/viewcollege", element: <ViewCollege /> },
+  { path: "/editcollege/:id", element: <EditCollege /> },
+  { path: "/addbanner", element: <AddBanner /> },
+  { path: "/addadsbanner", element: <AddBannerAds /> },
+  { path: "/addevents", element: <AddEvents /> },
+  { path: "/addlatestnotification", element: <AddLatestNotification /> },
+  { path: "/addservices", element: <AddServices /> },
+  { path: "/addtestimonials", element: <AddTestimonials /> },
+  { path: "/addcity", element: <AddCity /> },
+  { path: "/addstate", element: <AddState /> },
+  { path: "/addspecialization", element: <AddSpecialization /> },
+  { path: "/addentranceexam", element: <AddEntranceExam /> },
+  { path: "/addcourse", element: <AddCourse /> },
+  { path: "/addcollegetype", element: <AddCollegeType /> },
+  { path: "/addaffiliation", element: <AddAffiliation /> },
+  { path: "/addaccreditation", element: <AddAccreditation /> },
+  { path: "/addnewcategory", element: <NewCategory /> },
+  { path: "/addexam", element: <AddExam /> },
+  { path: "/viewexam", element: <ViewExam /> },
+  { path: "/editexam/:id", element: <EditExam /> },
+  { path: "/addlatestnews", element: <AddLatestNews /> },
+  { path: "/viewlatestnews", element: <ViewLatestNews /> },
+  { path: "/editlatestnews/:id", element: <AddLatestNews /> },
+  { path: "/addcoursedetail", element: <AddDetailedCourse /> },
+  { path: "/viewallcourses", element: <ViewDetailedCourse /> },
+  { path: "/editcoursedetail/:id", element: <AddDetailedCourse /> },
+  { path: "/addarticle", element: <AddArticle /> },
+  { path: "/viewarticle", element: <ViewArticle /> },
+  { path: "/logindetails", element: <UserLoginDetails /> },
+];
 
 const MainRoutes = () => {
   return (
     <div>
       <Routes>
-        <Route path="/" element={<Home />}></Route>
-        <Route path="/signup" element={<Signup />}></Route>
-        <Route path="/login" element={<Login />}></Route>
-        <Route path="/forget" element={<Forget />}></Route>
-        <Route path="/verifyemail" element={<Otp />}></Route>
-        <Route path="/Newpassword" element={<NewPassword />}></Route>
-        <Route path="/Thanks" element={<Thanks />}></Route>
-        <Route path="/college/:id" element={<Collages />}></Route>
-        <Route path="/courses" element={<Courses />}></Route>
-        <Route path="/about" element={<About />}></Route>
-        <Route path="/exam/:id" element={<Exam />}></Route>
-        <Route path="/contact" element={<ContactUs />}></Route>
-        <Route path="/latestnews" element={<LatestNews />}></Route>
-        <Route path="/redirectfolder" element={<Mainredirect />}></Route>
-        <Route path="/blogs" element={<Blog />}></Route>
-        <Route path="/allblogs" element={<BlogRedirect />}></Route>
-        <Route path="/articles" element={<Articles />}></Route>
-        <Route path="/allarticle" element={<ArticleRedirect />}></Route>
-        <Route path="/collegelist" element={<CollageList />}></Route>
-        <Route path="/rating" element={<Rating />}></Route>
-
-        {/************ HERE IS THE ROUTES OF THE DASHBOARD *************/}
-
-        <Route path="/adminlogin" element={<AdminLogin />} />
-        <Route path="/dashboard" element={<Dashboard />} />
-        {/* Add collage list */}
-        <Route path="/addcollege" element={<AddCollege />} />
-        <Route path="/viewcollege" element={<ViewCollege />} />
-        <Route path="/editcollege/:id" element={<EditCollege />} />
-
-        {/* HOME PAGE ROUTE */}
-        <Route path="/addbanner" element={<AddBanner />} />
-        <Route path="/addadsbanner" element={<AddBannerAds />} />
-        <Route path="/addevents" element={<AddEvents />} />
-        <Route
-          path="/addlatestnotification"
-          element={<AddLatestNotification />}
-        />
-        <Route path="/addservices" element={<AddServices />} />
-        <Route path="/addtestimonials" element={<AddTestimonials />} />
-
-        {/* MASTER BRANCH */}
-        <Route path="/addcity" element={<AddCity />} />
-        <Route path="/addstate" element={<AddState />} />
-        <Route path="/addspecialization" element={<AddSpecialization />} />
-        <Route path="/addentranceexam" element={<AddEntranceExam />} />
-        <Route path="/addcourse" element={<AddCourse />} />
-        <Route path="/addcollegetype" element={<AddCollegeType />} />
-        <Route path="/addaffiliation" element={<AddAffiliation />} />
-        <Route path="/addaccreditation" element={<AddAccreditation />} />
-        <Route path="/addnewcategory" element={<NewCategory />} />
-        {/* Login Page  */}
-        <Route path="/dashlogin" element={<Logindash />} />
-        <Route path="*" element={<Login />} />
-
-        {/* EXAM PAGE START FROM HERE */}
-        <Route path="/addexam" element={<AddExam />} />
-        <Route path="/viewexam" element={<ViewExam />} />
-        <Route path="/editexam/:id" element={<EditExam />} />
-
-        {/* NEWS PAGE START FROM HERE  */}
-        <Route path="/addlatestnews" element={<AddLatestNews />} />
-        <Route path="/viewlatestnews" element={<ViewLatestNews />} />
-        <Route path="/editlatestnews/:id" element={<AddLatestNews />} />
-
-        {/* COURSES SECTION START FROM HERE  */}
-        <Route path="/addcoursedetail" element={<AddDetailedCourse />} />
-        <Route path="/viewallcourses" element={<ViewDetailedCourse />} />
-        <Route path="/editcoursedetail/:id" element={<AddDetailedCourse />} />
-
-        {/* ARTICLE PAGE ROUTES START FROM HERE  */}
-        <Route path="/addarticle" element={<AddArticle />} />
-        <Route path="/viewarticle" element={<ViewArticle />} />
-        <Route path="/editarticle/:id" element={<AddArticle />} />
-
-        {/* ALL USER LOGIN DETAILS */}
-        <Route path="/logindetails" element={<UserLoginDetails />} />
-
-        {/* DEFAULT PATH OF FILE NOT FOUND  */}
-        <Route path="*" element={<Pagenotfound />}></Route>
+        {publicRoutes.map(({ path, element }, index) => (
+          <Route key={index} path={path} element={element} />
+        ))}
+        {protectedRoutes.map(({ path, element }, index) => (
+          <Route
+            key={index}
+            path={path}
+            element={<ProtectedRoute>{element}</ProtectedRoute>}
+          />
+        ))}
+        <Route path="*" element={<Pagenotfound />} />
       </Routes>
     </div>
   );

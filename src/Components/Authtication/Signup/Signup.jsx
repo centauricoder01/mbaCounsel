@@ -36,7 +36,7 @@ const Signup = () => {
     e.preventDefault();
     postUserDetails("authticate/addAuthUser", signupUser)
       .then((res) => {
-        
+
         alert(res.data.message);
         sessionStorage.setItem("userEmail", signupUser.email);
 
@@ -55,7 +55,6 @@ const Signup = () => {
         console.log(err);
         alert("Internal Server Error, Please try again...");
       });
-    console.log(signupUser);
   };
 
   const handleGoogleSubmit = (e) => {

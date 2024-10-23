@@ -27,7 +27,13 @@ const Login = () => {
       .then((res) => {
         alert(res.data.message);
         console.log(res.data);
-        navigate("/");
+        const userData = res.data.user;
+        localStorage.setItem("user", JSON.stringify(userData));
+        if (userData.role === "admin") {
+          navigate("/dashboard");
+        } else {
+          navigate("/");
+        }
       })
       .catch((err) => {
         alert("Invalid email or Password");
@@ -50,7 +56,7 @@ const Login = () => {
         <form className="signup-form-div" onSubmit={handleSubmit}>
           <input
             type="text"
-            placeholder="e-mail"
+            placeholder="Email"
             name="email"
             value={loginUser.email}
             onChange={handleInputChange}
@@ -64,15 +70,15 @@ const Login = () => {
             onChange={handleInputChange}
             required
           />
-          <p className="forgot-password-sign-in-div">
+          {/* <p className="forgot-password-sign-in-div">
             <Link to={"/forget"}>Forgot Password?</Link>
-          </p>
-          <button type="submit">Sign In</button>
+          </p> */}
+          <button type="submit">Login In</button>
         </form>
         <p className="already-have-account">
           Don't have a account?
           <Link to={"/signup"}>
-            <span style={{ color: "#044fa6" }}>SignUp</span>
+            <span style={{ color: "#044fa6" }}> SignUp</span>
           </Link>
         </p>
       </div>

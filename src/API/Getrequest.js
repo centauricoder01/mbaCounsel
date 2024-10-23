@@ -1,7 +1,7 @@
 import axios from "axios";
 
-function fetchData(path) {
-  return fetch(`https://api.mbacounsel.com/api/v1/home/${path}`)
+async function fetchData(path) {
+  return await fetch(`https://api.mbacounsel.com/api/v1/home/${path}`)
     .then((response) => {
       if (!response.ok) {
         throw new Error("Network response was not ok");
@@ -22,7 +22,7 @@ function getAttributeDetails(path) {
 }
 
 function postUserDetails(path, data) {
-  return axios.post(`http://localhost:3001/api/v1/${path}`, data);
+  return axios.post(`https://api.mbacounsel.com/api/v1/${path}`, data);
 }
 
 export const GetRequest = (path) => {

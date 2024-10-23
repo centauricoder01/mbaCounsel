@@ -17,7 +17,7 @@ const Otp = () => {
       .then((res) => {
         alert(res.data.message);
         if (res.data.success) {
-          navigate("/");
+          navigate("/login");
         } else {
           setGetOtp("");
           console.log(res.data);

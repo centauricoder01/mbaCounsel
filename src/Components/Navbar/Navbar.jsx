@@ -20,9 +20,12 @@ const MainNavbar = () => {
     course: null,
   }); // Logic for opening the Menu section
   const [open, setOpen] = useState(false);
+  const [user, setUser] = useState(null);
+
   const showDrawer = () => {
     setOpen(true);
   };
+
   const onClose = () => {
     setOpen(false);
   };
@@ -41,6 +44,12 @@ const MainNavbar = () => {
       .catch((error) => {
         console.error("Error:", error);
       });
+  }, []);
+
+  useEffect(() => {
+    const userData = JSON.parse(localStorage.getItem("user"));
+    // if(userData !)
+    setUser(userData);
   }, []);
 
   return (
@@ -83,8 +92,10 @@ const MainNavbar = () => {
             </li>
             <li>
               <button className="login-signup-button">
-                <CiLogin />
-                Login &nbsp; / &nbsp; Signup
+                <Link to={"/login"} style={{ color: "white" }}>
+                  <CiLogin />
+                  Login &nbsp; / &nbsp; Signup
+                </Link>
               </button>
             </li>
             <li
