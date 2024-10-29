@@ -46,7 +46,7 @@ const AddBanner = () => {
         PostRequest("home/addbanner", data)
           .then((res) => console.log(res.data))
           .catch((err) => console.log(err));
-        window.location.reload();
+        // window.location.reload();
       })
       .catch((err) => console.log(err));
   };
